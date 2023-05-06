@@ -1,0 +1,44 @@
+.section-two {
+  padding: 108px 40px;
+  .section-center {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    max-width: 1258px;
+    margin: 0 auto;
+    gap: 214px;
+
+    & img {
+      width: 500px;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    & .text {
+      //   width: 444px;
+      display: flex;
+      gap: 30px;
+      flex-direction: column;
+
+      & h2 {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 3.125rem;
+        line-height: 107%;
+        text-transform: uppercase;
+        color: #062644;
+      }
+
+      & p {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.37rem;
+        line-height: 30px;
+
+        color: #474747;
+      }
+    }
+  }
+}
