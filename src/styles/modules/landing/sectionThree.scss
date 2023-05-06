@@ -32,6 +32,9 @@
 
     & .items {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      //   justify-content: center;
 
       & .item {
         padding: 78px 25px;
