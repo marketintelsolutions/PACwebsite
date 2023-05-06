@@ -1,0 +1,50 @@
+.section-four {
+  background-size: contain;
+  border: 2px solid blue;
+  min-height: 200vh;
+  background-position: 10px;
+  background-repeat: no-repeat;
+  position: relative;
+
+  & .bg-image {
+    position: absolute;
+    top: -300px;
+    right: 0;
+    // width:
+  }
+
+  & .spirit {
+    padding-top: 108px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    & img {
+      position: relative;
+      z-index: 2;
+    }
+
+    & .items {
+      display: flex;
+      transform: translate(-20px);
+
+      & .item {
+        padding: 30px 40px;
+        max-width: 228px;
+        height: 123px;
+        display: flex;
+        // justify-content: ;
+        align-items: center;
+        gap: 15px;
+        flex-direction: column;
+        filter: drop-shadow(4px 4px 19px rgba(176, 176, 176, 0.25));
+        box-shadow: 4px 4px 19px rgba(176, 176, 176, 0.25);
+        background: white;
+
+        & p {
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}
