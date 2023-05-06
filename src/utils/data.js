@@ -60,3 +60,31 @@ export const foundations = [
     image: lagos,
   },
 ];
+export const footer = [
+  {
+    heading: "about",
+    items: ["about us", "leadership"],
+  },
+  {
+    heading: "resources",
+    items: [
+      "research",
+      "news",
+      "newsletter",
+      "get brochure",
+      "vendor reg portal",
+    ],
+  },
+  {
+    heading: "our portfolio",
+    items: [
+      "financial services",
+      "hospitality & entertainment",
+      "real eastate & infrastructure",
+      "Agro-allied & FMCG",
+      "healthcare",
+      "technology & payment systems",
+      "renewable energy",
+    ],
+  },
+];

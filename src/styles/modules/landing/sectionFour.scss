@@ -1,10 +1,13 @@
 .section-four {
   background-size: contain;
   //   border: 2px solid blue;
-  min-height: 200vh;
+  //   min-height: 200vh;
   background-position: 10px;
   background-repeat: no-repeat;
   position: relative;
+  height: fit-content;
+  padding-bottom: 179px;
+  overflow-y: hidden;
 
   & .bg-image {
     position: absolute;
