@@ -1,6 +1,8 @@
 import React from "react";
 import curvedbg from "../assets/images/curvedbg.svg";
 import spirit from "../assets/images/spirit.svg";
+import worldImage from "../assets/images/worldImage.svg";
+import playCircle from "../assets/images/playCircle.svg";
 
 const sectionFour = () => {
   return (
@@ -38,6 +40,21 @@ const sectionFour = () => {
             <h1>T</h1>
             <p>team spirit</p>
           </div>
+        </div>
+      </div>
+
+      {/* MIDDLE */}
+      <div className="middle">
+        <div className="image">
+          <img src={playCircle} alt="playCircle" className="play" />
+          <img src={worldImage} alt="worldImage" className="world" />
+        </div>
+        <div className="text">
+          <p>
+            Creating Impact through opportunities, strategic alliances and
+            partnerships
+          </p>
+          <button>Learn more</button>
         </div>
       </div>
     </section>

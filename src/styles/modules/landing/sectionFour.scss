@@ -40,9 +40,117 @@
         filter: drop-shadow(4px 4px 19px rgba(176, 176, 176, 0.25));
         box-shadow: 4px 4px 19px rgba(176, 176, 176, 0.25);
         background: white;
+        cursor: pointer;
+        transition: var(--transition);
+
+        &:hover {
+          color: white;
+          background: var(--primary-blue);
+          transition: var(--transition);
+        }
 
         & p {
           text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  & .middle {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    gap: 159px;
+    width: fit-content;
+    margin: 151px auto;
+    align-items: center;
+
+    & .image {
+      position: relative;
+      //   width: 620px;
+      height: 324px;
+      //   border: 2px solid red;
+
+      &:before {
+        content: "";
+        height: 181px;
+        width: 181px;
+        position: absolute;
+        background: var(--primary-blue);
+        border-radius: 40px;
+        // z-index: 2;
+        top: -52px;
+        right: 0;
+      }
+      &:after {
+        content: "";
+        height: 181px;
+        width: 181px;
+        position: absolute;
+        background: #a6a6a7;
+        border-radius: 40px;
+        // z-index: 2;
+        bottom: -52px;
+        left: 0;
+      }
+
+      & .play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 92px;
+        height: 92px;
+        z-index: 3;
+
+        transform: translateX(-46px) translateY(-46px);
+      }
+
+      & .world {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+    & .text {
+      width: 301px;
+      display: flex;
+      gap: 30px;
+      flex-direction: column;
+      & p {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 30px;
+
+        color: #474747;
+      }
+
+      & button {
+        width: 146px;
+        height: 49px;
+        display: flex;
+        border-radius: 25px;
+        background: var(--primary-blue);
+        color: white;
+        justify-content: center;
+        align-items: center;
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 27px;
+        border: none;
+        transition: var(--transition);
+        cursor: pointer;
+        border: 1px solid var(--primary-blue);
+
+        &:hover {
+          background: white;
+          color: var(--primary-blue);
+          transition: var(--transition);
         }
       }
     }

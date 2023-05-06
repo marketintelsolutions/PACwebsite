@@ -23,4 +23,5 @@ code {
 
 :root {
   --transition: all 0.3s linear;
+  --primary-blue: #062644;
 }
