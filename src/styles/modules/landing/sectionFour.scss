@@ -1,6 +1,6 @@
 .section-four {
   background-size: contain;
-  border: 2px solid blue;
+  //   border: 2px solid blue;
   min-height: 200vh;
   background-position: 10px;
   background-repeat: no-repeat;
@@ -232,6 +232,7 @@
             border: none;
             width: fit-content;
             text-transform: capitalize;
+            cursor: pointer;
           }
         }
       }

@@ -13,6 +13,7 @@ export const portfolio = [
   {
     img: finance,
     text: "Financial services",
+    color: "#38B6FF",
   },
   {
     img: celebration,
@@ -21,22 +22,27 @@ export const portfolio = [
   {
     img: estate,
     text: "real estate & infrastructure",
+    color: "#FAB400",
   },
   {
     img: plant,
     text: "Agro-allied & FMCG",
+    color: "#4E2E8F",
   },
   {
     img: blood,
     text: "healthcare",
+    color: "#FF0000",
   },
   {
     img: park,
     text: "renewable energy",
+    color: "#105215",
   },
   {
     img: internet,
     text: "technology and payment system",
+    color: "#FA6900",
   },
 ];
 
