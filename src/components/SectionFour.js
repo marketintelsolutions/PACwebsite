@@ -3,6 +3,8 @@ import curvedbg from "../assets/images/curvedbg.svg";
 import spirit from "../assets/images/spirit.svg";
 import worldImage from "../assets/images/worldImage.svg";
 import playCircle from "../assets/images/playCircle.svg";
+import arrowLeft from "../assets/images/arrowLeft.svg";
+import arrowRight from "../assets/images/arrowRight.svg";
 import { foundations } from "../utils/data";
 
 const sectionFour = () => {
@@ -80,6 +82,25 @@ const sectionFour = () => {
               </div>
             );
           })}
+        </div>
+        <div className="navigation">
+          <span className="arrow">
+            <img src={arrowLeft} alt="arrowLeft" />
+          </span>
+          <div className="pages">
+            <span className="page"></span>
+            <span className="page"></span>
+            <span className="page"></span>
+            <span className="page"></span>
+            <span className="page active"></span>
+            <span className="page"></span>
+            <span className="page"></span>
+            <span className="page"></span>
+            <span className="page"></span>
+          </div>
+          <span className="arrow">
+            <img src={arrowRight} alt="arrowRight" />
+          </span>
         </div>
       </div>
     </section>

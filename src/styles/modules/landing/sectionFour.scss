@@ -159,7 +159,7 @@
 
   & .bottom {
     margin-top: 253px;
-    border: 2px solid green;
+    // border: 2px solid green;
 
     & h2 {
       margin-bottom: 50px;
@@ -191,7 +191,7 @@
         max-height: 463.23px;
         display: flex;
         align-items: flex-end;
-        border: 2px solid blue;
+        // border: 2px solid blue;
 
         & .text {
           background: rgba(6, 38, 68, 0.8);
@@ -233,6 +233,35 @@
             width: fit-content;
             text-transform: capitalize;
           }
+        }
+      }
+    }
+
+    & .navigation {
+      margin-top: 50px;
+      display: flex;
+      //   border: 2px solid red;
+      gap: 50px;
+      justify-content: center;
+
+      & .arrow {
+        cursor: pointer;
+      }
+
+      & .pages {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        & .page {
+          width: 42.5px;
+          height: 3px;
+          background: #474747;
+
+          //   border: 3px solid #474747;
+        }
+
+        & .active {
+          background: #38b6ff;
         }
       }
     }
