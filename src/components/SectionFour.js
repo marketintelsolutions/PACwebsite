@@ -3,6 +3,7 @@ import curvedbg from "../assets/images/curvedbg.svg";
 import spirit from "../assets/images/spirit.svg";
 import worldImage from "../assets/images/worldImage.svg";
 import playCircle from "../assets/images/playCircle.svg";
+import { foundations } from "../utils/data";
 
 const sectionFour = () => {
   return (
@@ -55,6 +56,30 @@ const sectionFour = () => {
             partnerships
           </p>
           <button>Learn more</button>
+        </div>
+      </div>
+
+      {/* BOTTOM */}
+      <div className="bottom">
+        <h2>STAY UPDATED</h2>
+
+        <div className="foundations">
+          {foundations.map((item, index) => {
+            const { text, image } = item;
+            return (
+              <div
+                className="item"
+                key={index}
+                style={{ backgroundImage: `url(${image})` }}
+              >
+                <div className="text">
+                  <span></span>
+                  <p>{text}</p>
+                  <button>read more</button>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
