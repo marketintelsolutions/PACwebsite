@@ -38,7 +38,7 @@ const Footer = () => {
               </span>{" "}
               + 234-(1)-271-6899
             </p>
-            <p>
+            <p className="email">
               <span>
                 <img src={mailTransparent} alt="mailTransparent" />
               </span>{" "}
