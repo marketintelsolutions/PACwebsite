@@ -89,7 +89,7 @@ const SectionOne = () => {
           <div className="bg-label">
             <div className="text-center">
               <h1>PAC Holdings</h1>
-              <h3>Unlocking Value Across Africa</h3>
+              <h3>Unlocking Value Across Africa...</h3>
             </div>
           </div>
         </div>
