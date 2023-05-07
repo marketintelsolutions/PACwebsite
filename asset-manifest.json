@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.19e6670f.css",
-    "main.js": "/static/js/main.38ed1be9.js",
+    "main.js": "/static/js/main.720f1553.js",
     "static/media/worldImage.svg": "/static/media/worldImage.f217e0be4b88922cad1eb63248e3beb5.svg",
     "static/media/phoneLandingImage.png": "/static/media/phoneLandingImage.73ce9ba77f8d606ce0ee.png",
     "static/media/lagos.jpg": "/static/media/lagos.cc21ba74b907ea45efbb.jpg",
@@ -35,10 +35,10 @@
     "static/media/arrowLeft.svg": "/static/media/arrowLeft.8285f4806e7bf425e0b4fee5d17f97ba.svg",
     "static/media/arrowRight.svg": "/static/media/arrowRight.1178637f883bada5c1e50c64a31c12b8.svg",
     "main.19e6670f.css.map": "/static/css/main.19e6670f.css.map",
-    "main.38ed1be9.js.map": "/static/js/main.38ed1be9.js.map"
+    "main.720f1553.js.map": "/static/js/main.720f1553.js.map"
   },
   "entrypoints": [
     "static/css/main.19e6670f.css",
-    "static/js/main.38ed1be9.js"
+    "static/js/main.720f1553.js"
   ]
 }
