@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/PACwebsite/static/css/main.43ffa411.css",
+    "main.js": "/PACwebsite/static/js/main.780ab0ee.js",
+    "static/media/worldImage.svg": "/PACwebsite/static/media/worldImage.f217e0be4b88922cad1eb63248e3beb5.svg",
+    "static/media/phoneLandingImage.png": "/PACwebsite/static/media/phoneLandingImage.73ce9ba77f8d606ce0ee.png",
+    "static/media/lagos.jpg": "/PACwebsite/static/media/lagos.cc21ba74b907ea45efbb.jpg",
+    "static/media/conventions.jpg": "/PACwebsite/static/media/conventions.a289421c2a9b2ad3f55e.jpg",
+    "static/media/portugal.jpg": "/PACwebsite/static/media/portugal.16dfca74e8c28bf88e70.jpg",
+    "static/media/paclogo.svg": "/PACwebsite/static/media/paclogo.9dce8618b3ba9437e802021312f428a0.svg",
+    "static/media/curvedbg.svg": "/PACwebsite/static/media/curvedbg.55b16caa9d309a13ffe83dce6d2a3899.svg",
+    "static/media/mobile.png": "/PACwebsite/static/media/mobile.3e8a9336ebe5355fb6c9.png",
+    "static/media/spirit.svg": "/PACwebsite/static/media/spirit.7fbb3343af3a03f12b583a3da0ed6e82.svg",
+    "static/media/estate.svg": "/PACwebsite/static/media/estate.ca184b2476174309c1d1f52aea916de7.svg",
+    "static/media/celebration.svg": "/PACwebsite/static/media/celebration.af0a953f46a058eb29e1a6608a5ea12f.svg",
+    "static/media/internet.svg": "/PACwebsite/static/media/internet.0434d70fb1107bb6a9ee42d159e6b84b.svg",
+    "static/media/park.svg": "/PACwebsite/static/media/park.2e9e49eb8d3900dda46427aad078fa25.svg",
+    "static/media/mail.svg": "/PACwebsite/static/media/mail.7796c6e673c1987794a68233ced00365.svg",
+    "static/media/playCircle.svg": "/PACwebsite/static/media/playCircle.141434d503fa4e7306f52273e6830a5a.svg",
+    "static/media/plant.svg": "/PACwebsite/static/media/plant.2b9ae67c4fc8fd6ba18c86a0c0b027dd.svg",
+    "static/media/finance.svg": "/PACwebsite/static/media/finance.f124c3635506c8538b336bb774b00bde.svg",
+    "static/media/phone.svg": "/PACwebsite/static/media/phone.128bd0321d35aa87327f5688bd508bd8.svg",
+    "static/media/blood.svg": "/PACwebsite/static/media/blood.6e5a6c68ff82f41b298bfb70590dc264.svg",
+    "static/media/clock.svg": "/PACwebsite/static/media/clock.59eee965a8cd711d50bca119c7c95106.svg",
+    "static/media/arrowDownBlue.svg": "/PACwebsite/static/media/arrowDownBlue.b4131d2d3d07bd069b36ff6edc1e995f.svg",
+    "static/media/arrowDownFill.svg": "/PACwebsite/static/media/arrowDownFill.6f5ca8823d462c590e85ec3cea76f6ac.svg",
+    "index.html": "/PACwebsite/index.html",
+    "static/media/calender.svg": "/PACwebsite/static/media/calender.5931d57d26a886168fef2018169e0f43.svg",
+    "static/media/arrowLeft.svg": "/PACwebsite/static/media/arrowLeft.8285f4806e7bf425e0b4fee5d17f97ba.svg",
+    "static/media/arrowRight.svg": "/PACwebsite/static/media/arrowRight.1178637f883bada5c1e50c64a31c12b8.svg",
+    "main.43ffa411.css.map": "/PACwebsite/static/css/main.43ffa411.css.map",
+    "main.780ab0ee.js.map": "/PACwebsite/static/js/main.780ab0ee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43ffa411.css",
+    "static/js/main.780ab0ee.js"
+  ]
+}
