@@ -4,6 +4,9 @@ footer {
   z-index: 2;
   color: white;
   //   margin-top: 179px;
+  display: flex;
+  //   align-items: center;
+  justify-content: center;
 
   & .footer-center {
     display: grid;
@@ -12,6 +15,7 @@ footer {
     // display: flex;
     justify-content: center;
     // align-items: center;
+    max-width: 1440px;
 
     & .item {
       margin: 0 auto;
