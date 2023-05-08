@@ -12,7 +12,7 @@ const SectionThree = () => {
       <div className="bottom">
         <div className="items">
           {portfolio.map((item, index) => {
-            const { img, text, color } = item;
+            const { img, text, color, whiteImg } = item;
 
             return (
               <div
@@ -34,7 +34,7 @@ const SectionThree = () => {
                 key={index}
               >
                 <span>
-                  <img src={img} alt={text} />
+                  <img src={active[index] ? whiteImg : img} alt={text} />
                 </span>
                 <p>{text}</p>
               </div>
