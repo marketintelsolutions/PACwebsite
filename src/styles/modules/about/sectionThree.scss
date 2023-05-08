@@ -1,0 +1,45 @@
+.about-section-three {
+  height: 594px;
+
+  & .goals-center {
+    background: rgba(217, 217, 217, 0.83);
+    // background-size: ;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .goals {
+      display: flex;
+      width: 90%;
+      max-width: 1403px;
+      justify-content: space-between;
+      margin: 0 auto;
+      height: fit-content;
+    }
+
+    & .goal {
+      width: 277px;
+      height: 296px;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+
+      & p {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 27px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #062644;
+      }
+    }
+  }
+}
