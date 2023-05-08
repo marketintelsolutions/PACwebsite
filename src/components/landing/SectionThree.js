@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { portfolio } from "../utils/data";
+import { portfolio } from "../../utils/data";
 
 const SectionThree = () => {
   const [active, setActive] = useState(Array(portfolio.length).fill(false));
@@ -40,12 +40,6 @@ const SectionThree = () => {
               </div>
             );
           })}
-          {/* <div className="item">
-                <span>
-                  <img src={img} alt={text} />
-                </span>
-                <p>{text}</p>
-              </div> */}
         </div>
       </div>
     </section>

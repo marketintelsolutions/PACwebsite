@@ -6,10 +6,11 @@ import twitter from "../assets/images/twitter.svg";
 import linkedin from "../assets/images/linkedin.svg";
 import phoneTransparent from "../assets/images/phoneTransparent.svg";
 import mailTransparent from "../assets/images/mailTransparent.svg";
+import footerBg from "../assets/images/footerBg.png";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer style={{ backgroundImage: `url(${footerBg})` }}>
       <div className="footer-center">
         {footer.map((item) => {
           const { heading, items } = item;

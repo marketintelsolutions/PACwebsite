@@ -1,5 +1,5 @@
 import React from "react";
-import mobile from "../assets/images/mobile.png";
+import mobile from "../../assets/images/mobile.png";
 
 const SectionTwo = () => {
   return (

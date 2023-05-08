@@ -1,6 +1,6 @@
-.section-one {
+.about-section-one {
   //   border: 2px solid blue;
-  height: 100vh;
+  // height: 100vh;
   position: relative;
   overflow-x: hidden;
 
@@ -30,12 +30,12 @@
         position: absolute;
         top: 50%;
         left: 0;
-        background: rgba(6, 38, 68, 0.6);
+        background: #a6a6a7;
         border-radius: 0px 148px 148px 0px;
         max-width: 970px;
-        width: 50%;
-        max-height: 430px;
-        height: 40%;
+        width: 40%;
+        max-height: 182px;
+        height: 30%;
         // transform: translateY(-215px);
         transform: translateY(-25%);
         display: flex;
@@ -48,14 +48,10 @@
         & h1 {
           font-family: "Open Sans";
           font-style: normal;
-          font-weight: 700;
-          font-size: 64px;
-          line-height: 87px;
-          display: flex;
-          align-items: center;
-          letter-spacing: -0.095em;
-
-          color: #ffffff;
+          font-weight: 600;
+          font-size: 50px;
+          line-height: 107%;
+          color: white;
         }
 
         & h3 {

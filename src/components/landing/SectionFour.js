@@ -1,11 +1,11 @@
 import React from "react";
-import curvedbg from "../assets/images/curvedbg.svg";
-import spirit from "../assets/images/spirit.svg";
-import worldImage from "../assets/images/worldImage.svg";
-import playCircle from "../assets/images/playCircle.svg";
-import arrowLeft from "../assets/images/arrowLeft.svg";
-import arrowRight from "../assets/images/arrowRight.svg";
-import { foundations } from "../utils/data";
+import curvedbg from "../../assets/images/curvedbg.svg";
+import spirit from "../../assets/images/spirit.svg";
+import worldImage from "../../assets/images/worldImage.svg";
+import playCircle from "../../assets/images/playCircle.svg";
+import arrowLeft from "../../assets/images/arrowLeft.svg";
+import arrowRight from "../../assets/images/arrowRight.svg";
+import { foundations } from "../../utils/data";
 
 const sectionFour = () => {
   return (

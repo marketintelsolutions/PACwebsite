@@ -1,0 +1,23 @@
+.about-section-two {
+  padding: 73px;
+
+  & .text-center {
+    width: 80%;
+    max-width: 1014px;
+    margin: 0 auto;
+
+    & p {
+      text-align: justify;
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 30px;
+      display: flex;
+      align-items: center;
+      text-align: justify;
+
+      color: #474747;
+    }
+  }
+}

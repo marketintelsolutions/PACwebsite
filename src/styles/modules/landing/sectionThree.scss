@@ -55,6 +55,16 @@
         &:hover {
           //   color: white;
           background: #062644;
+
+          & p {
+            transition: var(--transition-fast);
+            transform: scale(1.11);
+          }
+
+          & img {
+            transition: var(--transition-fast);
+            transform: scale(1.11);
+          }
         }
 
         & p {

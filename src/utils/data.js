@@ -95,7 +95,7 @@ export const footer = [
     items: [
       "financial services",
       "hospitality & entertainment",
-      "real eastate & infrastructure",
+      "real estate & infrastructure",
       "Agro-allied & FMCG",
       "healthcare",
       "technology & payment systems",
