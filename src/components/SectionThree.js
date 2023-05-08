@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { portfolio } from "../utils/data";
 
 const SectionThree = () => {
+  const [active, setActive] = useState(Array(portfolio.length).fill(false));
+
   return (
     <section className="section-three">
       <div className="heading">
@@ -9,10 +11,28 @@ const SectionThree = () => {
       </div>
       <div className="bottom">
         <div className="items">
-          {portfolio.map((item) => {
-            const { img, text } = item;
+          {portfolio.map((item, index) => {
+            const { img, text, color } = item;
+
             return (
-              <div className="item">
+              <div
+                className="item"
+                onMouseOver={() => {
+                  const newArray = Array(portfolio.length).fill(false);
+                  const newActive = [...newArray];
+                  newActive[index] = true;
+                  setActive(newActive);
+                }}
+                onMouseLeave={() => {
+                  setActive(Array(portfolio.length).fill(false));
+                }}
+                style={
+                  active[index]
+                    ? { background: `${color}`, color: "white" }
+                    : {}
+                }
+                key={index}
+              >
                 <span>
                   <img src={img} alt={text} />
                 </span>
@@ -20,6 +40,12 @@ const SectionThree = () => {
               </div>
             );
           })}
+          {/* <div className="item">
+                <span>
+                  <img src={img} alt={text} />
+                </span>
+                <p>{text}</p>
+              </div> */}
         </div>
       </div>
     </section>

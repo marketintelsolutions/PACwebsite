@@ -18,16 +18,17 @@ export const portfolio = [
   {
     img: celebration,
     text: "hospitality & entertainment",
+    color: "#FAB400",
   },
   {
     img: estate,
     text: "real estate & infrastructure",
-    color: "#FAB400",
+    color: "#4E2E8F",
   },
   {
     img: plant,
     text: "Agro-allied & FMCG",
-    color: "#4E2E8F",
+    color: "#9ACB34",
   },
   {
     img: blood,
