@@ -1,11 +1,7 @@
 .about-section-four {
-  border: 2px solid red;
-
   padding-top: 47px;
 
   & .section-center {
-    border: 2px solid blue;
-
     & h1 {
       font-family: "Open Sans";
       font-style: normal;
@@ -19,7 +15,6 @@
       color: #062644;
     }
     & .bottom {
-      border: 2px solid green;
       width: 90%;
       max-width: 1304px;
       margin: 70px auto;
@@ -49,8 +44,65 @@
         align-items: center;
 
         & .item {
-          height: 500px;
-          border: 2px solid purple;
+          min-height: 556px;
+
+          background: #ffffff;
+          box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1);
+
+          & .text {
+            padding: 29px 25px;
+
+            & h2 {
+              font-family: "Open Sans";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 27px;
+              line-height: 36px;
+              /* or 133% */
+
+              display: flex;
+              align-items: center;
+
+              color: #3c4b6c;
+            }
+
+            & p {
+              margin-top: 17px;
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 11px;
+              line-height: 18px;
+              /* or 164% */
+
+              display: flex;
+              align-items: center;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+
+              color: #858d9d;
+            }
+
+            & button {
+              margin-top: 41px;
+              // margin-bottom: 45px;
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 24px;
+              /* identical to box height, or 150% */
+
+              display: flex;
+              align-items: center;
+
+              color: #0089ff;
+              border: none;
+              background: transparent;
+              text-transform: capitalize;
+              cursor: pointer;
+            }
+          }
         }
       }
     }
