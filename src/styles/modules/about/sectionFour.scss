@@ -49,6 +49,12 @@
           background: #ffffff;
           box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.1);
 
+          & img {
+            width: 380px;
+            height: 380px;
+            object-fit: cover;
+          }
+
           & .text {
             padding: 29px 25px;
 
