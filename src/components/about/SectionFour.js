@@ -49,7 +49,7 @@ const SectionFour = () => {
             <div className="item">
               <img src={placeholder} alt="placeholder" />
               <div className="text">
-                <h2>Eric Okoruwa</h2>
+                <h2>Tessa Egbe Ikimi</h2>
                 <p>Director</p>
                 <button>read bio</button>
               </div>
@@ -57,7 +57,7 @@ const SectionFour = () => {
             <div className="item">
               <img src={placeholder} alt="placeholder" />
               <div className="text">
-                <h2>Eric Okoruwa</h2>
+                <h2>Garba Ahmed</h2>
                 <p>Director</p>
                 <button>read bio</button>
               </div>
