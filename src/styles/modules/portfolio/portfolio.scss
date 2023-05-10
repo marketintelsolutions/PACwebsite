@@ -1,0 +1,70 @@
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  margin-top: 252px;
+  margin-bottom: 156px;
+
+  & .item {
+    display: flex;
+    max-width: 1424px;
+    margin: 0 auto;
+    gap: 48px;
+    align-items: center;
+
+    & h1 {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 107%;
+      /* identical to box height, or 43px */
+
+      display: flex;
+      align-items: center;
+
+      color: #38b6ff;
+    }
+
+    & .description {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      //   justify-content: space-around;
+      height: 100%;
+
+      & p {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        text-align: justify;
+
+        color: #474747;
+      }
+    }
+
+    & button {
+      margin-top: 15px;
+      background: transparent;
+      border: none;
+
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      /* identical to box height, or 150% */
+
+      display: flex;
+      align-items: center;
+
+      color: #0089ff;
+      cursor: pointer;
+    }
+  }
+}

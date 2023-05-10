@@ -60,12 +60,12 @@ const Navbar = () => {
             <Link to="/about" className="item">
               <p>About</p>
             </Link>
-            <div className="item">
+            <Link to="/portfolio" className="item">
               <p>Our Portfolio</p>
               <span>
                 <img src={arrowDownBlue} alt="arrowDownBlue" />
               </span>
-            </div>
+            </Link>
             <div className="item">
               <p>Resources</p>
               <span>
