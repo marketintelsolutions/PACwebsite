@@ -1,5 +1,7 @@
 .section-two {
   padding: 108px 40px;
+  overflow: hidden;
+
   .section-center {
     display: flex;
     align-items: center;
@@ -8,10 +10,25 @@
     margin: 0 auto;
     gap: 214px;
 
+    @media (max-width: $breakpoint-tablet) {
+      gap: 7px;
+    }
+
+    @media (max-width: $breakpoint-large) {
+      // top: 23px;
+      // max-width: 06px;
+      flex-direction: column;
+    }
+
     & img {
       width: 500px;
       height: 500px;
       object-fit: cover;
+
+      @media (max-width: $breakpoint-tablet) {
+        height: 343px;
+        width: 343px;
+      }
     }
 
     & .text {
@@ -28,6 +45,12 @@
         line-height: 107%;
         text-transform: uppercase;
         color: #062644;
+
+        @media (max-width: $breakpoint-tablet) {
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 107%;
+        }
       }
 
       & p {
@@ -38,6 +61,11 @@
         line-height: 30px;
 
         color: #474747;
+
+        @media (max-width: $breakpoint-tablet) {
+          font-size: 20px;
+          line-height: 27px;
+        }
       }
     }
   }

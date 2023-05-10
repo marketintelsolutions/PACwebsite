@@ -3,18 +3,17 @@
   width: 100%;
   z-index: 3;
   display: flex;
-  //   justify-self: center;
-  //   align-self: center;
-
   height: 63px;
   top: 10px;
 
-  & .center {
-    // background: rgba(255, 255, 255, 0.9);
-    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    // border-radius: 194px;
-    color: white;
+  @media (max-width: $breakpoint-xlarge) {
+  }
+  @media (max-width: $breakpoint-large) {
+    display: none;
+  }
 
+  & .center {
+    color: white;
     background: #062644;
     border-radius: 194px;
 
@@ -55,6 +54,16 @@
   top: 86px;
   z-index: 3;
   width: 100%;
+  transition: var(--transition);
+  margin: 0 auto;
+
+  @media (max-width: $breakpoint-large) {
+    top: 23px;
+    // max-width: 06px;
+  }
+  // @media (max-width: $breakpoint-tablet) {
+  //   top: 23px;
+  // }
 
   & .nav-center {
     background: rgba(255, 255, 255, 0.9);
@@ -67,10 +76,33 @@
     margin: 0 auto;
     padding: 24px 114px;
     align-items: center;
+    max-width: 1664px;
+
+    @media (max-width: $breakpoint-tablet) {
+      padding: 39px;
+      max-width: 406px;
+    }
+
+    & .logo {
+      & img {
+        @media (max-width: $breakpoint-large) {
+          height: 54px;
+          width: 154px;
+        }
+        @media (max-width: $breakpoint-tablet) {
+          height: 34px;
+          width: 124px;
+        }
+      }
+    }
 
     & .nav-items {
       display: flex;
       gap: 40px;
+
+      @media (max-width: $breakpoint-large) {
+        display: none;
+      }
 
       & .item {
         display: flex;
@@ -78,6 +110,15 @@
         text-decoration: none;
         cursor: pointer;
         color: var(--primary-blue);
+      }
+    }
+
+    & .menu {
+      display: none;
+      cursor: pointer;
+
+      @media (max-width: $breakpoint-large) {
+        display: flex;
       }
     }
   }

@@ -6,6 +6,7 @@ import mail from "../assets/logos/mail.svg";
 import phone from "../assets/logos/phone.svg";
 import calender from "../assets/logos/calender.svg";
 import clock from "../assets/logos/clock.svg";
+import menuLine from "../assets/logos/menuLine.svg";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -80,6 +81,9 @@ const Navbar = () => {
             <div className="item">
               <p>Contact</p>
             </div>
+          </div>
+          <div className="menu">
+            <img src={menuLine} alt="menuLine" />
           </div>
         </div>
       </nav>
