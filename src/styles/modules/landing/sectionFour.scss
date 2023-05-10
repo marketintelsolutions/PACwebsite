@@ -7,12 +7,15 @@
   position: relative;
   height: fit-content;
   padding-bottom: 179px;
-  overflow-y: hidden;
+  overflow: hidden;
 
   & .bg-image {
     position: absolute;
-    top: -300px;
-    right: 0;
+    top: -170px;
+    right: -45%;
+    height: 100%;
+    // border: 2px solid red;
+    width: 100%;
     // width:
   }
 
@@ -236,6 +239,7 @@
 
       & .item {
         background-repeat: no-repeat;
+        background-size: contain;
         min-height: 403px;
         width: 381px;
         max-width: 451.37px;
@@ -246,7 +250,7 @@
 
         @media (max-width: $breakpoint-tablet) {
           width: 337.14px;
-          height: 346px;
+          min-height: 346px;
         }
 
         & .text {
@@ -308,21 +312,44 @@
       //   border: 2px solid red;
       gap: 50px;
       justify-content: center;
+      align-items: center;
+
+      @media (max-width: $breakpoint-tablet) {
+        // font-size: 11.072px;
+        gap: 20px;
+      }
 
       & .arrow {
         cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        & img {
+          @media (max-width: $breakpoint-tablet) {
+            width: 8.44px;
+            height: 17.28px;
+          }
+        }
       }
 
       & .pages {
         display: flex;
         gap: 10px;
         align-items: center;
+
+        @media (max-width: $breakpoint-tablet) {
+          // width: 23.91px;
+        }
         & .page {
           width: 42.5px;
           height: 3px;
           background: #474747;
 
           //   border: 3px solid #474747;
+
+          @media (max-width: $breakpoint-tablet) {
+            width: 23.91px;
+          }
         }
 
         & .active {

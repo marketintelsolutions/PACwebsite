@@ -12,10 +12,18 @@ const Footer = () => {
   return (
     <footer style={{ backgroundImage: `url(${footerBg})` }}>
       <div className="footer-center">
+        <div className="item small">
+          <div className="bottom">
+            <p>Home</p>
+            <p>About</p>
+            <p>Resources</p>
+            <p>Portfolio</p>
+          </div>
+        </div>
         {footer.map((item) => {
           const { heading, items } = item;
           return (
-            <div className="item">
+            <div className="item large">
               <h2>{heading}</h2>
               <div className="bottom">
                 {items.map((i) => (
@@ -25,7 +33,7 @@ const Footer = () => {
             </div>
           );
         })}
-        <div className="item">
+        <div className="item ">
           <h2>connect with us</h2>
           <div className="bottom">
             <p>subscribe to our newsletter</p>

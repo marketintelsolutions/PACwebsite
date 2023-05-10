@@ -1,11 +1,14 @@
 import React from "react";
 import mobile from "../../assets/images/mobile.png";
+import MobileAnimation from "../MobileAnimation";
 
 const SectionTwo = () => {
   return (
     <section className="section-two">
       <div className="section-center">
-        <img src={mobile} alt="mobile" />
+        {/* <img src={mobile} alt="mobile" /> */}
+
+        <MobileAnimation />
         <div className="text">
           <h2>Our Investment Philosophy</h2>
           <p>

@@ -78,6 +78,9 @@
             align-items: center;
             letter-spacing: -0.095em;
           }
+          @media (max-width: $breakpoint-mobile) {
+            font-size: 30px;
+          }
         }
 
         & h3 {
@@ -101,6 +104,9 @@
             display: flex;
             align-items: center;
             letter-spacing: -0.095em;
+          }
+          @media (max-width: $breakpoint-mobile) {
+            font-size: 20px;
           }
         }
       }

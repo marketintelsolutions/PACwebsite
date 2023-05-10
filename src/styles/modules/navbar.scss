@@ -56,14 +56,16 @@
   width: 100%;
   transition: var(--transition);
   margin: 0 auto;
+  // border: 2px solid red;
 
   @media (max-width: $breakpoint-large) {
     top: 23px;
     // max-width: 06px;
   }
-  // @media (max-width: $breakpoint-tablet) {
-  //   top: 23px;
-  // }
+  @media (max-width: $breakpoint-tablet) {
+    // top: 23px;
+    width: 100vw;
+  }
 
   & .nav-center {
     background: rgba(255, 255, 255, 0.9);

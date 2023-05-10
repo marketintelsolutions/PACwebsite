@@ -17,6 +17,14 @@ footer {
     // align-items: center;
     max-width: 1440px;
 
+    @media (max-width: $breakpoint-tablet) {
+      // display: none;
+      // display: flex;
+      // flex-wrap: wrap;
+      grid-template-columns: 1fr;
+      gap: 70px;
+    }
+
     & .item {
       // margin: 0 auto;
       display: flex;
@@ -114,6 +122,20 @@ footer {
           justify-content: center;
           cursor: pointer;
         }
+      }
+    }
+
+    & .small {
+      display: none;
+
+      @media (max-width: $breakpoint-tablet) {
+        display: flex;
+      }
+    }
+
+    & .large {
+      @media (max-width: $breakpoint-tablet) {
+        display: none;
       }
     }
   }

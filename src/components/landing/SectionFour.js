@@ -6,6 +6,7 @@ import playCircle from "../../assets/images/playCircle.svg";
 import arrowLeft from "../../assets/images/arrowLeft.svg";
 import arrowRight from "../../assets/images/arrowRight.svg";
 import { foundations } from "../../utils/data";
+import LiquidBackground from "../LiquidBackground";
 
 const sectionFour = () => {
   return (
@@ -14,7 +15,8 @@ const sectionFour = () => {
       //   style={{ backgroundImage: `url(${curvedbg})` }}
     >
       <span className="bg-image">
-        <img src={curvedbg} alt="curvedbg" />
+        {/* <img src={curvedbg} alt="curvedbg" /> */}
+        <LiquidBackground />
       </span>
       <div className="spirit">
         <img src={spirit} alt="spirit" />
