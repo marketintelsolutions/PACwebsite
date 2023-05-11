@@ -1,16 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.5146e0cb.css",
-    "main.js": "/static/js/main.e6def14f.js",
+    "main.css": "/static/css/main.95320217.css",
+    "main.js": "/static/js/main.de18d5ec.js",
     "static/media/worldImage.svg": "/static/media/worldImage.f217e0be4b88922cad1eb63248e3beb5.svg",
     "static/media/team-2.jpg": "/static/media/team-2.f166f8dd8d6cb4e3a97f.jpg",
     "static/media/worldMain.png": "/static/media/worldMain.bc3646349316ec8e8b58.png",
     "static/media/phoneLandingImage.png": "/static/media/phoneLandingImage.73ce9ba77f8d606ce0ee.png",
     "static/media/aboutBg.png": "/static/media/aboutBg.a650566d312081957ce5.png",
+    "static/media/hospitality.png": "/static/media/hospitality.32ffd9a2ae1932417bb7.png",
     "static/media/goalsBg.png": "/static/media/goalsBg.34610bb5d46f36008909.png",
+    "static/media/agroAllied.png": "/static/media/agroAllied.6f7961e404ffe54f6b44.png",
+    "static/media/estate.png": "/static/media/estate.a0e930912d5963a1ee80.png",
     "static/media/team-3.jpg": "/static/media/team-3.f84a7b091479457a04be.jpg",
+    "static/media/renewable.png": "/static/media/renewable.3542dee0be533d3080f0.png",
+    "static/media/healthcare.png": "/static/media/healthcare.de3ddcbdcd868cade432.png",
     "static/media/team-1.jpg": "/static/media/team-1.2ffeb3f3a4dcf6c37ba3.jpg",
+    "static/media/financial.png": "/static/media/financial.d07d51f1a9d24f6453a7.png",
     "static/media/lagos.jpg": "/static/media/lagos.cc21ba74b907ea45efbb.jpg",
+    "static/media/technology.png": "/static/media/technology.b4bdc4c98ad14b2c6624.png",
     "static/media/conventions.jpg": "/static/media/conventions.a289421c2a9b2ad3f55e.jpg",
     "static/media/businessMan.png": "/static/media/businessMan.6964d73fb4bd10006c2d.png",
     "static/media/footerBg.png": "/static/media/footerBg.713bc37838d837d16798.png",
@@ -50,15 +57,16 @@
     "static/media/arrowDownFill.svg": "/static/media/arrowDownFill.6f5ca8823d462c590e85ec3cea76f6ac.svg",
     "index.html": "/index.html",
     "static/media/airplane.svg": "/static/media/airplane.4bacfd374026e740486dc9078c1a9898.svg",
+    "static/media/menuLine.svg": "/static/media/menuLine.d39ac3c2ee48d9be9ac32c4094a65c2a.svg",
     "static/media/calender.svg": "/static/media/calender.5931d57d26a886168fef2018169e0f43.svg",
     "static/media/facebook.svg": "/static/media/facebook.58ce81175c907a3a86b1603b3d013d55.svg",
     "static/media/arrowLeft.svg": "/static/media/arrowLeft.8285f4806e7bf425e0b4fee5d17f97ba.svg",
     "static/media/arrowRight.svg": "/static/media/arrowRight.1178637f883bada5c1e50c64a31c12b8.svg",
-    "main.5146e0cb.css.map": "/static/css/main.5146e0cb.css.map",
-    "main.e6def14f.js.map": "/static/js/main.e6def14f.js.map"
+    "main.95320217.css.map": "/static/css/main.95320217.css.map",
+    "main.de18d5ec.js.map": "/static/js/main.de18d5ec.js.map"
   },
   "entrypoints": [
-    "static/css/main.5146e0cb.css",
-    "static/js/main.e6def14f.js"
+    "static/css/main.95320217.css",
+    "static/js/main.de18d5ec.js"
   ]
 }
