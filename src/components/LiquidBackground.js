@@ -17,7 +17,7 @@ class LiquidBackground extends React.Component {
       <div>
         <Lottie
           options={defaultOptions}
-          //   height={`${"100%"}`}
+          height={`${"250vh"}`}
           //   width={`${"100%"}`}
           //   width={400}
           //   color={"red"}

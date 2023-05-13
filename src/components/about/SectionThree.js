@@ -10,6 +10,9 @@ const SectionThree = () => {
       className="about-section-three"
       style={{ backgroundImage: `url(${goalsBg})` }}
     >
+      {/* <div className="bg-image">
+        <img src={goalsBg} alt="goalsBg" />
+      </div> */}
       <div className="goals-center">
         <div className="goals">
           <div className="goal-container">

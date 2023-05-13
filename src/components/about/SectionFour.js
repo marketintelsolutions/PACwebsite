@@ -1,9 +1,8 @@
 import React from "react";
 import businessMan from "../../assets/images/businessMan.png";
-import team1 from "../../assets/images/team-1.jpg";
-import team2 from "../../assets/images/team-2.jpg";
-import team3 from "../../assets/images/team-3.jpg";
-import placeholder from "../../assets/images/placeholder.png";
+
+import { Link } from "react-router-dom";
+import { directors } from "../../utils/teamData";
 
 const SectionFour = () => {
   return (
@@ -14,12 +13,26 @@ const SectionFour = () => {
         <div className="bottom">
           <p>board of directors</p>
           <div className="items">
-            <div className="item">
+            {directors.map((item) => {
+              const { name, position, bioLink, imageSrc } = item;
+
+              return (
+                <div className="item">
+                  <img src={imageSrc} alt="businessMan" />
+                  <div className="text">
+                    <h2>{name}</h2>
+                    <p>{position}</p>
+                    <Link to={`${bioLink}`}>read bio</Link>
+                  </div>
+                </div>
+              );
+            })}
+            {/* <div className="item">
               <img src={placeholder} alt="businessMan" />
               <div className="text">
                 <h2>Dolapo Atekoja</h2>
                 <p>Chairman</p>
-                <button>read bio</button>
+                <Link to="/about/dolapo">read bio</Link>
               </div>
             </div>
             <div className="item">
@@ -61,7 +74,7 @@ const SectionFour = () => {
                 <p>Director</p>
                 <button>read bio</button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

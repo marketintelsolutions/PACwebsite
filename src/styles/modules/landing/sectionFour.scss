@@ -96,12 +96,9 @@
 
     & .image {
       position: relative;
-      //   width: 620px;
       height: 324px;
-      //   border: 2px solid red;
 
       @media (max-width: $breakpoint-tablet) {
-        // flex-direction: column;
         max-width: 383px;
       }
 
@@ -112,7 +109,6 @@
         position: absolute;
         background: var(--primary-blue);
         border-radius: 40px;
-        // z-index: 2;
         top: -52px;
         right: 0;
 
@@ -212,7 +208,6 @@
 
   & .bottom {
     margin-top: 253px;
-    // border: 2px solid green;
 
     & h2 {
       margin-bottom: 50px;
@@ -231,7 +226,6 @@
       position: relative;
       z-index: 2;
       display: flex;
-      //   grid-template-columns: 1fr 1fr 1fr;
       justify-content: center;
       align-items: center;
       gap: 30px;
@@ -246,7 +240,6 @@
         max-height: 463.23px;
         display: flex;
         align-items: flex-end;
-        // border: 2px solid blue;
 
         @media (max-width: $breakpoint-tablet) {
           width: 337.14px;
@@ -340,12 +333,11 @@
         @media (max-width: $breakpoint-tablet) {
           // width: 23.91px;
         }
+
         & .page {
           width: 42.5px;
           height: 3px;
           background: #474747;
-
-          //   border: 3px solid #474747;
 
           @media (max-width: $breakpoint-tablet) {
             width: 23.91px;

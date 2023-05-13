@@ -60,12 +60,25 @@ const Navbar = () => {
             <Link to="/about" className="item">
               <p>About</p>
             </Link>
-            <Link to="/portfolio" className="item">
-              <p>Our Portfolio</p>
+            <div className="item">
+              <Link to="/portfolio">Our Portfolio</Link>
               <span>
                 <img src={arrowDownBlue} alt="arrowDownBlue" />
               </span>
-            </Link>
+              <div className="dropdown">
+                <Link to="/portfolio/financial-services">
+                  financial services
+                </Link>
+                <p>hospitality & entertainment</p>
+                <Link to="/portfolio/real-estate">
+                  real estate & infrastructure
+                </Link>
+                <p>Agro-allied & FMCG</p>
+                <p>renewable energy</p>
+                <p>technology and payment system</p>
+                <p>healthcare</p>
+              </div>
+            </div>
             <div className="item">
               <p>Resources</p>
               <span>

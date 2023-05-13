@@ -3,6 +3,7 @@ import SectionFour from "../components/about/SectionFour";
 import SectionOne from "../components/about/SectionOne";
 import SectionThree from "../components/about/SectionThree";
 import SectionTwo from "../components/about/SectionTwo";
+import aboutBg from "../assets/images/aboutBg.png";
 
 const About = () => {
   useEffect(() => {
@@ -10,7 +11,7 @@ const About = () => {
   }, []);
   return (
     <section className="about">
-      <SectionOne />
+      <SectionOne color="#38B6FF" text="About" img={aboutBg} />
       <SectionTwo />
       <SectionThree />
       <SectionFour />

@@ -68,3 +68,34 @@
     }
   }
 }
+
+.financial,
+.real-estate {
+  & .heading-text {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+
+    color: #474747;
+    max-width: 1068px;
+    margin: 80px auto 0px;
+  }
+
+  & .bottom {
+    & h1 {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 27px;
+      line-height: 107%;
+      /* identical to box height, or 29px */
+
+      color: #062644;
+    }
+  }
+}

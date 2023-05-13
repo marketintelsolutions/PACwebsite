@@ -1,13 +1,26 @@
 .about-section-three {
   height: 594px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: var(--transition);
+
+  &:hover {
+    background-size: 120% 110%;
+    transition: var(--transition);
+  }
 
   & .goals-center {
     background: rgba(217, 217, 217, 0.83);
-    // background-size: ;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:hover {
+      // transform: scale(1.1);
+    }
+
+    // & .bg-image
 
     & .goals {
       display: flex;
