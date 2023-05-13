@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import paclogo from "../assets/logos/paclogo.svg";
 import arrowDownFill from "../assets/logos/arrowDownFill.svg";
 import arrowDownBlue from "../assets/logos/arrowDownBlue.svg";
@@ -10,6 +10,7 @@ import menuLine from "../assets/logos/menuLine.svg";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [isDropdown, setIsDropdown] = useState(false);
   return (
     <>
       <div className="pre-nav">
@@ -62,24 +63,26 @@ const Navbar = () => {
             </Link>
             <div className="item">
               <Link to="/portfolio">Our Portfolio</Link>
-              <span>
+              <span onClick={() => setIsDropdown(!isDropdown)}>
                 <img src={arrowDownBlue} alt="arrowDownBlue" />
               </span>
-              <div className="dropdown">
-                <Link to="/portfolio/financial-services">
-                  financial services
-                </Link>
-                <p>hospitality & entertainment</p>
-                <Link to="/portfolio/real-estate">
-                  real estate & infrastructure
-                </Link>
-                <Link to="/portfolio/agro-allied">Agro-allied & FMCG</Link>
-                <Link to="/portfolio/renewable">renewable energy</Link>
-                <Link to="/portfolio/technology">
-                  technology and payment system
-                </Link>
-                <Link to="/portfolio/healthcare">healthcare</Link>
-              </div>
+              {isDropdown && (
+                <div className="dropdown">
+                  <Link to="/portfolio/financial-services">
+                    financial services
+                  </Link>
+                  <Link>hospitality & entertainment</Link>
+                  <Link to="/portfolio/real-estate">
+                    real estate & infrastructure
+                  </Link>
+                  <Link to="/portfolio/agro-allied">Agro-allied & FMCG</Link>
+                  <Link to="/portfolio/renewable">renewable energy</Link>
+                  <Link to="/portfolio/technology">
+                    technology and payment system
+                  </Link>
+                  <Link to="/portfolio/healthcare">healthcare</Link>
+                </div>
+              )}
             </div>
             <div className="item">
               <p>Resources</p>
