@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import SharedLayout from "./components/SharedLayout";
 import About from "./pages/About";
+import AgroAllied from "./pages/AgroAllied";
 import BioPage from "./pages/BioPage";
 import FinancialServices from "./pages/FinancialServices";
 import Landing from "./pages/Landing";
@@ -22,6 +23,7 @@ const App = () => {
             element={<FinancialServices />}
           />
           <Route path="/portfolio/real-estate" element={<RealEstate />} />
+          <Route path="/portfolio/agro-allied" element={<AgroAllied />} />
         </Routes>
       </SharedLayout>
     </>

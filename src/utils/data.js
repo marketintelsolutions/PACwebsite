@@ -227,6 +227,7 @@ export const agroAllied = [
       "PAC Holdings is actively participating in Africa’s agro-allied and FMCG sector through its special project vehicle known as Kaxal Africa Limited – a member of the PanAfrican Capital group with active operating entities within the industry. Kaxal Africa is technologically driven to serve the African market by providing innovative and diversified services and fostering a culture of personal and professional integrity characterized by trust, respect, and a spirit of partnership among employees, clients, and investors. The goal of the brand is achieved through its two subsidiaries namely Webzen Agro Allied Services and Hawaree Africa.",
     ],
     textColor: "#046604",
+    // textColor: "#000000",
   },
   {
     img: webzen,

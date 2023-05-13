@@ -73,7 +73,7 @@ const Navbar = () => {
                 <Link to="/portfolio/real-estate">
                   real estate & infrastructure
                 </Link>
-                <p>Agro-allied & FMCG</p>
+                <Link to="/portfolio/agro-allied">Agro-allied & FMCG</Link>
                 <p>renewable energy</p>
                 <p>technology and payment system</p>
                 <p>healthcare</p>
