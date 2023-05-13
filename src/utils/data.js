@@ -83,15 +83,15 @@ export const portfolio = [
 
 export const foundations = [
   {
-    text: "PAC Capital Commits to a 3-year Sponsorship Agreement with CANEX presents Africa @Portugal Fashion Week",
+    text: "PAC Capital Commits to a 3-year Sponsorship Agreement with CANEX presents Africa @Portugal Fashion Week.",
     image: portugal,
   },
   {
-    text: "Pac Capital Limited Sponsors Afreximbank 2021 Intra-African Trade Fair (Iatf) Event In Durban, South Africa",
+    text: "Pac Capital Limited Sponsors Afreximbank 2021 Intra-African Trade Fair (Iatf) Event In Durban, South Africa.",
     image: conventions,
   },
   {
-    text: "PAC Foundation Joined other Stakeholders to celebrate Lagos Tree Planting Day",
+    text: "PAC Foundation Joined other Stakeholders to celebrate Lagos Tree Planting Day.",
     image: lagos,
   },
 ];
