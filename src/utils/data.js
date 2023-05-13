@@ -36,6 +36,10 @@ import kaxal from "../assets/images/kaxal.png";
 import webzen from "../assets/images/webzen.png";
 import hawaree from "../assets/images/hawaree.png";
 
+// renewable
+import gas from "../assets/images/gas.png";
+import solar from "../assets/images/solar.png";
+
 export const portfolio = [
   {
     img: finance,
@@ -244,5 +248,37 @@ export const agroAllied = [
       "Hawaree Africa is our e-commerce and consumer goods distribution arm. We work with several international and domestic companies across a variety of consumer categories including Food & Snacks, Drinks, Beauty & Personal Care, Sport & Fitness, Agro products, Stationaries and Office Supplies, Games, Electronics & IT, Baby Products & Toys, Services, etc. With the aim to be the most efficient e-commerce platform and distribution company across Africa, our goal is to make brands available and visible at key points of purchase via these channels at competitive prices with top notch prompt deliveries.",
     ],
     textColor: "#F1592A",
+  },
+];
+
+export const renewable = [
+  {
+    img: gas,
+    heading: "Gas Services",
+    text: [
+      "Our team provides corporate, retail, and bulk services and also provide the final link in the supply chain to all kinds of customers ranging from residential, business, and industrial gas customers. Also, our network of qualified personnel within the country is saddled with the professional responsibility of distributing LPG to our clients.",
+
+      "· Retail Gas Services",
+      " · Bulk LPG Supply",
+      "· Corporate LPG Services",
+      " · Gas Trading",
+      " · LPG Cylinder certification",
+      "· Gas Distribution",
+    ],
+  },
+  {
+    img: solar,
+    heading: "",
+    text: [
+      "Our Solar technologies convert sunlight into electrical energy either through photovoltaic (PV) panels or through mirrors that concentrate solar radiation. To better improve the reach of power supply to our clients, we provide efficient, low-cost, clean energy to homes and businesses by installing mini grids.",
+
+      "· Solar Power Generation",
+      "· Solar Battery Sales",
+      "· Corporate LPG Services",
+      "· Full Solar Installation",
+      "· Solar Equipment Servicing",
+      "· Solar Street Lighting",
+      "· Solar Mini Grid Installation",
+    ],
   },
 ];
