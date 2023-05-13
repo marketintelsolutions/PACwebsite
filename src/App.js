@@ -5,6 +5,7 @@ import About from "./pages/About";
 import AgroAllied from "./pages/AgroAllied";
 import BioPage from "./pages/BioPage";
 import FinancialServices from "./pages/FinancialServices";
+import Healthcare from "./pages/Healthcare";
 import Landing from "./pages/Landing";
 import Portfolio from "./pages/Portfolio";
 import RealEstate from "./pages/RealEstate";
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/portfolio/agro-allied" element={<AgroAllied />} />
           <Route path="/portfolio/renewable" element={<Renewable />} />
           <Route path="/portfolio/technology" element={<Technology />} />
+          <Route path="/portfolio/healthcare" element={<Healthcare />} />
         </Routes>
       </SharedLayout>
     </>

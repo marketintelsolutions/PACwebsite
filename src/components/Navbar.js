@@ -78,7 +78,7 @@ const Navbar = () => {
                 <Link to="/portfolio/technology">
                   technology and payment system
                 </Link>
-                <p>healthcare</p>
+                <Link to="/portfolio/healthcare">healthcare</Link>
               </div>
             </div>
             <div className="item">

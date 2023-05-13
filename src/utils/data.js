@@ -48,6 +48,11 @@ import smart from "../assets/images/smart.png";
 import technologyDistribution from "../assets/images/technologyDistribution.png";
 import mediaEntertainment from "../assets/images/mediaEntertainment.png";
 
+// healthcare
+import afrilife from "../assets/images/afrilife.png";
+import sage from "../assets/images/sage.png";
+import lifeLine from "../assets/images/lifeLine.png";
+
 export const portfolio = [
   {
     img: finance,
@@ -339,6 +344,38 @@ export const technology = [
     heading: "Media & Entertainment",
     text: [
       "Ziltch is a key player in Media infrastructure and creative Content Development to promote Africa and Global Culture .",
+    ],
+  },
+];
+
+export const healthcare = [
+  {
+    img: afrilife,
+    heading: "Afrilife",
+    text: [
+      "We invest across critical healthcare value chains by leveraging innovations and strategic partnerships in Africa.",
+
+      "Afrilife will invest in early stage but predominantly in mid-stage private entities and later-stage public entities (through PPPs) which are attractively valued and have a convincing business model, including their product pipeline, technology, and management.",
+    ],
+  },
+  {
+    img: sage,
+    heading: "Sage Diagnostics Services LTD",
+    text: [
+      "Sage Diagnostics center is a full-fledged diagnostic center inclusive of a molecular lab center to service the growing demand for diagnostics both for occupational health safety and for medical diagnostics requirements to aid treatment.",
+
+      "· Comprehensive wellness packages: Occupational Health screenings (Annual Health Checks, Fit To Fly tests, Medical Fitness Tests etc)",
+      " · Comprehensive laboratory, Basic Imaging, Other complimentary tests",
+      " · Specialized PCR Tests",
+    ],
+  },
+  {
+    img: lifeLine,
+    heading: "LifeLine Pharma",
+    text: [
+      "LIFELINE Pharma was started in the year 2000 by Mr. Prasad Nakhare and Mr. Kiran Khobare are the founders of the organization, and under their leadership, we have created STERIWELL® and STERINCI®.",
+
+      " We are an ISO 9001: 2015 certified firm, would like to introduce STERIWELL® 20 and 40-liter capacity machines that can treat 3 kg to 5.5 kg of waste per 45 minutes. STERIWELL® system is CE certified from a designated European notified body, meeting the standards and compliance to EN ISO 12100: 2010 for safety of machinery design and IEC (International Electro technical Communication) EN 602041: 2006+ A1: 2009. STERIWELL® is also certified with ISO14001: 2015 confirming to the International Standards for effective Environmental Management System (EMS). STERIWELL® is registered under GeM (Government e-Market Place) portal.",
     ],
   },
 ];
