@@ -75,7 +75,9 @@ const Navbar = () => {
                 </Link>
                 <Link to="/portfolio/agro-allied">Agro-allied & FMCG</Link>
                 <Link to="/portfolio/renewable">renewable energy</Link>
-                <p>technology and payment system</p>
+                <Link to="/portfolio/technology">
+                  technology and payment system
+                </Link>
                 <p>healthcare</p>
               </div>
             </div>

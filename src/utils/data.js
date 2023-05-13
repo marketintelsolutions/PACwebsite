@@ -40,6 +40,14 @@ import hawaree from "../assets/images/hawaree.png";
 import gas from "../assets/images/gas.png";
 import solar from "../assets/images/solar.png";
 
+// technology
+import paysharp from "../assets/images/paysharp.png";
+import fintech from "../assets/images/fintech.png";
+import technologyServices from "../assets/images/technologyServices.png";
+import smart from "../assets/images/smart.png";
+import technologyDistribution from "../assets/images/technologyDistribution.png";
+import mediaEntertainment from "../assets/images/mediaEntertainment.png";
+
 export const portfolio = [
   {
     img: finance,
@@ -268,7 +276,7 @@ export const renewable = [
   },
   {
     img: solar,
-    heading: "",
+    heading: "Solar Services",
     text: [
       "Our Solar technologies convert sunlight into electrical energy either through photovoltaic (PV) panels or through mirrors that concentrate solar radiation. To better improve the reach of power supply to our clients, we provide efficient, low-cost, clean energy to homes and businesses by installing mini grids.",
 
@@ -279,6 +287,58 @@ export const renewable = [
       "· Solar Equipment Servicing",
       "· Solar Street Lighting",
       "· Solar Mini Grid Installation",
+    ],
+  },
+];
+
+export const technology = [
+  {
+    img: paysharp,
+    heading: "Do More With Paysharp",
+    text: [
+      "Enjoy the ease of conducting financial transactions such as Airtime Vending, Cash Deposit and Withdrawals Bill Payment and many more services",
+    ],
+  },
+  {
+    img: fintech,
+    heading: "FinTech",
+    text: [
+      "Providing technology and innovation for financial service delivery",
+    ],
+  },
+  {
+    img: technologyServices,
+    heading: "Managed Technology Services",
+    text: [
+      "We are managed service provider (MSP) deliverIng network, application, infrastructure and security through ongoing and regular support. Our team of experts with over 50 years combined experience are eager to help you solve that Technology challenge.",
+    ],
+  },
+  {
+    img: smart,
+    heading: "Smart Creative",
+    text: [
+      "There's no limit to what you can get designed at Ziltch1 Smart Designs. Whether you're looking for a spectacular new logo or some stunning flyers or an amazing animation, our talented designers at Ziltch1 Technologies can make it happen. Click on the button below to see our wide range of design services.",
+
+      "  · Creative Design",
+      " · Web Designs Services",
+      "   · Print Design Services",
+      "· Product & Merchandise Design Services",
+      "· UI/UX Design",
+      "· Animation",
+    ],
+  },
+  {
+    img: technologyDistribution,
+    heading: "Technology Distribution",
+    text: [
+      "Development of User-Friendly Applications, Platforms and Solutions, to meet Customer needs & Expectations.",
+    ],
+  },
+  {
+    img: mediaEntertainment,
+    heading: "Media & Entertainment",
+    text: [
+      "Ziltch is a key player in Media infrastructure and creative Content Development to promote Africa and Global Culture .",
     ],
   },
 ];

@@ -9,6 +9,7 @@ import Landing from "./pages/Landing";
 import Portfolio from "./pages/Portfolio";
 import RealEstate from "./pages/RealEstate";
 import Renewable from "./pages/Renewable";
+import Technology from "./pages/Technology";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/portfolio/real-estate" element={<RealEstate />} />
           <Route path="/portfolio/agro-allied" element={<AgroAllied />} />
           <Route path="/portfolio/renewable" element={<Renewable />} />
+          <Route path="/portfolio/technology" element={<Technology />} />
         </Routes>
       </SharedLayout>
     </>
