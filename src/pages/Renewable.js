@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PortfolioLeft from "../components/portfolio/PortfolioLeft";
 import PortfolioRight from "../components/portfolio/PortfolioRight";
 import { renewable } from "../utils/data";
@@ -6,6 +6,10 @@ import renewableBg from "../assets/images/renewableBg.png";
 import SectionOne from "../components/about/SectionOne";
 
 const Renewable = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   return (
     <div>
       <SectionOne color="#38B6FF" text="Renewable Energy" img={renewableBg} />

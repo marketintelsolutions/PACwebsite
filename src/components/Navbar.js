@@ -68,19 +68,48 @@ const Navbar = () => {
               </span>
               {isDropdown && (
                 <div className="dropdown">
-                  <Link to="/portfolio/financial-services">
+                  <Link
+                    to="/portfolio/financial-services"
+                    onClick={() => setIsDropdown(!isDropdown)}
+                  >
                     financial services
                   </Link>
-                  <Link>hospitality & entertainment</Link>
-                  <Link to="/portfolio/real-estate">
+                  <Link
+                    to="/portfolio/hospitality"
+                    onClick={() => setIsDropdown(!isDropdown)}
+                  >
+                    hospitality & entertainment
+                  </Link>
+                  <Link
+                    to="/portfolio/real-estate"
+                    onClick={() => setIsDropdown(!isDropdown)}
+                  >
                     real estate & infrastructure
                   </Link>
-                  <Link to="/portfolio/agro-allied">Agro-allied & FMCG</Link>
-                  <Link to="/portfolio/renewable">renewable energy</Link>
-                  <Link to="/portfolio/technology">
+                  <Link
+                    to="/portfolio/agro-allied"
+                    onClick={() => setIsDropdown(!isDropdown)}
+                  >
+                    Agro-allied & FMCG
+                  </Link>
+                  <Link
+                    to="/portfolio/renewable"
+                    onClick={() => setIsDropdown(!isDropdown)}
+                  >
+                    renewable energy
+                  </Link>
+                  <Link
+                    to="/portfolio/technology"
+                    onClick={() => setIsDropdown(!isDropdown)}
+                  >
                     technology and payment system
                   </Link>
-                  <Link to="/portfolio/healthcare">healthcare</Link>
+                  <Link
+                    to="/portfolio/healthcare"
+                    onClick={() => setIsDropdown(!isDropdown)}
+                  >
+                    healthcare
+                  </Link>
                 </div>
               )}
             </div>

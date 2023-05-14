@@ -26,6 +26,20 @@
       color: #38b6ff;
     }
 
+    & h2 {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 107%;
+      /* identical to box height, or 26px */
+
+      display: flex;
+      align-items: center;
+
+      // color: #ffffff;
+    }
+
     & .description {
       margin-top: 15px;
       display: flex;
@@ -96,6 +110,48 @@
       /* identical to box height, or 29px */
 
       color: #062644;
+    }
+  }
+}
+
+.hospitality {
+  .top {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    & p {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 30px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      color: #474747;
+      max-width: 1068px;
+      margin: 0 auto;
+    }
+
+    & button {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      /* identical to box height, or 150% */
+
+      display: flex;
+      align-items: center;
+
+      color: #0089ff;
+      background: transparent;
+      width: 99px;
+      border: none;
+      margin: 0 auto;
     }
   }
 }

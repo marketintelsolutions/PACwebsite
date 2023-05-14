@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SectionOne from "../components/about/SectionOne";
 import PortfolioLeft from "../components/portfolio/PortfolioLeft";
 import PortfolioRight from "../components/portfolio/PortfolioRight";
@@ -6,6 +6,9 @@ import financialBg from "../assets/images/financialBg.png";
 import { financialData } from "../utils/data";
 
 const FinancialServices = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className="financial">
       <SectionOne color="#38B6FF" text="Financial Services" img={financialBg} />

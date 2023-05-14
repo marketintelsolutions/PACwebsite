@@ -53,6 +53,14 @@ import afrilife from "../assets/images/afrilife.png";
 import sage from "../assets/images/sage.png";
 import lifeLine from "../assets/images/lifeLine.png";
 
+// hospitality
+import blueAmber from "../assets/images/blueAmber.png";
+import luxor from "../assets/images/luxor.png";
+import residences from "../assets/images/residences.png";
+import amberCrest from "../assets/images/amberCrest.png";
+import eterniti from "../assets/images/eterniti.png";
+import steppingStone from "../assets/images/steppingStone.png";
+
 export const portfolio = [
   {
     img: finance,
@@ -376,6 +384,82 @@ export const healthcare = [
       "LIFELINE Pharma was started in the year 2000 by Mr. Prasad Nakhare and Mr. Kiran Khobare are the founders of the organization, and under their leadership, we have created STERIWELL® and STERINCI®.",
 
       " We are an ISO 9001: 2015 certified firm, would like to introduce STERIWELL® 20 and 40-liter capacity machines that can treat 3 kg to 5.5 kg of waste per 45 minutes. STERIWELL® system is CE certified from a designated European notified body, meeting the standards and compliance to EN ISO 12100: 2010 for safety of machinery design and IEC (International Electro technical Communication) EN 602041: 2006+ A1: 2009. STERIWELL® is also certified with ISO14001: 2015 confirming to the International Standards for effective Environmental Management System (EMS). STERIWELL® is registered under GeM (Government e-Market Place) portal.",
+    ],
+  },
+];
+
+export const hospitality = [
+  {
+    img: blueAmber,
+    heading: "BLUE AMBER - Luxury Hotels",
+    subHeading: "Plush, Contemporary, Grand, Inspiring.",
+    bgColor: "#00AEEF",
+    text: [
+      "From the charm and longing of an olden era to the modern amenities of today’s flawless high-tech efficiency, the BLUE AMBER - Luxury Hotels brand was designed to stand as an enduring testament to a golden age of warm-hearted hospitality, luxury, and elegance.",
+      "We build the hotels, or we refurbish the existing ones with attention to detail, quality, and an exceptional back-of-house. This passion for perfection is set by our leadership through the work and engagement of our Project Managers, designers, project teams, operations teams, and our partners, in order to achieve a truly prestigious and unique property, to convey the necessary qualities that live up to this unique brand proposition.",
+      "Firmly we believe that luxury need not to be extravagant; that the highest standards of luxury can be delivered in a sustainable and responsible way.",
+      "Blue Amber – Luxury Hotels are to set among the Amber Collection – Hotels & Resorts, the company brand that will be recognized by its versatility to accommodate, from families vacations to corporate business under the same roof, the hotels tend to be located in the leading business district of the cities and group destinations around the world. These hotels feature stylish, contemporary design, abundant meeting facilities and extraordinary restaurants.",
+    ],
+  },
+  {
+    img: luxor,
+    heading: "BLUE AMBER - Luxury Hotels",
+    subHeading: "Plush, Contemporary, Grand, Inspiring.",
+    bgColor: "#E61F2C",
+    text: [
+      "From the charm and longing of an olden era to the modern amenities of today’s flawless high-tech efficiency, the BLUE AMBER - Luxury Hotels brand was designed to stand as an enduring testament to a golden age of warm-hearted hospitality, luxury, and elegance.",
+      " We build the hotels, or we refurbish the existing ones with attention to detail, quality, and an exceptional back-of-house. This passion for perfection is set by our leadership through the work and engagement of our Project Managers, designers, project teams, operations teams, and our partners, in order to achieve a truly prestigious and unique property, to convey the necessary qualities that live up to this unique brand proposition.",
+      "Firmly we believe that luxury need not to be extravagant; that the highest standards of luxury can be delivered in a sustainable and responsible way.",
+      "Blue Amber – Luxury Hotels are to set among the Amber Collection – Hotels & Resorts, the company brand that will be recognized by its versatility to accommodate, from families vacations to corporate business under the same roof, the hotels tend to be located in the leading business district of the cities and group destinations around the world. These hotels feature stylish, contemporary design, abundant meeting facilities and extraordinary restaurants.",
+    ],
+  },
+  {
+    img: residences,
+    heading: "RESIDENCES by AMBER",
+    subHeading: "Warm, Cozy, Serene",
+    bgColor: "#FECC09",
+    text: [
+      "Our flagship 3-star brand is the ultimate signature in hospitality for the discerning business or leisure traveler looking for a serene and quiet environment. It offers access to a wide range of attractions and facilities, providing guests with comfort and convenience that ensures productivity by day, renewal by night.",
+      " Our facilities have been designed to offer you thoughtfully designed rooms and convenient round-the- clock food and beverage options that will not only exceed your expectation but keep the warm afterglow.",
+      " When it comes to meetings and celebrations, we offer hybrid, flexible and innovative solutions so that you can find the ideal venue with state-of-the-art equipment to fulfil your unique event vision and goals.",
+      "Enjoy complete international standard services as we give you a wonderful treat with our welcoming protocols - our express check-in using stress free cards alongside a welcoming glass of complimentary juice on arrival.",
+      "Above all, just simply experience our first-class personalized service with our well-trained personnel always available to serve you throughout your stay.",
+      "At Amber Residence, you are always welcome to a world of warmth.",
+    ],
+  },
+  {
+    img: amberCrest,
+    heading: "AMBER CREST",
+    subHeading: "Spirited, Personal, Unexpected. Adventurous",
+    bgColor: "#CDAB6B",
+    text: [
+      "The AMBER CREST hotels are Designed with timeless standards woven with modern details, AMBER CREST properties are where business meets pleasure. Catering from the independent traveller to the Corporate Client, the perfect balance is present everywhere.",
+      "The concept design of AMBER CREST is present in every project as prime physical space, organizational and operational environments to deliver a decisive, efficient, and complete brand experience, was considered at every interaction point in the guest experience. This brand pulls the elements that differentiate it in the market as well as innovations that will enhance and distinguish guest experience.",
+      "Our F&B outlets are designed to provide unrivalled guest experience but as well focused on the flowless of the service areas, the bar’s, lounge's have a lifestyle concept where the Interiors and ambience are thoughtfully planned for informal and relaxed moments.",
+      "MICE facilities are projected with the ultimate state-of-the-art audio-visual systems and complete meeting and banqueting equipment, providing, and guaranteeing each meetings & events in the AMBER CREST Hotel are as pleasant as they are productive, meeting the highest expectations of our clients.",
+    ],
+  },
+  {
+    img: eterniti,
+    heading: "ETERNITI HOTEL",
+    subHeading: "Home-like, Comfortable, Stylish",
+    bgColor: "#ED1C24",
+    text: [
+      "A Brand developed so that our guests now can feel the home touch while they are abroad, ETERNITI Apartments is a new design concept having the essential set of amenities that will be available to today's travelers – mention free WI-FI, complimentary full breakfast, a social area with a contemporaneous decor for evening relaxation, plus the handiness of a fully-equipped kitchen among the other well-known services that are so well established by AMBER COLLECTION – HOTELS & RESORTS",
+      " The ETERNITI guests will enjoy the freshness of food and beverage options at the daily complimentary breakfast, a small convenience corner will offer the guest a variety of snacks, upmarket frozen appetizers and grocery items that can be used to prepare lite meals in the apartment. A welcome set of complimentary groceries will be available at their arrival.",
+      "Guests can stay fit and have fun at our fitness center and recreational areas. Or just give us your list for grocery shopping service. Laundry services and dry-cleaning services are also available, also our 24/Concierge services",
+    ],
+  },
+  {
+    img: steppingStone,
+    heading: "STEPPINGSTONE",
+    subHeading: "Spirited, Personal, Unexpected. Adventurous",
+    bgColor: "#CDAB6B",
+    text: [
+      "Amber Hospitality Services Limited has developed a special brand together with Amber Collection – Hotels & Resorts a management platform of International Campus Residences, focussing on student housing in top cities across target countries.",
+      "The residences are designed to help students enhance their university experience by promoting a residential environment that supports their educational, and personal development.",
+      "The built-up communities encourage the students to continue their learning path outside the classroom, the necessary infrastructures have been thought and planned on the student needs such as privacy, convenience, WI-FI, dedicated laundry room, open space to study, like as well a diversity of social, and intellectual spaces to promote the cultural development.",
+      "This Brand, will promote the basic services of a normal hospitality operation, by making available 24 hours, 7 days a week Concierge services to help the students in their personal requirements, also cleaning services will be in place for public areas and rooms (this one, only ones a week), also the privacy and security it is something that we take very seriously in all our Residences, the wellbeing of everybody, we consider this is one of our prime services, within the range of available services that we provide.",
     ],
   },
 ];

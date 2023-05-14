@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SectionOne from "../components/about/SectionOne";
 import PortfolioLeft from "../components/portfolio/PortfolioLeft";
 import PortfolioRight from "../components/portfolio/PortfolioRight";
@@ -6,6 +6,10 @@ import { realEstate } from "../utils/data";
 import estateBg from "../assets/images/estateBg.png";
 
 const RealEstate = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   return (
     <div className="real-estate">
       <SectionOne

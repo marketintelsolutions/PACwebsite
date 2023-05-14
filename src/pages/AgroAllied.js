@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SectionOne from "../components/about/SectionOne";
 import PortfolioLeft from "../components/portfolio/PortfolioLeft";
 import PortfolioRight from "../components/portfolio/PortfolioRight";
@@ -6,6 +6,10 @@ import agroBg from "../assets/images/agroBg.png";
 import { agroAllied } from "../utils/data";
 
 const AgroAllied = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   return (
     <div>
       <SectionOne color="#38B6FF" text="Agro-allied" img={agroBg} />

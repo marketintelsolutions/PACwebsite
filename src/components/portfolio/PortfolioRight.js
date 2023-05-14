@@ -1,16 +1,53 @@
 import React from "react";
 
-const PortfolioRight = ({ img, heading, text, index, textColor }) => {
+const PortfolioRight = ({
+  img,
+  heading,
+  text,
+  index,
+  textColor,
+  subHeading,
+  bgColor,
+}) => {
+  console.log(bgColor);
   return (
     <div className="item">
-      <div className="text" key={index}>
-        <h1 style={{ color: `${textColor}` }}>{heading}</h1>
+      <div
+        className="text"
+        key={index}
+        style={
+          bgColor
+            ? { background: `${bgColor}`, color: "white", padding: "20px" }
+            : {}
+        }
+      >
+        <h1
+          style={
+            bgColor
+              ? { background: `${bgColor}`, color: "white" }
+              : { color: `${textColor}` }
+          }
+        >
+          {heading}
+        </h1>
+        {subHeading && <h2>{subHeading}</h2>}
         <div className="description">
           {text.map((item, index) => (
-            <p key={index}>{item}</p>
+            <p
+              style={
+                bgColor ? { background: `${bgColor}`, color: "white" } : {}
+              }
+              key={index}
+            >
+              {item}
+            </p>
           ))}
         </div>
-        <button>Read more</button>
+        <button
+          style={bgColor ? { background: `${bgColor}`, color: "white" } : {}}
+        >
+          Read more
+        </button>
       </div>
       <div className="image">
         <img src={img} alt={img} />

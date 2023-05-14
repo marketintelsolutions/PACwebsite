@@ -6,6 +6,7 @@ import AgroAllied from "./pages/AgroAllied";
 import BioPage from "./pages/BioPage";
 import FinancialServices from "./pages/FinancialServices";
 import Healthcare from "./pages/Healthcare";
+import Hospitality from "./pages/Hospitality";
 import Landing from "./pages/Landing";
 import Portfolio from "./pages/Portfolio";
 import RealEstate from "./pages/RealEstate";
@@ -25,6 +26,7 @@ const App = () => {
             path="/portfolio/financial-services"
             element={<FinancialServices />}
           />
+          <Route path="/portfolio/hospitality" element={<Hospitality />} />
           <Route path="/portfolio/real-estate" element={<RealEstate />} />
           <Route path="/portfolio/agro-allied" element={<AgroAllied />} />
           <Route path="/portfolio/renewable" element={<Renewable />} />
