@@ -34,7 +34,7 @@ const SectionOne = () => {
             <div className="bg-label">
               <div className="text-center">
                 <h1>PAC Holdings</h1>
-                <h3>Unlocking Value Across Africa</h3>
+                <h3>Unlocking Value Across Africa.</h3>
               </div>
             </div>
           </div>
@@ -42,7 +42,7 @@ const SectionOne = () => {
             <img src={worldMain} alt="phone-bg" />
             <div className="bg-label">
               <div className="text-center">
-                <h3>Africa’s investment future is Pan Africa</h3>
+                <h3>Africa’s investment future is Pan Africa.</h3>
               </div>
             </div>
           </div>
