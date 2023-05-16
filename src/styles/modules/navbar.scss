@@ -74,7 +74,7 @@
 
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     padding: 24px 114px;
     align-items: center;
@@ -114,12 +114,22 @@
         position: relative;
         flex-direction: column;
 
-        & a {
+        & a,
+        p {
           text-decoration: none;
           color: var(--primary-blue);
+          font-weight: 700;
 
           &:hover {
+            // color: white;
+            cursor: pointer;
+          }
+        }
+
+        & .drop-item {
+          &:hover {
             color: white;
+            // cursor: pointer;
           }
         }
 

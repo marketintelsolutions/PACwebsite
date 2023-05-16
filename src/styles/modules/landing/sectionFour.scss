@@ -15,8 +15,9 @@
     right: -45%;
     height: 100%;
     // border: 2px solid red;
-    width: 100%;
+    width: 90%;
     // width:
+    // z-index: 2;
   }
 
   & .spirit {
@@ -178,7 +179,7 @@
         }
       }
 
-      & button {
+      & a {
         width: 146px;
         height: 49px;
         display: flex;
@@ -196,11 +197,27 @@
         transition: var(--transition);
         cursor: pointer;
         border: 1px solid var(--primary-blue);
+        animation: mymove 5s infinite;
+        // a:hover .liquid{
+        // }
+
+        // @keyframes mymove {
+        //   0% {
+        //     transform: translate(-50%, -75%) rotate(0deg);
+        //   }
+        //   100% {
+        //     transform: translate(-50%, -75%) rotate(360deg);
+        //   }
+        // }
 
         &:hover {
           background: white;
           color: var(--primary-blue);
           transition: var(--transition);
+
+          // & .liquid {
+          //   top: -120px;
+          // }
         }
       }
     }
@@ -220,6 +237,8 @@
       text-transform: uppercase;
 
       color: #152344;
+      position: relative;
+      z-index: 3;
     }
 
     & .foundations {
@@ -255,6 +274,24 @@
           display: flex;
           flex-direction: column;
           gap: 29px;
+          transition: var(--transition);
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.8);
+            transition: var(--transition);
+
+            & span {
+              border-color: #38b6ff;
+            }
+
+            & p {
+              color: var(--primary-blue);
+            }
+
+            & button {
+              color: #38b6ff;
+            }
+          }
 
           & span {
             border: 2.22351px solid #ffffff;
@@ -279,7 +316,7 @@
           & button {
             font-family: "Open Sans";
             font-style: normal;
-            font-weight: 300;
+            font-weight: 500;
             font-size: 14.8234px;
             line-height: 107%;
             /* identical to box height, or 16px */

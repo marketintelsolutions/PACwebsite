@@ -59,7 +59,10 @@ const sectionFour = () => {
             Creating Impact through opportunities, strategic alliances and
             partnerships
           </p>
-          <button>Learn more</button>
+          <a>
+            <span>Learn more</span>
+            <div className="liquid"></div>
+          </a>
         </div>
       </div>
 

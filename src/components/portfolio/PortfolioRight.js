@@ -8,6 +8,7 @@ const PortfolioRight = ({
   textColor,
   subHeading,
   bgColor,
+  link,
 }) => {
   console.log(bgColor);
   return (
@@ -43,11 +44,13 @@ const PortfolioRight = ({
             </p>
           ))}
         </div>
-        <button
+        <a
+          href={link}
           style={bgColor ? { background: `${bgColor}`, color: "white" } : {}}
+          target="_blank"
         >
           Read more
-        </button>
+        </a>
       </div>
       <div className="image">
         <img src={img} alt={img} />

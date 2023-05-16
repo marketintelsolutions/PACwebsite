@@ -58,9 +58,9 @@ const Navbar = () => {
             <img src={paclogo} alt="logo" />
           </Link>
           <div className="nav-items">
-            <Link to="/about" className="item">
-              <p>About</p>
-            </Link>
+            <div className="item">
+              <Link to="/about">About</Link>
+            </div>
             <div className="item">
               <Link to="/portfolio">Our Portfolio</Link>
               <span onClick={() => setIsDropdown(!isDropdown)}>
@@ -71,42 +71,49 @@ const Navbar = () => {
                   <Link
                     to="/portfolio/financial-services"
                     onClick={() => setIsDropdown(!isDropdown)}
+                    className="drop-item"
                   >
                     financial services
                   </Link>
                   <Link
                     to="/portfolio/hospitality"
                     onClick={() => setIsDropdown(!isDropdown)}
+                    className="drop-item"
                   >
                     hospitality & entertainment
                   </Link>
                   <Link
                     to="/portfolio/real-estate"
                     onClick={() => setIsDropdown(!isDropdown)}
+                    className="drop-item"
                   >
                     real estate & infrastructure
                   </Link>
                   <Link
                     to="/portfolio/agro-allied"
                     onClick={() => setIsDropdown(!isDropdown)}
+                    className="drop-item"
                   >
                     Agro-allied & FMCG
                   </Link>
                   <Link
                     to="/portfolio/renewable"
                     onClick={() => setIsDropdown(!isDropdown)}
+                    className="drop-item"
                   >
                     renewable energy
                   </Link>
                   <Link
                     to="/portfolio/technology"
                     onClick={() => setIsDropdown(!isDropdown)}
+                    className="drop-item"
                   >
                     technology and payment system
                   </Link>
                   <Link
                     to="/portfolio/healthcare"
                     onClick={() => setIsDropdown(!isDropdown)}
+                    className="drop-item"
                   >
                     healthcare
                   </Link>

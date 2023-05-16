@@ -8,6 +8,7 @@ const PortfolioLeft = ({
   textColor,
   subHeading,
   bgColor,
+  link,
 }) => {
   return (
     <div className="item">
@@ -45,11 +46,13 @@ const PortfolioLeft = ({
             </p>
           ))}
         </div>
-        <button
+        <a
+          href={link}
+          target="_blank"
           style={bgColor ? { background: `${bgColor}`, color: "white" } : {}}
         >
           Read more
-        </button>
+        </a>
       </div>
     </div>
   );

@@ -157,6 +157,7 @@ export const financialData = [
       "PAC Capital Limited is the Investment Banking and Advisory arm of the Group’s Financial Services Division and is a leading Capital Markets & Financial Advisory Services firm in Nigeria. The company has extensive experience in the dynamics of working with Multi-Lateral Funding & Credit Institutions across Africa and beyond.",
       "We have worked across various sectors including public sector to provide comprehensive Capital Raising, Mergers and Acquisition Advisory, Debt Restructuring, Project Finance, Corporate Restructuring & Business Combination and Structured Trade Finance. ",
     ],
+    link: "https://paccapitalltd.com",
   },
   {
     img: asset,
@@ -166,6 +167,7 @@ export const financialData = [
 
       "Some products and services offered by PAC Asset include a portfolio of Mutual Funds, Private funds including endowments and other specialized funds, fixed income brokerage.",
     ],
+    link: "http://pacassetmanagement.com",
   },
   {
     img: securities,
@@ -175,6 +177,7 @@ export const financialData = [
 
       "The company offers brokerage/financial services to a broad spectrum of clients including institutional investors, Multi-Nationals, Public Sectors, High net-worth individuals and retail investors. Our services are planned for organizations and entities that wish to invest in Africa",
     ],
+    link: "https://pacsecurities.com",
   },
   {
     img: registras,
@@ -184,16 +187,18 @@ export const financialData = [
 
       "The services provided by PAC Registrars include Registrar to Offer services, Security Data Consultancy Services, Industrial/Debenture Issue Registrars, Industrial/Debenture Stock Data Management, Corporate Equity Issue Registrars Data Management, Government Bond Issue Registrars/Data Management.",
     ],
+    link: "https://www.pacregistrars.com",
   },
   {
-    img: trustees,
     heading: "PAC Trustees",
     text: [
       "PAC Trustees Limited provides specialized trustee services to a broad spectrum of clients including Multinationals, Charity Organisations, Religious Organisations, Company Cooperatives & Staff Schemes, (Private & Public) Insurance Companies, Money Deposit Institutions, Tertiary Institutions, Families & Estate Planning and public sectors.",
 
       "Some of our services include Corporate Trusts, Public Trusts, Specialized Private Trusts, Family Trusts and Warehousing Trustee Services. The expectations and needs of our client is priority in our delivery at PAC Trustees, seeing that our overall objective is to exceed client’s expectations.",
     ],
+    link: "https://www.pactrustees.com",
   },
+
   {
     img: factoring,
     heading: "Factoring & Supply Chain Finance",
@@ -202,6 +207,7 @@ export const financialData = [
 
       "At FSF, we are focused to assist businesses unlock opportunities through: Invoice Discounting, Full Service Factoring, Supply Chain Finance, Debt Factoring, Vendor Finance, Consumer Lending.",
     ],
+    link: "https://fscsng.com",
   },
   {
     img: keynes,
@@ -210,6 +216,7 @@ export const financialData = [
       "Keynes Private Equity is focused on deployment of Capital into growth sectors of emerging economies of the Sub-Saharan African region. KPE through its funds and vehicles has invested in Nigeria, Liberia, and Cote d’Ivoire.",
       "We are dedicated to creating above par value for our partners from alternative assets funds and Investments management.",
     ],
+    link: "https://keynesprivateequity.com",
   },
 ];
 
@@ -220,6 +227,7 @@ export const realEstate = [
     text: [
       "We provide daily oversight of residential, commercial, or industrial real estate and see to the day-to-day repairs and ongoing maintenance, security, and upkeep of properties including apartment and condominium complexes, private home communities, shopping centers, and industrial parks, etc.",
     ],
+    link: "http://bricsinfrastructure.com/ ",
   },
   {
     img: brokerage,
@@ -227,6 +235,7 @@ export const realEstate = [
     text: [
       "We offer real estate brokerage services by acting as a medium for buyers and sellers to get in touch with each other and enable them to complete transactions. Our brokerage services include property listings for sale or purchase, listings for renting, home sales and purchase, home renting, site visits, etc.",
     ],
+    link: "https://webzenagroallied.com",
   },
   {
     img: project,
@@ -234,6 +243,7 @@ export const realEstate = [
     text: [
       "Our team of experts are here to serve you, whether it is overseeing construction schemes from inception to completion, handling complex commercial transactions, and much more. We ensure an on-time and on-budget outcome for our clients.",
     ],
+    link: "https://tergoenergy.com",
   },
   {
     img: development,
@@ -241,6 +251,7 @@ export const realEstate = [
     text: [
       "Our real estate arm provides experience and expertise in developing luxury and state-of-the-art property for sale and for rent. We understand how to handle the different stages of your project accordingly.",
     ],
+    link: "https://ziltchone.com",
   },
 ];
 
@@ -261,6 +272,7 @@ export const agroAllied = [
       "This is the agro-allied business arm of Kaxal Africa which is focused on providing investment and business support services to organizations in the agribusiness space. We focus on the entire agricultural value chain with particular focus on the downstream (tail end) of the value chain such as processing, distribution, and retailing. Other areas of focus include investment, production, processing, trading, and exporting. Our goal is to be a leading player in the agribusiness industry space and investment destination for individuals and organizations that want to be involved in the agro-allied sector while ensuring food security and sustainable returns on investment for stakeholders or investors.",
     ],
     textColor: "#9ACB34",
+    link: "https://webzenagroallied.com ",
   },
   {
     img: hawaree,
@@ -286,6 +298,7 @@ export const renewable = [
       " · LPG Cylinder certification",
       "· Gas Distribution",
     ],
+    link: "https://tergoenergy.com",
   },
   {
     img: solar,
@@ -301,6 +314,7 @@ export const renewable = [
       "· Solar Street Lighting",
       "· Solar Mini Grid Installation",
     ],
+    link: "https://tergoenergy.com",
   },
 ];
 
@@ -353,6 +367,7 @@ export const technology = [
     text: [
       "Ziltch is a key player in Media infrastructure and creative Content Development to promote Africa and Global Culture .",
     ],
+    link: "https://ziltchone.com ",
   },
 ];
 
@@ -438,6 +453,7 @@ export const hospitality = [
       "Our F&B outlets are designed to provide unrivalled guest experience but as well focused on the flowless of the service areas, the bar’s, lounge's have a lifestyle concept where the Interiors and ambience are thoughtfully planned for informal and relaxed moments.",
       "MICE facilities are projected with the ultimate state-of-the-art audio-visual systems and complete meeting and banqueting equipment, providing, and guaranteeing each meetings & events in the AMBER CREST Hotel are as pleasant as they are productive, meeting the highest expectations of our clients.",
     ],
+    link: "https//amberhospitality.com",
   },
   {
     img: eterniti,
