@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import curvedbg from "../../assets/images/curvedbg.svg";
 import spirit from "../../assets/images/spirit.svg";
 import worldImage from "../../assets/images/worldImage.svg";
@@ -8,7 +8,21 @@ import arrowRight from "../../assets/images/arrowRight.svg";
 import { foundations } from "../../utils/data";
 import LiquidBackground from "../LiquidBackground";
 
-const sectionFour = () => {
+const SectionFour = () => {
+  const [scrollIndex, setScrollIndex] = useState(0);
+
+  const handleScroll = (direction) => {
+    const max = Math.floor(foundations.length / 3) - 1;
+    console.log(max, scrollIndex);
+    if (direction === "left" && scrollIndex !== 0) {
+      setScrollIndex(scrollIndex - 1);
+    } else if (direction === "right" && scrollIndex <= max) {
+      setScrollIndex(scrollIndex + 1);
+    }
+  };
+
+  const visibleFoundations = foundations.slice(scrollIndex, scrollIndex + 3);
+
   return (
     <section
       className="section-four"
@@ -70,26 +84,28 @@ const sectionFour = () => {
       <div className="bottom">
         <h2>STAY UPDATED</h2>
 
-        <div className="foundations">
-          {foundations.map((item, index) => {
-            const { text, image } = item;
-            return (
-              <div
-                className="item"
-                key={index}
-                style={{ backgroundImage: `url(${image})` }}
-              >
-                <div className="text">
-                  <span></span>
-                  <p>{text}</p>
-                  <button>read more</button>
+        <div className="foundations-container">
+          <div className="foundations">
+            {visibleFoundations.map((item, index) => {
+              const { text, image } = item;
+              return (
+                <div
+                  className="item"
+                  key={index}
+                  style={{ backgroundImage: `url(${image})` }}
+                >
+                  <div className="text">
+                    <span></span>
+                    <p>{text}</p>
+                    <button>read more</button>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
         <div className="navigation">
-          <span className="arrow">
+          <span className="arrow" onClick={() => handleScroll("left")}>
             <img src={arrowLeft} alt="arrowLeft" />
           </span>
           <div className="pages">
@@ -103,7 +119,7 @@ const sectionFour = () => {
             <span className="page"></span>
             <span className="page"></span>
           </div>
-          <span className="arrow">
+          <span className="arrow" onClick={() => handleScroll("right")}>
             <img src={arrowRight} alt="arrowRight" />
           </span>
         </div>
@@ -112,4 +128,4 @@ const sectionFour = () => {
   );
 };
 
-export default sectionFour;
+export default SectionFour;

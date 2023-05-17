@@ -241,6 +241,13 @@
       z-index: 3;
     }
 
+    & .foundations-container {
+      border: 2px solid blue;
+      overflow: hidden;
+      width: 80%;
+      margin: 0 auto;
+    }
+
     & .foundations {
       position: relative;
       z-index: 2;
@@ -248,7 +255,8 @@
       justify-content: center;
       align-items: center;
       gap: 30px;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
+      max-width: 1468px;
 
       & .item {
         background-repeat: no-repeat;
@@ -259,6 +267,7 @@
         max-height: 463.23px;
         display: flex;
         align-items: flex-end;
+        // border: 2px solid red;
 
         @media (max-width: $breakpoint-tablet) {
           width: 337.14px;
@@ -337,9 +346,11 @@
     }
 
     & .navigation {
+      position: relative;
+      z-index: 3;
       margin-top: 50px;
       display: flex;
-      //   border: 2px solid red;
+      // border: 2px solid red;
       gap: 50px;
       justify-content: center;
       align-items: center;

@@ -119,6 +119,34 @@ export const foundations = [
     text: "PAC Foundation Joined other Stakeholders to celebrate Lagos Tree Planting Day.",
     image: lagos,
   },
+  {
+    text: "PAC Capital Commits to a 3-year Sponsorship Agreement with CANEX presents Africa @Portugal Fashion Week.",
+    image: conventions,
+  },
+  {
+    text: "Pac Capital Limited Sponsors Afreximbank 2021 Intra-African Trade Fair (Iatf) Event In Durban, South Africa.",
+    image: portugal,
+  },
+  {
+    text: "Pac Capital Limited Sponsors Afreximbank 2021 Intra-African Trade Fair (Iatf) Event In Durban, South Africa.",
+    image: conventions,
+  },
+  {
+    text: "PAC Foundation Joined other Stakeholders to celebrate Lagos Tree Planting Day.",
+    image: lagos,
+  },
+  {
+    text: "PAC Capital Commits to a 3-year Sponsorship Agreement with CANEX presents Africa @Portugal Fashion Week.",
+    image: conventions,
+  },
+  {
+    text: "Pac Capital Limited Sponsors Afreximbank 2021 Intra-African Trade Fair (Iatf) Event In Durban, South Africa.",
+    image: portugal,
+  },
+  {
+    text: "PAC Foundation Joined other Stakeholders to celebrate Lagos Tree Planting Day.",
+    image: conventions,
+  },
 ];
 export const footer = [
   {

@@ -8,7 +8,7 @@ const SharedLayout = ({ children }) => {
   const handleClick = (e) => {
     console.log(e.target.classList);
     if (!e.target.classList.contains("portfolio-arrow")) {
-      console.log("hello");
+      // console.log("hello");
       setIsDropdown(false);
     }
   };
