@@ -137,6 +137,32 @@
           cursor: pointer;
         }
       }
+
+      & .border {
+        // border-bottom: 2px solid var(--primary-blue);
+        border-width: 0;
+        position: relative;
+
+        &:after {
+          content: "";
+          width: 0%;
+          height: 2px;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: var(--primary-blue);
+          transition: var(--transition);
+        }
+
+        &:hover {
+          &:after {
+            // border-width: 2px;
+            transform-origin: left;
+            transition: var(--transition);
+            width: 100%;
+          }
+        }
+      }
     }
 
     & .menu {

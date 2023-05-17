@@ -60,7 +60,7 @@ const Navbar = ({ isDropdown, setIsDropdown }) => {
             <div className="item">
               <Link to="/about">About</Link>
             </div>
-            <div className="item">
+            <div className="item border">
               <Link to="/portfolio">Our Portfolio</Link>
               <span onClick={() => setIsDropdown(!isDropdown)}>
                 <img
@@ -123,13 +123,13 @@ const Navbar = ({ isDropdown, setIsDropdown }) => {
                 </div>
               )}
             </div>
-            <div className="item">
+            <div className="item border">
               <p>Resources</p>
               <span>
                 <img src={arrowDownBlue} alt="arrowDownBlue" />
               </span>
             </div>
-            <div className="item">
+            <div className="item border">
               <p>Join Us</p>
               <span>
                 <img src={arrowDownBlue} alt="arrowDownFill" />
