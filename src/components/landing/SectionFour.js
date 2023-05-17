@@ -109,15 +109,12 @@ const SectionFour = () => {
             <img src={arrowLeft} alt="arrowLeft" />
           </span>
           <div className="pages">
-            <span className="page"></span>
-            <span className="page"></span>
-            <span className="page"></span>
-            <span className="page"></span>
-            <span className="page active"></span>
-            <span className="page"></span>
-            <span className="page"></span>
-            <span className="page"></span>
-            <span className="page"></span>
+            {foundations.map((_, index) => {
+              let active = scrollIndex === index;
+              return (
+                <span className={`${active ? "page active" : "page"}`}></span>
+              );
+            })}
           </div>
           <span className="arrow" onClick={() => handleScroll("right")}>
             <img src={arrowRight} alt="arrowRight" />
