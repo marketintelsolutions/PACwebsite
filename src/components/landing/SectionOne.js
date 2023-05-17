@@ -16,8 +16,12 @@ const SectionOne = () => {
     return () => clearInterval(interval);
   }, [translated]);
 
+  const handleClick = (e) => {
+    // console.log(e.currentTarget);
+  };
+
   return (
-    <section className="section-one">
+    <section className="section-one" onClick={(e) => handleClick(e)}>
       <div className="section-container">
         <div className="left-button" onClick={() => setTranslated(!translated)}>
           <img src={leftArrow} alt="leftArrow" />

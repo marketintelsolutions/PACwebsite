@@ -9,8 +9,7 @@ import clock from "../assets/logos/clock.svg";
 import menuLine from "../assets/logos/menuLine.svg";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
-  const [isDropdown, setIsDropdown] = useState(false);
+const Navbar = ({ isDropdown, setIsDropdown }) => {
   return (
     <>
       <div className="pre-nav">
@@ -64,7 +63,11 @@ const Navbar = () => {
             <div className="item">
               <Link to="/portfolio">Our Portfolio</Link>
               <span onClick={() => setIsDropdown(!isDropdown)}>
-                <img src={arrowDownBlue} alt="arrowDownBlue" />
+                <img
+                  className="portfolio-arrow"
+                  src={arrowDownBlue}
+                  alt="arrowDownBlue"
+                />
               </span>
               {isDropdown && (
                 <div className="dropdown">
