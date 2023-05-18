@@ -74,11 +74,12 @@
 
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 87%;
     margin: 0 auto;
     padding: 45px 114px;
     align-items: center;
     max-width: 1664px;
+    height: 120px;
 
     @media (max-width: $breakpoint-tablet) {
       padding: 39px;
