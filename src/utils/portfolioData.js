@@ -13,6 +13,7 @@ export const portfolioData = [
     text: [
       "At PAC Holdings, Financial Services is our strength and flagship space. Through the years, we have penetrated the financial services value-chain and have positioned ourselves to deliver value through investment banking and advisory, asset management, securities trading, registrar services, trusteeship and supply-chain finance. We have only one goal – leverage opportunities and unlock wealth.",
     ],
+    link: "/portfolio/financial-services",
   },
 
   {
@@ -23,6 +24,7 @@ export const portfolioData = [
       " Our roots are in Africa, but our business knowledge was gathered around the world and in all kinds of hospitality operations, despite all the challenges that the industry faces nowadays our mission still to provide responsible management solutions.",
       "Amber Hospitality Services Limited has developed different Brands to reach all angles of the industry, targeting customer satisfaction by delivering exceptional services and quality products. By meeting and continually endeavouring to exceed our customers expectations, we will produce the results needed to satisfy and attract investors and continue our individual and corporate growth.",
     ],
+    link: "/portfolio/hospitality",
   },
   {
     img: estate,
@@ -33,6 +35,7 @@ export const portfolioData = [
       "Properties currently within our real estate portfolio includes residential apartment, office complex, sport facilities and virgin lands, all situated within prime locations. Our core services are Infrastructure Development, Facility Management and Property Management/Marketing.",
       "In conjunction with our real estate strategic partners, we are currently developing a new 200 hectares island from the Lagos lagoon along the Lekki Corridor. This new city is a work, live and play island estimated to house about 10,000 people.",
     ],
+    link: "/portfolio/real-estate",
   },
   {
     img: agroAllied,
@@ -43,6 +46,7 @@ export const portfolioData = [
       " An industrial mango plantation with a ranch/slaughter business-line in Cote D’Voire.",
       "Manufacture and supply of High Quality Cassava Flour (HQCF)/ Commercial and Mechanized Farming of Cassava Tubers.",
     ],
+    link: "/portfolio/agro-allied",
   },
   {
     img: renewable,
@@ -53,6 +57,7 @@ export const portfolioData = [
       "We apply our multi-disciplined technical expertise to the development of natural gas and solar to generate positive results in a responsible manner.",
       "Tergo Energy is committed and dedicated to serving the interests of all our stakeholders by being both a good steward of the resources we operate and delivering attractive returns to our investors.",
     ],
+    link: "/portfolio/renewable",
   },
   {
     img: technology,
@@ -60,6 +65,7 @@ export const portfolioData = [
     text: [
       "One of the major investment we have done in the ICT & Media space is in Pan-African Towers- a company engaging in telecommunications, energy, logistics and engineering businesses in Nigeria. Its co-location services include vertical space for GSM/CDMS/WIMAX antenna configuration on tower, vertical space on tower for fixing transmission equipment (microwave), air conditioned equipment, and concrete base for outdoor BTS equipment",
     ],
+    link: "/portfolio/technology",
   },
   {
     img: healthcare,
@@ -70,5 +76,6 @@ export const portfolioData = [
       "We apply our multi-disciplined technical expertise to the development of natural gas and solar to generate positive results in a responsible manner.",
       "Tergo Energy is committed and dedicated to serving the interests of all our stakeholders by being both a good steward of the resources we operate and delivering attractive returns to our investors.",
     ],
+    link: "/portfolio/healthcare",
   },
 ];
