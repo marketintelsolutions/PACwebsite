@@ -1,7 +1,7 @@
 .pre-nav {
   position: fixed;
   width: 100%;
-  z-index: 3;
+  z-index: 4;
   display: flex;
   height: 63px;
   top: 10px;
@@ -52,7 +52,7 @@
 .navbar {
   position: fixed;
   top: 86px;
-  z-index: 3;
+  z-index: 4;
   width: 100%;
   transition: var(--transition);
   margin: 0 auto;
