@@ -21,7 +21,7 @@ const Hospitality = () => {
           market, so we look forward to discussing your specific opportunity and
           how we can assist you in revealing the full potential of your asset.
         </p>
-        <button>Read More</button>
+        {/*<button>Read More</button>*/}
       </div>
 
       <div className="bottom portfolio">

@@ -47,7 +47,7 @@ const PortfolioRight = ({
         <a
           href={link}
           style={bgColor ? { background: `${bgColor}`, color: "white" } : {}}
-          target="_blank"
+          target="_self"
         >
           Read more
         </a>
