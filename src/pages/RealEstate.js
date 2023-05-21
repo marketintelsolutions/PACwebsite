@@ -4,6 +4,7 @@ import PortfolioLeft from "../components/portfolio/PortfolioLeft";
 import PortfolioRight from "../components/portfolio/PortfolioRight";
 import { realEstate } from "../utils/data";
 import estateBg from "../assets/images/estateBg.png";
+import animation from "../assets/images/portfolioAnimationLeft.svg";
 
 const RealEstate = () => {
   useEffect(() => {
@@ -19,6 +20,9 @@ const RealEstate = () => {
       />
 
       <div className="bottom portfolio">
+        <div className="animation">
+          <img src={animation} alt="animation" />
+        </div>
         {realEstate.map((item, index) => {
           if (index % 2 !== 0 || index === 1) {
             return <PortfolioRight {...item} index={index} />;

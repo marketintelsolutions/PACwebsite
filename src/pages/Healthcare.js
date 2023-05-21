@@ -4,6 +4,7 @@ import PortfolioLeft from "../components/portfolio/PortfolioLeft";
 import PortfolioRight from "../components/portfolio/PortfolioRight";
 import { healthcare } from "../utils/data";
 import healthcareBg from "../assets/images/healthcareBg.png";
+import animation from "../assets/images/portfolioAnimationLeft.svg";
 
 const Healthcare = () => {
   useEffect(() => {
@@ -15,6 +16,9 @@ const Healthcare = () => {
       <SectionOne color="#38B6FF" text="Healthcare" img={healthcareBg} />
 
       <div className="bottom portfolio">
+        <div className="animation">
+          <img src={animation} alt="animation" />
+        </div>
         {healthcare.map((item, index) => {
           if (index % 2 !== 0 || index === 1) {
             return <PortfolioRight {...item} index={index} />;

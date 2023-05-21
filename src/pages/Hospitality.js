@@ -4,6 +4,7 @@ import PortfolioLeft from "../components/portfolio/PortfolioLeft";
 import PortfolioRight from "../components/portfolio/PortfolioRight";
 import hospitalityBg from "../assets/images/hospitalityBg.png";
 import { hospitality } from "../utils/data";
+import animation from "../assets/images/portfolioAnimationLeft.svg";
 
 const Hospitality = () => {
   return (
@@ -25,6 +26,9 @@ const Hospitality = () => {
       </div>
 
       <div className="bottom portfolio">
+        <div className="animation">
+          <img src={animation} alt="animation" />
+        </div>
         {hospitality.map((item, index) => {
           if (index % 2 !== 0 || index === 1) {
             return <PortfolioRight {...item} index={index} />;

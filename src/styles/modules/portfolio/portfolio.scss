@@ -4,6 +4,14 @@
   gap: 10px;
   margin-top: 252px;
   margin-bottom: 156px;
+  position: relative;
+
+  & .animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // border: 2px solid red;
+  }
 
   & .item {
     display: flex;
