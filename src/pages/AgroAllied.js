@@ -4,6 +4,7 @@ import PortfolioLeft from "../components/portfolio/PortfolioLeft";
 import PortfolioRight from "../components/portfolio/PortfolioRight";
 import agroBg from "../assets/images/agroBg.png";
 import { agroAllied } from "../utils/data";
+import animation from "../assets/images/portfolioAnimationLeft.svg";
 
 const AgroAllied = () => {
   useEffect(() => {
@@ -15,6 +16,9 @@ const AgroAllied = () => {
       <SectionOne color="#38B6FF" text="Agro-allied" img={agroBg} />
 
       <div className="bottom portfolio">
+        <div className="animation">
+          <img src={animation} alt="animation" />
+        </div>
         {agroAllied.map((item, index) => {
           if (index % 2 !== 0 || index === 1) {
             return <PortfolioRight {...item} index={index} />;

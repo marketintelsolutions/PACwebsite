@@ -4,6 +4,7 @@ import PortfolioLeft from "../components/portfolio/PortfolioLeft";
 import PortfolioRight from "../components/portfolio/PortfolioRight";
 import technologyBg from "../assets/images/technologyBg.png";
 import { technology } from "../utils/data";
+import animation from "../assets/images/portfolioAnimationLeft.svg";
 
 const Technology = () => {
   useEffect(() => {
@@ -19,6 +20,9 @@ const Technology = () => {
       />
 
       <div className="bottom portfolio">
+        <div className="animation">
+          <img src={animation} alt="animation" />
+        </div>
         {technology.map((item, index) => {
           if (index % 2 !== 0 || index === 1) {
             return <PortfolioRight {...item} index={index} />;

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PortfolioRight = ({
   img,
@@ -9,6 +10,7 @@ const PortfolioRight = ({
   subHeading,
   bgColor,
   link,
+  page,
 }) => {
   console.log(bgColor);
   return (
@@ -44,6 +46,7 @@ const PortfolioRight = ({
             </p>
           ))}
         </div>
+<<<<<<< HEAD
         <a
           href={link}
           style={bgColor ? { background: `${bgColor}`, color: "white" } : {}}
@@ -51,6 +54,24 @@ const PortfolioRight = ({
         >
           Read more
         </a>
+=======
+        {page ? (
+          <Link
+            to={link}
+            style={bgColor ? { background: `${bgColor}`, color: "white" } : {}}
+          >
+            Read more
+          </Link>
+        ) : (
+          <a
+            href={link}
+            style={bgColor ? { background: `${bgColor}`, color: "white" } : {}}
+            target="_blank"
+          >
+            Read more
+          </a>
+        )}
+>>>>>>> 867f891d36b8d8fc70eedad1f2e9de13abde690e
       </div>
       <div className="image">
         <img src={img} alt={img} />

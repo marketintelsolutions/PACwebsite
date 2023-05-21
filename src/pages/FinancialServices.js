@@ -4,6 +4,7 @@ import PortfolioLeft from "../components/portfolio/PortfolioLeft";
 import PortfolioRight from "../components/portfolio/PortfolioRight";
 import financialBg from "../assets/images/financialBg.png";
 import { financialData } from "../utils/data";
+import animation from "../assets/images/portfolioAnimationLeft.svg";
 
 const FinancialServices = () => {
   useEffect(() => {
@@ -22,6 +23,9 @@ const FinancialServices = () => {
       </p>
 
       <div className="bottom portfolio">
+        <div className="animation">
+          <img src={animation} alt="animation" />
+        </div>
         {financialData.map((item, index) => {
           if (index % 2 !== 0 || index === 1) {
             return <PortfolioRight {...item} index={index} />;
