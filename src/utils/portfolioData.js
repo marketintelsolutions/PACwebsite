@@ -14,6 +14,7 @@ export const portfolioData = [
       "At PAC Holdings, Financial Services is our strength and flagship space. Through the years, we have penetrated the financial services value-chain and have positioned ourselves to deliver value through investment banking and advisory, asset management, securities trading, registrar services, trusteeship and supply-chain finance. We have only one goal – leverage opportunities and unlock wealth.",
     ],
     link: "/portfolio/financial-services",
+    page: true,
   },
 
   {
@@ -25,6 +26,7 @@ export const portfolioData = [
       "Amber Hospitality Services Limited has developed different Brands to reach all angles of the industry, targeting customer satisfaction by delivering exceptional services and quality products. By meeting and continually endeavouring to exceed our customers expectations, we will produce the results needed to satisfy and attract investors and continue our individual and corporate growth.",
     ],
     link: "/portfolio/hospitality",
+    page: true,
   },
   {
     img: estate,
@@ -36,6 +38,7 @@ export const portfolioData = [
       "In conjunction with our real estate strategic partners, we are currently developing a new 200 hectares island from the Lagos lagoon along the Lekki Corridor. This new city is a work, live and play island estimated to house about 10,000 people.",
     ],
     link: "/portfolio/real-estate",
+    page: true,
   },
   {
     img: agroAllied,
@@ -47,6 +50,7 @@ export const portfolioData = [
       "Manufacture and supply of High Quality Cassava Flour (HQCF)/ Commercial and Mechanized Farming of Cassava Tubers.",
     ],
     link: "/portfolio/agro-allied",
+    page: true,
   },
   {
     img: renewable,
@@ -58,6 +62,7 @@ export const portfolioData = [
       "Tergo Energy is committed and dedicated to serving the interests of all our stakeholders by being both a good steward of the resources we operate and delivering attractive returns to our investors.",
     ],
     link: "/portfolio/renewable",
+    page: true,
   },
   {
     img: technology,
@@ -66,6 +71,7 @@ export const portfolioData = [
       "One of the major investment we have done in the ICT & Media space is in Pan-African Towers- a company engaging in telecommunications, energy, logistics and engineering businesses in Nigeria. Its co-location services include vertical space for GSM/CDMS/WIMAX antenna configuration on tower, vertical space on tower for fixing transmission equipment (microwave), air conditioned equipment, and concrete base for outdoor BTS equipment",
     ],
     link: "/portfolio/technology",
+    page: true,
   },
   {
     img: healthcare,
@@ -77,5 +83,6 @@ export const portfolioData = [
       "Tergo Energy is committed and dedicated to serving the interests of all our stakeholders by being both a good steward of the resources we operate and delivering attractive returns to our investors.",
     ],
     link: "/portfolio/healthcare",
+    page: true,
   },
 ];
