@@ -218,6 +218,7 @@ export const financialData = [
     link: "https://www.pacregistrars.com",
   },
   {
+    img: trustees,
     heading: "PAC Trustees",
     text: [
       "PAC Trustees Limited provides specialized trustee services to a broad spectrum of clients including Multinationals, Charity Organisations, Religious Organisations, Company Cooperatives & Staff Schemes, (Private & Public) Insurance Companies, Money Deposit Institutions, Tertiary Institutions, Families & Estate Planning and public sectors.",

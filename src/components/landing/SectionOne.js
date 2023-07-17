@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import phoneLandingImage from "../../assets/images/phoneLandingImage.png";
 import worldMain from "../../assets/images/worldMain.png";
-
 import rightArrow from "../../assets/images/rightArrow.svg";
 import leftArrow from "../../assets/images/leftArrow.svg";
 
@@ -16,9 +15,7 @@ const SectionOne = () => {
     return () => clearInterval(interval);
   }, [translated]);
 
-  const handleClick = (e) => {
-    // console.log(e.currentTarget);
-  };
+  const handleClick = (e) => {};
 
   return (
     <section className="section-one" onClick={(e) => handleClick(e)}>
