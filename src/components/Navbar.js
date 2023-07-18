@@ -8,13 +8,26 @@ import calender from "../assets/logos/calender.svg";
 import clock from "../assets/logos/clock.svg";
 import menuLine from "../assets/logos/menuLine.svg";
 import { Link } from "react-router-dom";
+import { ourPortfolio, joinUs } from "../utils/navData";
 
 const Navbar = ({ isDropdown, setIsDropdown }) => {
+  const [dropItems, setDropItems] = useState([]);
+  const [position, setPosition] = useState({});
+
+  const toggleDropdown = (e, items) => {
+    setIsDropdown(!isDropdown);
+
+    const { top, left } = e.target.getBoundingClientRect();
+    const topPosition = top;
+
+    setPosition({ top: topPosition, left });
+    setDropItems(items);
+  };
   return (
     <>
       <div className="pre-nav">
         <div className="center">
-          <div className="dropdown item">
+          <div className="predropdown item">
             <p>Nigeria</p>
             <span>
               <img src={arrowDownFill} alt="arrowDownFill" />
@@ -42,7 +55,7 @@ const Navbar = ({ isDropdown, setIsDropdown }) => {
             </span>
             <p>info@panfricancapitalholdings.com</p>
           </div>
-          <div className="dropdown item">
+          <div className="predropdown item">
             <p>English</p>
             <span>
               {" "}
@@ -62,66 +75,13 @@ const Navbar = ({ isDropdown, setIsDropdown }) => {
             </div>
             <div className="item border">
               <Link to="/portfolio">Our Portfolio</Link>
-              <span onClick={() => setIsDropdown(!isDropdown)}>
+              <span onClick={(e) => toggleDropdown(e, ourPortfolio)}>
                 <img
                   className="portfolio-arrow"
                   src={arrowDownBlue}
                   alt="arrowDownBlue"
                 />
               </span>
-              {isDropdown && (
-                <div className="dropdown">
-                  <Link
-                    to="/portfolio/financial-services"
-                    onClick={() => setIsDropdown(!isDropdown)}
-                    className="drop-item"
-                  >
-                    financial services
-                  </Link>
-                  <Link
-                    to="/portfolio/hospitality"
-                    onClick={() => setIsDropdown(!isDropdown)}
-                    className="drop-item"
-                  >
-                    hospitality & entertainment
-                  </Link>
-                  <Link
-                    to="/portfolio/real-estate"
-                    onClick={() => setIsDropdown(!isDropdown)}
-                    className="drop-item"
-                  >
-                    real estate & infrastructure
-                  </Link>
-                  <Link
-                    to="/portfolio/agro-allied"
-                    onClick={() => setIsDropdown(!isDropdown)}
-                    className="drop-item"
-                  >
-                    Agro-allied & FMCG
-                  </Link>
-                  <Link
-                    to="/portfolio/renewable"
-                    onClick={() => setIsDropdown(!isDropdown)}
-                    className="drop-item"
-                  >
-                    renewable energy
-                  </Link>
-                  <Link
-                    to="/portfolio/technology"
-                    onClick={() => setIsDropdown(!isDropdown)}
-                    className="drop-item"
-                  >
-                    technology and payment system
-                  </Link>
-                  <Link
-                    to="/portfolio/healthcare"
-                    onClick={() => setIsDropdown(!isDropdown)}
-                    className="drop-item"
-                  >
-                    healthcare
-                  </Link>
-                </div>
-              )}
             </div>
             <div className="item border">
               <p>Resources</p>
@@ -132,8 +92,16 @@ const Navbar = ({ isDropdown, setIsDropdown }) => {
             <div className="item border">
               <p>Join Us</p>
               <span>
-                <img src={arrowDownBlue} alt="arrowDownFill" />
+                <img
+                  src={arrowDownBlue}
+                  alt="arrowDownFill"
+                  className="portfolio-arrow"
+                  onClick={(e) => toggleDropdown(e, joinUs)}
+                />
               </span>
+            </div>
+            <div className="item">
+              <p>CSR</p>
             </div>
             <div className="item">
               <p>Contact</p>
@@ -144,6 +112,28 @@ const Navbar = ({ isDropdown, setIsDropdown }) => {
           </div>
         </div>
       </nav>
+      {isDropdown && (
+        <div
+          className="dropdown"
+          style={{
+            top: `${position.top}px`,
+            left: `${position.left}px`,
+          }}
+        >
+          {dropItems.map((item, index) => {
+            return (
+              <Link
+                key={index}
+                to={item.path}
+                onClick={() => setIsDropdown(!isDropdown)}
+                className="drop-item"
+              >
+                {item.text}
+              </Link>
+            );
+          })}
+        </div>
+      )}
     </>
   );
 };

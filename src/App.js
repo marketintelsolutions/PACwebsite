@@ -7,6 +7,9 @@ import BioPage from "./pages/BioPage";
 import FinancialServices from "./pages/FinancialServices";
 import Healthcare from "./pages/Healthcare";
 import Hospitality from "./pages/Hospitality";
+import Alumni from "./pages/joinUs/Alumni";
+import Career from "./pages/joinUs/Career";
+import Vendor from "./pages/joinUs/Vendor";
 import Landing from "./pages/Landing";
 import Portfolio from "./pages/Portfolio";
 import RealEstate from "./pages/RealEstate";
@@ -32,6 +35,9 @@ const App = () => {
           <Route path="/portfolio/renewable" element={<Renewable />} />
           <Route path="/portfolio/technology" element={<Technology />} />
           <Route path="/portfolio/healthcare" element={<Healthcare />} />
+          <Route path="/joinus/career" element={<Career />} />
+          <Route path="/joinus/alumni" element={<Alumni />} />
+          <Route path="/joinus/vendor" element={<Vendor />} />
         </Routes>
       </SharedLayout>
     </>
