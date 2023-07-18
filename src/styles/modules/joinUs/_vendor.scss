@@ -1,0 +1,102 @@
+.vendor {
+  border: 2px solid red;
+
+  & .section-two {
+    & .center {
+      max-width: 1104px;
+      border-radius: 15px;
+      background: #fff;
+      box-shadow: 4px 4px 26px 0px rgba(189, 189, 189, 0.25);
+      width: 85%;
+      margin: 0 auto;
+
+      & .heading {
+        background: #152344;
+        padding: 20px 44px;
+
+        p {
+          color: #fff;
+          font-family: Open Sans;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 107%; /* 21.4px */
+        }
+      }
+
+      & form {
+        padding: 70px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        & label {
+          color: #000;
+          text-align: justify;
+          font-family: Kozuka Gothic Pro;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        & input,
+        select {
+          height: 49px;
+          border-radius: 5px;
+          border: 1px solid #e0e0e0;
+          background: #f3f3f3;
+          padding: 10px;
+          width: 100%;
+        }
+
+        & input {
+          padding-left: 70px;
+        }
+
+        & .input,
+        .item {
+          position: relative;
+          //   border: 2px solid red;
+
+          & img {
+            position: absolute;
+            top: 13px;
+            left: 16px;
+          }
+        }
+        & .name {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        & .address {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          & .items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            row-gap: 10px;
+          }
+        }
+
+        & .information {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 22px;
+          row-gap: 10px;
+
+          & .item {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+}
