@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "react-lottie";
-import animationData from "../utils/liquidBackground.json";
+import animationData from "../utils/animations/liquidBackground.json";
 
 class LiquidBackground extends React.Component {
   render() {

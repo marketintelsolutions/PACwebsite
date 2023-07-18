@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "react-lottie";
-import animationData from "../utils/ourInvestment.json";
+import animationData from "../utils/animations/ourInvestment.json";
 
 class MobileAnimation extends React.Component {
   render() {
