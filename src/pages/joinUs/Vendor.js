@@ -8,6 +8,9 @@ import suitcase from "../../assets/logos/suitcase.svg";
 import pen from "../../assets/logos/pen.svg";
 import microscope from "../../assets/logos/microscope.svg";
 import nuban from "../../assets/logos/nuban.svg";
+import contact from "../../assets/logos/contact.svg";
+import position from "../../assets/logos/position.svg";
+import business from "../../assets/logos/business.svg";
 
 const Vendor = () => {
   return (
@@ -217,6 +220,130 @@ const Vendor = () => {
                   <span>No</span>
                 </div>
               </div>
+            </div>
+
+            <label htmlFor="nature">
+              If yes, give names and addresses of key Organisations
+            </label>
+            <textarea
+              name="nature"
+              id="nature"
+              className="text-details"
+              placeholder="Other companies you are registered with"
+            ></textarea>
+            <label htmlFor="nature">
+              Give brief details of the type and value of work you have done in
+              the 24 months
+            </label>
+            <textarea
+              name="nature"
+              id="nature"
+              className="text-details"
+            ></textarea>
+
+            {/* REFERENCES */}
+            <div className="heading">
+              <p>References</p>
+            </div>
+            <h3>
+              Please list one (1) reference that is familiar with your work
+            </h3>
+            <label htmlFor="organisation">Name of Organisation</label>
+            <div className="input">
+              <img src={locationGrey} alt="locationGrey" />
+              <input type="text" id="organisation" placeholder="Company name" />
+            </div>
+
+            <div className="address">
+              <label>Address</label>
+              <div className="input">
+                <img src={locationGrey} alt="locationGrey" />
+                <input
+                  type="text"
+                  placeholder="Street Address"
+                  name="referenceStreet"
+                />
+              </div>
+              <div className="input">
+                <img src={locationGrey} alt="locationGrey" />
+                <input
+                  type="text"
+                  placeholder="Apt. Suite. Bldg. (optional)"
+                  name="referenceApartment"
+                />
+              </div>
+
+              <div className="items">
+                <div className="input">
+                  <img src={locationGrey} alt="locationGrey" />
+                  <input type="text" placeholder="City" name="referenceCity" />
+                </div>
+                <div className="input">
+                  <img src={locationGrey} alt="locationGrey" />
+                  <input
+                    type="text"
+                    placeholder="State / Province / Region"
+                    name="referenceState"
+                  />
+                </div>
+                <div className="input">
+                  <img src={locationGrey} alt="locationGrey" />
+                  <input
+                    type="text"
+                    placeholder="Postal / Zip Code"
+                    name="referencePostal"
+                  />
+                </div>
+                <select name="referenceCountry" id="">
+                  <option value="">- - Select Country - -</option>
+                  <option value="nigeria">nigeria</option>
+                </select>
+              </div>
+            </div>
+            <div className="information">
+              <div className="item">
+                <label htmlFor="contactPerson">Contact Person</label>
+                <div className="input">
+                  <img src={contact} alt="locationGrey" />
+                  <input type="text" id="contactPerson" />
+                </div>
+              </div>
+              <div className="item">
+                <label htmlFor="contactPosition">Position</label>
+                <div className="input">
+                  <img src={position} alt="locationGrey" />
+                  <input type="text" id="contactPosition" />
+                </div>
+              </div>
+              <div className="item">
+                <label htmlFor="contactPhone">Phone Number</label>
+                <div className="input">
+                  <img src={suitcase} alt="locationGrey" />
+                  <input
+                    type="tel"
+                    id="referencePhone"
+                    placeholder="Contact’s phone number"
+                  />
+                </div>
+              </div>
+              <div className="item">
+                <label htmlFor="referenceBusinessYears">
+                  Years in business
+                </label>
+                <div className="input">
+                  <img src={business} alt="locationGrey" />
+                  <input
+                    type="number"
+                    id="referenceBusinessYears"
+                    placeholder="How long have you been in business with the above named company"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* UPLOADS */}
+            <div className="heading">
+              <p>Uploads</p>
             </div>
           </form>
         </div>
