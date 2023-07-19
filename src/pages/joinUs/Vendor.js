@@ -11,6 +11,8 @@ import nuban from "../../assets/logos/nuban.svg";
 import contact from "../../assets/logos/contact.svg";
 import position from "../../assets/logos/position.svg";
 import business from "../../assets/logos/business.svg";
+import cloud from "../../assets/logos/cloud.svg";
+import cancel from "../../assets/logos/cancel.svg";
 
 const Vendor = () => {
   return (
@@ -222,22 +224,22 @@ const Vendor = () => {
               </div>
             </div>
 
-            <label htmlFor="nature">
+            <label htmlFor="keyOrganisations">
               If yes, give names and addresses of key Organisations
             </label>
             <textarea
-              name="nature"
-              id="nature"
+              name="keyOrganisations"
+              id="keyOrganisations"
               className="text-details"
               placeholder="Other companies you are registered with"
             ></textarea>
-            <label htmlFor="nature">
+            <label htmlFor="workDetails">
               Give brief details of the type and value of work you have done in
               the 24 months
             </label>
             <textarea
-              name="nature"
-              id="nature"
+              name="workDetails"
+              id="workDetails"
               className="text-details"
             ></textarea>
 
@@ -321,7 +323,7 @@ const Vendor = () => {
                   <img src={suitcase} alt="locationGrey" />
                   <input
                     type="tel"
-                    id="referencePhone"
+                    id="contactPhone"
                     placeholder="Contact’s phone number"
                   />
                 </div>
@@ -345,6 +347,63 @@ const Vendor = () => {
             <div className="heading">
               <p>Uploads</p>
             </div>
+            <h3>
+              Please note that application should be accompanied with the
+              following;
+            </h3>
+            <p className="upload-text">
+              1. A photocopy of Certificate of Incorporation 2. A photocopy of
+              Memorandum and Articles of Association 3. A photocopy of VAT
+              registration Certificate 4. Any other relevant document
+            </p>
+            <label>Upload documents mentioned above</label>
+            <div className="upload-input">
+              <label htmlFor="documents">
+                <input type="file" multiple id="documents" />
+                <div className="upload-btn">
+                  <img src={cloud} alt="cloud" />
+                </div>
+                {/* <button type="button" className="upload-btn">
+                </button> */}
+              </label>
+              <button type="button" className="cancel-btn">
+                <img src={cancel} alt="cancel" />
+              </button>
+            </div>
+            <label>Other relevant documents</label>
+            <div className="upload-input">
+              <label htmlFor="otherDocuments">
+                <input type="file" multiple id="otherDocuments" />
+                <div className="upload-btn">
+                  <img src={cloud} alt="cloud" />
+                </div>
+                {/* <button type="button" className="upload-btn">
+                </button> */}
+              </label>
+              <button type="button" className="cancel-btn">
+                <img src={cancel} alt="cancel" />
+              </button>
+            </div>
+            <div className="account-type">
+              <label htmlFor="accountType">
+                I hereby certify that the above information submitted is true
+                and correct
+              </label>
+              <div className="options">
+                <div className="option">
+                  <input
+                    type="radio"
+                    value="trueInformation"
+                    name="accountType"
+                    id="accountType"
+                  />{" "}
+                  <span>Yes, I confirm</span>
+                </div>
+              </div>
+            </div>
+            <button type="submit" className="submit-btn">
+              submit
+            </button>
           </form>
         </div>
       </div>
