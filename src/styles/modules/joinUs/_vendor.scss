@@ -96,6 +96,46 @@
             gap: 10px;
           }
         }
+
+        & .account-type {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          & .options {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            & .option {
+              display: flex;
+              gap: 10px;
+              align-items: center;
+            }
+
+            & input {
+              width: 15px;
+              height: 15px;
+              display: flex;
+              //   align-items: center;
+              justify-content: center;
+              //   height:;
+
+              &:checked {
+                width: 15px;
+                background: #152344;
+                border: 2px solid #152344;
+                color: red;
+              }
+            }
+
+            & input[type="radio"]:checked {
+              width: 15px;
+              background: #152344;
+              border: 2px solid #152344;
+              color: red;
+            }
+          }
+        }
       }
     }
   }

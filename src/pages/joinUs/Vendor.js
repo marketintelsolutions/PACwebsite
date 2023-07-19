@@ -7,6 +7,7 @@ import date from "../../assets/logos/date.svg";
 import suitcase from "../../assets/logos/suitcase.svg";
 import pen from "../../assets/logos/pen.svg";
 import microscope from "../../assets/logos/microscope.svg";
+import nuban from "../../assets/logos/nuban.svg";
 
 const Vendor = () => {
   return (
@@ -109,6 +110,57 @@ const Vendor = () => {
                   <input type="text" id="tin" placeholder="TIN" />
                 </div>
               </div>
+            </div>
+            <div className="heading">
+              <p>Account Information</p>
+            </div>
+            <div className="information">
+              <div className="item">
+                <label htmlFor="bank">Bank Name</label>
+                <div className="input">
+                  <img src={house} alt="house" />
+                  <input type="text" id="bank" />
+                </div>
+              </div>
+              <div className="item">
+                <label htmlFor="account">Account Number</label>
+                <div className="input">
+                  <img src={nuban} alt="house" />
+                  <input
+                    type="text"
+                    id="account"
+                    placeholder="NUBAN or standard account number"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="account-type">
+              <label htmlFor="">Type of Account</label>
+              <div className="options">
+                <div className="option">
+                  <input type="radio" value="savings" name="accountType" />{" "}
+                  <span>Savings</span>
+                </div>
+                <div className="option">
+                  <input type="radio" value="current" name="accountType" />{" "}
+                  <span>Current</span>
+                </div>
+                <div className="option">
+                  <input type="radio" value="domiciliary" name="accountType" />{" "}
+                  <span>Domiciliary</span>
+                </div>
+                <div className="option">
+                  <input type="radio" value="corporate" name="accountType" />{" "}
+                  <span>Corporate</span>
+                </div>
+                <div className="option">
+                  <input type="radio" value="other" name="accountType" />{" "}
+                  <span>Other</span>
+                </div>
+              </div>
+            </div>
+            <div className="heading">
+              <p>Contact Information</p>
             </div>
           </form>
         </div>
