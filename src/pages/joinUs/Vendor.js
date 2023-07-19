@@ -162,6 +162,62 @@ const Vendor = () => {
             <div className="heading">
               <p>Contact Information</p>
             </div>
+            <div className="information">
+              <div className="item">
+                <label htmlFor="phone">Phone Number</label>
+                <div className="input">
+                  <img src={house} alt="house" />
+                  <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Official phone number"
+                  />
+                </div>
+              </div>
+              <div className="item">
+                <label htmlFor="mobile">Mobile Phone</label>
+                <div className="input">
+                  <img src={date} alt="house" />
+                  <input
+                    type="text"
+                    id="mobile"
+                    placeholder="Alternative phone number"
+                  />
+                </div>
+              </div>
+              <div className="item">
+                <label htmlFor="email">Email Address</label>
+                <div className="input">
+                  <img src={suitcase} alt="suitcase" />
+                  <input type="email" id="email" />
+                </div>
+              </div>
+              <div className="item">
+                <label htmlFor="years">Number of years in business</label>
+                <div className="input">
+                  <img src={pen} alt="pen" />
+                  <input type="email" id="years" />
+                </div>
+              </div>
+            </div>
+            <label htmlFor="nature">Nature of Business</label>
+            <textarea name="nature" id="nature" className="nature"></textarea>
+
+            <div className="account-type">
+              <label htmlFor="">
+                Are you registered with any other organisation
+              </label>
+              <div className="options">
+                <div className="option">
+                  <input type="radio" value="yes" name="otherOrg" />{" "}
+                  <span>Yes</span>
+                </div>
+                <div className="option">
+                  <input type="radio" value="no" name="otherOrg" />{" "}
+                  <span>No</span>
+                </div>
+              </div>
+            </div>
           </form>
         </div>
       </div>

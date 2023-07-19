@@ -41,7 +41,8 @@
         }
 
         & input,
-        select {
+        select,
+        textarea {
           height: 49px;
           border-radius: 5px;
           border: 1px solid #e0e0e0;
@@ -52,6 +53,10 @@
 
         & input {
           padding-left: 70px;
+        }
+
+        & textarea {
+          resize: none;
         }
 
         & .input,
@@ -135,6 +140,10 @@
               color: red;
             }
           }
+        }
+
+        & .nature {
+          height: 236px;
         }
       }
     }
