@@ -14,12 +14,13 @@ const BioPage = () => {
   console.log(page, personId, useParams());
 
   return (
-    <div className="bio-page">
+    <section className="bio-page">
       <div className="section-center">
         <div className="left">
           <img src={page.image} alt={page.image} />
         </div>
-        <div className="right">
+        s
+        <article className="right">
           <div className="desc">
             {page?.data?.map((item) => (
               <p>{item}</p>
@@ -28,9 +29,9 @@ const BioPage = () => {
 
           <h2>{page.name}</h2>
           <h3>{page.position}</h3>
-        </div>
+        </article>
       </div>
-    </div>
+    </section>
   );
 };
 

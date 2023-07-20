@@ -2,6 +2,7 @@ import React from "react";
 import SectionOne from "../../components/about/SectionOne";
 import alumni from "../../assets/images/pacAlumni.png";
 import mapalumni from "../../assets/images/mapalumni.png";
+import alumniBg from "../../assets/images/alumniBg.png";
 import { alumniData } from "../../utils/joinusData";
 
 const Alumni = () => {
@@ -85,7 +86,10 @@ const Alumni = () => {
           })}
         </div>
       </div>
-      <div className="section-five">
+      <div
+        className="section-five"
+        style={{ backgroundImage: `url(${alumniBg})` }}
+      >
         <div className="content">
           <h1>Join Our Community Today</h1>
           <p>Become an icon</p>

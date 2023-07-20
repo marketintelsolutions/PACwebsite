@@ -1,6 +1,6 @@
 .section-four {
   background-size: contain;
-  //   border: 2px solid blue;
+  // border: 2px solid blue;
   //   min-height: 200vh;
   background-position: 10px;
   background-repeat: no-repeat;
@@ -12,12 +12,12 @@
   & .bg-image {
     position: absolute;
     top: -170px;
-    right: -45%;
+    right: -65%;
     height: 100%;
     // border: 2px solid red;
-    width: 90%;
+    // width: 90%;
     // width:
-    // z-index: 2;
+    // z-index: 5;
   }
 
   & .spirit {
@@ -89,6 +89,7 @@
     width: fit-content;
     margin: 151px auto;
     align-items: center;
+    // border: 2px solid red;
 
     @media (max-width: $breakpoint-tablet) {
       flex-direction: column;
@@ -198,17 +199,6 @@
         cursor: pointer;
         border: 1px solid var(--primary-blue);
         animation: mymove 5s infinite;
-        // a:hover .liquid{
-        // }
-
-        // @keyframes mymove {
-        //   0% {
-        //     transform: translate(-50%, -75%) rotate(0deg);
-        //   }
-        //   100% {
-        //     transform: translate(-50%, -75%) rotate(360deg);
-        //   }
-        // }
 
         &:hover {
           background: white;

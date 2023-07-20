@@ -104,7 +104,7 @@ const Navbar = ({ isDropdown, setIsDropdown }) => {
               <p>CSR</p>
             </div>
             <div className="item">
-              <p>Contact</p>
+              <Link to="/contact">Contact</Link>
             </div>
           </div>
           <div className="menu">

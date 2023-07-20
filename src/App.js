@@ -4,6 +4,7 @@ import SharedLayout from "./components/SharedLayout";
 import About from "./pages/About";
 import AgroAllied from "./pages/AgroAllied";
 import BioPage from "./pages/BioPage";
+import Contact from "./pages/Contact";
 import FinancialServices from "./pages/FinancialServices";
 import Healthcare from "./pages/Healthcare";
 import Hospitality from "./pages/Hospitality";
@@ -38,6 +39,7 @@ const App = () => {
           <Route path="/joinus/career" element={<Career />} />
           <Route path="/joinus/alumni" element={<Alumni />} />
           <Route path="/joinus/vendor" element={<Vendor />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </SharedLayout>
     </>
