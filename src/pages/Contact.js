@@ -3,6 +3,12 @@ import SectionOne from "../components/about/SectionOne";
 import contactBg from "../assets/images/contactBg.png";
 import contactMapOne from "../assets/images/contactMapOne.png";
 import contactMapTwo from "../assets/images/contactMapTwo.png";
+import Block from "../components/contact/Block";
+import {
+  contactDetailsOne,
+  contactDetailsThree,
+  contactDetailsTwo,
+} from "../utils/contactData";
 
 const Contact = () => {
   return (
@@ -50,7 +56,30 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className="contact-section-three"></div>
+      {/* SECTION THREE */}
+      <div className="contact-section-three">
+        <h1>Our Contact Details</h1>
+        <div className="content">
+          <div className="left row">
+            {contactDetailsOne.map((item, index) => {
+              return <Block {...item} key={index} />;
+            })}
+          </div>
+          <span className="line"></span>
+          <div className="middle row">
+            {contactDetailsTwo.map((item, index) => {
+              return <Block {...item} key={index} />;
+            })}
+          </div>
+          <span className="line"></span>
+          <div className="right row">
+            {contactDetailsThree.map((item, index) => {
+              return <Block {...item} key={index} />;
+            })}
+          </div>
+        </div>
+      </div>
+      {/* SECTION FOUR */}
       <div className="contact-section-four map-item">
         <div className="bottom">
           <div className="right">
@@ -82,6 +111,20 @@ const Contact = () => {
             </div>
           </div>
         </div>
+      </div>
+      {/* SECTION FIVE */}
+      <div className="section-five">
+        <h1>Send us a message</h1>
+        <span></span>
+        <form>
+          <div className="top">
+            <input type="text" placeholder="Full Name" />
+            <input type="email" placeholder="Email" />
+          </div>
+          <input type="text" placeholder="Subject" />
+          <textarea placeholder="Message"></textarea>
+          <button type="button">Submit</button>
+        </form>
       </div>
     </div>
   );
