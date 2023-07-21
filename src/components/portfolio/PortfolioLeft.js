@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PortfolioLeft = ({
   img,
@@ -9,6 +10,7 @@ const PortfolioLeft = ({
   subHeading,
   bgColor,
   link,
+  page,
 }) => {
   return (
     <div className="item">
@@ -46,13 +48,17 @@ const PortfolioLeft = ({
             </p>
           ))}
         </div>
-        <a
-          href={link}
-          target="_blank"
-          style={bgColor ? { background: `${bgColor}`, color: "white" } : {}}
-        >
-          Read more
-        </a>
+        {page ? (
+          <Link to={link}>Read more</Link>
+        ) : (
+          <a
+            href={link}
+            style={bgColor ? { background: `${bgColor}`, color: "white" } : {}}
+            target="_blank"
+          >
+            Read more
+          </a>
+        )}
       </div>
     </div>
   );

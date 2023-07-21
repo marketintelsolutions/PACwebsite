@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import vendorbg from "../../assets/images/vendorbg.png";
 import SectionOne from "../../components/about/SectionOne";
 import locationGrey from "../../assets/logos/locationGrey.svg";
@@ -15,6 +15,63 @@ import cloud from "../../assets/logos/cloud.svg";
 import cancel from "../../assets/logos/cancel.svg";
 
 const Vendor = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
+  const [formData, setFormData] = useState({
+    company: "",
+    streetAddress: "",
+    aptSuiteBuilding: "",
+    city: "",
+    state: "",
+    postalCode: "",
+    country: "",
+    registration: "",
+    dateOfIncorporation: "",
+    paidUpShare: "",
+    authorizedShare: "",
+    tin: "",
+    bank: "",
+    account: "",
+    accountType: "",
+
+    phone: "",
+    mobile: "",
+    email: "",
+    yearsInBusiness: "",
+    natureOfBusiness: "",
+    registeredWithOtherOrg: "",
+    keyOrganisations: "",
+    workDetails: "",
+
+    organisation: "",
+    referenceStreet: "",
+    referenceApartment: "",
+    referenceCity: "",
+    referenceState: "",
+    referencePostal: "",
+    referenceCountry: "",
+    contactPerson: "",
+    contactPosition: "",
+    contactPhone: "",
+    referenceBusinessYears: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here with the formData object.
+    console.log(formData);
+  };
+
   return (
     <div className="vendor">
       <SectionOne
@@ -27,42 +84,85 @@ const Vendor = () => {
           <div className="heading">
             <p>Vendor Information</p>
           </div>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="name">
               <label htmlFor="company">Name of Company</label>
-              <input type="text" id="company" />
+              <input
+                type="text"
+                id="company"
+                name="company"
+                value={formData.company}
+                onChange={handleChange}
+              />
             </div>
 
             <div className="address">
               <label>Permanent Business Address</label>
               <div className="input">
                 <img src={locationGrey} alt="locationGrey" />
-                <input type="text" placeholder="Street Address" />
+                <input
+                  type="text"
+                  placeholder="Street Address"
+                  name="streetAddress"
+                  value={formData.streetAddress}
+                  onChange={handleChange}
+                />
               </div>
               <div className="input">
                 <img src={locationGrey} alt="locationGrey" />
-                <input type="text" placeholder="Apt. Suite. Bldg. (optional)" />
+                <input
+                  type="text"
+                  placeholder="Apt. Suite. Bldg. (optional)"
+                  name="aptSuiteBuilding"
+                  value={formData.aptSuiteBuilding}
+                  onChange={handleChange}
+                />
               </div>
 
               <div className="items">
                 <div className="input">
                   <img src={locationGrey} alt="locationGrey" />
-                  <input type="text" placeholder="City" />
+                  <input
+                    type="text"
+                    placeholder="City"
+                    name="city"
+                    value={formData.city}
+                    onChange={handleChange}
+                  />
                 </div>
                 <div className="input">
                   <img src={locationGrey} alt="locationGrey" />
-                  <input type="text" placeholder="State / Province / Region" />
+                  <input
+                    type="text"
+                    placeholder="State / Province / Region"
+                    name="state"
+                    value={formData.state}
+                    onChange={handleChange}
+                  />
                 </div>
                 <div className="input">
                   <img src={locationGrey} alt="locationGrey" />
-                  <input type="text" placeholder="Postal / Zip Code" />
+                  <input
+                    type="text"
+                    placeholder="Postal / Zip Code"
+                    name="postalCode"
+                    value={formData.postalCode}
+                    onChange={handleChange}
+                  />
                 </div>
-                <select name="" id="">
+                <select
+                  name="country"
+                  id="country"
+                  value={formData.country}
+                  onChange={handleChange}
+                >
                   <option value="">- - Select Country - -</option>
                   <option value="nigeria">nigeria</option>
+                  {/* Add other country options as needed */}
                 </select>
               </div>
             </div>
+
             <div className="information">
               <div className="item">
                 <label htmlFor="registration">
@@ -74,17 +174,25 @@ const Vendor = () => {
                     type="text"
                     id="registration"
                     placeholder="CAC registration number"
+                    name="registration"
+                    value={formData.registration}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
               <div className="item">
-                <label htmlFor="registration">Date of Incorporation</label>
+                <label htmlFor="dateOfIncorporation">
+                  Date of Incorporation
+                </label>
                 <div className="input">
                   <img src={date} alt="locationGrey" />
                   <input
                     type="date"
-                    id="registration"
+                    id="dateOfIncorporation"
                     placeholder="Select Date"
+                    name="dateOfIncorporation"
+                    value={formData.dateOfIncorporation}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -96,35 +204,60 @@ const Vendor = () => {
                     type="text"
                     id="paidUpShare"
                     placeholder="CAC registration number"
+                    name="paidUpShare"
+                    value={formData.paidUpShare}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
               <div className="item">
-                <label htmlFor="authorisedShare">
+                <label htmlFor="authorizedShare">
                   Authorized Share Capital:
                 </label>
                 <div className="input">
                   <img src={pen} alt="locationGrey" />
-                  <input type="text" id="authorisedShare" placeholder="" />
+                  <input
+                    type="text"
+                    id="authorizedShare"
+                    placeholder=""
+                    name="authorizedShare"
+                    value={formData.authorizedShare}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
               <div className="item">
                 <label htmlFor="tin">Tax Identification Number</label>
                 <div className="input">
                   <img src={microscope} alt="locationGrey" />
-                  <input type="text" id="tin" placeholder="TIN" />
+                  <input
+                    type="text"
+                    id="tin"
+                    placeholder="TIN"
+                    name="tin"
+                    value={formData.tin}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
             </div>
+
             <div className="heading">
               <p>Account Information</p>
             </div>
+
             <div className="information">
               <div className="item">
                 <label htmlFor="bank">Bank Name</label>
                 <div className="input">
                   <img src={house} alt="house" />
-                  <input type="text" id="bank" />
+                  <input
+                    type="text"
+                    id="bank"
+                    name="bank"
+                    value={formData.bank}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
               <div className="item">
@@ -135,35 +268,71 @@ const Vendor = () => {
                     type="text"
                     id="account"
                     placeholder="NUBAN or standard account number"
+                    name="account"
+                    value={formData.account}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
             </div>
+
             <div className="account-type">
-              <label htmlFor="">Type of Account</label>
+              <label htmlFor="accountType">Type of Account</label>
               <div className="options">
                 <div className="option">
-                  <input type="radio" value="savings" name="accountType" />{" "}
+                  <input
+                    type="radio"
+                    value="savings"
+                    name="accountType"
+                    checked={formData.accountType === "savings"}
+                    onChange={handleChange}
+                  />{" "}
                   <span>Savings</span>
                 </div>
                 <div className="option">
-                  <input type="radio" value="current" name="accountType" />{" "}
+                  <input
+                    type="radio"
+                    value="current"
+                    name="accountType"
+                    checked={formData.accountType === "current"}
+                    onChange={handleChange}
+                  />{" "}
                   <span>Current</span>
                 </div>
                 <div className="option">
-                  <input type="radio" value="domiciliary" name="accountType" />{" "}
+                  <input
+                    type="radio"
+                    value="domiciliary"
+                    name="accountType"
+                    checked={formData.accountType === "domiciliary"}
+                    onChange={handleChange}
+                  />{" "}
                   <span>Domiciliary</span>
                 </div>
                 <div className="option">
-                  <input type="radio" value="corporate" name="accountType" />{" "}
+                  <input
+                    type="radio"
+                    value="corporate"
+                    name="accountType"
+                    checked={formData.accountType === "corporate"}
+                    onChange={handleChange}
+                  />{" "}
                   <span>Corporate</span>
                 </div>
                 <div className="option">
-                  <input type="radio" value="other" name="accountType" />{" "}
+                  <input
+                    type="radio"
+                    value="other"
+                    name="accountType"
+                    checked={formData.accountType === "other"}
+                    onChange={handleChange}
+                  />{" "}
                   <span>Other</span>
                 </div>
               </div>
             </div>
+
+            {/* CONTACT INFORMATION */}
             <div className="heading">
               <p>Contact Information</p>
             </div>
@@ -175,7 +344,10 @@ const Vendor = () => {
                   <input
                     type="tel"
                     id="phone"
+                    name="phone"
+                    value={formData.phone}
                     placeholder="Official phone number"
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -186,7 +358,10 @@ const Vendor = () => {
                   <input
                     type="text"
                     id="mobile"
+                    name="mobile"
+                    value={formData.mobile}
                     placeholder="Alternative phone number"
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -194,31 +369,64 @@ const Vendor = () => {
                 <label htmlFor="email">Email Address</label>
                 <div className="input">
                   <img src={suitcase} alt="suitcase" />
-                  <input type="email" id="email" />
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
               <div className="item">
-                <label htmlFor="years">Number of years in business</label>
+                <label htmlFor="yearsInBusiness">
+                  Number of years in business
+                </label>
                 <div className="input">
                   <img src={pen} alt="pen" />
-                  <input type="email" id="years" />
+                  <input
+                    type="text"
+                    id="yearsInBusiness"
+                    name="yearsInBusiness"
+                    value={formData.yearsInBusiness}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
             </div>
-            <label htmlFor="nature">Nature of Business</label>
-            <textarea name="nature" id="nature" className="nature"></textarea>
+
+            <label htmlFor="natureOfBusiness">Nature of Business</label>
+            <textarea
+              name="natureOfBusiness"
+              id="natureOfBusiness"
+              className="nature"
+              value={formData.natureOfBusiness}
+              onChange={handleChange}
+            ></textarea>
 
             <div className="account-type">
-              <label htmlFor="">
+              <label htmlFor="registeredWithOtherOrg">
                 Are you registered with any other organisation
               </label>
               <div className="options">
                 <div className="option">
-                  <input type="radio" value="yes" name="otherOrg" />{" "}
+                  <input
+                    type="radio"
+                    value="yes"
+                    name="registeredWithOtherOrg"
+                    checked={formData.registeredWithOtherOrg === "yes"}
+                    onChange={handleChange}
+                  />{" "}
                   <span>Yes</span>
                 </div>
                 <div className="option">
-                  <input type="radio" value="no" name="otherOrg" />{" "}
+                  <input
+                    type="radio"
+                    value="no"
+                    name="registeredWithOtherOrg"
+                    checked={formData.registeredWithOtherOrg === "no"}
+                    onChange={handleChange}
+                  />{" "}
                   <span>No</span>
                 </div>
               </div>
@@ -232,7 +440,10 @@ const Vendor = () => {
               id="keyOrganisations"
               className="text-details"
               placeholder="Other companies you are registered with"
+              value={formData.keyOrganisations}
+              onChange={handleChange}
             ></textarea>
+
             <label htmlFor="workDetails">
               Give brief details of the type and value of work you have done in
               the 24 months
@@ -241,6 +452,8 @@ const Vendor = () => {
               name="workDetails"
               id="workDetails"
               className="text-details"
+              value={formData.workDetails}
+              onChange={handleChange}
             ></textarea>
 
             {/* REFERENCES */}
@@ -253,7 +466,14 @@ const Vendor = () => {
             <label htmlFor="organisation">Name of Organisation</label>
             <div className="input">
               <img src={locationGrey} alt="locationGrey" />
-              <input type="text" id="organisation" placeholder="Company name" />
+              <input
+                type="text"
+                id="organisation"
+                name="organisation"
+                value={formData.organisation}
+                placeholder="Company name"
+                onChange={handleChange}
+              />
             </div>
 
             <div className="address">
@@ -264,6 +484,8 @@ const Vendor = () => {
                   type="text"
                   placeholder="Street Address"
                   name="referenceStreet"
+                  value={formData.referenceStreet}
+                  onChange={handleChange}
                 />
               </div>
               <div className="input">
@@ -272,13 +494,21 @@ const Vendor = () => {
                   type="text"
                   placeholder="Apt. Suite. Bldg. (optional)"
                   name="referenceApartment"
+                  value={formData.referenceApartment}
+                  onChange={handleChange}
                 />
               </div>
 
               <div className="items">
                 <div className="input">
                   <img src={locationGrey} alt="locationGrey" />
-                  <input type="text" placeholder="City" name="referenceCity" />
+                  <input
+                    type="text"
+                    placeholder="City"
+                    name="referenceCity"
+                    value={formData.referenceCity}
+                    onChange={handleChange}
+                  />
                 </div>
                 <div className="input">
                   <img src={locationGrey} alt="locationGrey" />
@@ -286,6 +516,8 @@ const Vendor = () => {
                     type="text"
                     placeholder="State / Province / Region"
                     name="referenceState"
+                    value={formData.referenceState}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="input">
@@ -294,9 +526,16 @@ const Vendor = () => {
                     type="text"
                     placeholder="Postal / Zip Code"
                     name="referencePostal"
+                    value={formData.referencePostal}
+                    onChange={handleChange}
                   />
                 </div>
-                <select name="referenceCountry" id="">
+                <select
+                  name="referenceCountry"
+                  id=""
+                  value={formData.referenceCountry}
+                  onChange={handleChange}
+                >
                   <option value="">- - Select Country - -</option>
                   <option value="nigeria">nigeria</option>
                 </select>
@@ -307,14 +546,26 @@ const Vendor = () => {
                 <label htmlFor="contactPerson">Contact Person</label>
                 <div className="input">
                   <img src={contact} alt="locationGrey" />
-                  <input type="text" id="contactPerson" />
+                  <input
+                    type="text"
+                    id="contactPerson"
+                    name="contactPerson"
+                    value={formData.contactPerson}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
               <div className="item">
                 <label htmlFor="contactPosition">Position</label>
                 <div className="input">
                   <img src={position} alt="locationGrey" />
-                  <input type="text" id="contactPosition" />
+                  <input
+                    type="text"
+                    id="contactPosition"
+                    name="contactPosition"
+                    value={formData.contactPosition}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
               <div className="item">
@@ -324,7 +575,10 @@ const Vendor = () => {
                   <input
                     type="tel"
                     id="contactPhone"
+                    name="contactPhone"
                     placeholder="Contact’s phone number"
+                    value={formData.contactPhone}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -337,7 +591,10 @@ const Vendor = () => {
                   <input
                     type="number"
                     id="referenceBusinessYears"
+                    name="referenceBusinessYears"
                     placeholder="How long have you been in business with the above named company"
+                    value={formData.referenceBusinessYears}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -364,7 +621,7 @@ const Vendor = () => {
                   <img src={cloud} alt="cloud" />
                 </div>
                 {/* <button type="button" className="upload-btn">
-                </button> */}
+          </button> */}
               </label>
               <button type="button" className="cancel-btn">
                 <img src={cancel} alt="cancel" />
@@ -378,7 +635,7 @@ const Vendor = () => {
                   <img src={cloud} alt="cloud" />
                 </div>
                 {/* <button type="button" className="upload-btn">
-                </button> */}
+          </button> */}
               </label>
               <button type="button" className="cancel-btn">
                 <img src={cancel} alt="cancel" />
@@ -396,6 +653,8 @@ const Vendor = () => {
                     value="trueInformation"
                     name="accountType"
                     id="accountType"
+                    checked={formData.accountType === "trueInformation"}
+                    onChange={handleChange}
                   />{" "}
                   <span>Yes, I confirm</span>
                 </div>

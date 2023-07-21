@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SectionOne from "../../components/about/SectionOne";
 import alumni from "../../assets/images/pacAlumni.png";
 import mapalumni from "../../assets/images/mapalumni.png";
@@ -6,6 +6,32 @@ import alumniBg from "../../assets/images/alumniBg.png";
 import { alumniData } from "../../utils/joinusData";
 
 const Alumni = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    address: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = () => {
+    // Handle form submission here with the formData object.
+    console.log(formData);
+  };
+
   return (
     <div className="alumni">
       <SectionOne
@@ -39,18 +65,53 @@ const Alumni = () => {
           </p>
           <form>
             <div className="details">
-              <input type="text" placeholder="First Name" />
-              <input type="text" placeholder="Last Name" />
-              <input type="text" placeholder="Email Address" />
-              <input type="text" placeholder="Office or Home Address" />
+              <input
+                type="text"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                placeholder="First Name"
+              />
+              <input
+                type="text"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                placeholder="Last Name"
+              />
+              <input
+                type="text"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email Address"
+              />
+              <input
+                type="text"
+                name="address"
+                value={formData.address}
+                onChange={handleChange}
+                placeholder="Office or Home Address"
+              />
             </div>
-            <input type="text" className="phone" placeholder="Phone No" />
+            <input
+              type="text"
+              className="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder="Phone No"
+            />
             <textarea
               name="message"
               id="message"
+              value={formData.message}
+              onChange={handleChange}
               placeholder="Enter Message"
             ></textarea>
-            <button type="button">submit</button>
+            <button type="button" onClick={handleSubmit}>
+              Submit
+            </button>
           </form>
         </div>
       </div>

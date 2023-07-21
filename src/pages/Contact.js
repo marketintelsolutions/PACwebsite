@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SectionOne from "../components/about/SectionOne";
 import contactBg from "../assets/images/contactBg.png";
 import contactMapOne from "../assets/images/contactMapOne.png";
@@ -11,6 +11,27 @@ import {
 } from "../utils/contactData";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here with the formData object.
+    console.log(formData);
+  };
+
   return (
     <div className="contact">
       <SectionOne color="#38B6FF" text="Contact Us" img={contactBg} />
@@ -116,14 +137,37 @@ const Contact = () => {
       <div className="section-five">
         <h1>Send us a message</h1>
         <span></span>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="top">
-            <input type="text" placeholder="Full Name" />
-            <input type="email" placeholder="Email" />
+            <input
+              type="text"
+              placeholder="Full Name"
+              name="fullName"
+              value={formData.fullName}
+              onChange={handleChange}
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
           </div>
-          <input type="text" placeholder="Subject" />
-          <textarea placeholder="Message"></textarea>
-          <button type="button">Submit</button>
+          <input
+            type="text"
+            placeholder="Subject"
+            name="subject"
+            value={formData.subject}
+            onChange={handleChange}
+          />
+          <textarea
+            placeholder="Message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+          ></textarea>
+          <button type="submit">Submit</button>
         </form>
       </div>
     </div>
