@@ -374,7 +374,8 @@
         }
       }
 
-      & button {
+      & button,
+      a {
         font-family: "Open Sans";
         font-style: normal;
         font-weight: 500;
@@ -388,6 +389,7 @@
         width: fit-content;
         text-transform: capitalize;
         cursor: pointer;
+        text-decoration: none;
 
         @media (max-width: $breakpoint-tablet) {
           font-size: 11.072px;

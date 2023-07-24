@@ -17,6 +17,7 @@ import RealEstate from "./pages/RealEstate";
 import Renewable from "./pages/Renewable";
 import Newsletter from "./pages/resources/Newsletter";
 import StayUpdated from "./pages/resources/StayUpdated";
+import StayUpdatedItem from "./pages/resources/StayUpdatedItem";
 import Technology from "./pages/Technology";
 
 const App = () => {
@@ -42,6 +43,10 @@ const App = () => {
           <Route path="/joinus/alumni" element={<Alumni />} />
           <Route path="/joinus/vendor" element={<Vendor />} />
           <Route path="/resources/stay-updated" element={<StayUpdated />} />
+          <Route
+            path="/resources/stay-updated/:id"
+            element={<StayUpdatedItem />}
+          />
           <Route path="/resources/newsletter" element={<Newsletter />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

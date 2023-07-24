@@ -3,6 +3,7 @@ import SectionOne from "../../components/about/SectionOne";
 import vendorbg from "../../assets/images/vendorbg.png";
 import { foundations } from "../../utils/data";
 import Pagination from "../../components/resources/Pagination";
+import { Link } from "react-router-dom";
 
 const StayUpdated = () => {
   useEffect(() => {
@@ -26,7 +27,9 @@ const StayUpdated = () => {
                   <div className="text">
                     <span></span>
                     <p>{text}</p>
-                    <button>read more</button>
+                    <Link to={`/resources/stay-updated/${text}`}>
+                      Read more
+                    </Link>
                   </div>
                 </div>
               );
