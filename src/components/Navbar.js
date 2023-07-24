@@ -8,7 +8,7 @@ import calender from "../assets/logos/calender.svg";
 import clock from "../assets/logos/clock.svg";
 import menuLine from "../assets/logos/menuLine.svg";
 import { Link } from "react-router-dom";
-import { ourPortfolio, joinUs } from "../utils/navData";
+import { ourPortfolio, joinUs, resources } from "../utils/navData";
 
 const Navbar = ({ isDropdown, setIsDropdown }) => {
   const [dropItems, setDropItems] = useState([]);
@@ -75,7 +75,10 @@ const Navbar = ({ isDropdown, setIsDropdown }) => {
             </div>
             <div className="item border">
               <Link to="/portfolio">Our Portfolio</Link>
-              <span onClick={(e) => toggleDropdown(e, ourPortfolio)}>
+              <span
+                onClick={(e) => toggleDropdown(e, ourPortfolio)}
+                className="portfolio-arrow"
+              >
                 <img
                   className="portfolio-arrow"
                   src={arrowDownBlue}
@@ -85,18 +88,27 @@ const Navbar = ({ isDropdown, setIsDropdown }) => {
             </div>
             <div className="item border">
               <p>Resources</p>
-              <span>
-                <img src={arrowDownBlue} alt="arrowDownBlue" />
+              <span
+                onClick={(e) => toggleDropdown(e, resources)}
+                className="portfolio-arrow"
+              >
+                <img
+                  src={arrowDownBlue}
+                  alt="arrowDownBlue"
+                  className="portfolio-arrow"
+                />
               </span>
             </div>
             <div className="item border">
               <p>Join Us</p>
-              <span>
+              <span
+                onClick={(e) => toggleDropdown(e, joinUs)}
+                className="portfolio-arrow"
+              >
                 <img
                   src={arrowDownBlue}
                   alt="arrowDownFill"
                   className="portfolio-arrow"
-                  onClick={(e) => toggleDropdown(e, joinUs)}
                 />
               </span>
             </div>
@@ -121,6 +133,19 @@ const Navbar = ({ isDropdown, setIsDropdown }) => {
           }}
         >
           {dropItems.map((item, index) => {
+            if (item.external) {
+              return (
+                <a
+                  href="https://pacresearch.org/"
+                  className="drop-item"
+                  onClick={() => setIsDropdown(!isDropdown)}
+                  target="_blank"
+                  key={index}
+                >
+                  {item.text}
+                </a>
+              );
+            }
             return (
               <Link
                 key={index}

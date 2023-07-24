@@ -9,6 +9,7 @@ import {
   contactDetailsThree,
   contactDetailsTwo,
 } from "../utils/contactData";
+import { contact } from "../utils/helpers/sendMailHelpers";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -28,8 +29,17 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    let recipient_email = "igbagboleye2@gmail.com";
+
+    const { fullName, email, subject, message } = formData;
+    const fields = Object.keys(formData);
+
     // Handle form submission here with the formData object.
     console.log(formData);
+    contact({ fullName, email, subject, message, recipient_email, fields });
+
+    setFormData({ fullName: "", email: "", subject: "", message: "" });
   };
 
   return (

@@ -13,6 +13,7 @@ import position from "../../assets/logos/position.svg";
 import business from "../../assets/logos/business.svg";
 import cloud from "../../assets/logos/cloud.svg";
 import cancel from "../../assets/logos/cancel.svg";
+import { vendorForm } from "../../utils/helpers/sendMailHelpers";
 
 const Vendor = () => {
   useEffect(() => {
@@ -68,7 +69,86 @@ const Vendor = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const {
+      company,
+      streetAddress,
+      aptSuiteBuilding,
+      city,
+      state,
+      postalCode,
+      country,
+      registration,
+      dateOfIncorporation,
+      paidUpShare,
+      authorizedShare,
+      tin,
+      bank,
+      account,
+      accountType,
+      phone,
+      mobile,
+      email,
+      yearsInBusiness,
+      natureOfBusiness,
+      registeredWithOtherOrg,
+      keyOrganisations,
+      workDetails,
+      organisation,
+      referenceStreet,
+      referenceApartment,
+      referenceCity,
+      referenceState,
+      referencePostal,
+      referenceCountry,
+      contactPerson,
+      contactPosition,
+      contactPhone,
+      referenceBusinessYears,
+    } = formData;
     // Handle form submission here with the formData object.
+
+    let recipient_email = "igbagboleye2@gmail.com";
+    const fields = Object.keys(formData);
+
+    vendorForm({
+      company,
+      streetAddress,
+      aptSuiteBuilding,
+      city,
+      state,
+      postalCode,
+      country,
+      registration,
+      dateOfIncorporation,
+      paidUpShare,
+      authorizedShare,
+      tin,
+      bank,
+      account,
+      accountType,
+      phone,
+      mobile,
+      email,
+      yearsInBusiness,
+      natureOfBusiness,
+      registeredWithOtherOrg,
+      keyOrganisations,
+      workDetails,
+      organisation,
+      referenceStreet,
+      referenceApartment,
+      referenceCity,
+      referenceState,
+      referencePostal,
+      referenceCountry,
+      contactPerson,
+      contactPosition,
+      contactPhone,
+      referenceBusinessYears,
+      recipient_email,
+      fields,
+    });
     console.log(formData);
   };
 

@@ -43,3 +43,19 @@ export const joinUs = [
     path: "/joinus/vendor",
   },
 ];
+
+export const resources = [
+  {
+    text: "Research",
+    path: "/resources/research",
+    external: true,
+  },
+  {
+    text: "Stay Updated",
+    path: "/resources/stay-updated",
+  },
+  {
+    text: "Newsletter",
+    path: "/resources/newsletter",
+  },
+];

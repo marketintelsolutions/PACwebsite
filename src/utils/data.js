@@ -143,10 +143,10 @@ export const foundations = [
     text: "Pac Capital Limited Sponsors Afreximbank 2021 Intra-African Trade Fair (Iatf) Event In Durban, South Africa.",
     image: portugal,
   },
-  {
-    text: "PAC Foundation Joined other Stakeholders to celebrate Lagos Tree Planting Day.",
-    image: conventions,
-  },
+  // {
+  //   text: "PAC Foundation Joined other Stakeholders to celebrate Lagos Tree Planting Day.",
+  //   image: conventions,
+  // },
 ];
 export const footer = [
   {

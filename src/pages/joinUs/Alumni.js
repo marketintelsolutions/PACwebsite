@@ -4,6 +4,7 @@ import alumni from "../../assets/images/pacAlumni.png";
 import mapalumni from "../../assets/images/mapalumni.png";
 import alumniBg from "../../assets/images/alumniBg.png";
 import { alumniData } from "../../utils/joinusData";
+import { gettingStarted } from "../../utils/helpers/sendMailHelpers";
 
 const Alumni = () => {
   useEffect(() => {
@@ -28,7 +29,37 @@ const Alumni = () => {
   };
 
   const handleSubmit = () => {
+    const { firstName, lastName, email, address, phone, message } = formData;
     // Handle form submission here with the formData object.
+
+    let recipient_email = "igbagboleye2@gmail.com";
+    const fields = Object.keys(formData);
+
+    if (!firstName || !lastName || !email || !address || !phone || !message) {
+      alert("Fill all fields");
+
+      return;
+    }
+
+    gettingStarted({
+      firstName,
+      lastName,
+      email,
+      address,
+      phone,
+      message,
+      recipient_email,
+      fields,
+    });
+
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      address: "",
+      phone: "",
+      message: "",
+    });
     console.log(formData);
   };
 
