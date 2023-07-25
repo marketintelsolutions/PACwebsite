@@ -5,6 +5,7 @@ import PortfolioRight from "../components/portfolio/PortfolioRight";
 import technologyBg from "../assets/images/technologyBg.png";
 import { technology } from "../utils/data";
 import animation from "../assets/images/portfolioAnimationLeft.svg";
+import Paysharp from "../components/portfolio/Paysharp";
 
 const Technology = () => {
   useEffect(() => {
@@ -14,8 +15,8 @@ const Technology = () => {
   return (
     <div>
       <SectionOne
-        color="#38B6FF"
-        text="Technology and Payment System"
+        color="#FA6900"
+        text="Technology and Media "
         img={technologyBg}
       />
 
@@ -24,10 +25,13 @@ const Technology = () => {
           <img src={animation} alt="animation" />
         </div>
         {technology.map((item, index) => {
-          if (index % 2 !== 0 || index === 1) {
-            return <PortfolioRight {...item} index={index} />;
+          if (item.heading === "Paysharp Services") {
+            return <Paysharp {...item} key={index} />;
           }
-          return <PortfolioLeft {...item} index={index} />;
+          if (index % 2 !== 0 || index === 1) {
+            return <PortfolioRight {...item} key={index} />;
+          }
+          return <PortfolioLeft {...item} key={index} />;
         })}
       </div>
     </div>

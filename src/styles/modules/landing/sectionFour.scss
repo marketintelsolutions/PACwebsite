@@ -311,11 +311,12 @@
 
   & .item {
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     min-height: 403px;
     // width: 381px;
-    width: 451px;
-    // max-width: 451.37px;
+    // width: 451px;
+    width: fit-content;
+    max-width: 451.37px;
     max-height: 463.23px;
     display: flex;
     align-items: flex-end;
@@ -331,7 +332,7 @@
       border-radius: 3.70585px;
       height: 50%;
       color: white;
-      padding: 28px 27px;
+      padding: 43px 27px;
       display: flex;
       flex-direction: column;
       gap: 29px;
@@ -366,7 +367,7 @@
         font-size: 20.0116px;
         line-height: 107%;
         text-transform: capitalize;
-
+        width: 395.041px;
         color: #ffffff;
 
         @media (max-width: $breakpoint-tablet) {

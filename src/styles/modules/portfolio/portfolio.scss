@@ -1,8 +1,10 @@
+.margin {
+  margin-top: 324px;
+}
 .portfolio {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 324px;
   margin-bottom: 156px;
   position: relative;
 
@@ -190,6 +192,70 @@
       background: transparent;
       width: 99px;
       border: none;
+    }
+  }
+}
+
+.paysharp {
+  // border: 2px solid red;
+
+  & .content {
+    // border: 2px solid blue;
+    max-width: 1481px;
+    // width: fit-content;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & h3 {
+      color: #192640;
+      text-align: center;
+      font-family: Open Sans;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    & h2 {
+      color: #192640;
+      text-align: center;
+      font-family: Open Sans;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 107%; /* 51.36px */
+      margin: 5px auto 53px;
+    }
+
+    & .paysharp-items {
+      // display: grid;
+      display: flex;
+      flex-wrap: wrap;
+      // grid-template-columns: repeat(autofill, minmax(468px, 80%));
+      // grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 100%;
+      justify-content: center;
+
+      & .paysharp-item {
+        // border: 2px solid red;
+        border-radius: 5px;
+        background: #fff;
+        box-shadow: 4px 4px 12px 5px rgba(96, 95, 95, 0.25);
+        padding: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 483px;
+        min-width: 30%;
+        // width: 100%;
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   }
 }

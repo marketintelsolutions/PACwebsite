@@ -43,6 +43,13 @@ import solar from "../assets/images/solar.png";
 // technology
 import paysharp from "../assets/images/paysharp.png";
 import fintech from "../assets/images/fintech.png";
+import realEstateNew from "../assets/images/realEstate.png";
+import airtime from "../assets/logos/airtime.svg";
+import cash from "../assets/logos/cash.svg";
+import deposit from "../assets/logos/deposit.svg";
+import prepaid from "../assets/logos/prepaid.svg";
+import money from "../assets/logos/money.svg";
+import subscription from "../assets/logos/subscription.svg";
 import technologyServices from "../assets/images/technologyServices.png";
 import smart from "../assets/images/smart.png";
 import technologyDistribution from "../assets/images/technologyDistribution.png";
@@ -349,6 +356,13 @@ export const renewable = [
 
 export const technology = [
   {
+    img: fintech,
+    heading: "Ziltchone Technologies",
+    text: [
+      "We Care. We Connect. We Create. We are the next generation of the Solutions. Giving you more for less!",
+    ],
+  },
+  {
     img: paysharp,
     heading: "Do More With Paysharp",
     text: [
@@ -356,48 +370,86 @@ export const technology = [
     ],
   },
   {
-    img: fintech,
-    heading: "FinTech",
-    text: [
-      "Providing technology and innovation for financial service delivery",
+    img: paysharp,
+    heading: "Paysharp Services",
+    text: "A Single Platform With Endless Possibilities",
+    items: [
+      {
+        image: airtime,
+        text: "Airtime Vending",
+      },
+      {
+        image: cash,
+        text: "Cash Withdrawal",
+      },
+      {
+        image: deposit,
+        text: "Cash Deposit",
+      },
+      {
+        image: prepaid,
+        text: "Prepaid Meter",
+      },
+      {
+        image: money,
+        text: "Money Transfer",
+      },
+      {
+        image: subscription,
+        text: "Cable Subscription",
+      },
     ],
   },
   {
-    img: technologyServices,
-    heading: "Managed Technology Services",
+    img: realEstateNew,
+    heading: "Real Estate Management",
     text: [
-      "We are managed service provider (MSP) deliverIng network, application, infrastructure and security through ongoing and regular support. Our team of experts with over 50 years combined experience are eager to help you solve that Technology challenge.",
+      "ProptyPlus – One of the leading Real Estate Software platform providing the ultimate property search experience and property management",
     ],
   },
-  {
-    img: smart,
-    heading: "Smart Creative",
-    text: [
-      "There's no limit to what you can get designed at Ziltch1 Smart Designs. Whether you're looking for a spectacular new logo or some stunning flyers or an amazing animation, our talented designers at Ziltch1 Technologies can make it happen. Click on the button below to see our wide range of design services.",
+  // {
+  //   img: fintech,
+  //   heading: "FinTech",
+  //   text: [
+  //     "Providing technology and innovation for financial service delivery",
+  //   ],
+  // },
+  // {
+  //   img: technologyServices,
+  //   heading: "Managed Technology Services",
+  //   text: [
+  //     "We are managed service provider (MSP) deliverIng network, application, infrastructure and security through ongoing and regular support. Our team of experts with over 50 years combined experience are eager to help you solve that Technology challenge.",
+  //   ],
+  // },
+  // {
+  //   img: smart,
+  //   heading: "Smart Creative",
+  //   text: [
+  //     "There's no limit to what you can get designed at Ziltch1 Smart Designs. Whether you're looking for a spectacular new logo or some stunning flyers or an amazing animation, our talented designers at Ziltch1 Technologies can make it happen. Click on the button below to see our wide range of design services.",
 
-      "  · Creative Design",
-      " · Web Designs Services",
-      "   · Print Design Services",
-      "· Product & Merchandise Design Services",
-      "· UI/UX Design",
-      "· Animation",
-    ],
-  },
-  {
-    img: technologyDistribution,
-    heading: "Technology Distribution",
-    text: [
-      "Development of User-Friendly Applications, Platforms and Solutions, to meet Customer needs & Expectations.",
-    ],
-  },
-  {
-    img: mediaEntertainment,
-    heading: "Media & Entertainment",
-    text: [
-      "Ziltch is a key player in Media infrastructure and creative Content Development to promote Africa and Global Culture .",
-    ],
-    link: "https://ziltchone.com ",
-  },
+  //     "  · Creative Design",
+  //     " · Web Designs Services",
+  //     "   · Print Design Services",
+  //     "· Product & Merchandise Design Services",
+  //     "· UI/UX Design",
+  //     "· Animation",
+  //   ],
+  // },
+  // {
+  //   img: technologyDistribution,
+  //   heading: "Technology Distribution",
+  //   text: [
+  //     "Development of User-Friendly Applications, Platforms and Solutions, to meet Customer needs & Expectations.",
+  //   ],
+  // },
+  // {
+  //   img: mediaEntertainment,
+  //   heading: "Media & Entertainment",
+  //   text: [
+  //     "Ziltch is a key player in Media infrastructure and creative Content Development to promote Africa and Global Culture .",
+  //   ],
+  //   link: "https://ziltchone.com ",
+  // },
 ];
 
 export const healthcare = [
