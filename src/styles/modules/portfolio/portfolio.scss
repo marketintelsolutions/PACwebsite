@@ -28,22 +28,26 @@
     justify-content: center;
     height: fit-content;
     transform: scale(0.76, 0.76);
+    // max-height: 478px;
+    height: fit-content;
 
     & .text {
       max-width: 506px;
       // border: 2px solid blue;
-      min-height: 400px;
+      // min-height: 400px;
+      height: 100%;
+      height: fit-content;
     }
 
     & .image {
       height: 100%;
-      min-height: 400px;
+      // min-height: 400px;
       // border: 2px solid green;
       & img {
         // height: 400px;
         height: 100%;
         // width: 420px;
-        width: auto;
+        width: 100%;
         object-fit: contain;
       }
     }
@@ -59,7 +63,7 @@
       display: flex;
       align-items: center;
 
-      color: #38b6ff;
+      color: #474747;
     }
 
     & h2 {
@@ -80,7 +84,7 @@
       margin-top: 15px;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      // gap: 5px;
       //   justify-content: space-around;
       height: 100%;
 

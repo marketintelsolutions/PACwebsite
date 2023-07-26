@@ -14,7 +14,7 @@ const RealEstate = () => {
   return (
     <div className="real-estate">
       <SectionOne
-        color="#38B6FF"
+        color="#4E2E8F"
         text="Real Estate & Infrastructure"
         img={estateBg}
       />
@@ -25,9 +25,9 @@ const RealEstate = () => {
         </div>
         {realEstate.map((item, index) => {
           if (index % 2 !== 0 || index === 1) {
-            return <PortfolioRight {...item} index={index} />;
+            return <PortfolioRight {...item} key={index} />;
           }
-          return <PortfolioLeft {...item} index={index} />;
+          return <PortfolioLeft {...item} key={index} />;
         })}
       </div>
       {/* </div> */}

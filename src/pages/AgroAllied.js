@@ -13,7 +13,7 @@ const AgroAllied = () => {
 
   return (
     <div>
-      <SectionOne color="#38B6FF" text="Agro-allied" img={agroBg} />
+      <SectionOne color="#9ACB34" text="Agro-allied" img={agroBg} />
 
       <div className="bottom portfolio">
         <div className="animation">

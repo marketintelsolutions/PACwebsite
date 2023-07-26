@@ -11,6 +11,7 @@ const PortfolioLeft = ({
   bgColor,
   link,
   page,
+  headingColor,
 }) => {
   return (
     <div className="item">
@@ -30,7 +31,7 @@ const PortfolioLeft = ({
           style={
             bgColor
               ? { background: `${bgColor}`, color: "white" }
-              : { color: `${textColor}` }
+              : { color: `${headingColor || textColor}` }
           }
         >
           {heading}

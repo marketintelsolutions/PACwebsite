@@ -11,8 +11,9 @@ const PortfolioRight = ({
   bgColor,
   link,
   page,
+  headingColor,
 }) => {
-  console.log(bgColor);
+  // console.log(bgColor);
   return (
     <div className="item">
       <div
@@ -28,7 +29,7 @@ const PortfolioRight = ({
           style={
             bgColor
               ? { background: `${bgColor}`, color: "white" }
-              : { color: `${textColor}` }
+              : { color: `${headingColor || textColor}` }
           }
         >
           {heading}

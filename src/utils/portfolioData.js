@@ -15,6 +15,7 @@ export const portfolioData = [
     ],
     link: "/portfolio/financial-services",
     page: true,
+    headingColor: "#38B6FF",
   },
 
   {
@@ -27,6 +28,7 @@ export const portfolioData = [
     ],
     link: "/portfolio/hospitality",
     page: true,
+    headingColor: "#FAB400",
   },
   {
     img: estate,
@@ -39,6 +41,7 @@ export const portfolioData = [
     ],
     link: "/portfolio/real-estate",
     page: true,
+    headingColor: "#4E2E8F",
   },
   {
     img: agroAllied,
@@ -51,6 +54,7 @@ export const portfolioData = [
     ],
     link: "/portfolio/agro-allied",
     page: true,
+    headingColor: "#9ACB34",
   },
   {
     img: renewable,
@@ -63,6 +67,7 @@ export const portfolioData = [
     ],
     link: "/portfolio/renewable",
     page: true,
+    headingColor: "#105215",
   },
   {
     img: technology,
@@ -72,6 +77,7 @@ export const portfolioData = [
     ],
     link: "/portfolio/technology",
     page: true,
+    headingColor: "#FA6900",
   },
   {
     img: healthcare,
@@ -84,5 +90,6 @@ export const portfolioData = [
     ],
     link: "/portfolio/healthcare",
     page: true,
+    headingColor: "#FF0000",
   },
 ];

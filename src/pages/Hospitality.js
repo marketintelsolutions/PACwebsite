@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SectionOne from "../components/about/SectionOne";
 import PortfolioLeft from "../components/portfolio/PortfolioLeft";
 import PortfolioRight from "../components/portfolio/PortfolioRight";
@@ -7,10 +7,13 @@ import { hospitality } from "../utils/data";
 import animation from "../assets/images/portfolioAnimationLeft.svg";
 
 const Hospitality = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className="hospitality">
       <SectionOne
-        color="#38B6FF"
+        color="#FAB400"
         text="Hospitality & Entertainment"
         img={hospitalityBg}
       />

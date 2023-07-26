@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import csrBg from "../assets/images/csrBg.png";
 import csrWomen from "../assets/images/csrWomen.png";
 import playWhite from "../assets/images/playWhite.svg";
 import { blocks, goals } from "../utils/csrData";
 
 const Csr = () => {
+  const [grey, setGrey] = useState(Array.from(goals).fill(false));
+  const newArray = blocks.map((item) => {
+    return { ...item, white: false };
+  });
+
+  const [items, setItems] = useState(newArray);
   return (
     <section className="csr">
       <div
@@ -44,12 +50,23 @@ const Csr = () => {
 
       <div className="csr-section-three">
         <div className="content">
-          {blocks.map((item, index) => {
-            const { image, text } = item;
+          {items.map((item, index) => {
+            const { image, text, whiteImg } = item;
             let border = index !== blocks.length - 1;
             return (
-              <div className={border ? "csr-item border" : "csr-item"}>
-                <img src={image} alt={image} />
+              <div
+                className={border ? "csr-item border" : "csr-item"}
+                key={index}
+                onMouseEnter={() => {
+                  const modifiedArray = newArray.map((item, i) => {
+                    if (i !== index) return item;
+                    return { ...item, white: true };
+                  });
+                  setItems(modifiedArray);
+                }}
+                onMouseLeave={() => setItems(newArray)}
+              >
+                <img src={items[index].white ? whiteImg : image} alt={image} />
                 <p>{text}</p>
               </div>
             );
@@ -66,17 +83,27 @@ const Csr = () => {
           </div>
           <div className="goals">
             {goals.map((item, index) => {
-              const { image, logo, number, text, color } = item;
+              const { image, logo, number, text, color, greyLogo } = item;
               return (
                 <div
                   className="goal"
                   style={{ backgroundImage: `url(${image})` }}
+                  onMouseEnter={() => {
+                    const newArray = [...grey];
+                    newArray[index] = true;
+                    setGrey(newArray);
+                  }}
+                  onMouseLeave={() => setGrey(Array.from(goals).fill(false))}
                 >
                   <div
                     className="goal-center"
-                    style={{ background: `${color}` }}
+                    style={{
+                      background: `${
+                        grey[index] ? "rgba(255, 255, 255, 0.70)" : color
+                      }`,
+                    }}
                   >
-                    <img src={logo} alt={logo} />
+                    <img src={grey[index] ? greyLogo : logo} alt={logo} />
                     <div className="text">
                       <span>{number}</span>
                       <p>{text}</p>

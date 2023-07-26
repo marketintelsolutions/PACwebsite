@@ -13,7 +13,7 @@ const Renewable = () => {
 
   return (
     <div>
-      <SectionOne color="#38B6FF" text="Renewable Energy" img={renewableBg} />
+      <SectionOne color="#3CB64B" text="Renewable Energy" img={renewableBg} />
 
       <div className="bottom portfolio">
         <div className="animation">
@@ -21,9 +21,9 @@ const Renewable = () => {
         </div>
         {renewable.map((item, index) => {
           if (index % 2 !== 0 || index === 1) {
-            return <PortfolioRight {...item} index={index} />;
+            return <PortfolioRight {...item} key={index} />;
           }
-          return <PortfolioLeft {...item} index={index} />;
+          return <PortfolioLeft {...item} key={index} />;
         })}
       </div>
     </div>

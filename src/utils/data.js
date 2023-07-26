@@ -271,7 +271,7 @@ export const realEstate = [
     text: [
       "We offer real estate brokerage services by acting as a medium for buyers and sellers to get in touch with each other and enable them to complete transactions. Our brokerage services include property listings for sale or purchase, listings for renting, home sales and purchase, home renting, site visits, etc.",
     ],
-    link: "https://webzenagroallied.com",
+    link: "http://bricsinfrastructure.com/ ",
   },
   {
     img: project,
@@ -279,7 +279,7 @@ export const realEstate = [
     text: [
       "Our team of experts are here to serve you, whether it is overseeing construction schemes from inception to completion, handling complex commercial transactions, and much more. We ensure an on-time and on-budget outcome for our clients.",
     ],
-    link: "https://tergoenergy.com",
+    link: "http://bricsinfrastructure.com/ ",
   },
   {
     img: development,
@@ -287,7 +287,7 @@ export const realEstate = [
     text: [
       "Our real estate arm provides experience and expertise in developing luxury and state-of-the-art property for sale and for rent. We understand how to handle the different stages of your project accordingly.",
     ],
-    link: "https://ziltchone.com",
+    link: "http://bricsinfrastructure.com/ ",
   },
 ];
 
@@ -300,6 +300,7 @@ export const agroAllied = [
     ],
     textColor: "#046604",
     // textColor: "#000000",
+    link: "https://kaxalafrica.com",
   },
   {
     img: webzen,
@@ -317,6 +318,7 @@ export const agroAllied = [
       "Hawaree Africa is our e-commerce and consumer goods distribution arm. We work with several international and domestic companies across a variety of consumer categories including Food & Snacks, Drinks, Beauty & Personal Care, Sport & Fitness, Agro products, Stationaries and Office Supplies, Games, Electronics & IT, Baby Products & Toys, Services, etc. With the aim to be the most efficient e-commerce platform and distribution company across Africa, our goal is to make brands available and visible at key points of purchase via these channels at competitive prices with top notch prompt deliveries.",
     ],
     textColor: "#F1592A",
+    link: "https://hawaree.com",
   },
 ];
 
@@ -335,6 +337,7 @@ export const renewable = [
       "· Gas Distribution",
     ],
     link: "https://tergoenergy.com",
+    headingColor: "#474747",
   },
   {
     img: solar,
@@ -351,6 +354,7 @@ export const renewable = [
       "· Solar Mini Grid Installation",
     ],
     link: "https://tergoenergy.com",
+    headingColor: "#474747",
   },
 ];
 
@@ -361,6 +365,7 @@ export const technology = [
     text: [
       "We Care. We Connect. We Create. We are the next generation of the Solutions. Giving you more for less!",
     ],
+    link: "https://ziltchone.com",
   },
   {
     img: paysharp,
@@ -368,6 +373,7 @@ export const technology = [
     text: [
       "Enjoy the ease of conducting financial transactions such as Airtime Vending, Cash Deposit and Withdrawals Bill Payment and many more services",
     ],
+    link: "https://paysharpng.com ",
   },
   {
     img: paysharp,
@@ -406,6 +412,7 @@ export const technology = [
     text: [
       "ProptyPlus – One of the leading Real Estate Software platform providing the ultimate property search experience and property management",
     ],
+    link: "https://proptyplus.com",
   },
   // {
   //   img: fintech,
@@ -461,6 +468,7 @@ export const healthcare = [
 
       "Afrilife will invest in early stage but predominantly in mid-stage private entities and later-stage public entities (through PPPs) which are attractively valued and have a convincing business model, including their product pipeline, technology, and management.",
     ],
+    link: "https://afrilifehealthcare.com",
   },
   {
     img: sage,
@@ -472,6 +480,7 @@ export const healthcare = [
       " · Comprehensive laboratory, Basic Imaging, Other complimentary tests",
       " · Specialized PCR Tests",
     ],
+    link: "https://sagedsl.com",
   },
   {
     img: lifeLine,
@@ -481,6 +490,7 @@ export const healthcare = [
 
       " We are an ISO 9001: 2015 certified firm, would like to introduce STERIWELL® 20 and 40-liter capacity machines that can treat 3 kg to 5.5 kg of waste per 45 minutes. STERIWELL® system is CE certified from a designated European notified body, meeting the standards and compliance to EN ISO 12100: 2010 for safety of machinery design and IEC (International Electro technical Communication) EN 602041: 2006+ A1: 2009. STERIWELL® is also certified with ISO14001: 2015 confirming to the International Standards for effective Environmental Management System (EMS). STERIWELL® is registered under GeM (Government e-Market Place) portal.",
     ],
+    //   link: "https://ziltchone.com ",
   },
 ];
 
@@ -496,6 +506,8 @@ export const hospitality = [
       "Firmly we believe that luxury need not to be extravagant; that the highest standards of luxury can be delivered in a sustainable and responsible way.",
       "Blue Amber – Luxury Hotels are to set among the Amber Collection – Hotels & Resorts, the company brand that will be recognized by its versatility to accommodate, from families vacations to corporate business under the same roof, the hotels tend to be located in the leading business district of the cities and group destinations around the world. These hotels feature stylish, contemporary design, abundant meeting facilities and extraordinary restaurants.",
     ],
+    link: "https://amberhospitality.com",
+    page: false,
   },
   {
     img: luxor,
@@ -508,6 +520,7 @@ export const hospitality = [
       "Firmly we believe that luxury need not to be extravagant; that the highest standards of luxury can be delivered in a sustainable and responsible way.",
       "Blue Amber – Luxury Hotels are to set among the Amber Collection – Hotels & Resorts, the company brand that will be recognized by its versatility to accommodate, from families vacations to corporate business under the same roof, the hotels tend to be located in the leading business district of the cities and group destinations around the world. These hotels feature stylish, contemporary design, abundant meeting facilities and extraordinary restaurants.",
     ],
+    page: false,
   },
   {
     img: residences,
@@ -522,6 +535,8 @@ export const hospitality = [
       "Above all, just simply experience our first-class personalized service with our well-trained personnel always available to serve you throughout your stay.",
       "At Amber Residence, you are always welcome to a world of warmth.",
     ],
+    link: "https://amberresidenceng.com",
+    page: false,
   },
   {
     img: amberCrest,
@@ -534,7 +549,8 @@ export const hospitality = [
       "Our F&B outlets are designed to provide unrivalled guest experience but as well focused on the flowless of the service areas, the bar’s, lounge's have a lifestyle concept where the Interiors and ambience are thoughtfully planned for informal and relaxed moments.",
       "MICE facilities are projected with the ultimate state-of-the-art audio-visual systems and complete meeting and banqueting equipment, providing, and guaranteeing each meetings & events in the AMBER CREST Hotel are as pleasant as they are productive, meeting the highest expectations of our clients.",
     ],
-    link: "https//amberhospitality.com",
+    // link: "https//amberhospitality.com",
+    page: false,
   },
   {
     img: eterniti,
@@ -546,6 +562,7 @@ export const hospitality = [
       " The ETERNITI guests will enjoy the freshness of food and beverage options at the daily complimentary breakfast, a small convenience corner will offer the guest a variety of snacks, upmarket frozen appetizers and grocery items that can be used to prepare lite meals in the apartment. A welcome set of complimentary groceries will be available at their arrival.",
       "Guests can stay fit and have fun at our fitness center and recreational areas. Or just give us your list for grocery shopping service. Laundry services and dry-cleaning services are also available, also our 24/Concierge services",
     ],
+    page: false,
   },
   {
     img: steppingStone,
@@ -558,5 +575,6 @@ export const hospitality = [
       "The built-up communities encourage the students to continue their learning path outside the classroom, the necessary infrastructures have been thought and planned on the student needs such as privacy, convenience, WI-FI, dedicated laundry room, open space to study, like as well a diversity of social, and intellectual spaces to promote the cultural development.",
       "This Brand, will promote the basic services of a normal hospitality operations, by making available 24 hours, 7 days a week Concierge services to help the students in their personal requirements, also cleaning services will be in place for public areas and rooms (this one, only ones a week), also the privacy and security it is something that we take very seriously in all our Residences, the wellbeing of everybody, we consider this is one of our prime services, within the range of available services that we provide.",
     ],
+    page: false,
   },
 ];

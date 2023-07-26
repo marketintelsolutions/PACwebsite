@@ -1,6 +1,7 @@
 .csr {
   & .csr-section-one {
     height: 100vh;
+    max-height: 880px;
     display: flex;
     align-items: flex-end;
     padding-bottom: 205px;
@@ -159,6 +160,14 @@
         justify-content: center;
         align-items: center;
 
+        &:hover {
+          background: #e62d39;
+
+          & p {
+            color: #fff;
+          }
+        }
+
         & img {
           width: 48px;
           height: 48px;
@@ -234,6 +243,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          transition: var(--transition);
 
           & .goal-center {
             padding: 39px;
@@ -281,6 +291,16 @@
                 // border: 2px solid green;
                 // display: inline-block;
                 float: right;
+              }
+            }
+          }
+
+          &:hover {
+            transition: var(--transition);
+            & .text {
+              & span,
+              p {
+                color: #474747;
               }
             }
           }

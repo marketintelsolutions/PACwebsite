@@ -54,8 +54,8 @@ export const resources = [
     text: "Stay Updated",
     path: "/resources/stay-updated",
   },
-  {
-    text: "Newsletter",
-    path: "/resources/newsletter",
-  },
+  // {
+  //   text: "Newsletter",
+  //   path: "/resources/newsletter",
+  // },
 ];

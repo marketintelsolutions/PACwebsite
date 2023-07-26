@@ -300,7 +300,8 @@
   // display: flex;
   display: grid;
   // grid-template-columns: repeat(auto, minmax(381px, 20%));
-  grid-template-columns: repeat(3, 1fr);
+  // grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
   gap: 30px;
@@ -313,14 +314,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 403px;
-    // width: 381px;
-    // width: 451px;
     width: fit-content;
-    max-width: 451.37px;
     max-height: 463.23px;
     display: flex;
     align-items: flex-end;
-    // border: 2px solid red;
 
     @media (max-width: $breakpoint-tablet) {
       width: 337.14px;
@@ -331,6 +328,7 @@
       background: rgba(6, 38, 68, 0.8);
       border-radius: 3.70585px;
       height: 50%;
+      max-height: 225px;
       color: white;
       padding: 43px 27px;
       display: flex;
@@ -367,7 +365,7 @@
         font-size: 20.0116px;
         line-height: 107%;
         text-transform: capitalize;
-        width: 395.041px;
+        max-width: 395.041px;
         color: #ffffff;
 
         @media (max-width: $breakpoint-tablet) {
