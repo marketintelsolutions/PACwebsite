@@ -158,28 +158,40 @@ export const foundations = [
 export const footer = [
   {
     heading: "about",
-    items: ["about us", "leadership"],
+    items: [
+      { link: "/about", text: "about us" },
+      { link: "/about", text: "leadership" },
+    ],
   },
   {
     heading: "resources",
     items: [
-      "research",
-      "news",
-      "newsletter",
-      "get brochure",
-      "vendor reg portal",
+      { link: "https://pacresearch.org", text: "research", external: true },
+      { link: "/resources/newsletter", text: "news" },
+      { link: "/resources/newsletter", text: "newsletter" },
+      { link: "/resources/newsletter", text: "get brochure" },
+      { link: "/joinus/vendor", text: "vendor reg portal" },
     ],
   },
   {
     heading: "our portfolio",
     items: [
-      "financial services",
-      "hospitality & entertainment",
-      "real estate & infrastructure",
-      "Agro-allied & FMCG",
-      "healthcare",
-      "technology & payment systems",
-      "renewable energy",
+      { link: "/portfolio/financial-services", text: "financial services" },
+      {
+        link: "/portfolio/hospitality",
+        text: "hospitality & entertainment",
+      },
+      {
+        link: "/portfolio/real-estate",
+        text: "real estate & infrastructure",
+      },
+      { link: "/portfolio/agro-allied", text: "Agro-allied & FMCG" },
+      { link: "portfolio/healthcare", text: "healthcare" },
+      {
+        link: "/portfolio/technology",
+        text: "technology & payment systems",
+      },
+      { link: "/portfolio/renewable", text: "renewable energy" },
     ],
   },
 ];

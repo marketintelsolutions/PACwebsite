@@ -45,7 +45,8 @@ footer {
         flex-direction: column;
         gap: 15px;
 
-        & p {
+        & a,
+        p {
           font-family: "Open Sans";
           font-style: normal;
           font-weight: 400;
@@ -54,8 +55,12 @@ footer {
           text-transform: capitalize;
           cursor: pointer;
           display: flex;
-          //   align-items: center;
+          // align-items: center;
+          justify-content: center;
           gap: 20px;
+          color: white;
+          text-decoration: none;
+          width: fit-content;
         }
 
         & .email {
@@ -110,6 +115,8 @@ footer {
       & .icons {
         display: flex;
         gap: 10px;
+        // align-items: center;
+        // justify-content: center;
 
         & .icon {
           background: white;

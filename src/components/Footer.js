@@ -7,6 +7,7 @@ import linkedin from "../assets/images/linkedin.svg";
 import phoneTransparent from "../assets/images/phoneTransparent.svg";
 import mailTransparent from "../assets/images/mailTransparent.svg";
 import footerBg from "../assets/images/footerBg.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -26,9 +27,16 @@ const Footer = () => {
             <div className="item large">
               <h2>{heading}</h2>
               <div className="bottom">
-                {items.map((i) => (
-                  <p>{i}</p>
-                ))}
+                {items.map((i) => {
+                  if (i.external) {
+                    return (
+                      <a href={i.link} target="_blank">
+                        {i.text}
+                      </a>
+                    );
+                  }
+                  return <Link to={i.link}>{i.text}</Link>;
+                })}
               </div>
             </div>
           );
