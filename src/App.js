@@ -5,6 +5,7 @@ import About from "./pages/About";
 import AgroAllied from "./pages/AgroAllied";
 import BioPage from "./pages/BioPage";
 import Contact from "./pages/Contact";
+import Csr from "./pages/Csr";
 import FinancialServices from "./pages/FinancialServices";
 import Healthcare from "./pages/Healthcare";
 import Hospitality from "./pages/Hospitality";
@@ -48,6 +49,7 @@ const App = () => {
             element={<StayUpdatedItem />}
           />
           <Route path="/resources/newsletter" element={<Newsletter />} />
+          <Route path="/csr" element={<Csr />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </SharedLayout>

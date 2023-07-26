@@ -113,7 +113,7 @@ const Navbar = ({ isDropdown, setIsDropdown }) => {
               </span>
             </div>
             <div className="item">
-              <p>CSR</p>
+              <Link to="/csr">CSR</Link>
             </div>
             <div className="item">
               <Link to="/contact">Contact</Link>
