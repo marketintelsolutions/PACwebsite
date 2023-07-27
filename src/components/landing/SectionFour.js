@@ -71,7 +71,7 @@ const SectionFour = () => {
         <div className="text">
           <p>
             Creating Impact through opportunities, strategic alliances and
-            partnerships
+            partnerships.
           </p>
           <a>
             <span>Learn more</span>
