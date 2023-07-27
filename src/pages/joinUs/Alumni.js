@@ -3,13 +3,45 @@ import SectionOne from "../../components/about/SectionOne";
 import alumni from "../../assets/images/pacAlumni.png";
 import mapalumni from "../../assets/images/mapalumni.png";
 import alumniBg from "../../assets/images/alumniBg.png";
+import paclogo from "../../assets/images/paclogo.svg";
+import alumniLogo from "../../assets/logos/alumniLogo.svg";
 import { alumniData } from "../../utils/joinusData";
 import { gettingStarted } from "../../utils/helpers/sendMailHelpers";
+import { useNavigate } from "react-router-dom";
 
-const Alumni = () => {
+const Alumni = ({ setNavlogo }) => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     window.scroll(0, 0);
+    setNavlogo(alumniLogo);
+
+    // const onBeforeUnload = (e) => {
+    //   // run your cleanup code here
+    //   setNavlogo(paclogo);
+    //   console.log("user is leaving page");
+    // };
+    // window.addEventListener("beforeunload", onBeforeUnload);
+    // return () => {
+    //   window.removeEventListener("beforeunload", onBeforeUnload);
+    // };
   }, []);
+
+  useEffect(() => {
+    const unlisten = navigate((location, action) => {
+      if (action === "POP") {
+        console.log("User is leaving the page");
+        // Do something before the user leaves the page
+        // setNavlogo(paclogo);
+      }
+    });
+
+    return () => {
+      console.log("Component is unmounting");
+      // Do something before the component unmounts
+      setNavlogo(paclogo);
+    };
+  }, [navigate]);
 
   const [formData, setFormData] = useState({
     firstName: "",

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import SharedLayout from "./components/SharedLayout";
 import About from "./pages/About";
@@ -20,11 +20,17 @@ import Newsletter from "./pages/resources/Newsletter";
 import StayUpdated from "./pages/resources/StayUpdated";
 import StayUpdatedItem from "./pages/resources/StayUpdatedItem";
 import Technology from "./pages/Technology";
+import logo from "./assets/logos/paclogo.svg";
 
 const App = () => {
+  const [navlogo, setNavlogo] = useState(logo);
+
+  useEffect(() => {
+    // setNavlogo(logo);
+  });
   return (
     <>
-      <SharedLayout>
+      <SharedLayout logo={navlogo}>
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/about" element={<About />} />
@@ -41,7 +47,10 @@ const App = () => {
           <Route path="/portfolio/technology" element={<Technology />} />
           <Route path="/portfolio/healthcare" element={<Healthcare />} />
           <Route path="/joinus/career" element={<Career />} />
-          <Route path="/joinus/alumni" element={<Alumni />} />
+          <Route
+            path="/joinus/alumni"
+            element={<Alumni setNavlogo={setNavlogo} />}
+          />
           <Route path="/joinus/vendor" element={<Vendor />} />
           <Route path="/resources/stay-updated" element={<StayUpdated />} />
           <Route
@@ -49,7 +58,7 @@ const App = () => {
             element={<StayUpdatedItem />}
           />
           <Route path="/resources/newsletter" element={<Newsletter />} />
-          <Route path="/csr" element={<Csr />} />
+          <Route path="/csr" element={<Csr setNavlogo={setNavlogo} />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </SharedLayout>

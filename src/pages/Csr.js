@@ -1,14 +1,51 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import csrBg from "../assets/images/csrBg.png";
 import csrWomen from "../assets/images/csrWomen.png";
 import playWhite from "../assets/images/playWhite.svg";
+import csrLogo from "../assets/logos/csrLogo.svg";
+import paclogo from "../assets/images/paclogo.svg";
 import { blocks, goals } from "../utils/csrData";
+import { useNavigate } from "react-router-dom";
 
-const Csr = () => {
+const Csr = ({ setNavlogo }) => {
+  const navigate = useNavigate();
+
   const [grey, setGrey] = useState(Array.from(goals).fill(false));
+
   const newArray = blocks.map((item) => {
     return { ...item, white: false };
   });
+
+  useEffect(() => {
+    window.scroll(0, 0);
+    setNavlogo(csrLogo);
+
+    // const onBeforeUnload = (e) => {
+    //   // run your cleanup code here
+    //   setNavlogo(paclogo);
+    //   console.log("user is leaving page");
+    // };
+    // window.addEventListener("beforeunload", onBeforeUnload);
+    // return () => {
+    //   window.removeEventListener("beforeunload", onBeforeUnload);
+    // };
+  }, []);
+
+  useEffect(() => {
+    const unlisten = navigate((location, action) => {
+      if (action === "POP") {
+        console.log("User is leaving the page");
+        // Do something before the user leaves the page
+        // setNavlogo(paclogo);
+      }
+    });
+
+    return () => {
+      console.log("Component is unmounting");
+      // Do something before the component unmounts
+      setNavlogo(paclogo);
+    };
+  }, [navigate]);
 
   const [items, setItems] = useState(newArray);
   return (

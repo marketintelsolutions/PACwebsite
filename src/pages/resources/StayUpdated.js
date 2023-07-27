@@ -35,9 +35,9 @@ const StayUpdated = () => {
               );
             })}
           </div>
+          <Pagination />
         </div>
       </div>
-      <Pagination />
     </section>
   );
 };

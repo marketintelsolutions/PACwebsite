@@ -348,7 +348,8 @@
           color: var(--primary-blue);
         }
 
-        & button {
+        & button,
+        a {
           color: #38b6ff;
         }
       }

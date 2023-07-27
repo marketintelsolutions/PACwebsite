@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-const SharedLayout = ({ children }) => {
+const SharedLayout = ({ logo, children }) => {
   const [isDropdown, setIsDropdown] = useState(false);
 
   const handleClick = (e) => {
@@ -13,7 +13,11 @@ const SharedLayout = ({ children }) => {
   };
   return (
     <div onClick={(e) => handleClick(e)}>
-      <Navbar isDropdown={isDropdown} setIsDropdown={setIsDropdown} />
+      <Navbar
+        isDropdown={isDropdown}
+        setIsDropdown={setIsDropdown}
+        logo={logo}
+      />
       {children}
       <Footer />
     </div>

@@ -10,7 +10,7 @@ import menuLine from "../assets/logos/menuLine.svg";
 import { Link } from "react-router-dom";
 import { ourPortfolio, joinUs, resources } from "../utils/navData";
 
-const Navbar = ({ isDropdown, setIsDropdown }) => {
+const Navbar = ({ isDropdown, setIsDropdown, logo }) => {
   const [dropItems, setDropItems] = useState([]);
   const [position, setPosition] = useState({});
 
@@ -67,7 +67,7 @@ const Navbar = ({ isDropdown, setIsDropdown }) => {
       <nav className="navbar">
         <div className="nav-center">
           <Link to="/" className="logo">
-            <img src={paclogo} alt="logo" />
+            <img src={logo} alt="logo" />
           </Link>
           <div className="nav-items">
             <div className="item">
