@@ -21,6 +21,7 @@ import StayUpdated from "./pages/resources/StayUpdated";
 import StayUpdatedItem from "./pages/resources/StayUpdatedItem";
 import Technology from "./pages/Technology";
 import logo from "./assets/logos/paclogo.svg";
+import Error from "./pages/Error";
 
 const App = () => {
   const [navlogo, setNavlogo] = useState(logo);
@@ -60,6 +61,7 @@ const App = () => {
           <Route path="/resources/newsletter" element={<Newsletter />} />
           <Route path="/csr" element={<Csr setNavlogo={setNavlogo} />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </SharedLayout>
     </>
