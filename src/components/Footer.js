@@ -30,7 +30,7 @@ const Footer = () => {
                 {items.map((i) => {
                   if (i.external) {
                     return (
-                      <a href={i.link} target="_blank">
+                      <a href={i.link} target="_blank" rel="noreferrer">
                         {i.text}
                       </a>
                     );

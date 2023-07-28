@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import paclogo from "../assets/logos/paclogo.svg";
+// import paclogo from "../assets/logos/paclogo.svg";
 import arrowDownFill from "../assets/logos/arrowDownFill.svg";
 import arrowDownBlue from "../assets/logos/arrowDownBlue.svg";
 import mail from "../assets/logos/mail.svg";
@@ -141,6 +141,7 @@ const Navbar = ({ isDropdown, setIsDropdown, logo }) => {
                   onClick={() => setIsDropdown(!isDropdown)}
                   target="_blank"
                   key={index}
+                  rel="noreferrer"
                 >
                   {item.text}
                 </a>
