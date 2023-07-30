@@ -1,6 +1,24 @@
 .bio-page {
   display: flex;
   // border: 2px solid red;
+  flex-direction: column;
+  margin: 308px auto 128px;
+
+  .btn-container {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  & button {
+    width: fit-content;
+    padding: 20px 35px;
+    background: #062644;
+    color: white;
+    font-size: 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
 
   & .section-center {
     // border: 2px solid blue;
@@ -8,8 +26,8 @@
     gap: 72px;
     justify-content: center;
     // align-items: center;
-    margin: 308px auto 128px;
     width: 70%;
+    margin: 70px auto;
 
     & .left {
       margin: 0 auto;

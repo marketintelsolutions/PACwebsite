@@ -167,8 +167,8 @@ export const footer = [
     heading: "resources",
     items: [
       { link: "https://pacresearch.org", text: "research", external: true },
-      { link: "/resources/newsletter", text: "news" },
-      { link: "/resources/newsletter", text: "newsletter" },
+      { link: "/resources/stay-updated", text: "news" },
+      // { link: "/resources/newsletter", text: "newsletter" },
       { link: "/resources/newsletter", text: "get brochure" },
       { link: "/joinus/vendor", text: "vendor reg portal" },
     ],
