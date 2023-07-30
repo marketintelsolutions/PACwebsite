@@ -30,7 +30,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    let recipient_email = "igbagboleye2@gmail.com";
+    let recipient_email = process.env.RECIPIENT_EMAIL;
 
     const { fullName, email, subject, message } = formData;
     const fields = Object.keys(formData);

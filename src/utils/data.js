@@ -50,10 +50,10 @@ import deposit from "../assets/logos/deposit.svg";
 import prepaid from "../assets/logos/prepaid.svg";
 import money from "../assets/logos/money.svg";
 import subscription from "../assets/logos/subscription.svg";
-import technologyServices from "../assets/images/technologyServices.png";
-import smart from "../assets/images/smart.png";
-import technologyDistribution from "../assets/images/technologyDistribution.png";
-import mediaEntertainment from "../assets/images/mediaEntertainment.png";
+// import technologyServices from "../assets/images/technologyServices.png";
+// import smart from "../assets/images/smart.png";
+// import technologyDistribution from "../assets/images/technologyDistribution.png";
+// import mediaEntertainment from "../assets/images/mediaEntertainment.png";
 
 // healthcare
 import afrilife from "../assets/images/afrilife.png";

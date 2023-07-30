@@ -108,7 +108,7 @@ const Vendor = () => {
     } = formData;
     // Handle form submission here with the formData object.
 
-    let recipient_email = "igbagboleye2@gmail.com";
+    let recipient_email = process.env.RECIPIENT_EMAIL;
     const fields = Object.keys(formData);
 
     vendorForm({

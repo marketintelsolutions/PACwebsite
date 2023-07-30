@@ -11,8 +11,8 @@ export const contact = ({
   if (fullName && email && subject && message) {
     axios
       .post(
-        // " https://sagebackend-207c01373df4.herokuapp.com/pacwebsite/send-message",
-        " http://localhost:8080/pacwebsite/send-message",
+        `${process.env.SEND_EMAIL_BASE_URL}/pacwebsite/send-message`,
+        // " http://localhost:8080/pacwebsite/send-message",
         {
           fullName,
           email,
@@ -43,10 +43,9 @@ export const gettingStarted = ({
 }) => {
   if (firstName && lastName && email && address && phone && message) {
     axios
-      // .post("http://localhost:8080/attijara/contact", {
       .post(
-        // " https://sagebackend-207c01373df4.herokuapp.com/pacwebsite/getting-started",
-        " http://localhost:8080/pacwebsite/getting-started",
+        `${process.env.SEND_EMAIL_BASE_URL}/pacwebsite/getting-started`,
+        // " http://localhost:8080/pacwebsite/getting-started",
         {
           firstName,
           lastName,
@@ -143,8 +142,8 @@ export const vendorForm = ({
   ) {
     axios
       .post(
-        // " https://sagebackend-207c01373df4.herokuapp.compacwebsite/pacwebsite/vendor-info",
-        " http://localhost:8080/pacwebsite/vendor-info",
+        `${process.env.SEND_EMAIL_BASE_URL}/pacwebsite/vendor-info`,
+        // " http://localhost:8080/pacwebsite/vendor-info",
         {
           company,
           streetAddress,
