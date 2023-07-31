@@ -7,6 +7,7 @@ import arrowLeft from "../../assets/images/arrowLeft.svg";
 import arrowRight from "../../assets/images/arrowRight.svg";
 import { foundations } from "../../utils/data";
 import LiquidBackground from "../LiquidBackground";
+import ButtonAnimation from "../ButtonAnimation";
 
 const SectionFour = () => {
   const [scrollIndex, setScrollIndex] = useState(0);
@@ -75,7 +76,9 @@ const SectionFour = () => {
           </p>
           <a>
             <span>Learn more</span>
-            <div className="liquid"></div>
+            <div className="liquid">
+              <ButtonAnimation />
+            </div>
           </a>
         </div>
       </div>

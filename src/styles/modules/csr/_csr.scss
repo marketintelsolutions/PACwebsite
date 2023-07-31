@@ -131,18 +131,64 @@
         }
 
         & button {
-          padding: 15px 34px;
-          border: none;
-          background: transparent;
-          width: fit-content;
-          color: #fff;
-          font-family: Open Sans;
-          font-size: 18px;
+          // padding: 15px 34px;
+          // background: transparent;
+          // width: fit-content;
+          // color: #fff;
+          // font-family: Open Sans;
+          // font-size: 18px;
+          // font-style: normal;
+          // font-weight: 400;
+          // line-height: normal;
+          // border-radius: 51px;
+          // background: #0053fa;
+          // position: relative;
+
+          width: 186px;
+          // width: fit-content;
+          padding: 0;
+          height: 69px;
+          // overflow: hidden;
+          display: flex;
+          border-radius: 25px;
+          background: var(--primary-blue);
+          // background: rgba(6, 38, 68, 0.9);
+          color: white;
+          justify-content: center;
+          align-items: center;
+          font-family: "Open Sans";
           font-style: normal;
           font-weight: 400;
+          font-size: 17px;
           line-height: normal;
-          border-radius: 51px;
-          background: #0053fa;
+          border: none;
+          transition: var(--transition);
+          cursor: pointer;
+          border: 1px solid var(--primary-blue);
+          animation: mymove 5s infinite;
+          position: relative;
+          // border: 2px solid red;
+
+          & span {
+            z-index: 4;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+          }
+
+          & .liquid {
+            // height: 100%;
+            width: fit-content;
+            // width: 186px;
+            padding: 0;
+            height: 69px;
+          }
         }
       }
     }

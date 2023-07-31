@@ -181,8 +181,10 @@
       }
 
       & a {
-        width: 146px;
-        height: 49px;
+        // width: 186px;
+        width: fit-content;
+        height: 69px;
+        // overflow: hidden;
         display: flex;
         border-radius: 25px;
         background: var(--primary-blue);
@@ -192,13 +194,28 @@
         font-family: "Open Sans";
         font-style: normal;
         font-weight: 400;
-        font-size: 20px;
+        font-size: 17px;
         line-height: 27px;
         border: none;
         transition: var(--transition);
         cursor: pointer;
         border: 1px solid var(--primary-blue);
         animation: mymove 5s infinite;
+        position: relative;
+        // border: 2px solid red;
+
+        & span {
+          z-index: 4;
+          position: absolute;
+        }
+
+        & .liquid {
+          // height: 100%;
+          width: fit-content;
+          // width: 186px;
+          padding: 0;
+          height: 69px;
+        }
 
         &:hover {
           background: white;

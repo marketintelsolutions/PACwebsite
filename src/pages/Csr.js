@@ -7,6 +7,7 @@ import paclogo from "../assets/images/paclogo.svg";
 import { blocks, goals } from "../utils/csrData";
 import { useNavigate } from "react-router-dom";
 import LiquidBackground from "../components/LiquidBackground";
+import ButtonAnimation from "../components/ButtonAnimation";
 
 const Csr = ({ setNavlogo }) => {
   const navigate = useNavigate();
@@ -83,7 +84,12 @@ const Csr = ({ setNavlogo }) => {
               bring development that balances social, economic, and
               environmental sustainability.
             </p>
-            <button>Learn more</button>
+            <button>
+              <span>Learn more</span>
+              <div className="liquid">
+                <ButtonAnimation />
+              </div>
+            </button>
           </div>
         </div>
       </div>
