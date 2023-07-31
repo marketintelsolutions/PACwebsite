@@ -8,6 +8,7 @@ import alumniLogo from "../../assets/logos/alumniLogo.svg";
 import { alumniData } from "../../utils/joinusData";
 import { gettingStarted } from "../../utils/helpers/sendMailHelpers";
 import { useNavigate } from "react-router-dom";
+import LiquidBackground from "../../components/LiquidBackground";
 
 const Alumni = ({ setNavlogo }) => {
   const navigate = useNavigate();
@@ -102,6 +103,9 @@ const Alumni = ({ setNavlogo }) => {
         text="Welcome to the PAC Alumni Network"
         img={alumni}
       />
+      <div className="animation animate-left">
+        <LiquidBackground />
+      </div>
       <div className="section-two">
         <div className="left">
           <h3>

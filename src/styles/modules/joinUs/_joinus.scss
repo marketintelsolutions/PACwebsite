@@ -6,12 +6,19 @@
     display: flex;
     max-width: 1493px;
     margin: 0 auto;
-    gap: 224px;
+    gap: 124px;
+    justify-content: space-between;
+    width: 80%;
+    position: relative;
+    z-index: 3;
 
     & .left {
       display: flex;
       flex-direction: column;
       gap: 20px;
+      max-width: 659px;
+      width: 50%;
+      // border: 2px solid red;
 
       & h3 {
         color: #25333f;
@@ -25,10 +32,11 @@
       & p {
         color: #707070;
         font-family: Open Sans;
-        font-size: 31px;
+        font-size: 25px;
         font-style: normal;
         font-weight: 300;
         line-height: 40px; /* 129.032% */
+        // width: 80%;
       }
 
       & button {
@@ -45,20 +53,26 @@
     }
 
     & .right {
+      // border: 2px solid red;
       & img {
-        width: 609.989px;
-        height: 351.69px;
+        width: 100%;
+        height: 100%;
+        max-width: 609.989px;
+        max-height: 351.69px;
+        object-fit: cover;
       }
     }
   }
 
   & .section-three {
-    background: white;
+    background: transparent;
     color: black;
+    position: relative;
+    z-index: 0;
 
     & .form-container {
       max-width: 1104px;
-      //   border: 2px solid blue;
+      // border: 2px solid blue;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -157,9 +171,12 @@
         gap: 48px;
         // width: fit-content;
         justify-content: space-between;
-        // margin: 0 auto;
+        margin: 0 auto;
+        width: 80%;
+        max-width: 1399px;
 
         & .left {
+          width: 50%;
           max-width: 619px;
           display: flex;
           flex-direction: column;
@@ -190,6 +207,14 @@
           justify-content: center;
           // border: 2px solid blue;
           width: 732px;
+
+          & img {
+            width: 100%;
+            height: 100%;
+            max-width: 732px;
+            max-height: 488.06px;
+            object-fit: cover;
+          }
         }
       }
     }

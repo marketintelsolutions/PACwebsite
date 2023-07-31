@@ -5,6 +5,7 @@ import PortfolioRight from "../components/portfolio/PortfolioRight";
 import { realEstate } from "../utils/data";
 import estateBg from "../assets/images/estateBg.png";
 import animation from "../assets/images/portfolioAnimationLeft.svg";
+import LiquidBackground from "../components/LiquidBackground";
 
 const RealEstate = () => {
   useEffect(() => {
@@ -21,7 +22,8 @@ const RealEstate = () => {
 
       <div className="bottom portfolio">
         <div className="animation">
-          <img src={animation} alt="animation" />
+          {/* <img src={animation} alt="animation" /> */}
+          <LiquidBackground />
         </div>
         {realEstate.map((item, index) => {
           if (index % 2 !== 0 || index === 1) {

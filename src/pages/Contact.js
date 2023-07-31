@@ -10,6 +10,7 @@ import {
   contactDetailsTwo,
 } from "../utils/contactData";
 import { contact } from "../utils/helpers/sendMailHelpers";
+import LiquidBackground from "../components/LiquidBackground";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -45,6 +46,9 @@ const Contact = () => {
   return (
     <div className="contact">
       <SectionOne color="#38B6FF" text="Contact Us" img={contactBg} />
+      <div className="animation animate-left">
+        <LiquidBackground />
+      </div>
       <div className="contact-section-two map-item">
         <div className="heading">
           <h1>Connect with PAC</h1>

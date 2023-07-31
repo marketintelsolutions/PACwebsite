@@ -4,6 +4,7 @@ import careerBg from "../../assets/images/careerBg.png";
 import { careerData } from "../../utils/career";
 import CareerBlock from "../../components/joinus/CareerBlock";
 import CareerBlockReversed from "../../components/joinus/CareerBlockReversed";
+import LiquidBackground from "../../components/LiquidBackground";
 
 const Career = () => {
   const [subject, setSubject] = useState("test subject");
@@ -28,6 +29,10 @@ const Career = () => {
   return (
     <section className="career">
       <SectionOne color="#38B6FF" text="Careers" img={careerBg} />
+
+      <div className="animation animate-left">
+        <LiquidBackground />
+      </div>
       <div className="career-section-two">
         <div className="content">
           {careerData.map((item, index) => {

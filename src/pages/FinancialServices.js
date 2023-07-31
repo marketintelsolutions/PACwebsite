@@ -5,6 +5,7 @@ import PortfolioRight from "../components/portfolio/PortfolioRight";
 import financialBg from "../assets/images/financialBg.png";
 import { financialData } from "../utils/data";
 import animation from "../assets/images/portfolioAnimationLeft.svg";
+import LiquidBackground from "../components/LiquidBackground";
 
 const FinancialServices = () => {
   useEffect(() => {
@@ -23,8 +24,9 @@ const FinancialServices = () => {
       </p>
 
       <div className="bottom portfolio">
-        <div className="animation">
-          <img src={animation} alt="animation" />
+        <div className="animation animate-left">
+          {/* <img src={animation} alt="animation" /> */}
+          <LiquidBackground />
         </div>
         {financialData.map((item, index) => {
           if (index % 2 !== 0 || index === 1) {

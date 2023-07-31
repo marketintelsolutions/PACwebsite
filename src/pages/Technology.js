@@ -6,6 +6,7 @@ import technologyBg from "../assets/images/technologyBg.png";
 import { technology } from "../utils/data";
 import animation from "../assets/images/portfolioAnimationLeft.svg";
 import Paysharp from "../components/portfolio/Paysharp";
+import LiquidBackground from "../components/LiquidBackground";
 
 const Technology = () => {
   useEffect(() => {
@@ -21,8 +22,9 @@ const Technology = () => {
       />
 
       <div className="bottom portfolio">
-        <div className="animation">
-          <img src={animation} alt="animation" />
+        <div className="animation animate-left">
+          {/* <img src={animation} alt="animation" /> */}
+          <LiquidBackground />
         </div>
         {technology.map((item, index) => {
           if (item.heading === "Paysharp Services") {

@@ -19,3 +19,47 @@
 @import "./modules/csr/csr";
 @import "./modules/footer.scss";
 @import "./modules/error.scss";
+
+// body {
+//   &::-webkit-scrollbar {
+//     width: 6px;
+//   }
+
+//   /* Track */
+//   &::-webkit-scrollbar-track {
+//     background: transparent;
+//   }
+
+//   /* Handle */
+//   &::-webkit-scrollbar-thumb {
+//     background: var(--primary-blue);
+//     border-radius: 100px;
+//   }
+
+//   /* Handle on hover */
+//   &::-webkit-scrollbar-thumb:hover {
+//     background: grey;
+//   }
+// }
+
+.animation {
+  position: absolute;
+  top: -800px;
+  left: -108%;
+}
+
+.animate-left {
+  left: unset;
+  top: -800px;
+  right: -108%;
+}
+
+.stay-updated,
+.career,
+.alumni,
+.csr,
+.contact {
+  & .animation {
+    top: -100px;
+  }
+}

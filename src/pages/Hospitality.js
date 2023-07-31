@@ -5,6 +5,7 @@ import PortfolioRight from "../components/portfolio/PortfolioRight";
 import hospitalityBg from "../assets/images/hospitalityBg.png";
 import { hospitality } from "../utils/data";
 import animation from "../assets/images/portfolioAnimationLeft.svg";
+import LiquidBackground from "../components/LiquidBackground";
 
 const Hospitality = () => {
   useEffect(() => {
@@ -30,7 +31,8 @@ const Hospitality = () => {
 
       <div className="bottom portfolio">
         <div className="animation">
-          <img src={animation} alt="animation" />
+          {/* <img src={animation} alt="animation" /> */}
+          <LiquidBackground />
         </div>
         {hospitality.map((item, index) => {
           if (index % 2 !== 0 || index === 1) {

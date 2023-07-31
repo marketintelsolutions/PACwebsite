@@ -4,6 +4,7 @@ import vendorbg from "../../assets/images/vendorbg.png";
 import { foundations } from "../../utils/data";
 import Pagination from "../../components/resources/Pagination";
 import { Link } from "react-router-dom";
+import LiquidBackground from "../../components/LiquidBackground";
 
 const StayUpdated = () => {
   useEffect(() => {
@@ -13,6 +14,9 @@ const StayUpdated = () => {
   return (
     <section className="stay-updated">
       <SectionOne color="#38B6FF" text="Stay Updated" img={vendorbg} />
+      <div className="animation animate-left">
+        <LiquidBackground />
+      </div>
       <div className="section-two">
         <div className="foundations-container">
           <div className="foundations">

@@ -5,6 +5,7 @@ import PortfolioRight from "../components/portfolio/PortfolioRight";
 import agroBg from "../assets/images/agroBg.png";
 import { agroAllied } from "../utils/data";
 import animation from "../assets/images/portfolioAnimationLeft.svg";
+import LiquidBackground from "../components/LiquidBackground";
 
 const AgroAllied = () => {
   useEffect(() => {
@@ -16,8 +17,9 @@ const AgroAllied = () => {
       <SectionOne color="#9ACB34" text="Agro-allied" img={agroBg} />
 
       <div className="bottom portfolio">
-        <div className="animation">
-          <img src={animation} alt="animation" />
+        <div className="animation animate-left">
+          {/* <img src={animation} alt="animation" /> */}
+          <LiquidBackground />
         </div>
         {agroAllied.map((item, index) => {
           if (index % 2 !== 0 || index === 1) {

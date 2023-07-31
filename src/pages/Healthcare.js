@@ -5,6 +5,7 @@ import PortfolioRight from "../components/portfolio/PortfolioRight";
 import { healthcare } from "../utils/data";
 import healthcareBg from "../assets/images/healthcareBg.png";
 import animation from "../assets/images/portfolioAnimationLeft.svg";
+import LiquidBackground from "../components/LiquidBackground";
 
 const Healthcare = () => {
   useEffect(() => {
@@ -16,14 +17,15 @@ const Healthcare = () => {
       <SectionOne color="#38B6FF" text="Healthcare" img={healthcareBg} />
 
       <div className="bottom portfolio">
-        <div className="animation">
-          <img src={animation} alt="animation" />
+        <div className="animation ">
+          {/* <img src={animation} alt="animation" /> */}
+          <LiquidBackground />
         </div>
         {healthcare.map((item, index) => {
           if (index % 2 !== 0 || index === 1) {
-            return <PortfolioRight {...item} index={index} />;
+            return <PortfolioRight {...item} key={index} />;
           }
-          return <PortfolioLeft {...item} index={index} />;
+          return <PortfolioLeft {...item} key={index} />;
         })}
       </div>
     </div>

@@ -15,6 +15,7 @@ footer {
     // display: flex;
     justify-content: center;
     // align-items: center;
+    width: 85%;
     max-width: 1440px;
 
     @media (max-width: $breakpoint-tablet) {
@@ -50,7 +51,7 @@ footer {
           font-family: "Open Sans";
           font-style: normal;
           font-weight: 400;
-          font-size: 18px;
+          font-size: 16px;
           line-height: 27px;
           text-transform: capitalize;
           cursor: pointer;

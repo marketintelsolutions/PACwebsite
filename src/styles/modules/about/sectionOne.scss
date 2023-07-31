@@ -3,6 +3,7 @@
   // height: 100vh;
   position: relative;
   overflow-x: hidden;
+  z-index: 3;
 
   & .section-container {
     & .main {

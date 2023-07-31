@@ -6,6 +6,7 @@ import csrLogo from "../assets/logos/csrLogo.svg";
 import paclogo from "../assets/images/paclogo.svg";
 import { blocks, goals } from "../utils/csrData";
 import { useNavigate } from "react-router-dom";
+import LiquidBackground from "../components/LiquidBackground";
 
 const Csr = ({ setNavlogo }) => {
   const navigate = useNavigate();
@@ -64,7 +65,9 @@ const Csr = ({ setNavlogo }) => {
           </p>
         </div>
       </div>
-
+      <div className="animation animate-left">
+        <LiquidBackground />
+      </div>
       <div className="csr-section-two">
         <div className="content">
           <div className="left">
