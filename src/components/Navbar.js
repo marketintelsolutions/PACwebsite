@@ -13,6 +13,7 @@ import { ourPortfolio, joinUs, resources } from "../utils/navData";
 const Navbar = ({ isDropdown, setIsDropdown, logo }) => {
   const [dropItems, setDropItems] = useState([]);
   const [position, setPosition] = useState({});
+  const [dropdown, setDropdown] = useState(false);
 
   const toggleDropdown = (e, items) => {
     setIsDropdown(!isDropdown);
@@ -69,7 +70,7 @@ const Navbar = ({ isDropdown, setIsDropdown, logo }) => {
           <Link to="/" className="logo">
             <img src={logo} alt="logo" />
           </Link>
-          <div className="nav-items">
+          <div className={`${dropdown ? "nav-items active" : "nav-items"}`}>
             <div className="item">
               <Link to="/about">About</Link>
             </div>
@@ -119,7 +120,7 @@ const Navbar = ({ isDropdown, setIsDropdown, logo }) => {
               <Link to="/contact">Contact</Link>
             </div>
           </div>
-          <div className="menu">
+          <div className="menu" onClick={() => setDropdown(!dropdown)}>
             <img src={menuLine} alt="menuLine" />
           </div>
         </div>
