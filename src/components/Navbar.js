@@ -72,10 +72,14 @@ const Navbar = ({ isDropdown, setIsDropdown, logo }) => {
           </Link>
           <div className={`${dropdown ? "nav-items active" : "nav-items"}`}>
             <div className="item">
-              <Link to="/about">About</Link>
+              <Link to="/about" onClick={() => setDropdown(false)}>
+                About
+              </Link>
             </div>
             <div className="item border">
-              <Link to="/portfolio">Our Portfolio</Link>
+              <Link to="/portfolio" onClick={() => setDropdown(false)}>
+                Our Portfolio
+              </Link>
               <span
                 onClick={(e) => toggleDropdown(e, ourPortfolio)}
                 className="portfolio-arrow"
@@ -114,10 +118,14 @@ const Navbar = ({ isDropdown, setIsDropdown, logo }) => {
               </span>
             </div>
             <div className="item">
-              <Link to="/csr">CSR</Link>
+              <Link to="/csr" onClick={() => setDropdown(false)}>
+                CSR
+              </Link>
             </div>
             <div className="item">
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact" onClick={() => setDropdown(false)}>
+                Contact
+              </Link>
             </div>
           </div>
           <div className="menu" onClick={() => setDropdown(!dropdown)}>
@@ -152,7 +160,10 @@ const Navbar = ({ isDropdown, setIsDropdown, logo }) => {
               <Link
                 key={index}
                 to={item.path}
-                onClick={() => setIsDropdown(!isDropdown)}
+                onClick={() => {
+                  setIsDropdown(!isDropdown);
+                  setDropdown(false);
+                }}
                 className="drop-item"
               >
                 {item.text}
