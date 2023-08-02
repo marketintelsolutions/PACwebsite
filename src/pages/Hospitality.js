@@ -24,7 +24,7 @@ const Hospitality = () => {
           We do understand that every property is unique, and for that, we have
           design five main Brands in order to fully apply the demands of the
           market, so we look forward to discussing your specific opportunity and
-          how we can assist you in revealing the full potential of your asset.
+          how we can assist you in revealing the full potential of your asset
         </p>
         {/*<button>Read More</button>*/}
       </div>
