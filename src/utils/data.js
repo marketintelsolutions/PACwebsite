@@ -502,7 +502,7 @@ export const healthcare = [
 
       " We are an ISO 9001: 2015 certified firm, would like to introduce STERIWELL® 20 and 40-liter capacity machines that can treat 3 kg to 5.5 kg of waste per 45 minutes. STERIWELL® system is CE certified from a designated European notified body, meeting the standards and compliance to EN ISO 12100: 2010 for safety of machinery design and IEC (International Electro technical Communication) EN 602041: 2006+ A1: 2009. STERIWELL® is also certified with ISO14001: 2015 confirming to the International Standards for effective Environmental Management System (EMS). STERIWELL® is registered under GeM (Government e-Market Place) portal.",
     ],
-    //   link: "https://ziltchone.com ",
+    //   link: "https://www.ziltchone.com ",
   },
 ];
 
