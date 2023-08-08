@@ -7,9 +7,13 @@ import CareerBlockReversed from "../../components/joinus/CareerBlockReversed";
 import LiquidBackground from "../../components/LiquidBackground";
 
 const Career = () => {
-  const [subject, setSubject] = useState("test subject");
-  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("message");
   const [mailLink, setMailLink] = useState("");
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   useEffect(() => {
     updateMailLink();
@@ -21,9 +25,7 @@ const Career = () => {
       encodeURIComponent(subject) +
       `&body=` +
       encodeURIComponent(message);
-    setMailLink("mailto:person@email.com" + mailString);
-
-    // console.log(mailString);
+    setMailLink("mailto:info@panafricancapitalholdings.com" + mailString);
   };
 
   return (

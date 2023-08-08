@@ -8,6 +8,10 @@ const CareerBlockReversed = ({
   image,
   mailLink,
 }) => {
+  let mailtoLink = `mailto:info@panafricancapitalholdings.com?subject=${encodeURIComponent(
+    heading
+  )}`;
+
   return (
     <div className="career-item">
       <div className="right">
@@ -32,7 +36,7 @@ const CareerBlockReversed = ({
             </div>
           </>
         )}
-        <a href={mailLink} id="mail-link">
+        <a href={mailtoLink} id="mail-link">
           SUBMIT RESUME{" "}
           <span>
             <img src={downloadGrey} alt="downloadGrey" />
