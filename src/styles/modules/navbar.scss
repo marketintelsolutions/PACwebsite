@@ -17,6 +17,7 @@
     background: #062644;
     border-radius: 194px;
 
+    transition: var(--transition);
     margin: 0 auto;
     max-width: 1600px;
     // width: 90%;
@@ -43,6 +44,7 @@
     }
 
     & .predropdown {
+      transition: var(--transition);
       background: #a6a6a7;
       border-radius: 194px;
       cursor: pointer;
@@ -52,10 +54,12 @@
 
 .pre-nav-selected {
   & .center {
+    transition: var(--transition);
     background: #a6a6a7;
 
     & .predropdown {
       background: #062644;
+      transition: var(--transition);
     }
   }
 }
