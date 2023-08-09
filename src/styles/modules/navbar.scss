@@ -50,6 +50,16 @@
   }
 }
 
+.pre-nav-selected {
+  & .center {
+    background: #a6a6a7;
+
+    & .predropdown {
+      background: #062644;
+    }
+  }
+}
+
 .navbar {
   position: fixed;
   top: 86px;

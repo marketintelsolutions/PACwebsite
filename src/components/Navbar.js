@@ -73,7 +73,11 @@ const Navbar = ({ isDropdown, setIsDropdown, logo }) => {
   return (
     <>
       {/* PRENAV */}
-      <div className="pre-nav">
+      <div
+        className={`${
+          active.country !== "Nigeria" ? "pre-nav pre-nav-selected" : "pre-nav"
+        }`}
+      >
         <div className="center">
           <div
             className="predropdown item"
