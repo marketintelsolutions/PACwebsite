@@ -545,7 +545,7 @@ export const hospitality = [
       " When it comes to meetings and celebrations, we offer hybrid, flexible and innovative solutions so that you can find the ideal venue with state-of-the-art equipment to fulfil your unique event vision and goals.",
       "Enjoy complete international standard services as we give you a wonderful treat with our welcoming protocols - our express check-in using stress free cards alongside a welcoming glass of complimentary juice on arrival.",
       "Above all, just simply experience our first-class personalized service with our well-trained personnel always available to serve you throughout your stay.",
-      "At Amber Residence, you are always welcome to a world of warmth.",
+      "At Amber Residence, you are always welcome to a world of warmth",
     ],
     link: "https://amberresidenceng.com",
     page: false,
