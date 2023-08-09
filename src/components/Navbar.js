@@ -8,13 +8,46 @@ import calender from "../assets/logos/calender.svg";
 import clock from "../assets/logos/clock.svg";
 import menuLine from "../assets/logos/menuLine.svg";
 import { Link } from "react-router-dom";
-import { ourPortfolio, joinUs, resources } from "../utils/navData";
+import {
+  ourPortfolio,
+  joinUs,
+  resources,
+  countries,
+  languages,
+} from "../utils/navData";
 
 const Navbar = ({ isDropdown, setIsDropdown, logo }) => {
   const [dropItems, setDropItems] = useState([]);
   const [position, setPosition] = useState({});
   const [dropdown, setDropdown] = useState(false);
 
+  // prenav
+  // const [country, setCountry] = useState("Nigeria");
+  const [preDropItems, setPreDropItems] = useState([]);
+  const [isPrenavDropdown, setIsPrenavDropdown] = useState(true);
+  const [prePosition, setPrePosition] = useState({});
+  // const [language, setLanguage] = useState("English");
+  const [active, setActive] = useState({
+    focus: "",
+    country: "Nigeria",
+    language: "English",
+  });
+
+  // TOGGLE FOR PRENAV
+  const togglePreDropdown = (e, items, type) => {
+    setIsPrenavDropdown(!isPrenavDropdown);
+
+    const { top, left } = e.target.getBoundingClientRect();
+    const topPosition = top;
+
+    setPrePosition({ top: topPosition, left });
+    setPreDropItems(items);
+
+    // console.log(preDropItems);
+    setActive({ ...active, focus: `${type}` });
+  };
+
+  // TOGGLE FOR NAVBAR
   const toggleDropdown = (e, items) => {
     setIsDropdown(!isDropdown);
 
@@ -24,12 +57,29 @@ const Navbar = ({ isDropdown, setIsDropdown, logo }) => {
     setPosition({ top: topPosition, left });
     setDropItems(items);
   };
+
+  // ONCLICK FOR PRENAV DROPDOWN
+  const setActiveItem = (item) => {
+    if (active.focus === "country") {
+      setActive({ ...active, focus: "", country: item });
+      // console.log("entered");
+    } else if (active.focus === "language") {
+      setActive({ ...active, focus: "", language: item });
+    }
+    // console.log("no entry");
+    setIsPrenavDropdown(false);
+  };
+
   return (
     <>
+      {/* PRENAV */}
       <div className="pre-nav">
         <div className="center">
-          <div className="predropdown item">
-            <p>Nigeria</p>
+          <div
+            className="predropdown item"
+            onClick={(e) => togglePreDropdown(e, countries, "country")}
+          >
+            <p>{active.country}</p>
             <span>
               <img src={arrowDownFill} alt="arrowDownFill" />
             </span>
@@ -56,8 +106,11 @@ const Navbar = ({ isDropdown, setIsDropdown, logo }) => {
             </span>
             <p>info@panfricancapitalholdings.com</p>
           </div>
-          <div className="predropdown item">
-            <p>English</p>
+          <div
+            className="predropdown item"
+            onClick={(e) => togglePreDropdown(e, languages, "language")}
+          >
+            <p>{active.language}</p>
             <span>
               {" "}
               <img src={arrowDownFill} alt="arrowDownFill" />
@@ -65,6 +118,8 @@ const Navbar = ({ isDropdown, setIsDropdown, logo }) => {
           </div>
         </div>
       </div>
+
+      {/*------- NAVBAR -------*/}
       <nav className="navbar">
         <div className="nav-center">
           <Link to="/" className="logo">
@@ -133,6 +188,33 @@ const Navbar = ({ isDropdown, setIsDropdown, logo }) => {
           </div>
         </div>
       </nav>
+
+      {/* PRENAV DROPDOWN */}
+      {isPrenavDropdown && (
+        <div
+          className="pre-dropdown dropdown"
+          style={{
+            // top: `${prePosition.top}px`,
+            top: "72px",
+            left: `${prePosition.left}px`,
+          }}
+        >
+          {preDropItems.map((item, index) => {
+            if (item === active.country || item === active.language) return;
+            return (
+              <p
+                className="drop-item"
+                key={index}
+                onClick={() => setActiveItem(item)}
+              >
+                {item}
+              </p>
+            );
+          })}
+        </div>
+      )}
+
+      {/* NAVBAR DROPDOWN */}
       {isDropdown && (
         <div
           className="dropdown"

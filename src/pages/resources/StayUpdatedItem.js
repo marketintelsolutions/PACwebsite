@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import arrowRight from "../../assets/logos/arrowRight.svg";
 
 const StayUpdatedItem = () => {
   useEffect(() => {
@@ -15,7 +16,11 @@ const StayUpdatedItem = () => {
   return (
     <section className="stay-updated-item">
       <div className="content">
-        <button onClick={handleGoBack}>Go Back</button>
+        <div className="btn-container">
+          <button onClick={handleGoBack}>
+            Stay Updated <img src={arrowRight} alt="arrowRight" />{" "}
+          </button>
+        </div>
         <h1>
           PAC Capital Commits to a 3-year Sponsorship Agreement with CANEX
           presents Africa @Portugal Fashion Week

@@ -29,8 +29,8 @@ const CareerBlockReversed = ({
             <h3>ELIGIBILITY CRITERIA</h3>
             <div className="list">
               <ul>
-                {eligibility.map((item) => (
-                  <li>{item}</li>
+                {eligibility.map((item, index) => (
+                  <li key={index}>{item}</li>
                 ))}
               </ul>
             </div>

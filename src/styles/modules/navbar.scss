@@ -21,6 +21,7 @@
     max-width: 1600px;
     // width: 90%;
     display: flex;
+    position: relative;
 
     & .item {
       display: flex;
@@ -233,7 +234,8 @@
   gap: 24px;
   z-index: 4;
 
-  & a {
+  & a,
+  p {
     font-family: "Open Sans";
     font-style: normal;
     font-weight: 400;
@@ -257,12 +259,19 @@
       transition: var(--transition);
     }
 
-    & a {
+    & a,
+    p {
       &:hover {
         background: #062644;
         color: white;
         transition: var(--transition);
       }
     }
+  }
+}
+
+.pre-dropdown {
+  & p {
+    width: 215px;
   }
 }

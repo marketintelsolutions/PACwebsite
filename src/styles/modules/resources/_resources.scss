@@ -142,28 +142,35 @@
 
 .stay-updated-item {
   min-height: 100vh;
-  margin-top: 371px;
+  margin-top: 323px;
 
   & .content {
     max-width: 1276px;
     margin: 0 auto;
+    width: 100%;
+    // display: flex;
+  }
+
+  & .btn-container {
+    // border: 2px solid red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   & button {
-    border: none;
-    padding: 10px 25px;
-    color: #fff;
-    font-family: Open Sans;
-    font-size: 25px;
+    color: #0089ff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
     font-style: normal;
     font-weight: 700;
-    line-height: 40px; /* 114.286% */
-    max-width: 784px;
-    margin: 0 auto;
-    background: #152344;
-    border-radius: 10px;
-    margin-bottom: 40px;
-    cursor: pointer;
+    line-height: 20px;
+    background: transparent;
+    margin: 0 auto 103px;
+    // width: fit-content;
+    border: none;
+    // align-self: ;
   }
 
   & h1 {
