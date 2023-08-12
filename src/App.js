@@ -40,7 +40,7 @@ const cacheProvider = {
 
 const App = () => {
   const [navlogo, setNavlogo] = useState(logo);
-  const [language, setLanguage] = useState("fr");
+  const [language, setLanguage] = useState("en");
 
   const handleLanguageChange = (newLanguage) => {
     setLanguage(newLanguage);
