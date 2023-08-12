@@ -12,7 +12,7 @@ const Navbar = ({ isDropdown, setIsDropdown, logo, setLanguage }) => {
   const [dropdown, setDropdown] = useState(false);
 
   // prenav states
-  const [isPrenavDropdown, setIsPrenavDropdown] = useState(true);
+  const [isPrenavDropdown, setIsPrenavDropdown] = useState(false);
   const [preDropItems, setPreDropItems] = useState([]);
   const [prePosition, setPrePosition] = useState({});
   const [active, setActive] = useState({
