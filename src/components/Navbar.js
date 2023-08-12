@@ -1,50 +1,36 @@
 import React, { useState } from "react";
 // import paclogo from "../assets/logos/paclogo.svg";
-import arrowDownFill from "../assets/logos/arrowDownFill.svg";
 import arrowDownBlue from "../assets/logos/arrowDownBlue.svg";
-import mail from "../assets/logos/mail.svg";
-import phone from "../assets/logos/phone.svg";
-import calender from "../assets/logos/calender.svg";
-import clock from "../assets/logos/clock.svg";
 import menuLine from "../assets/logos/menuLine.svg";
 import { Link } from "react-router-dom";
-import {
-  ourPortfolio,
-  joinUs,
-  resources,
-  countries,
-  languages,
-} from "../utils/navData";
+import { ourPortfolio, joinUs, resources } from "../utils/navData";
+import Prenav from "./navbar/Prenav";
 
-const Navbar = ({ isDropdown, setIsDropdown, logo }) => {
+const Navbar = ({ isDropdown, setIsDropdown, logo, setLanguage }) => {
   const [dropItems, setDropItems] = useState([]);
   const [position, setPosition] = useState({});
   const [dropdown, setDropdown] = useState(false);
 
-  // prenav
-  // const [country, setCountry] = useState("Nigeria");
-  const [preDropItems, setPreDropItems] = useState([]);
+  // prenav states
   const [isPrenavDropdown, setIsPrenavDropdown] = useState(true);
+  const [preDropItems, setPreDropItems] = useState([]);
   const [prePosition, setPrePosition] = useState({});
-  // const [language, setLanguage] = useState("English");
   const [active, setActive] = useState({
     focus: "",
     country: "Nigeria",
     language: "English",
   });
 
-  // TOGGLE FOR PRENAV
-  const togglePreDropdown = (e, items, type) => {
-    setIsPrenavDropdown(!isPrenavDropdown);
-
-    const { top, left } = e.target.getBoundingClientRect();
-    const topPosition = top;
-
-    setPrePosition({ top: topPosition, left });
-    setPreDropItems(items);
-
-    // console.log(preDropItems);
-    setActive({ ...active, focus: `${type}` });
+  const setActiveItem = ({ text, translation }) => {
+    if (active.focus === "country") {
+      setActive({ ...active, focus: "", country: text });
+      // console.log("entered");
+    } else if (active.focus === "language") {
+      setLanguage(translation);
+      setActive({ ...active, focus: "", language: text });
+    }
+    // console.log("no entry");
+    setIsPrenavDropdown(false);
   };
 
   // TOGGLE FOR NAVBAR
@@ -58,70 +44,17 @@ const Navbar = ({ isDropdown, setIsDropdown, logo }) => {
     setDropItems(items);
   };
 
-  // ONCLICK FOR PRENAV DROPDOWN
-  const setActiveItem = (item) => {
-    if (active.focus === "country") {
-      setActive({ ...active, focus: "", country: item });
-      // console.log("entered");
-    } else if (active.focus === "language") {
-      setActive({ ...active, focus: "", language: item });
-    }
-    // console.log("no entry");
-    setIsPrenavDropdown(false);
-  };
-
   return (
     <>
       {/* PRENAV */}
-      <div
-        className={`${
-          active.country !== "Nigeria" ? "pre-nav pre-nav-selected" : "pre-nav"
-        }`}
-      >
-        <div className="center">
-          <div
-            className="predropdown item"
-            onClick={(e) => togglePreDropdown(e, countries, "country")}
-          >
-            <p>{active.country}</p>
-            <span>
-              <img src={arrowDownFill} alt="arrowDownFill" />
-            </span>
-          </div>
-          <div className="item">
-            <img src={calender} alt="arrowDownFill" />
-            <p>Mon - Fri</p>
-          </div>
-          <div className="item">
-            <span>
-              <img src={clock} alt="arrowDownFill" />
-            </span>
-            <p>8:00am-5:00pm</p>
-          </div>
-          <div className="item">
-            <span>
-              <img src={phone} alt="arrowDownFill" />
-            </span>
-            <p>+ 234-(1)-271-6899</p>
-          </div>
-          <div className="item">
-            <span>
-              <img src={mail} alt="arrowDownFill" />
-            </span>
-            <p>info@panfricancapitalholdings.com</p>
-          </div>
-          <div
-            className="predropdown item"
-            onClick={(e) => togglePreDropdown(e, languages, "language")}
-          >
-            <p>{active.language}</p>
-            <span>
-              {" "}
-              <img src={arrowDownFill} alt="arrowDownFill" />
-            </span>
-          </div>
-        </div>
-      </div>
+      <Prenav
+        active={active}
+        setActive={setActive}
+        setPreDropItems={setPreDropItems}
+        setIsPrenavDropdown={setIsPrenavDropdown}
+        isPrenavDropdown={isPrenavDropdown}
+        setPrePosition={setPrePosition}
+      />
 
       {/*------- NAVBAR -------*/}
       <nav className="navbar">
@@ -204,14 +137,16 @@ const Navbar = ({ isDropdown, setIsDropdown, logo }) => {
           }}
         >
           {preDropItems.map((item, index) => {
-            if (item === active.country || item === active.language) return;
+            const { text } = item;
+            if (text === active.country || text === active.language) return;
+
             return (
               <p
                 className="drop-item"
                 key={index}
                 onClick={() => setActiveItem(item)}
               >
-                {item}
+                {text}
               </p>
             );
           })}

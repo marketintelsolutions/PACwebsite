@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-const SharedLayout = ({ logo, children }) => {
+const SharedLayout = ({ logo, setLanguage, children }) => {
   const [isDropdown, setIsDropdown] = useState(false);
 
   const handleClick = (e) => {
@@ -17,6 +17,7 @@ const SharedLayout = ({ logo, children }) => {
         isDropdown={isDropdown}
         setIsDropdown={setIsDropdown}
         logo={logo}
+        setLanguage={setLanguage}
       />
       {children}
       <Footer />

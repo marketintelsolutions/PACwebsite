@@ -1,4 +1,5 @@
 import React from "react";
+import { Translate } from "react-auto-translate";
 import mobile from "../../assets/images/mobile.png";
 import MobileAnimation from "../MobileAnimation";
 
@@ -10,11 +11,15 @@ const SectionTwo = () => {
 
         <MobileAnimation />
         <div className="text">
-          <h2>Our Investment Philosophy</h2>
+          <h2>
+            <Translate>Our Investment Philosophy</Translate>
+          </h2>
           <p>
-            We believe that progress is informed by the past and inspired by the
-            future, this is why we operate an investment philosophy based on
-            ideas, partnerships and solutions.
+            <Translate>
+              We believe that progress is informed by the past and inspired by
+              the future, this is why we operate an investment philosophy based
+              on ideas, partnerships and solutions.
+            </Translate>
           </p>
         </div>
       </div>

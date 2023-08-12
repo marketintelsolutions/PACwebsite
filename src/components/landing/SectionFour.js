@@ -8,6 +8,8 @@ import arrowRight from "../../assets/images/arrowRight.svg";
 import { foundations } from "../../utils/data";
 import LiquidBackground from "../LiquidBackground";
 import ButtonAnimation from "../ButtonAnimation";
+import { Translate } from "react-auto-translate";
+import { itemsData } from "../../utils/landingData";
 
 const SectionFour = () => {
   const [scrollIndex, setScrollIndex] = useState(0);
@@ -36,30 +38,20 @@ const SectionFour = () => {
       <div className="spirit">
         <img src={spirit} alt="spirit" />
         <div className="items">
-          <div className="item">
-            <h1>S</h1>
-            <p>service</p>
-          </div>
-          <div className="item">
-            <h1>P</h1>
-            <p>professionalism</p>
-          </div>
-          <div className="item">
-            <h1>I</h1>
-            <p>innovation</p>
-          </div>
-          <div className="item">
-            <h1>R</h1>
-            <p>respect</p>
-          </div>
-          <div className="item">
-            <h1>I</h1>
-            <p>integrity</p>
-          </div>
-          <div className="item">
-            <h1>T</h1>
-            <p>team spirit</p>
-          </div>
+          {itemsData.map((item, index) => {
+            const { letter, text } = item;
+
+            return (
+              <div className="item" key={index}>
+                <h1>
+                  <Translate>{letter}</Translate>
+                </h1>
+                <p>
+                  <Translate>{text}</Translate>
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
 
@@ -71,11 +63,15 @@ const SectionFour = () => {
         </div>
         <div className="text">
           <p>
-            Creating Impact through opportunities, strategic alliances and
-            partnerships.
+            <Translate>
+              Creating Impact through opportunities, strategic alliances and
+              partnerships.
+            </Translate>
           </p>
           <a>
-            <span>Learn more</span>
+            <span>
+              <Translate>Learn more</Translate>
+            </span>
             <div className="liquid">
               <ButtonAnimation />
             </div>
@@ -85,7 +81,9 @@ const SectionFour = () => {
 
       {/* BOTTOM */}
       <div className="bottom">
-        <h2>STAY UPDATED</h2>
+        <h2>
+          <Translate>STAY UPDATED</Translate>
+        </h2>
 
         <div className="foundations-container">
           <div className="foundations">
@@ -99,8 +97,12 @@ const SectionFour = () => {
                 >
                   <div className="text">
                     <span></span>
-                    <p>{text}</p>
-                    <button>read more</button>
+                    <p>
+                      <Translate>{text}</Translate>
+                    </p>
+                    <button>
+                      <Translate>read more</Translate>
+                    </button>
                   </div>
                 </div>
               );

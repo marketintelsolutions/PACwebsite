@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { portfolio } from "../../utils/data";
+import { Translate } from "react-auto-translate";
 
 const SectionThree = () => {
   const [active, setActive] = useState(Array(portfolio.length).fill(false));
@@ -7,7 +8,9 @@ const SectionThree = () => {
   return (
     <section className="section-three">
       <div className="heading">
-        <h1>our portfolio</h1>
+        <h1>
+          <Translate>our portfolio</Translate>
+        </h1>
       </div>
       <div className="bottom">
         <div className="items">
@@ -36,7 +39,9 @@ const SectionThree = () => {
                 <span>
                   <img src={active[index] ? whiteImg : img} alt={text} />
                 </span>
-                <p>{text}</p>
+                <p>
+                  <Translate>{text}</Translate>
+                </p>
               </div>
             );
           })}

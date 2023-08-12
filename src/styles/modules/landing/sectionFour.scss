@@ -181,8 +181,8 @@
       }
 
       & a {
-        // width: 186px;
-        width: fit-content;
+        width: 186px;
+        // width: fit-content;
         height: 69px;
         // overflow: hidden;
         display: flex;
@@ -203,10 +203,13 @@
         animation: mymove 5s infinite;
         position: relative;
         // border: 2px solid red;
+        text-align: center;
+        // padding: 30px;
 
         & span {
           z-index: 4;
           position: absolute;
+          padding: 10px;
         }
 
         & .liquid {
@@ -222,9 +225,12 @@
           color: var(--primary-blue);
           transition: var(--transition);
 
-          // & .liquid {
-          //   top: -120px;
-          // }
+          & .liquid {
+            // top: -120px;
+            // display: none;
+            opacity: 0;
+            width: 0;
+          }
         }
       }
     }

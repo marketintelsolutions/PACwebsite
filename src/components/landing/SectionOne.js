@@ -3,17 +3,18 @@ import phoneLandingImage from "../../assets/images/phoneLandingImage.png";
 import worldMain from "../../assets/images/worldMain.png";
 import rightArrow from "../../assets/images/rightArrow.svg";
 import leftArrow from "../../assets/images/leftArrow.svg";
+import { Translate } from "react-auto-translate";
 
 const SectionOne = () => {
   const [translated, setTranslated] = useState(false);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTranslated(!translated);
-    }, 3000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setTranslated(!translated);
+  //   }, 3000);
 
-    return () => clearInterval(interval);
-  }, [translated]);
+  //   return () => clearInterval(interval);
+  // }, [translated]);
 
   const handleClick = (e) => {};
 
@@ -35,7 +36,9 @@ const SectionOne = () => {
             <div className="bg-label">
               <div className="text-center">
                 <h1>PAC Holdings</h1>
-                <h3>Unlocking Value Across Africa.</h3>
+                <h3>
+                  <Translate>Unlocking Value Across Africa.</Translate>
+                </h3>
               </div>
             </div>
           </div>

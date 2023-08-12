@@ -60,6 +60,28 @@ export const resources = [
   // },
 ];
 
-export const countries = ["Nigeria", "Ghana"];
+export const countries = {
+  type: "country",
+  items: [
+    {
+      text: "Nigeria",
+    },
+    {
+      text: "Ghana",
+    },
+  ],
+};
 
-export const languages = ["English", "French"];
+export const languages = {
+  type: "language",
+  items: [
+    {
+      text: "English",
+      translation: "en",
+    },
+    {
+      text: "French",
+      translation: "fr",
+    },
+  ],
+};
