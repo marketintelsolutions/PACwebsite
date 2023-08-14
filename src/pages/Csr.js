@@ -8,6 +8,7 @@ import { blocks, goals } from "../utils/csrData";
 import { useNavigate } from "react-router-dom";
 import LiquidBackground from "../components/LiquidBackground";
 import ButtonAnimation from "../components/ButtonAnimation";
+import { Translate } from "react-auto-translate";
 
 const Csr = ({ setNavlogo }) => {
   const navigate = useNavigate();
@@ -57,12 +58,18 @@ const Csr = ({ setNavlogo }) => {
         style={{ backgroundImage: `url(${csrBg})` }}
       >
         <div className="center">
-          <h3>Make An Impact</h3>
-          <h1>Shape the World one Life at a time</h1>
+          <h3>
+            <Translate>Make An Impact</Translate>
+          </h3>
+          <h1>
+            <Translate>Shape the World one Life at a time</Translate>
+          </h1>
           <p>
-            The impact of an individual is felt more when part of a collective.
-            By empowering others, we shape mindsets, build capacity and the
-            future with our collective efforts
+            <Translate>
+              The impact of an individual is felt more when part of a
+              collective. By empowering others, we shape mindsets, build
+              capacity and the future with our collective efforts
+            </Translate>
           </p>
         </div>
       </div>
@@ -76,16 +83,24 @@ const Csr = ({ setNavlogo }) => {
             <img src={playWhite} alt="playWhite" className="play" />
           </div>
           <div className="right">
-            <h1>A Dream In Their Mind Is Our Mission Defined</h1>
+            <h1>
+              <Translate>
+                A Dream In Their Mind Is Our Mission Defined
+              </Translate>
+            </h1>
             <span></span>
             <p>
-              We recognize the need for immediate action in our communities and
-              confidence that our interventions will support other efforts to
-              bring development that balances social, economic, and
-              environmental sustainability.
+              <Translate>
+                We recognize the need for immediate action in our communities
+                and confidence that our interventions will support other efforts
+                to bring development that balances social, economic, and
+                environmental sustainability.
+              </Translate>
             </p>
             <button>
-              <span>Learn more</span>
+              <span>
+                <Translate>Learn more</Translate>
+              </span>
               <div className="liquid">
                 <ButtonAnimation />
               </div>
@@ -113,7 +128,9 @@ const Csr = ({ setNavlogo }) => {
                 onMouseLeave={() => setItems(newArray)}
               >
                 <img src={items[index].white ? whiteImg : image} alt={image} />
-                <p>{text}</p>
+                <p>
+                  <Translate>{text}</Translate>
+                </p>
               </div>
             );
           })}
@@ -122,7 +139,9 @@ const Csr = ({ setNavlogo }) => {
 
       <div className="csr-section-four">
         <div className="center">
-          <h1>Sustainable Development Goals</h1>
+          <h1>
+            <Translate>Sustainable Development Goals</Translate>
+          </h1>
           <div className="line">
             <span className="red"></span>
             <span className="white"></span>
@@ -151,8 +170,12 @@ const Csr = ({ setNavlogo }) => {
                   >
                     <img src={grey[index] ? greyLogo : logo} alt={logo} />
                     <div className="text">
-                      <span>{number}</span>
-                      <p>{text}</p>
+                      <span>
+                        <Translate>{number}</Translate>
+                      </span>
+                      <p>
+                        <Translate>{text}</Translate>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -162,7 +185,9 @@ const Csr = ({ setNavlogo }) => {
         </div>
       </div>
       <div className="get-involved">
-        <button>Get Involved</button>
+        <button>
+          <Translate>Get Involved</Translate>
+        </button>
       </div>
     </section>
   );

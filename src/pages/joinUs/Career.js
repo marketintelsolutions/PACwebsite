@@ -5,6 +5,7 @@ import { careerData } from "../../utils/career";
 import CareerBlock from "../../components/joinus/CareerBlock";
 import CareerBlockReversed from "../../components/joinus/CareerBlockReversed";
 import LiquidBackground from "../../components/LiquidBackground";
+import { Translate } from "react-auto-translate";
 
 const Career = () => {
   const [subject, setSubject] = useState("");
@@ -57,13 +58,19 @@ const Career = () => {
           })}
         </div>
         <div className="join">
-          <h1>Join Us</h1>
+          <h1>
+            <Translate>Join Us</Translate>
+          </h1>
           <p>
-            It’s never been easier to find your perfect role that meets your
-            career ambitions. Head over to our career page to explore an
-            opportunity at PAC Holdings.
+            <Translate>
+              It’s never been easier to find your perfect role that meets your
+              career ambitions. Head over to our career page to explore an
+              opportunity at PAC Holdings.
+            </Translate>
           </p>
-          <button>View All Jobs</button>
+          <button>
+            <Translate>View All Jobs</Translate>
+          </button>
         </div>
       </div>
     </section>

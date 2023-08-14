@@ -9,6 +9,7 @@ import { alumniData } from "../../utils/joinusData";
 import { gettingStarted } from "../../utils/helpers/sendMailHelpers";
 import { useNavigate } from "react-router-dom";
 import LiquidBackground from "../../components/LiquidBackground";
+import { Translate } from "react-auto-translate";
 
 const Alumni = ({ setNavlogo }) => {
   const navigate = useNavigate();
@@ -109,14 +110,21 @@ const Alumni = ({ setNavlogo }) => {
       <div className="section-two">
         <div className="left">
           <h3>
-            Encouraging Relationships that transcend workplace. Be an icon today
+            <Translate>
+              Encouraging Relationships that transcend workplace. Be an icon
+              today
+            </Translate>
           </h3>
           <p>
-            We are a band of ex-PanAfrican Capital Group staff with a shared
-            goal of staying connected while cheering each other on the journey
-            of life towards making positive impact where it matters most.
+            <Translate>
+              We are a band of ex-PanAfrican Capital Group staff with a shared
+              goal of staying connected while cheering each other on the journey
+              of life towards making positive impact where it matters most.
+            </Translate>
           </p>
-          <button>Discover more</button>
+          <button>
+            <Translate>Discover more</Translate>
+          </button>
         </div>
         <div className="right">
           <img src={mapalumni} alt="mapalumni" />
@@ -124,11 +132,15 @@ const Alumni = ({ setNavlogo }) => {
       </div>
       <div className="section-three">
         <div className="form-container">
-          <h2>Getting Started</h2>
+          <h2>
+            <Translate>Getting Started</Translate>
+          </h2>
           <span></span>
           <p>
-            Kindly fill this form. You can manually send us email on
-            info@panafricancapitalholdings.com
+            <Translate>
+              Kindly fill this form. You can manually send us email on
+              info@panafricancapitalholdings.com
+            </Translate>
           </p>
           <form>
             <div className="details">
@@ -177,7 +189,7 @@ const Alumni = ({ setNavlogo }) => {
               placeholder="Enter Message"
             ></textarea>
             <button type="button" onClick={handleSubmit}>
-              Submit
+              <Translate>Submit</Translate>
             </button>
           </form>
         </div>
@@ -194,8 +206,12 @@ const Alumni = ({ setNavlogo }) => {
                     <img src={image} alt={heading} />
                   </div>
                   <div className="left">
-                    <h2>{heading}</h2>
-                    <p>{text}</p>
+                    <h2>
+                      <Translate>{heading}</Translate>
+                    </h2>
+                    <p>
+                      <Translate>{text}</Translate>
+                    </p>
                   </div>
                 </div>
               );
@@ -203,8 +219,12 @@ const Alumni = ({ setNavlogo }) => {
             return (
               <div className="item" key={index}>
                 <div className="left">
-                  <h2>{heading}</h2>
-                  <p>{text}</p>
+                  <h2>
+                    <Translate>{heading}</Translate>
+                  </h2>
+                  <p>
+                    <Translate>{text}</Translate>
+                  </p>
                 </div>
                 <div className="right">
                   <img src={image} alt={heading} />
@@ -219,9 +239,15 @@ const Alumni = ({ setNavlogo }) => {
         style={{ backgroundImage: `url(${alumniBg})` }}
       >
         <div className="content">
-          <h1>Join Our Community Today</h1>
-          <p>Become an icon</p>
-          <button>Get started</button>
+          <h1>
+            <Translate>Join Our Community Today</Translate>
+          </h1>
+          <p>
+            <Translate>Become an icon</Translate>
+          </p>
+          <button>
+            <Translate>Get started</Translate>
+          </button>
         </div>
       </div>
     </div>

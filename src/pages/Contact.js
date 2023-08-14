@@ -11,6 +11,7 @@ import {
 } from "../utils/contactData";
 import { contact } from "../utils/helpers/sendMailHelpers";
 import LiquidBackground from "../components/LiquidBackground";
+import { Translate } from "react-auto-translate";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -51,11 +52,15 @@ const Contact = () => {
       </div>
       <div className="contact-section-two map-item">
         <div className="heading">
-          <h1>Connect with PAC</h1>
+          <h1>
+            <Translate>Connect with PAC</Translate>
+          </h1>
           <span></span>
           <p>
-            Connect with the right client relationship and specialist teams to
-            move you forward
+            <Translate>
+              Connect with the right client relationship and specialist teams to
+              move you forward
+            </Translate>
           </p>
         </div>
 
@@ -71,14 +76,18 @@ const Contact = () => {
               </div>
             </div>
             <div className="telephone item">
-              <h2>Telephone</h2>
+              <h2>
+                <Translate>Telephone</Translate>
+              </h2>
               <div className="text">
                 <p>+234 (0) 271 6899</p>
                 <p>+234 (0) 271 6893</p>
               </div>
             </div>
             <div className="email item">
-              <h2>Email us</h2>
+              <h2>
+                <Translate>Email us</Translate>
+              </h2>
               <div className="text">
                 <a href="info@panafricancapitalholdings.com">
                   info@panafricancapitalholdings.com
@@ -93,7 +102,9 @@ const Contact = () => {
       </div>
       {/* SECTION THREE */}
       <div className="contact-section-three">
-        <h1>Our Contact Details</h1>
+        <h1>
+          <Translate>Our Contact Details</Translate>
+        </h1>
         <div className="content">
           <div className="left row">
             {contactDetailsOne.map((item, index) => {
@@ -131,13 +142,17 @@ const Contact = () => {
               </div>
             </div>
             <div className="telephone item">
-              <h2>Telephone</h2>
+              <h2>
+                <Translate>Telephone</Translate>
+              </h2>
               <div className="text">
                 <p>+ 233 (0) 262 727400</p>
               </div>
             </div>
             <div className="email item">
-              <h2>Email us</h2>
+              <h2>
+                <Translate>Email us</Translate>
+              </h2>
               <div className="text">
                 <a href="info@panafricancapitalholdings.com">
                   info@panafricancapitalholdings.com
@@ -149,7 +164,9 @@ const Contact = () => {
       </div>
       {/* SECTION FIVE */}
       <div className="section-five">
-        <h1>Send us a message</h1>
+        <h1>
+          <Translate>Send us a message</Translate>
+        </h1>
         <span></span>
         <form onSubmit={handleSubmit}>
           <div className="top">
@@ -181,7 +198,9 @@ const Contact = () => {
             value={formData.message}
             onChange={handleChange}
           ></textarea>
-          <button type="submit">Submit</button>
+          <button type="submit">
+            <Translate>Submit</Translate>
+          </button>
         </form>
       </div>
     </div>

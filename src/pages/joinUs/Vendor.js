@@ -14,6 +14,7 @@ import business from "../../assets/logos/business.svg";
 import cloud from "../../assets/logos/cloud.svg";
 import cancel from "../../assets/logos/cancel.svg";
 import { vendorForm } from "../../utils/helpers/sendMailHelpers";
+import { Translate } from "react-auto-translate";
 
 const Vendor = () => {
   useEffect(() => {
@@ -162,11 +163,15 @@ const Vendor = () => {
       <div className="section-two">
         <div className="center">
           <div className="heading">
-            <p>Vendor Information</p>
+            <p>
+              <Translate>Vendor Information</Translate>
+            </p>
           </div>
           <form onSubmit={handleSubmit}>
             <div className="name">
-              <label htmlFor="company">Name of Company</label>
+              <label htmlFor="company">
+                <Translate>Name of Company</Translate>
+              </label>
               <input
                 type="text"
                 id="company"
@@ -177,7 +182,9 @@ const Vendor = () => {
             </div>
 
             <div className="address">
-              <label>Permanent Business Address</label>
+              <label>
+                <Translate>Permanent Business Address</Translate>
+              </label>
               <div className="input">
                 <img src={locationGrey} alt="locationGrey" />
                 <input
@@ -236,8 +243,12 @@ const Vendor = () => {
                   value={formData.country}
                   onChange={handleChange}
                 >
-                  <option value="">- - Select Country - -</option>
-                  <option value="nigeria">nigeria</option>
+                  <option value="">
+                    <Translate>- - Select Country - -</Translate>
+                  </option>
+                  <option value="nigeria">
+                    <Translate>nigeria</Translate>
+                  </option>
                   {/* Add other country options as needed */}
                 </select>
               </div>
@@ -246,7 +257,7 @@ const Vendor = () => {
             <div className="information">
               <div className="item">
                 <label htmlFor="registration">
-                  Company Registration Number
+                  <Translate> Company Registration Number</Translate>
                 </label>
                 <div className="input">
                   <img src={house} alt="locationGrey" />
@@ -262,7 +273,7 @@ const Vendor = () => {
               </div>
               <div className="item">
                 <label htmlFor="dateOfIncorporation">
-                  Date of Incorporation
+                  <Translate> Date of Incorporation</Translate>
                 </label>
                 <div className="input">
                   <img src={date} alt="locationGrey" />
@@ -277,7 +288,9 @@ const Vendor = () => {
                 </div>
               </div>
               <div className="item">
-                <label htmlFor="paidUpShare">Paid-Up Share Capital</label>
+                <label htmlFor="paidUpShare">
+                  <Translate>Paid-Up Share Capital</Translate>
+                </label>
                 <div className="input">
                   <img src={suitcase} alt="locationGrey" />
                   <input
@@ -292,7 +305,7 @@ const Vendor = () => {
               </div>
               <div className="item">
                 <label htmlFor="authorizedShare">
-                  Authorized Share Capital:
+                  <Translate>Authorized Share Capital:</Translate>
                 </label>
                 <div className="input">
                   <img src={pen} alt="locationGrey" />
@@ -307,7 +320,9 @@ const Vendor = () => {
                 </div>
               </div>
               <div className="item">
-                <label htmlFor="tin">Tax Identification Number</label>
+                <label htmlFor="tin">
+                  <Translate>Tax Identification Number</Translate>
+                </label>
                 <div className="input">
                   <img src={microscope} alt="locationGrey" />
                   <input
@@ -323,12 +338,16 @@ const Vendor = () => {
             </div>
 
             <div className="heading">
-              <p>Account Information</p>
+              <p>
+                <Translate>Account Information</Translate>
+              </p>
             </div>
 
             <div className="information">
               <div className="item">
-                <label htmlFor="bank">Bank Name</label>
+                <label htmlFor="bank">
+                  <Translate>Bank Name</Translate>
+                </label>
                 <div className="input">
                   <img src={house} alt="house" />
                   <input
@@ -341,7 +360,9 @@ const Vendor = () => {
                 </div>
               </div>
               <div className="item">
-                <label htmlFor="account">Account Number</label>
+                <label htmlFor="account">
+                  <Translate>Account Number</Translate>
+                </label>
                 <div className="input">
                   <img src={nuban} alt="house" />
                   <input
@@ -357,7 +378,9 @@ const Vendor = () => {
             </div>
 
             <div className="account-type">
-              <label htmlFor="accountType">Type of Account</label>
+              <label htmlFor="accountType">
+                <Translate>Type of Account</Translate>
+              </label>
               <div className="options">
                 <div className="option">
                   <input
@@ -367,7 +390,9 @@ const Vendor = () => {
                     checked={formData.accountType === "savings"}
                     onChange={handleChange}
                   />{" "}
-                  <span>Savings</span>
+                  <span>
+                    <Translate>Savings</Translate>
+                  </span>
                 </div>
                 <div className="option">
                   <input
@@ -377,7 +402,9 @@ const Vendor = () => {
                     checked={formData.accountType === "current"}
                     onChange={handleChange}
                   />{" "}
-                  <span>Current</span>
+                  <span>
+                    <Translate>Current</Translate>
+                  </span>
                 </div>
                 <div className="option">
                   <input
@@ -387,7 +414,9 @@ const Vendor = () => {
                     checked={formData.accountType === "domiciliary"}
                     onChange={handleChange}
                   />{" "}
-                  <span>Domiciliary</span>
+                  <span>
+                    <Translate>Domiciliary</Translate>
+                  </span>
                 </div>
                 <div className="option">
                   <input
@@ -397,7 +426,9 @@ const Vendor = () => {
                     checked={formData.accountType === "corporate"}
                     onChange={handleChange}
                   />{" "}
-                  <span>Corporate</span>
+                  <span>
+                    <Translate>Corporate</Translate>
+                  </span>
                 </div>
                 <div className="option">
                   <input
@@ -407,18 +438,24 @@ const Vendor = () => {
                     checked={formData.accountType === "other"}
                     onChange={handleChange}
                   />{" "}
-                  <span>Other</span>
+                  <span>
+                    <Translate>Other</Translate>
+                  </span>
                 </div>
               </div>
             </div>
 
             {/* CONTACT INFORMATION */}
             <div className="heading">
-              <p>Contact Information</p>
+              <p>
+                <Translate>Contact Information</Translate>
+              </p>
             </div>
             <div className="information">
               <div className="item">
-                <label htmlFor="phone">Phone Number</label>
+                <label htmlFor="phone">
+                  <Translate>Phone Number</Translate>
+                </label>
                 <div className="input">
                   <img src={house} alt="house" />
                   <input
@@ -432,7 +469,9 @@ const Vendor = () => {
                 </div>
               </div>
               <div className="item">
-                <label htmlFor="mobile">Mobile Phone</label>
+                <label htmlFor="mobile">
+                  <Translate>Mobile Phone</Translate>
+                </label>
                 <div className="input">
                   <img src={date} alt="house" />
                   <input
@@ -446,7 +485,9 @@ const Vendor = () => {
                 </div>
               </div>
               <div className="item">
-                <label htmlFor="email">Email Address</label>
+                <label htmlFor="email">
+                  <Translate>Email Address</Translate>
+                </label>
                 <div className="input">
                   <img src={suitcase} alt="suitcase" />
                   <input
@@ -460,7 +501,7 @@ const Vendor = () => {
               </div>
               <div className="item">
                 <label htmlFor="yearsInBusiness">
-                  Number of years in business
+                  <Translate>Number of years in business</Translate>
                 </label>
                 <div className="input">
                   <img src={pen} alt="pen" />
@@ -475,7 +516,9 @@ const Vendor = () => {
               </div>
             </div>
 
-            <label htmlFor="natureOfBusiness">Nature of Business</label>
+            <label htmlFor="natureOfBusiness">
+              <Translate>Nature of Business</Translate>
+            </label>
             <textarea
               name="natureOfBusiness"
               id="natureOfBusiness"
@@ -486,7 +529,10 @@ const Vendor = () => {
 
             <div className="account-type">
               <label htmlFor="registeredWithOtherOrg">
-                Are you registered with any other organisation
+                <Translate>
+                  {" "}
+                  Are you registered with any other organisation
+                </Translate>
               </label>
               <div className="options">
                 <div className="option">
@@ -497,7 +543,9 @@ const Vendor = () => {
                     checked={formData.registeredWithOtherOrg === "yes"}
                     onChange={handleChange}
                   />{" "}
-                  <span>Yes</span>
+                  <span>
+                    <Translate>Yes</Translate>
+                  </span>
                 </div>
                 <div className="option">
                   <input
@@ -507,13 +555,18 @@ const Vendor = () => {
                     checked={formData.registeredWithOtherOrg === "no"}
                     onChange={handleChange}
                   />{" "}
-                  <span>No</span>
+                  <span>
+                    <Translate>No</Translate>
+                  </span>
                 </div>
               </div>
             </div>
 
             <label htmlFor="keyOrganisations">
-              If yes, give names and addresses of key Organisations
+              <Translate>
+                {" "}
+                If yes, give names and addresses of key Organisations
+              </Translate>
             </label>
             <textarea
               name="keyOrganisations"
@@ -525,8 +578,10 @@ const Vendor = () => {
             ></textarea>
 
             <label htmlFor="workDetails">
-              Give brief details of the type and value of work you have done in
-              the 24 months
+              <Translate>
+                Give brief details of the type and value of work you have done
+                in the 24 months
+              </Translate>
             </label>
             <textarea
               name="workDetails"
@@ -538,12 +593,19 @@ const Vendor = () => {
 
             {/* REFERENCES */}
             <div className="heading">
-              <p>References</p>
+              <p>
+                <Translate>References</Translate>
+              </p>
             </div>
             <h3>
-              Please list one (1) reference that is familiar with your work
+              <Translate>
+                {" "}
+                Please list one (1) reference that is familiar with your work
+              </Translate>
             </h3>
-            <label htmlFor="organisation">Name of Organisation</label>
+            <label htmlFor="organisation">
+              <Translate>Name of Organisation</Translate>
+            </label>
             <div className="input">
               <img src={locationGrey} alt="locationGrey" />
               <input
@@ -557,7 +619,9 @@ const Vendor = () => {
             </div>
 
             <div className="address">
-              <label>Address</label>
+              <label>
+                <Translate>Address</Translate>
+              </label>
               <div className="input">
                 <img src={locationGrey} alt="locationGrey" />
                 <input
@@ -616,14 +680,20 @@ const Vendor = () => {
                   value={formData.referenceCountry}
                   onChange={handleChange}
                 >
-                  <option value="">- - Select Country - -</option>
-                  <option value="nigeria">nigeria</option>
+                  <option value="">
+                    <Translate>- - Select Country - -</Translate>
+                  </option>
+                  <option value="nigeria">
+                    <Translate>nigeria</Translate>
+                  </option>
                 </select>
               </div>
             </div>
             <div className="information">
               <div className="item">
-                <label htmlFor="contactPerson">Contact Person</label>
+                <label htmlFor="contactPerson">
+                  <Translate>Contact Person</Translate>
+                </label>
                 <div className="input">
                   <img src={contact} alt="locationGrey" />
                   <input
@@ -636,7 +706,9 @@ const Vendor = () => {
                 </div>
               </div>
               <div className="item">
-                <label htmlFor="contactPosition">Position</label>
+                <label htmlFor="contactPosition">
+                  <Translate>Position</Translate>
+                </label>
                 <div className="input">
                   <img src={position} alt="locationGrey" />
                   <input
@@ -649,7 +721,9 @@ const Vendor = () => {
                 </div>
               </div>
               <div className="item">
-                <label htmlFor="contactPhone">Phone Number</label>
+                <label htmlFor="contactPhone">
+                  <Translate>Phone Number</Translate>
+                </label>
                 <div className="input">
                   <img src={suitcase} alt="locationGrey" />
                   <input
@@ -664,7 +738,7 @@ const Vendor = () => {
               </div>
               <div className="item">
                 <label htmlFor="referenceBusinessYears">
-                  Years in business
+                  <Translate>Years in business</Translate>
                 </label>
                 <div className="input">
                   <img src={business} alt="locationGrey" />
@@ -682,18 +756,26 @@ const Vendor = () => {
 
             {/* UPLOADS */}
             <div className="heading">
-              <p>Uploads</p>
+              <p>
+                <Translate>Uploads</Translate>
+              </p>
             </div>
             <h3>
-              Please note that application should be accompanied with the
-              following;
+              <Translate>
+                Please note that application should be accompanied with the
+                following;
+              </Translate>
             </h3>
             <p className="upload-text">
-              1. A photocopy of Certificate of Incorporation 2. A photocopy of
-              Memorandum and Articles of Association 3. A photocopy of VAT
-              registration Certificate 4. Any other relevant document
+              <Translate>
+                1. A photocopy of Certificate of Incorporation 2. A photocopy of
+                Memorandum and Articles of Association 3. A photocopy of VAT
+                registration Certificate 4. Any other relevant document
+              </Translate>
             </p>
-            <label>Upload documents mentioned above</label>
+            <label>
+              <Translate>Upload documents mentioned above</Translate>
+            </label>
             <div className="upload-input">
               <label htmlFor="documents">
                 <input type="file" multiple id="documents" />
@@ -707,7 +789,9 @@ const Vendor = () => {
                 <img src={cancel} alt="cancel" />
               </button>
             </div>
-            <label>Other relevant documents</label>
+            <label>
+              <Translate>Other relevant documents</Translate>
+            </label>
             <div className="upload-input">
               <label htmlFor="otherDocuments">
                 <input type="file" multiple id="otherDocuments" />
@@ -723,8 +807,10 @@ const Vendor = () => {
             </div>
             <div className="account-type">
               <label htmlFor="accountType">
-                I hereby certify that the above information submitted is true
-                and correct
+                <Translate>
+                  I hereby certify that the above information submitted is true
+                  and correct
+                </Translate>
               </label>
               <div className="options">
                 <div className="option">
@@ -736,12 +822,14 @@ const Vendor = () => {
                     checked={formData.accountType === "trueInformation"}
                     onChange={handleChange}
                   />{" "}
-                  <span>Yes, I confirm</span>
+                  <span>
+                    <Translate>Yes, I confirm</Translate>
+                  </span>
                 </div>
               </div>
             </div>
             <button type="submit" className="submit-btn">
-              submit
+              <Translate>submit</Translate>
             </button>
           </form>
         </div>
