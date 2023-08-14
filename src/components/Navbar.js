@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import paclogo from "../assets/logos/paclogo.svg";
 import arrowDownBlue from "../assets/logos/arrowDownBlue.svg";
 import menuLine from "../assets/logos/menuLine.svg";
 import { Link } from "react-router-dom";
@@ -19,11 +18,13 @@ const Navbar = ({ isDropdown, setIsDropdown, logo, setLanguage }) => {
     focus: "",
     country: "Nigeria",
     language: "English",
+    email: "info@panfricancapitalholdings",
+    phone: "+ 234-(1)-271-6899",
   });
 
-  const setActiveItem = ({ text, translation }) => {
+  const setActiveItem = ({ text, translation, phone, email }) => {
     if (active.focus === "country") {
-      setActive({ ...active, focus: "", country: text });
+      setActive({ ...active, focus: "", country: text, phone, email });
       // console.log("entered");
     } else if (active.focus === "language") {
       setLanguage(translation);

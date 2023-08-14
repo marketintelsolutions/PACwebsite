@@ -65,9 +65,13 @@ export const countries = {
   items: [
     {
       text: "Nigeria",
+      email: "info@panfricancapitalholdings",
+      phone: "+ 234-(1)-271-6899",
     },
     {
       text: "Ghana",
+      email: "info@panafricancapitalgh.com",
+      phone: "+233 (0) 302 788523",
     },
   ],
 };

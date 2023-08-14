@@ -57,13 +57,13 @@ const Prenav = ({
           <span>
             <img src={phone} alt="arrowDownFill" />
           </span>
-          <p>+ 234-(1)-271-6899</p>
+          <p>{active.phone}</p>
         </div>
         <div className="item">
           <span>
             <img src={mail} alt="arrowDownFill" />
           </span>
-          <p>info@panfricancapitalholdings.com</p>
+          <p>{active.email}</p>
         </div>
         <div
           className="predropdown item"
