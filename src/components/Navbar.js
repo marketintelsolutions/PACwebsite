@@ -6,13 +6,19 @@ import { ourPortfolio, joinUs, resources } from "../utils/navData";
 import Prenav from "./navbar/Prenav";
 import { Translate } from "react-auto-translate";
 
-const Navbar = ({ isDropdown, setIsDropdown, logo, setLanguage }) => {
+const Navbar = ({
+  isDropdown,
+  setIsDropdown,
+  logo,
+  setLanguage,
+  isPrenavDropdown,
+  setIsPrenavDropdown,
+}) => {
   const [dropItems, setDropItems] = useState([]);
   const [position, setPosition] = useState({});
   const [dropdown, setDropdown] = useState(false);
 
   // prenav states
-  const [isPrenavDropdown, setIsPrenavDropdown] = useState(false);
   const [preDropItems, setPreDropItems] = useState([]);
   const [prePosition, setPrePosition] = useState({});
   const [active, setActive] = useState({

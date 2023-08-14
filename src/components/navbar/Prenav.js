@@ -39,11 +39,11 @@ const Prenav = ({
           className="predropdown item"
           onClick={(e) => togglePreDropdown(e, countries)}
         >
-          <p>
+          <p className="pretext">
             <Translate>{active.country}</Translate>
           </p>
           <span>
-            <img src={arrowDownFill} alt="arrowDownFill" />
+            <img src={arrowDownFill} alt="arrowDownFill" className="preimage" />
           </span>
         </div>
         <div className="item">
@@ -76,12 +76,12 @@ const Prenav = ({
           className="predropdown item"
           onClick={(e) => togglePreDropdown(e, languages)}
         >
-          <p>
+          <p className="pretext">
             <Translate>{active.language}</Translate>
           </p>
           <span>
             {" "}
-            <img src={arrowDownFill} alt="arrowDownFill" />
+            <img src={arrowDownFill} alt="arrowDownFill" className="preimage" />
           </span>
         </div>
       </div>
