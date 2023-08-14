@@ -80,3 +80,12 @@ export const directors = [
     image: placeholder,
   },
 ];
+
+export const coreValues = [
+  { name: "ervice", value: "S" },
+  { name: "rofessionalism", value: "P" },
+  { name: "ntegrity", value: "I" },
+  { name: "espect", value: "R" },
+  { name: "nnovation", value: "I" },
+  { name: "eam spirit", value: "T" },
+];

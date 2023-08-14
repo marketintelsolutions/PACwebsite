@@ -6,6 +6,7 @@ import financialBg from "../assets/images/financialBg.png";
 import { financialData } from "../utils/data";
 import animation from "../assets/images/portfolioAnimationLeft.svg";
 import LiquidBackground from "../components/LiquidBackground";
+import { Translate } from "react-auto-translate";
 
 const FinancialServices = () => {
   useEffect(() => {
@@ -15,12 +16,14 @@ const FinancialServices = () => {
     <div className="financial">
       <SectionOne color="#38B6FF" text="Financial Services" img={financialBg} />
       <p className="heading-text">
-        At PAC Holdings, Financial Services is our strength and flagship space.
-        Through the years, we have penetrated the financial services value-chain
-        and have positioned ourselves to deliver value through investment
-        banking and advisory, asset management, securities trading, registrar
-        services, trusteeship and supply-chain finance. We have only one goal –
-        leverage opportunities and unlock wealth.
+        <Translate>
+          At PAC Holdings, Financial Services is our strength and flagship
+          space. Through the years, we have penetrated the financial services
+          value-chain and have positioned ourselves to deliver value through
+          investment banking and advisory, asset management, securities trading,
+          registrar services, trusteeship and supply-chain finance. We have only
+          one goal – leverage opportunities and unlock wealth.
+        </Translate>
       </p>
 
       <div className="bottom portfolio">

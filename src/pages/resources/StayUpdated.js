@@ -5,6 +5,7 @@ import { foundations } from "../../utils/data";
 import Pagination from "../../components/resources/Pagination";
 import { Link } from "react-router-dom";
 import LiquidBackground from "../../components/LiquidBackground";
+import { Translate } from "react-auto-translate";
 
 const StayUpdated = () => {
   useEffect(() => {
@@ -30,9 +31,11 @@ const StayUpdated = () => {
                 >
                   <div className="text">
                     <span></span>
-                    <p>{text}</p>
+                    <p>
+                      <Translate>{text}</Translate>
+                    </p>
                     <Link to={`/resources/stay-updated/${text}`}>
-                      Read more
+                      <Translate> Read more</Translate>
                     </Link>
                   </div>
                 </div>

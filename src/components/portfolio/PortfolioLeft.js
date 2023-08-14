@@ -1,4 +1,5 @@
 import React from "react";
+import { Translate } from "react-auto-translate";
 import { Link } from "react-router-dom";
 
 const PortfolioLeft = ({
@@ -34,9 +35,14 @@ const PortfolioLeft = ({
               : { color: `${headingColor || textColor}` }
           }
         >
+          {/* <Translate>{heading}</Translate> */}
           {heading}
         </h1>
-        {subHeading && <h2>{subHeading}</h2>}
+        {subHeading && (
+          <h2>
+            <Translate>{subHeading}</Translate>
+          </h2>
+        )}
         <div className="description">
           {text.map((item, index) => (
             <p
@@ -45,19 +51,21 @@ const PortfolioLeft = ({
               }
               key={index}
             >
-              {item}
+              <Translate>{item}</Translate>
             </p>
           ))}
         </div>
         {page ? (
-          <Link to={link}>Read more</Link>
+          <Link to={link}>
+            <Translate>Read more</Translate>
+          </Link>
         ) : (
           <a
             href={link}
             style={bgColor ? { background: `${bgColor}`, color: "white" } : {}}
             target="_blank"
           >
-            Read more
+            <Translate> Read more</Translate>
           </a>
         )}
       </div>

@@ -6,6 +6,7 @@ import hospitalityBg from "../assets/images/hospitalityBg.png";
 import { hospitality } from "../utils/data";
 import animation from "../assets/images/portfolioAnimationLeft.svg";
 import LiquidBackground from "../components/LiquidBackground";
+import { Translate } from "react-auto-translate";
 
 const Hospitality = () => {
   useEffect(() => {
@@ -21,10 +22,13 @@ const Hospitality = () => {
 
       <div className="top">
         <p>
-          We do understand that every property is unique, and for that, we have
-          design five main Brands in order to fully apply the demands of the
-          market, so we look forward to discussing your specific opportunity and
-          how we can assist you in revealing the full potential of your asset
+          <Translate>
+            We do understand that every property is unique, and for that, we
+            have design five main Brands in order to fully apply the demands of
+            the market, so we look forward to discussing your specific
+            opportunity and how we can assist you in revealing the full
+            potential of your asset
+          </Translate>
         </p>
         {/*<button>Read More</button>*/}
       </div>

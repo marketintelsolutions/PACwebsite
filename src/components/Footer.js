@@ -65,7 +65,12 @@ const Footer = () => {
               <Translate>subscribe to our newsletter</Translate>
             </p>
             <div className="input">
-              <input type="text" placeholder="Email Address" />
+              <input
+                type="text"
+                // placeholder={`${(<Translate>xEmail Address</Translate>)}`}
+                // placeholder={<Translate>hello</Translate>}
+                placeholder="Email Address"
+              />
               <button>
                 <Translate>subscribe</Translate>
               </button>

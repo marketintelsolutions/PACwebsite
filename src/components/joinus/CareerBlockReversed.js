@@ -1,4 +1,5 @@
 import React from "react";
+import { Translate } from "react-auto-translate";
 import downloadGrey from "../../assets/logos/downloadGrey.svg";
 
 const CareerBlockReversed = ({
@@ -18,26 +19,36 @@ const CareerBlockReversed = ({
         <img src={image} alt="image" />
       </div>
       <div className="left">
-        <h1>{heading}</h1>
+        <h1>
+          <Translate>{heading}</Translate>
+        </h1>
         <span className="line"></span>
-        <h2>Overview</h2>
-        {text.map((item) => (
-          <p>{item}</p>
+        <h2>
+          <Translate>Overview</Translate>
+        </h2>
+        {text.map((item, index) => (
+          <p key={index}>
+            <Translate>{item}</Translate>
+          </p>
         ))}
         {eligibility && (
           <>
-            <h3>ELIGIBILITY CRITERIA</h3>
+            <h3>
+              <Translate>ELIGIBILITY CRITERIA</Translate>
+            </h3>
             <div className="list">
               <ul>
                 {eligibility.map((item, index) => (
-                  <li key={index}>{item}</li>
+                  <li key={index}>
+                    <Translate>{item}</Translate>
+                  </li>
                 ))}
               </ul>
             </div>
           </>
         )}
         <a href={mailtoLink} id="mail-link">
-          SUBMIT RESUME{" "}
+          <Translate>SUBMIT RESUME</Translate>
           <span>
             <img src={downloadGrey} alt="downloadGrey" />
           </span>

@@ -3,6 +3,8 @@ import goalsBg from "../../assets/images/goalsBg.png";
 import binoculars from "../../assets/logos/binoculars.svg";
 import airplane from "../../assets/logos/airplane.svg";
 import handshake from "../../assets/logos/binoculars.svg";
+import { Translate } from "react-auto-translate";
+import { coreValues } from "../../utils/teamData";
 
 const SectionThree = () => {
   return (
@@ -18,11 +20,15 @@ const SectionThree = () => {
           <div className="goal-container">
             <div className="goal">
               <img src={binoculars} alt="binoculars" />
-              <p className="main-text">our vision</p>
+              <p className="main-text">
+                <Translate>our vision</Translate>
+              </p>
               <div className="text">
                 <p>
-                  “To deliver exceptional services in our chosen markets and
-                  create value for all our stakeholders”
+                  <Translate>
+                    “To deliver exceptional services in our chosen markets and
+                    create value for all our stakeholders”
+                  </Translate>
                 </p>
               </div>
             </div>
@@ -30,11 +36,16 @@ const SectionThree = () => {
           <div className="goal-container">
             <div className="goal">
               <img src={airplane} alt="airplane" />
-              <p className="main-text">our mission</p>
+              <p className="main-text">
+                <Translate>our mission</Translate>
+              </p>
               <div className="text">
                 <p>
-                  “To run successful & socially responsible business
-                  institutions, providing sustainable returns to stake holders”
+                  <Translate>
+                    “To run successful & socially responsible business
+                    institutions, providing sustainable returns to stake
+                    holders”
+                  </Translate>
                 </p>
               </div>
             </div>
@@ -42,26 +53,21 @@ const SectionThree = () => {
           <div className="goal-container">
             <div className="goal">
               <img src={handshake} alt="handshake" />
-              <p className="main-text">our core values</p>
+              <p className="main-text">
+                <Translate>our core values</Translate>
+              </p>
               <div className="spirit text">
-                <p>
-                  <span>S</span>ervice
-                </p>
-                <p>
-                  <span>P</span>rofessionalism
-                </p>
-                <p>
-                  <span>I</span>ntegrity
-                </p>
-                <p>
-                  <span>R</span>espect
-                </p>
-                <p>
-                  <span>I</span>nnovation
-                </p>
-                <p>
-                  <span>T</span>eam spirit
-                </p>
+                {coreValues.map((item, index) => {
+                  const { name, value } = item;
+                  return (
+                    <p key={index}>
+                      <span>
+                        <Translate>{value}</Translate>
+                      </span>
+                      <Translate> {name}</Translate>
+                    </p>
+                  );
+                })}
               </div>
             </div>
           </div>

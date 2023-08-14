@@ -179,7 +179,7 @@ const Navbar = ({ isDropdown, setIsDropdown, logo, setLanguage }) => {
                   key={index}
                   rel="noreferrer"
                 >
-                  {item.text}
+                  <Translate>{item.text}</Translate>
                 </a>
               );
             }
@@ -193,7 +193,7 @@ const Navbar = ({ isDropdown, setIsDropdown, logo, setLanguage }) => {
                 }}
                 className="drop-item"
               >
-                {item.text}
+                <Translate>{item.text}</Translate>
               </Link>
             );
           })}

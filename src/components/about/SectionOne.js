@@ -1,4 +1,5 @@
 import React from "react";
+import { Translate } from "react-auto-translate";
 import aboutBg from "../../assets/images/aboutBg.png";
 
 const SectionOne = ({ color, text, img, textColor }) => {
@@ -10,7 +11,9 @@ const SectionOne = ({ color, text, img, textColor }) => {
             <img src={img} alt="phone-bg" />
             <div className="bg-label" style={{ backgroundColor: `${color}` }}>
               <div className="text-center">
-                <h1 style={{ color: `${textColor}` }}>{text}</h1>
+                <h1 style={{ color: `${textColor}` }}>
+                  <Translate>{text}</Translate>
+                </h1>
               </div>
             </div>
           </div>
