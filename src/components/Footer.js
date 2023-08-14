@@ -8,6 +8,7 @@ import phoneTransparent from "../assets/images/phoneTransparent.svg";
 import mailTransparent from "../assets/images/mailTransparent.svg";
 import footerBg from "../assets/images/footerBg.png";
 import { Link } from "react-router-dom";
+import { Translate } from "react-auto-translate";
 
 const Footer = () => {
   return (
@@ -15,39 +16,59 @@ const Footer = () => {
       <div className="footer-center">
         <div className="item small">
           <div className="bottom">
-            <p>Home</p>
-            <p>About</p>
-            <p>Resources</p>
-            <p>Portfolio</p>
+            <p>
+              <Translate>Home</Translate>
+            </p>
+            <p>
+              <Translate>About</Translate>
+            </p>
+            <p>
+              <Translate>Resources</Translate>
+            </p>
+            <p>
+              <Translate>Portfolio</Translate>
+            </p>
           </div>
         </div>
-        {footer.map((item) => {
+        {footer.map((item, index) => {
           const { heading, items } = item;
           return (
-            <div className="item large">
-              <h2>{heading}</h2>
+            <div key={index} className="item large">
+              <h2>
+                <Translate>{heading}</Translate>
+              </h2>
               <div className="bottom">
                 {items.map((i) => {
                   if (i.external) {
                     return (
                       <a href={i.link} target="_blank" rel="noreferrer">
-                        {i.text}
+                        <Translate>{i.text}</Translate>
                       </a>
                     );
                   }
-                  return <Link to={i.link}>{i.text}</Link>;
+                  return (
+                    <Link to={i.link}>
+                      <Translate>{i.text}</Translate>
+                    </Link>
+                  );
                 })}
               </div>
             </div>
           );
         })}
         <div className="item ">
-          <h2>connect with us</h2>
+          <h2>
+            <Translate>connect with us</Translate>
+          </h2>
           <div className="bottom">
-            <p>subscribe to our newsletter</p>
+            <p>
+              <Translate>subscribe to our newsletter</Translate>
+            </p>
             <div className="input">
               <input type="text" placeholder="Email Address" />
-              <button>subscribe</button>
+              <button>
+                <Translate>subscribe</Translate>
+              </button>
             </div>
             <p>
               <span>
@@ -61,7 +82,9 @@ const Footer = () => {
               </span>{" "}
               info@panafricancapitalholdings.com
             </p>
-            <h3>follow us</h3>
+            <h3>
+              <Translate>follow us</Translate>
+            </h3>
             <div className="icons">
               <div className="icon">
                 <img src={facebook} alt="facebook" />

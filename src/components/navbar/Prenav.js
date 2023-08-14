@@ -5,6 +5,7 @@ import calender from "../../assets/logos/calender.svg";
 import clock from "../../assets/logos/clock.svg";
 import { countries, languages } from "../../utils/navData";
 import arrowDownFill from "../../assets/logos/arrowDownFill.svg";
+import { Translate } from "react-auto-translate";
 
 const Prenav = ({
   active,
@@ -38,20 +39,26 @@ const Prenav = ({
           className="predropdown item"
           onClick={(e) => togglePreDropdown(e, countries)}
         >
-          <p>{active.country}</p>
+          <p>
+            <Translate>{active.country}</Translate>
+          </p>
           <span>
             <img src={arrowDownFill} alt="arrowDownFill" />
           </span>
         </div>
         <div className="item">
           <img src={calender} alt="arrowDownFill" />
-          <p>Mon - Fri</p>
+          <p>
+            <Translate>Mon - Fri</Translate>
+          </p>
         </div>
         <div className="item">
           <span>
             <img src={clock} alt="arrowDownFill" />
           </span>
-          <p>8:00am-5:00pm</p>
+          <p>
+            <Translate>8:00am-5:00pm</Translate>
+          </p>
         </div>
         <div className="item">
           <span>
@@ -69,7 +76,9 @@ const Prenav = ({
           className="predropdown item"
           onClick={(e) => togglePreDropdown(e, languages)}
         >
-          <p>{active.language}</p>
+          <p>
+            <Translate>{active.language}</Translate>
+          </p>
           <span>
             {" "}
             <img src={arrowDownFill} alt="arrowDownFill" />

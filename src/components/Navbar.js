@@ -4,6 +4,7 @@ import menuLine from "../assets/logos/menuLine.svg";
 import { Link } from "react-router-dom";
 import { ourPortfolio, joinUs, resources } from "../utils/navData";
 import Prenav from "./navbar/Prenav";
+import { Translate } from "react-auto-translate";
 
 const Navbar = ({ isDropdown, setIsDropdown, logo, setLanguage }) => {
   const [dropItems, setDropItems] = useState([]);
@@ -66,12 +67,12 @@ const Navbar = ({ isDropdown, setIsDropdown, logo, setLanguage }) => {
           <div className={`${dropdown ? "nav-items active" : "nav-items"}`}>
             <div className="item">
               <Link to="/about" onClick={() => setDropdown(false)}>
-                About
+                <Translate>About</Translate>
               </Link>
             </div>
             <div className="item border">
               <Link to="/portfolio" onClick={() => setDropdown(false)}>
-                Our Portfolio
+                <Translate>Our Portfolio</Translate>
               </Link>
               <span
                 onClick={(e) => toggleDropdown(e, ourPortfolio)}
@@ -85,7 +86,9 @@ const Navbar = ({ isDropdown, setIsDropdown, logo, setLanguage }) => {
               </span>
             </div>
             <div className="item border">
-              <p>Resources</p>
+              <p>
+                <Translate>Resources</Translate>
+              </p>
               <span
                 onClick={(e) => toggleDropdown(e, resources)}
                 className="portfolio-arrow"
@@ -98,7 +101,9 @@ const Navbar = ({ isDropdown, setIsDropdown, logo, setLanguage }) => {
               </span>
             </div>
             <div className="item border">
-              <p>Join Us</p>
+              <p>
+                <Translate>Join Us</Translate>
+              </p>
               <span
                 onClick={(e) => toggleDropdown(e, joinUs)}
                 className="portfolio-arrow"
@@ -117,7 +122,7 @@ const Navbar = ({ isDropdown, setIsDropdown, logo, setLanguage }) => {
             </div>
             <div className="item">
               <Link to="/contact" onClick={() => setDropdown(false)}>
-                Contact
+                <Translate>Contact</Translate>
               </Link>
             </div>
           </div>
