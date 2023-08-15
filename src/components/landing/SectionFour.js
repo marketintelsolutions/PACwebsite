@@ -5,6 +5,9 @@ import worldImage from "../../assets/images/worldImage.svg";
 import playCircle from "../../assets/images/playCircle.svg";
 import arrowLeft from "../../assets/images/arrowLeft.svg";
 import arrowRight from "../../assets/images/arrowRight.svg";
+import vector from "../../assets/logos/vector.svg";
+import vector1 from "../../assets/logos/vector1.svg";
+import vector2 from "../../assets/logos/vector2.svg";
 import { foundations } from "../../utils/data";
 import LiquidBackground from "../LiquidBackground";
 import ButtonAnimation from "../ButtonAnimation";
@@ -36,7 +39,24 @@ const SectionFour = () => {
         <LiquidBackground />
       </span>
       <div className="spirit">
-        <img src={spirit} alt="spirit" />
+        {/* <img src={spirit} alt="spirit" /> */}
+        <div className="image">
+          <div className="outer" style={{ backgroundImage: `url(${vector})` }}>
+            <div
+              className="middle"
+              style={{ backgroundImage: `url(${vector1})` }}
+            >
+              <div
+                className="inner"
+                style={{ backgroundImage: `url(${vector2})` }}
+              >
+                <p className="text">
+                  <Translate>OUR SPIRIT</Translate>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="items">
           {itemsData.map((item, index) => {
             const { letter, text } = item;

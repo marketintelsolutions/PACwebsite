@@ -32,11 +32,51 @@
     @media (max-width: $breakpoint-tablet) {
       flex-direction: column;
     }
-    & img {
-      position: relative;
-      z-index: 2;
-    }
+    // & img {
+    //   position: relative;
+    //   z-index: 2;
+    // }
 
+    & .image {
+      & .outer,
+      .middle,
+      .inner {
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      & .outer {
+        width: 300.009px;
+        height: 330.25px;
+
+        & .middle {
+          width: 242.796px;
+          height: 263.192px;
+
+          & .inner {
+            width: 194.436px;
+            height: 212.754px;
+
+            & .text {
+              text-align: center;
+              color: #474747;
+              text-align: center;
+              text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+                0px 4px 4px rgba(0, 0, 0, 0.25);
+              font-family: CastleT;
+              font-size: 35px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 107%; /* 37.45px */
+              text-transform: uppercase;
+              max-width: 163.1px;
+            }
+          }
+        }
+      }
+    }
     & .items {
       display: flex;
       transform: translate(-20px);
