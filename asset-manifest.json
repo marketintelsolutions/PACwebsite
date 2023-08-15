@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.26a01416.css",
-    "main.js": "/static/js/main.75db49a1.js",
+    "main.css": "/static/css/main.e0a79ab6.css",
+    "main.js": "/static/js/main.c44fb3ca.js",
     "static/media/alumniLogo.svg": "/static/media/alumniLogo.072ebe2b1f4211b1ed48a67dd2bcc238.svg",
     "static/media/alumniBg.png": "/static/media/alumniBg.a53ca1451e7c5a8f1a26.png",
     "static/media/errorImage.jpg": "/static/media/errorImage.f794f8c278e7dc061491.jpg",
@@ -163,15 +163,15 @@
     "static/media/menuLine.svg": "/static/media/menuLine.d39ac3c2ee48d9be9ac32c4094a65c2a.svg",
     "static/media/calender.svg": "/static/media/calender.5931d57d26a886168fef2018169e0f43.svg",
     "static/media/airtime.svg": "/static/media/airtime.4c0d334fd2123b70601dcfbd66691ac3.svg",
+    "static/media/arrowRight.svg": "/static/media/arrowRight.1178637f883bada5c1e50c64a31c12b8.svg",
     "static/media/facebook.svg": "/static/media/facebook.58ce81175c907a3a86b1603b3d013d55.svg",
     "static/media/prepaid.svg": "/static/media/prepaid.8e1336786270552592a9c7eadf9c1115.svg",
     "static/media/arrowLeft.svg": "/static/media/arrowLeft.8285f4806e7bf425e0b4fee5d17f97ba.svg",
-    "static/media/arrowRight.svg": "/static/media/arrowRight.1178637f883bada5c1e50c64a31c12b8.svg",
-    "main.26a01416.css.map": "/static/css/main.26a01416.css.map",
-    "main.75db49a1.js.map": "/static/js/main.75db49a1.js.map"
+    "main.e0a79ab6.css.map": "/static/css/main.e0a79ab6.css.map",
+    "main.c44fb3ca.js.map": "/static/js/main.c44fb3ca.js.map"
   },
   "entrypoints": [
-    "static/css/main.26a01416.css",
-    "static/js/main.75db49a1.js"
+    "static/css/main.e0a79ab6.css",
+    "static/js/main.c44fb3ca.js"
   ]
 }
