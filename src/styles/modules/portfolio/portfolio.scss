@@ -2,7 +2,7 @@
   margin-top: 324px;
 
   @media (max-width: $breakpoint-tablet) {
-    margin: 190px 43.5px;
+    margin-top: 190px;
   }
 }
 .portfolio {
@@ -13,7 +13,6 @@
   position: relative;
 
   // border: 2px solid blue;
-
   @media (max-width: $breakpoint-tablet) {
     gap: 60px;
   }
@@ -31,11 +30,14 @@
     transform: scale(0.76, 0.76);
     // max-height: 478px;
     // border: 2px solid red;
+    position: relative;
+    z-index: 4;
 
     @media (max-width: $breakpoint-tablet) {
       flex-direction: column;
       transform: none;
       height: auto;
+      padding: 0 43.5px;
     }
 
     & .text {
