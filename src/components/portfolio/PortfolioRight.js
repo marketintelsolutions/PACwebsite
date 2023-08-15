@@ -16,7 +16,7 @@ const PortfolioRight = ({
 }) => {
   // console.log(bgColor);
   return (
-    <div className="item">
+    <div className="item right-item">
       <div
         className="text"
         key={index}
