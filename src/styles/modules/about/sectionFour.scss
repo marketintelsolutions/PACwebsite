@@ -1,6 +1,10 @@
 .about-section-four {
   padding-top: 47px;
 
+  @media (max-width: $breakpoint-tablet) {
+    padding-top: 60px 17px;
+  }
+
   & .section-center {
     & h1 {
       font-family: "Open Sans";
@@ -42,6 +46,13 @@
         gap: 82px;
         justify-content: center;
         align-items: center;
+
+        @media (max-width: $breakpoint-tablet) {
+          // padding-top: 60px 17px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+        }
 
         & .item {
           min-height: 556px;

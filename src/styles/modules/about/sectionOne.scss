@@ -1,5 +1,5 @@
 .about-section-one {
-  //   border: 2px solid blue;
+  // border: 2px solid blue;
   // height: 100vh;
   position: relative;
   overflow-x: hidden;
@@ -25,6 +25,11 @@
         width: 100%;
         width: 100vw;
         height: 100%;
+
+        @media (max-width: $breakpoint-tablet) {
+          min-height: 565px;
+          object-fit: cover;
+        }
       }
 
       & .bg-label {
@@ -47,6 +52,11 @@
         // padding-left: 60%;
         padding: 0 90px;
 
+        @media (max-width: $breakpoint-tablet) {
+          min-width: 327px;
+          max-height: 168px;
+        }
+
         & h1 {
           font-family: "Open Sans";
           font-style: normal;
@@ -54,6 +64,11 @@
           font-size: 40px;
           line-height: 107%;
           color: white;
+
+          @media (max-width: $breakpoint-tablet) {
+            font-weight: 700;
+            letter-spacing: -3.8px;
+          }
         }
 
         & h3 {

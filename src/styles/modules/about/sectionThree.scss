@@ -4,6 +4,10 @@
   background-repeat: no-repeat;
   transition: var(--transition);
 
+  @media (max-width: $breakpoint-tablet) {
+    height: fit-content;
+  }
+
   &:hover {
     background-size: 120% 110%;
     transition: var(--transition);
@@ -15,6 +19,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: $breakpoint-tablet) {
+      padding: 60px 73.5px;
+    }
 
     &:hover {
       // transform: scale(1.1);
@@ -29,6 +37,13 @@
       justify-content: space-between;
       margin: 0 auto;
       height: fit-content;
+
+      @media (max-width: $breakpoint-tablet) {
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+      }
     }
 
     & .goal-container {

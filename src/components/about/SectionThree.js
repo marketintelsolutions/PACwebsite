@@ -2,7 +2,7 @@ import React from "react";
 import goalsBg from "../../assets/images/goalsBg.png";
 import binoculars from "../../assets/logos/binoculars.svg";
 import airplane from "../../assets/logos/airplane.svg";
-import handshake from "../../assets/logos/binoculars.svg";
+import handshake from "../../assets/logos/handshake.svg";
 import { Translate } from "react-auto-translate";
 import { coreValues } from "../../utils/teamData";
 

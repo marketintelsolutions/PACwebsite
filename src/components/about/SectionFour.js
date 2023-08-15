@@ -14,9 +14,7 @@ const SectionFour = () => {
         </h1>
 
         <div className="bottom">
-          <p>
-            <Translate>board of directors</Translate>
-          </p>
+          <p>{/* <Translate>board of directors</Translate> */}</p>
           <div className="items">
             {directors.map((item, index) => {
               const { name, position, bioLink, imageSrc } = item;

@@ -8,13 +8,13 @@ import { Translate } from "react-auto-translate";
 const SectionOne = () => {
   const [translated, setTranslated] = useState(false);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setTranslated(!translated);
-  //   }, 3000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTranslated(!translated);
+    }, 3000);
 
-  //   return () => clearInterval(interval);
-  // }, [translated]);
+    return () => clearInterval(interval);
+  }, [translated]);
 
   const handleClick = (e) => {};
 

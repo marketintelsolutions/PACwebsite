@@ -1,6 +1,10 @@
 .about-section-two {
   padding: 73px;
 
+  @media (max-width: $breakpoint-tablet) {
+    padding: 53px 43.4px;
+  }
+
   & .text-center {
     width: 80%;
     max-width: 1014px;
@@ -18,6 +22,11 @@
       text-align: justify;
 
       color: #474747;
+      @media (max-width: $breakpoint-tablet) {
+        color: #474747;
+        font-size: 20px;
+        line-height: normal;
+      }
     }
   }
 }
