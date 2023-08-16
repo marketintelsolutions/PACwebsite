@@ -59,6 +59,13 @@
   left: unset;
   top: -800px;
   right: -108%;
+
+  @media (max-width: $breakpoint-tablet) {
+    top: -1200px;
+    right: -1100px;
+    // height: 250px;
+    // width: 650px;
+  }
 }
 
 .stay-updated,
