@@ -46,6 +46,13 @@
   position: absolute;
   top: -800px;
   left: -108%;
+
+  @media (max-width: $breakpoint-tablet) {
+    top: -1300px;
+    left: -1600px;
+    // height: 250px;
+    // width: 650px;
+  }
 }
 
 .animate-left {
