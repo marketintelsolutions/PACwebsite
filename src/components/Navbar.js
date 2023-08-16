@@ -13,10 +13,11 @@ const Navbar = ({
   setLanguage,
   isPrenavDropdown,
   setIsPrenavDropdown,
+  dropdown,
+  setDropdown,
 }) => {
   const [dropItems, setDropItems] = useState([]);
   const [position, setPosition] = useState({});
-  const [dropdown, setDropdown] = useState(false);
 
   // prenav states
   const [preDropItems, setPreDropItems] = useState([]);
@@ -133,7 +134,7 @@ const Navbar = ({
             </div>
           </div>
           <div className="menu" onClick={() => setDropdown(!dropdown)}>
-            <img src={menuLine} alt="menuLine" />
+            <img src={menuLine} alt="menuLine" className="menu-image" />
           </div>
         </div>
       </nav>
