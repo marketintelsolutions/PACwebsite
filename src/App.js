@@ -22,6 +22,8 @@ import StayUpdatedItem from "./pages/resources/StayUpdatedItem";
 import Technology from "./pages/Technology";
 import logo from "./assets/logos/paclogo.svg";
 import Error from "./pages/Error";
+import Login from "./pages/admin/Login";
+import Dashboard from "./pages/admin/Dashboard";
 import { Translator, Translate } from "react-auto-translate";
 
 const cacheProvider = {
@@ -60,6 +62,8 @@ const App = () => {
             <Route path="/" element={<Landing />} />
             <Route path="/about" element={<About />} />
             <Route path="/about/:personId" element={<BioPage />} />
+
+            {/* -------PORTFOLIO------ */}
             <Route path="/portfolio" element={<Portfolio />} />
             <Route
               path="/portfolio/financial-services"
@@ -71,20 +75,33 @@ const App = () => {
             <Route path="/portfolio/renewable" element={<Renewable />} />
             <Route path="/portfolio/technology" element={<Technology />} />
             <Route path="/portfolio/healthcare" element={<Healthcare />} />
+            {/* -------****------------- */}
+
+            {/* ---------JOIN US---------- */}
             <Route path="/joinus/career" element={<Career />} />
             <Route
               path="/joinus/alumni"
               element={<Alumni setNavlogo={setNavlogo} />}
             />
             <Route path="/joinus/vendor" element={<Vendor />} />
+            {/* ---------********---------- */}
+
+            {/* ------------RESOURCES----------- */}
             <Route path="/resources/stay-updated" element={<StayUpdated />} />
             <Route
               path="/resources/stay-updated/:id"
               element={<StayUpdatedItem />}
             />
             <Route path="/resources/newsletter" element={<Newsletter />} />
+            {/*---------*********-----------  */}
+
             <Route path="/csr" element={<Csr setNavlogo={setNavlogo} />} />
             <Route path="/contact" element={<Contact />} />
+
+            {/* ------ADMIN--------- */}
+            <Route path="/admin/login" element={<Login />} />
+            <Route path="/admin" element={<Dashboard />} />
+
             <Route path="*" element={<Error />} />
           </Routes>
         </SharedLayout>
