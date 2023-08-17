@@ -11,6 +11,7 @@
   gap: 10px;
   margin-bottom: 156px;
   position: relative;
+  overflow-x: hidden;
 
   // border: 2px solid blue;
   @media (max-width: $breakpoint-tablet) {
@@ -42,21 +43,15 @@
 
     & .text {
       max-width: 506px;
-      // border: 2px solid blue;
-      // min-height: 400px;
       height: 100%;
       height: fit-content;
     }
 
     & .image {
       height: 100%;
-      // min-height: 400px;
-      // border: 2px solid green;
 
       & img {
-        // height: 400px;
         height: 100%;
-        // width: 420px;
         width: 100%;
         object-fit: contain;
       }
@@ -72,7 +67,6 @@
 
       display: flex;
       align-items: center;
-
       color: #474747;
     }
 
@@ -86,16 +80,12 @@
 
       display: flex;
       align-items: center;
-
-      // color: #ffffff;
     }
 
     & .description {
       margin-top: 15px;
       display: flex;
       flex-direction: column;
-      // gap: 5px;
-      //   justify-content: space-around;
       height: 100%;
 
       & p {
@@ -107,7 +97,6 @@
         display: flex;
         align-items: center;
         text-align: justify;
-
         color: #474747;
       }
     }
@@ -126,7 +115,6 @@
 
       display: flex;
       align-items: center;
-
       color: #0089ff;
       cursor: pointer;
       text-decoration: none;
@@ -158,6 +146,13 @@
     width: 55%;
     max-width: 1068px;
     margin: 80px auto 0px;
+
+    @media (max-width: $breakpoint-tablet) {
+      // flex-direction: column-reverse;
+      width: 80%;
+      // background: red;
+      overflow-x: visible;
+    }
   }
 
   & .bottom {

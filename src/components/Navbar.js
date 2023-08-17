@@ -67,7 +67,7 @@ const Navbar = ({
 
       {/*------- NAVBAR -------*/}
       <nav className="navbar">
-        <div className="nav-center">
+        <div className={`${dropdown ? "nav-center open" : "nav-center"}`}>
           <Link to="/" className="logo">
             <img src={logo} alt="logo" />
           </Link>
