@@ -1,8 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BiSolidLockAlt } from "react-icons/bi";
+import { auth } from "../../firebase/firebaseConfig";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const ControlledLogin = () => {
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Handle login logic here
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = JSON.stringify(userCredential.user);
+        // ...
+        localStorage.setItem("user", user);
+        setError(null);
+        navigate("/admin");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setError(error.message);
+      });
+  };
+
   return (
     <div className="admin-login">
       <div className="left">
@@ -12,7 +49,7 @@ const Login = () => {
         </div>
       </div>
       <div className="right">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="form-center">
             <h1>Hello Again!</h1>
             <p>Welcome back</p>
@@ -26,6 +63,8 @@ const Login = () => {
                 type="email"
                 name="email"
                 placeholder="Email Address"
+                value={email}
+                onChange={handleEmailChange}
               />
             </div>
             <div className="input-item">
@@ -37,10 +76,14 @@ const Login = () => {
                 type="password"
                 name="password"
                 placeholder="Password"
+                value={password}
+                onChange={handlePasswordChange}
               />
             </div>
 
-            <button type="button">Login</button>
+            {error && <p>{error}</p>}
+
+            <button type="submit">Login</button>
           </div>
         </form>
       </div>
@@ -48,4 +91,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default ControlledLogin;
