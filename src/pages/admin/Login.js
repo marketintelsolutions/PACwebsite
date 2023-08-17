@@ -5,7 +5,7 @@ import { auth } from "../../firebase/firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
-const ControlledLogin = () => {
+const ControlledLogin = ({ setIsAuth }) => {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
@@ -29,7 +29,14 @@ const ControlledLogin = () => {
         // Signed in
         const user = JSON.stringify(userCredential.user);
         // ...
+
+        // add user details to local storage
         localStorage.setItem("user", user);
+
+        // set isAuth to true add add to localStorage
+        localStorage.setItem("isAuth", true);
+        setIsAuth(true);
+
         setError(null);
         navigate("/admin");
       })

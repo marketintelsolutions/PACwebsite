@@ -44,6 +44,9 @@ const App = () => {
   const [navlogo, setNavlogo] = useState(logo);
   const [language, setLanguage] = useState("en");
 
+  // auth
+  const [isAuth, setIsAuth] = useState(false);
+
   const handleLanguageChange = (newLanguage) => {
     setLanguage(newLanguage);
   };
@@ -99,8 +102,12 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
 
             {/* ------ADMIN--------- */}
-            <Route path="/admin/login" element={<Login />} />
-            <Route path="/admin" element={<Dashboard />} />
+            <Route
+              path="/admin/login"
+              element={<Login setIsAuth={setIsAuth} />}
+            />
+            <Route path="/admin" element={<Dashboard isAuth={isAuth} />} />
+            {/* <ProtectedRoute path="/admin" element={<Dashboard />} /> */}
 
             <Route path="*" element={<Error />} />
           </Routes>
