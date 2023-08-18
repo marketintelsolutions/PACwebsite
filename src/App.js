@@ -23,8 +23,10 @@ import Technology from "./pages/Technology";
 import logo from "./assets/logos/paclogo.svg";
 import Error from "./pages/Error";
 import Login from "./pages/admin/Login";
-import Dashboard from "./pages/admin/Dashboard";
+import Dashboard from "./components/admin/Dashboard";
 import { Translator, Translate } from "react-auto-translate";
+import CreatePost from "./pages/admin/CreatePost";
+import AllPosts from "./pages/admin/AllPosts";
 
 const cacheProvider = {
   get: (language, key) =>
@@ -106,7 +108,12 @@ const App = () => {
               path="/admin/login"
               element={<Login setIsAuth={setIsAuth} />}
             />
-            <Route path="/admin" element={<Dashboard isAuth={isAuth} />} />
+
+            <Route path="/admin" element={<AllPosts isAuth={isAuth} />} />
+            <Route
+              path="/admin/stay-updated/create-post"
+              element={<CreatePost isAuth={isAuth} />}
+            />
             {/* <ProtectedRoute path="/admin" element={<Dashboard />} /> */}
 
             <Route path="*" element={<Error />} />
