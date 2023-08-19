@@ -91,18 +91,34 @@ const Footer = () => {
               <Translate>follow us</Translate>
             </h3>
             <div className="icons">
-              <div className="icon">
+              <a
+                href="https://www.facebook.com/PACHoldingsLtd"
+                target="_blank"
+                className="icon"
+              >
                 <img src={facebook} alt="facebook" />
-              </div>
-              <div className="icon">
+              </a>
+              <a
+                href="https://instagram.com/pacholdings?igshid=YmMyMTA2M2Y="
+                target="_blank"
+                className="icon"
+              >
                 <img src={instagram} alt="instagram" />
-              </div>
-              <div className="icon">
+              </a>
+              <a
+                href="https://twitter.com/PACHoldingsLtd?t=A_VcFWUX98Wng_OPzYJLHg&s=09"
+                target="_blank"
+                className="icon"
+              >
                 <img src={twitter} alt="twitter" />
-              </div>
-              <div className="icon">
+              </a>
+              <a
+                href="https://www.linkedin.com/company/panafrican-capital-holdings-limited/"
+                target="_blank"
+                className="icon"
+              >
                 <img src={linkedin} alt="linkedin" />
-              </div>
+              </a>
             </div>
           </div>
         </div>
