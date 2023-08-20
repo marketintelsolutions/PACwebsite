@@ -168,7 +168,9 @@ const CreatePostStayUpdated = () => {
           <label htmlFor="image">
             <img src={selectImage} alt="selectImage" />
             <p>{image ? image.name : "No Image Selected"}</p>
-            <button type="button">Replace image</button>
+            <button type="button">
+              {image ? "Replace Image" : "Select image"}
+            </button>
           </label>
           <input
             type="file"

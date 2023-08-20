@@ -58,6 +58,10 @@
             padding-right: 40px;
           }
         }
+
+        & .delete {
+          cursor: pointer;
+        }
       }
     }
   }
