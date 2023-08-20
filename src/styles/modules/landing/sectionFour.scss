@@ -408,7 +408,7 @@
   gap: 30px;
   // flex-wrap: wrap;
   width: 100%;
-  // border: 2px solid red;
+  border: 2px solid red;
   margin: 0 auto;
 
   & .item {
@@ -416,7 +416,8 @@
     background-size: cover;
     min-height: 403px;
     width: fit-content;
-    max-height: 463.23px;
+    // max-height: 463.23px;
+    height: fit-content;
     display: flex;
     align-items: flex-end;
 
@@ -428,8 +429,9 @@
     & .text {
       background: rgba(6, 38, 68, 0.8);
       border-radius: 3.70585px;
-      height: 50%;
-      max-height: 225px;
+      min-height: 50%;
+      height: fit-content;
+      // max-height: 225px;
       color: white;
       padding: 43px 27px;
       display: flex;

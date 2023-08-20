@@ -78,7 +78,8 @@ const CreatePostStayUpdated = () => {
     // Handle discard logic
   };
 
-  const handleSaveAndContinue = async () => {
+  const handleSaveAndContinue = async (e) => {
+    e.preventDefault();
     const { header, date, imgUrl, imageTitle, titleDesc, body } = formData;
 
     if (!header || !date || !imgUrl || !imageTitle || !titleDesc || !body) {
@@ -180,8 +181,8 @@ const CreatePostStayUpdated = () => {
           <button
             className="submit"
             type="submit"
-            onClick={handleSaveAndContinue}
-            disabled={progress !== null && progress < 100}
+            onClick={(e) => handleSaveAndContinue(e)}
+            // disabled={progress !== null && progress < 100}
           >
             Save and Continue
           </button>
