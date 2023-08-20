@@ -67,8 +67,11 @@ const StayUpdatedItem = () => {
               <div className="short-desc">
                 <p>{blog.titleDesc}</p>
               </div>
-              <div className="body">
-                <p>{blog.body}</p>
+              <div
+                className="body"
+                dangerouslySetInnerHTML={{ __html: blog.body }}
+              >
+                {/* <p>{blog.body}</p> */}
               </div>
             </div>
             <div className="right">

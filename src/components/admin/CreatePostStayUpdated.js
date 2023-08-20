@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
 import { db, storage } from "../../firebase/firebaseConfig";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { BsCalendar2Date } from "react-icons/bs";
+import { AiOutlineCheckCircle } from "react-icons/ai";
 import selectImage from "../../assets/images/myImage.svg";
+import closeModal from "../../assets/logos/closeModal.svg";
+import ReactQuill from "react-quill";
 
 const CreatePostStayUpdated = () => {
+  const [image, setImage] = useState(null);
+  const [progress, setProgress] = useState(0);
+  const [isModal, setModal] = useState(false);
   const [formData, setFormData] = useState({
     header: "",
     date: "",
@@ -15,8 +21,6 @@ const CreatePostStayUpdated = () => {
     titleDesc: "",
     body: "",
   });
-  const [image, setImage] = useState(null);
-  const [progress, setProgress] = useState(0);
 
   const postCollectionRef = collection(db, "stayUpdated");
   let navigate = useNavigate();
@@ -50,7 +54,7 @@ const CreatePostStayUpdated = () => {
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadUrl) => {
             setFormData((prev) => ({ ...prev, imgUrl: downloadUrl }));
-            console.log("hello");
+            // console.log("hello");
           });
         }
       );
@@ -58,6 +62,10 @@ const CreatePostStayUpdated = () => {
 
     formData && uploadFile();
   }, [image]);
+
+  // useEffect(() => {
+
+  // }, [isModal]);
 
   const handleChange = (event) => {
     const { name, value, files } = event.target;
@@ -74,6 +82,15 @@ const CreatePostStayUpdated = () => {
     }
   };
 
+  const handleQuillChange = (content) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      body: content,
+    }));
+
+    console.log(content);
+  };
+
   const handleDiscard = () => {
     // Handle discard logic
   };
@@ -87,15 +104,38 @@ const CreatePostStayUpdated = () => {
       return;
     }
     // Handle save and continue logic
-    console.log("hey there");
+    // console.log("hey there");
     await addDoc(postCollectionRef, { ...formData });
     // await addDoc(postCollectionRef, { title: "hello" });
-    console.log("entered");
-    navigate("/admin");
+    // console.log("entered");
+
+    setModal(true);
+
+    const timeout = setTimeout(() => {
+      navigate("/admin");
+    }, 4000);
+
+    return () => clearTimeout(timeout);
   };
 
   return (
     <div className="create-post">
+      {isModal && (
+        <div className="modal">
+          <div className="modal-center">
+            <div className="close-btn">
+              <img src={closeModal} alt="closeModal" />
+            </div>
+            <div className="icon">
+              <AiOutlineCheckCircle />
+            </div>
+            <p>Post created successfully!</p>
+            <Link to="/admin" className="button">
+              Dashboard
+            </Link>
+          </div>
+        </div>
+      )}
       <form>
         <div className="header form-item">
           <label htmlFor="header">Header</label>
@@ -167,12 +207,11 @@ const CreatePostStayUpdated = () => {
         </div>
         <div className="form-item">
           <label htmlFor="body">Body Of Article</label>
-          <textarea
-            name="body"
-            id="body"
+          <ReactQuill
+            className="textarea"
             value={formData.body}
-            onChange={handleChange}
-          ></textarea>
+            onChange={handleQuillChange}
+          />
         </div>
         <div className="buttons">
           <button className="discard" type="button" onClick={handleDiscard}>

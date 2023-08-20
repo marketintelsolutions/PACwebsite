@@ -19,8 +19,8 @@ function getTimeAgo(date) {
 }
 
 export function arrangeAndAddTimeAgo(array) {
-  //   array.sort((a, b) => new Date(b.date) - new Date(a.date));
-  array.sort((a, b) => new Date(a.date) - new Date(b.date));
+  array.sort((a, b) => new Date(b.date) - new Date(a.date));
+  // array.sort((a, b) => new Date(a.date) - new Date(b.date));
   const limitedArray = array.slice(0, 9); // Limit to 9 items
 
   return limitedArray.map((item) => {
