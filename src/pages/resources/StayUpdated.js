@@ -10,27 +10,19 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
 import CustomLoader from "../../components/resources/CustomLoader";
 import { limitStringTo70Characters } from "../../utils/resources/arrangeNews";
+import { getPosts } from "../../utils/admin/fetchPosts";
 
 const StayUpdated = () => {
   const [postLists, setPostLists] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const postCollectionRef = collection(db, "stayUpdated");
   const posts = JSON.parse(localStorage.getItem("posts"));
 
   useEffect(() => {
     posts && localStorage.clear("posts");
     setLoading(true);
 
-    const getPosts = async () => {
-      const data = await getDocs(postCollectionRef);
-      const posts = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-      setPostLists(posts);
-      setLoading(false);
-      localStorage.setItem("posts", JSON.stringify(posts));
-    };
-
-    return () => getPosts();
+    return () => getPosts(setPostLists, setLoading);
   }, []);
 
   useEffect(() => {

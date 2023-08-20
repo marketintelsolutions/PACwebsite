@@ -7,7 +7,9 @@ const Dashboard = ({ children }) => {
       <div className="sidebar">
         <h1>Dashboard</h1>
         <div className="items">
-          <Link className="item active">Stay Updated</Link>
+          <Link to="/admin" className="item active">
+            Stay Updated
+          </Link>
           <Link className="item">Subscribers</Link>
         </div>
       </div>
