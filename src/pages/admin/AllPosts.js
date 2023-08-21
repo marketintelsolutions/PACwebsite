@@ -2,14 +2,19 @@ import React, { useEffect, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import Dashboard from "../../components/admin/Dashboard";
 import deleteLogo from "../../assets/logos/delete.svg";
+import alert from "../../assets/logos/alert.svg";
+import closeModal from "../../assets/logos/closeModal.svg";
 import { getPosts } from "../../utils/admin/fetchPosts";
 import CustomLoader from "../../components/resources/CustomLoader";
 import { deleteDoc, doc } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
+import { AiOutlineCheckCircle } from "react-icons/ai";
 
 const AllPosts = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [isModal, setModal] = useState(false);
+  const [id, setId] = useState("");
 
   const isAuthenticated = localStorage.getItem("isAuth");
 
@@ -28,6 +33,7 @@ const AllPosts = () => {
       // setLoading(false);
 
       getPosts(setPosts, setLoading);
+      setModal(false);
     } catch (error) {
       console.log(error);
     }
@@ -39,6 +45,31 @@ const AllPosts = () => {
 
   return (
     <Dashboard>
+      {isModal && (
+        <div className="modal">
+          <div className="modal-center">
+            <div className="close-btn" onClick={() => setModal(false)}>
+              <img src={closeModal} alt="closeModal" />
+            </div>
+            <div className="icon">
+              <img src={alert} alt="alert" />
+            </div>
+            <p>Are you sure you want to delete this post?</p>
+            <div className="buttons">
+              <button
+                to="/admin"
+                className="button"
+                onClick={() => handleDelete(id)}
+              >
+                Yes, confirm
+              </button>
+              <button className="grey button" onClick={() => setModal(false)}>
+                No, change it
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       <Link to="/admin/stay-updated/create-post" className="add-btn">
         Add New Post
       </Link>
@@ -81,7 +112,10 @@ const AllPosts = () => {
                         src={deleteLogo}
                         alt="deleteLogo"
                         className="delete"
-                        onClick={() => handleDelete(id)}
+                        onClick={() => {
+                          setId(id);
+                          setModal(true);
+                        }}
                       />
                     </td>
                   </tr>
