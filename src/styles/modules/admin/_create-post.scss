@@ -139,6 +139,17 @@
       }
     }
 
+    & .background {
+      & label {
+        // background: transparent;
+        background: rgba(6, 38, 68, 0.88);
+
+        & p {
+          color: #fff;
+        }
+      }
+    }
+
     & .header {
       & label {
         color: #000;

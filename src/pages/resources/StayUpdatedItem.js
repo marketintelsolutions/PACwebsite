@@ -6,6 +6,7 @@ import { db } from "../../firebase/firebaseConfig";
 import moment from "moment";
 import { arrangeAndAddTimeAgo } from "../../utils/resources/arrangeNews";
 import CustomLoader from "../../components/resources/CustomLoader";
+import { getBlogDetails } from "../../utils/admin/fetchPosts";
 
 const StayUpdatedItem = () => {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ const StayUpdatedItem = () => {
 
     setLoading(true);
 
-    id && getBlogDetails();
+    id && getBlogDetails(id, setBlog, setLoading);
 
     const blogList = JSON.parse(localStorage.getItem("posts"));
     console.log(blogList);
@@ -30,12 +31,6 @@ const StayUpdatedItem = () => {
 
   // useEffect(() => {}, []);
 
-  const getBlogDetails = async () => {
-    const docRef = doc(db, "stayUpdated", `${id}`);
-    const blogDetail = await getDoc(docRef);
-    setBlog(blogDetail.data());
-    setLoading(false);
-  };
   // console.log(blog, "blog");
 
   // const handleGoBack = () => {

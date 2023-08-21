@@ -1,4 +1,4 @@
-import { collection, getDocs } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
 
 const postCollectionRef = collection(db, "stayUpdated");
@@ -9,4 +9,11 @@ export const getPosts = async (setPostLists, setLoading) => {
   setPostLists(posts);
   setLoading(false);
   localStorage.setItem("posts", JSON.stringify(posts));
+};
+
+export const getBlogDetails = async (id, setBlog, setLoading) => {
+  const docRef = doc(db, "stayUpdated", `${id}`);
+  const blogDetail = await getDoc(docRef);
+  setBlog(blogDetail.data());
+  setLoading(false);
 };

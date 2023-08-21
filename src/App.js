@@ -27,6 +27,7 @@ import Dashboard from "./components/admin/Dashboard";
 import { Translator, Translate } from "react-auto-translate";
 import CreatePost from "./pages/admin/CreatePost";
 import AllPosts from "./pages/admin/AllPosts";
+import EditPost from "./pages/admin/EditPost";
 
 const cacheProvider = {
   get: (language, key) =>
@@ -109,10 +110,14 @@ const App = () => {
               element={<Login setIsAuth={setIsAuth} />}
             />
 
-            <Route path="/admin" element={<AllPosts isAuth={isAuth} />} />
+            <Route path="/admin" element={<AllPosts />} />
             <Route
               path="/admin/stay-updated/create-post"
-              element={<CreatePost isAuth={isAuth} />}
+              element={<CreatePost />}
+            />
+            <Route
+              path="/admin/stay-updated/edit-post/:id"
+              element={<EditPost />}
             />
             {/* <ProtectedRoute path="/admin" element={<Dashboard />} /> */}
 

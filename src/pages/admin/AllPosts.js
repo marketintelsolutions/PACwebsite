@@ -106,7 +106,11 @@ const AllPosts = () => {
                       {/* <input type="radio" name="state" checked /> */}
                       <button type="button">c</button>
                     </td>
-                    <td>Edit</td>
+                    <td>
+                      <Link to={`/admin/stay-updated/edit-post/${id}`}>
+                        Edit
+                      </Link>
+                    </td>
                     <td>
                       <img
                         src={deleteLogo}
