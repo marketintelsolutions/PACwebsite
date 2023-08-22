@@ -38,16 +38,21 @@ const Footer = () => {
                 <Translate>{heading}</Translate>
               </h2>
               <div className="bottom">
-                {items.map((i) => {
+                {items.map((i, index) => {
                   if (i.external) {
                     return (
-                      <a href={i.link} target="_blank" rel="noreferrer">
+                      <a
+                        href={i.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        key={index}
+                      >
                         <Translate>{i.text}</Translate>
                       </a>
                     );
                   }
                   return (
-                    <Link to={i.link}>
+                    <Link to={i.link} key={index}>
                       <Translate>{i.text}</Translate>
                     </Link>
                   );

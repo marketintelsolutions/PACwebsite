@@ -29,6 +29,7 @@ const CreatePostStayUpdated = () => {
     imageTitle: "",
     titleDesc: "",
     body: "",
+    published: blog.published,
   });
   const [loading, setLoading] = useState(false);
 
@@ -48,6 +49,7 @@ const CreatePostStayUpdated = () => {
   }, [image]);
 
   console.log(blog);
+  console.log(formData.published);
 
   const handleQuillChange = (content) => {
     setFormData((prevData) => ({
@@ -180,7 +182,7 @@ const CreatePostStayUpdated = () => {
               onClick={(e) =>
                 handleSaveAndContinue(e, formData, id, setModal, navigate)
               }
-              // disabled={progress !== null && progress < 100}
+              disabled={progress < 100}
             >
               Save and Continue
             </button>

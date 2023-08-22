@@ -18,6 +18,7 @@ const AllPosts = () => {
   const isAuthenticated = localStorage.getItem("isAuth");
 
   useEffect(() => {
+    window.scroll(0, 0);
     setLoading(true);
     return () => getPosts(setPosts, setLoading);
   }, []);
@@ -73,7 +74,7 @@ const AllPosts = () => {
                 Yes, confirm
               </button>
               <button className="grey button" onClick={() => setModal(false)}>
-                No, change it
+                Cancel
               </button>
             </div>
           </div>

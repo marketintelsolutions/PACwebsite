@@ -46,7 +46,10 @@ const StayUpdated = () => {
               <CustomLoader />
             ) : (
               postLists.map((item, index) => {
-                const { id, header, imgUrl } = item;
+                const { id, header, imgUrl, published } = item;
+
+                if (!published) return;
+
                 return (
                   <div
                     className="item"

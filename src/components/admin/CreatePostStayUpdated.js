@@ -20,6 +20,7 @@ const CreatePostStayUpdated = () => {
     imageTitle: "",
     titleDesc: "",
     body: "",
+    published: true,
   });
 
   const postCollectionRef = collection(db, "stayUpdated");
@@ -179,12 +180,12 @@ const CreatePostStayUpdated = () => {
             onChange={handleChange}
           />
         </div>
-        {/* {progress > 0 && (
+        {progress > 0 && (
           <>
             <progress value={progress} max="100" />
-            {progress}%
+            {progress === 100 ? "Uploaded" : `Uploading Image... ${progress}%`}
           </>
-        )} */}
+        )}
         <div className="form-item">
           <label htmlFor="image-title">Short Image Title</label>
           <input
@@ -220,10 +221,10 @@ const CreatePostStayUpdated = () => {
             Discard
           </button>
           <button
-            className="submit"
+            className={progress < 100 ? "submit disabled" : "submit"}
             type="submit"
             onClick={(e) => handleSaveAndContinue(e)}
-            // disabled={progress !== null && progress < 100}
+            disabled={progress < 100}
           >
             Save and Continue
           </button>

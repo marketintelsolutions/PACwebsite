@@ -192,6 +192,10 @@
         background: #eee;
         color: #000;
       }
+
+      & .disabled {
+        cursor: not-allowed;
+      }
     }
   }
 
