@@ -136,11 +136,11 @@ const CreatePostStayUpdated = () => {
       const timeout = setTimeout(() => {
         navigate("/admin");
       }, 4000);
+
+      return () => clearTimeout(timeout);
     } catch (error) {
       console.log("Error:", error);
     }
-
-    return () => clearTimeout(timeout);
   };
 
   if (!isAuthenticated) {

@@ -99,12 +99,12 @@ const AllPosts = () => {
                     <td>{header}</td>
                     <td>{date}</td>
                     <td>
-                      {/* <input type="radio" name="state" /> */}
-                      <button type="button">c</button>
+                      <input type="radio" name="unpublished" />
+                      {/* <button type="button">c</button> */}
                     </td>
                     <td>
-                      {/* <input type="radio" name="state" checked /> */}
-                      <button type="button">c</button>
+                      <input type="radio" name="published" defaultChecked />
+                      {/* <button type="button">c</button> */}
                     </td>
                     <td>
                       <Link to={`/admin/stay-updated/edit-post/${id}`}>
