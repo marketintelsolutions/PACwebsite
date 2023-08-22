@@ -1,5 +1,5 @@
 import { collection, doc, getDoc, getDocs } from "firebase/firestore";
-import { db } from "../../firebase/firebaseConfig";
+import { db } from "../../../firebase/firebaseConfig";
 
 const postCollectionRef = collection(db, "stayUpdated");
 

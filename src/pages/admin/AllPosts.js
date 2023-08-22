@@ -4,11 +4,10 @@ import Dashboard from "../../components/admin/Dashboard";
 import deleteLogo from "../../assets/logos/delete.svg";
 import alert from "../../assets/logos/alert.svg";
 import closeModal from "../../assets/logos/closeModal.svg";
-import { getPosts } from "../../utils/admin/fetchPosts";
+import { getPosts } from "../../utils/helpers/admin/fetchPosts";
 import CustomLoader from "../../components/resources/CustomLoader";
-import { deleteDoc, doc } from "firebase/firestore";
+import { deleteDoc, doc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
-import { AiOutlineCheckCircle } from "react-icons/ai";
 
 const AllPosts = () => {
   const [posts, setPosts] = useState([]);
@@ -34,6 +33,16 @@ const AllPosts = () => {
 
       getPosts(setPosts, setLoading);
       setModal(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handlePublishToggle = async (id, isPublished) => {
+    try {
+      const postDocRef = doc(db, "stayUpdated", id);
+      await updateDoc(postDocRef, { published: !isPublished });
+      getPosts(setPosts, setLoading);
     } catch (error) {
       console.log(error);
     }
@@ -92,19 +101,27 @@ const AllPosts = () => {
 
             <tbody>
               {posts?.map((post, index) => {
-                const { header, id, date } = post;
+                const { header, id, date, published } = post;
                 return (
                   <tr key={index}>
                     <td>{index + 1}</td>
                     <td>{header}</td>
                     <td>{date}</td>
                     <td>
-                      <input type="radio" name="unpublished" />
-                      {/* <button type="button">c</button> */}
+                      <input
+                        type="radio"
+                        name={`unpublished${index}`}
+                        checked={!published}
+                        onChange={() => handlePublishToggle(id, published)}
+                      />
                     </td>
                     <td>
-                      <input type="radio" name="published" defaultChecked />
-                      {/* <button type="button">c</button> */}
+                      <input
+                        type="radio"
+                        name={`published${index}`}
+                        checked={published}
+                        onChange={() => handlePublishToggle(id, published)}
+                      />
                     </td>
                     <td>
                       <Link to={`/admin/stay-updated/edit-post/${id}`}>

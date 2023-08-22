@@ -10,7 +10,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
 import CustomLoader from "../../components/resources/CustomLoader";
 import { limitStringTo70Characters } from "../../utils/resources/arrangeNews";
-import { getPosts } from "../../utils/admin/fetchPosts";
+import { getPosts } from "../../utils/helpers/admin/fetchPosts";
 
 const StayUpdated = () => {
   const [postLists, setPostLists] = useState([]);

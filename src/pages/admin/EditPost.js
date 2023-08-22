@@ -9,7 +9,13 @@ import selectImage from "../../assets/images/myImage.svg";
 import closeModal from "../../assets/logos/closeModal.svg";
 import ReactQuill from "react-quill";
 import Dashboard from "../../components/admin/Dashboard";
-import { getBlogDetails } from "../../utils/admin/fetchPosts";
+import {
+  getBlogDetails,
+  handleChange,
+  handleSaveAndContinue,
+  uploadFile,
+} from "../../utils/helpers/admin/editPost";
+// import { getBlogDetails } from "../../utils/admin/fetchPosts";
 
 const CreatePostStayUpdated = () => {
   const [image, setImage] = useState(null);
@@ -33,75 +39,15 @@ const CreatePostStayUpdated = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    const getBlogDetails = async () => {
-      const docRef = doc(db, "stayUpdated", `${id}`);
-      const blogDetail = await getDoc(docRef);
-      const data = blogDetail.data();
-      setBlog(blogDetail.data());
-      setLoading(false);
-      setFormData({ ...data });
-      setImage(data.imgUrl); // Set the initial imgUrl
-    };
-
-    getBlogDetails();
+    // fetch the blog details and populate the details
+    getBlogDetails(id, setBlog, setLoading, setFormData, setImage);
   }, [id, loading]);
 
   useEffect(() => {
-    const uploadFile = () => {
-      if (image) {
-        const storageRef = ref(storage, `${image?.name}`);
-        const uploadTask = uploadBytesResumable(storageRef, image);
-
-        uploadTask.on(
-          "state_changed",
-          (snapshot) => {
-            const progress =
-              (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-            setProgress(progress);
-
-            switch (snapshot.state) {
-              case "paused":
-                console.log("upload is paused");
-                break;
-              case "running":
-                console.log("Upload is running", progress);
-                break;
-              default:
-                break;
-            }
-          },
-          (error) => {
-            console.log(error);
-          },
-          () => {
-            getDownloadURL(uploadTask.snapshot.ref).then((downloadUrl) => {
-              setFormData((prev) => ({ ...prev, imgUrl: downloadUrl }));
-            });
-          }
-        );
-      }
-    };
-
-    uploadFile();
+    uploadFile(image, setProgress, setFormData);
   }, [image]);
 
-  const handleChange = (event) => {
-    const { name, value, files } = event.target;
-
-    if (name === "image") {
-      const selectedImage = files[0];
-      setImage(selectedImage);
-      setFormData((prevData) => ({
-        ...prevData,
-        imgUrl: selectedImage ? URL.createObjectURL(selectedImage) : null,
-      }));
-    } else {
-      setFormData((prevData) => ({
-        ...prevData,
-        [name]: value,
-      }));
-    }
-  };
+  console.log(blog);
 
   const handleQuillChange = (content) => {
     setFormData((prevData) => ({
@@ -112,35 +58,6 @@ const CreatePostStayUpdated = () => {
 
   const handleDiscard = () => {
     // Handle discard logic
-  };
-
-  const handleSaveAndContinue = async (e) => {
-    e.preventDefault();
-    const { header, date, imgUrl, imageTitle, titleDesc, body } = formData;
-
-    if (!header || !date || !imageTitle || !titleDesc || !body) {
-      alert("Please fill in all required fields.");
-      return;
-    }
-
-    try {
-      await updateDoc(doc(db, "stayUpdated", id), {
-        header,
-        date,
-        imgUrl: imgUrl || blog.imgUrl, // Maintain previous imgUrl if not changed
-        imageTitle,
-        titleDesc,
-        body,
-      });
-      setModal(true);
-      const timeout = setTimeout(() => {
-        navigate("/admin");
-      }, 4000);
-
-      return () => clearTimeout(timeout);
-    } catch (error) {
-      console.log("Error:", error);
-    }
   };
 
   if (!isAuthenticated) {
@@ -175,7 +92,7 @@ const CreatePostStayUpdated = () => {
               name="header"
               placeholder="Add title or header"
               value={formData.header}
-              onChange={handleChange}
+              onChange={(e) => handleChange(e, setImage, setFormData)}
             />
           </div>
           <div className="form-item date-item">
@@ -191,7 +108,8 @@ const CreatePostStayUpdated = () => {
               id="date"
               name="date"
               value={formData.date}
-              onChange={handleChange}
+              onChange={(e) => handleChange(e, setImage, setFormData)}
+              // onChange={handleChange}
             />
           </div>
           <div
@@ -209,7 +127,8 @@ const CreatePostStayUpdated = () => {
               type="file"
               name="image"
               accept="image/*"
-              onChange={handleChange}
+              onChange={(e) => handleChange(e, setImage, setFormData)}
+              // onChange={handleChange}
             />
           </div>
 
@@ -227,7 +146,8 @@ const CreatePostStayUpdated = () => {
               name="imageTitle"
               placeholder="Add Short Image Title"
               value={formData.imageTitle}
-              onChange={handleChange}
+              onChange={(e) => handleChange(e, setImage, setFormData)}
+              // onChange={handleChange}
             />
           </div>
           <div className="form-item">
@@ -238,7 +158,8 @@ const CreatePostStayUpdated = () => {
               name="titleDesc"
               placeholder="Add Short Title Description"
               value={formData.titleDesc}
-              onChange={handleChange}
+              onChange={(e) => handleChange(e, setImage, setFormData)}
+              // onChange={handleChange}
             />
           </div>
           <div className="form-item">
@@ -256,7 +177,9 @@ const CreatePostStayUpdated = () => {
             <button
               className="submit"
               type="submit"
-              onClick={(e) => handleSaveAndContinue(e)}
+              onClick={(e) =>
+                handleSaveAndContinue(e, formData, id, setModal, navigate)
+              }
               // disabled={progress !== null && progress < 100}
             >
               Save and Continue

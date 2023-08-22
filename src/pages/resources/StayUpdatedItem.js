@@ -6,7 +6,7 @@ import { db } from "../../firebase/firebaseConfig";
 import moment from "moment";
 import { arrangeAndAddTimeAgo } from "../../utils/resources/arrangeNews";
 import CustomLoader from "../../components/resources/CustomLoader";
-import { getBlogDetails } from "../../utils/admin/fetchPosts";
+import { getBlogDetails } from "../../utils/helpers/admin/fetchPosts";
 
 const StayUpdatedItem = () => {
   const navigate = useNavigate();
