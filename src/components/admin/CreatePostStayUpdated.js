@@ -224,7 +224,8 @@ const CreatePostStayUpdated = () => {
             className={progress < 100 ? "submit disabled" : "submit"}
             type="submit"
             onClick={(e) => handleSaveAndContinue(e)}
-            disabled={progress < 100}
+            disabled={progress !== null && progress < 100}
+            // disabled={progress < 100}
           >
             Save and Continue
           </button>

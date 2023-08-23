@@ -19,7 +19,7 @@ import {
 
 const CreatePostStayUpdated = () => {
   const [image, setImage] = useState(null);
-  const [progress, setProgress] = useState(0);
+  const [progress, setProgress] = useState(null);
   const [isModal, setModal] = useState(false);
   const [blog, setBlog] = useState({});
   const [formData, setFormData] = useState({
@@ -182,7 +182,7 @@ const CreatePostStayUpdated = () => {
               onClick={(e) =>
                 handleSaveAndContinue(e, formData, id, setModal, navigate)
               }
-              disabled={progress < 100}
+              disabled={progress !== null && progress < 100}
             >
               Save and Continue
             </button>
