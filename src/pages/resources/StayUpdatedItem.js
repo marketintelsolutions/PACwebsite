@@ -73,7 +73,9 @@ const StayUpdatedItem = () => {
               <h2>Latest News</h2>
               <div className="items">
                 {blogs.map((item) => {
-                  const { id, header, timeAgo } = item;
+                  const { id, header, timeAgo, published } = item;
+                  if (!published) return;
+
                   return (
                     <div className="item">
                       <p className="time">{timeAgo}</p>
