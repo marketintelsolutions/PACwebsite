@@ -94,6 +94,7 @@ const CreatePostStayUpdated = () => {
 
   const handleDiscard = () => {
     // Handle discard logic
+    navigate("/admin");
   };
 
   const handleSaveAndContinue = async (e) => {
@@ -112,9 +113,9 @@ const CreatePostStayUpdated = () => {
 
     setModal(true);
 
-    const timeout = setTimeout(() => {
-      navigate("/admin");
-    }, 4000);
+    // const timeout = setTimeout(() => {
+    //   navigate("/admin");
+    // }, 4000);
 
     return () => clearTimeout(timeout);
   };

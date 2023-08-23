@@ -60,6 +60,7 @@ const CreatePostStayUpdated = () => {
 
   const handleDiscard = () => {
     // Handle discard logic
+    navigate("/admin");
   };
 
   if (!isAuthenticated) {
