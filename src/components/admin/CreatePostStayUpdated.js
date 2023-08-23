@@ -117,7 +117,7 @@ const CreatePostStayUpdated = () => {
     //   navigate("/admin");
     // }, 4000);
 
-    return () => clearTimeout(timeout);
+    // return () => clearTimeout(timeout);
   };
 
   return (
