@@ -2,15 +2,17 @@ import React, { useEffect, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import Dashboard from "../../components/admin/Dashboard";
 import deleteLogo from "../../assets/logos/delete.svg";
+import sendIcon from "../../assets/logos/sendIcon.svg";
 import alert from "../../assets/logos/alert.svg";
 import closeModal from "../../assets/logos/closeModal.svg";
-import { getPosts } from "../../utils/helpers/admin/fetchPosts";
+import { getSubscribers } from "../../utils/helpers/admin/fetchSubscribers";
 import CustomLoader from "../../components/resources/CustomLoader";
-import { deleteDoc, doc, updateDoc } from "firebase/firestore";
+import { deleteDoc, doc } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
+import moment from "moment";
 
-const AllPosts = () => {
-  const [posts, setPosts] = useState([]);
+const Subscribers = () => {
+  const [subscribers, setSubscribers] = useState([]);
   const [loading, setLoading] = useState(false);
   const [isModal, setModal] = useState(false);
   const [id, setId] = useState("");
@@ -20,7 +22,7 @@ const AllPosts = () => {
   useEffect(() => {
     window.scroll(0, 0);
     setLoading(true);
-    return () => getPosts(setPosts, setLoading);
+    return () => getSubscribers(setSubscribers, setLoading);
   }, []);
 
   // console.log(posts);
@@ -28,36 +30,19 @@ const AllPosts = () => {
   const handleDelete = async (id) => {
     try {
       setLoading(true);
-      const postDocRef = doc(db, "stayUpdated", id); // Create the document reference
+      const postDocRef = doc(db, "subscribers", id); // Create the document reference
       await deleteDoc(postDocRef); // Delete the document using the reference
       // setLoading(false);
 
-      getPosts(setPosts, setLoading);
+      getSubscribers(setSubscribers, setLoading);
       setModal(false);
     } catch (error) {
       console.log(error);
     }
   };
 
-  const handlePublishToggle = async (id, isPublished) => {
-    try {
-      const postDocRef = doc(db, "stayUpdated", id);
-      await updateDoc(postDocRef, { published: !isPublished });
-      getPosts(setPosts, setLoading);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  const handleTopnewsToggle = async (id, isTopnews) => {
-    console.log(isTopnews);
-    try {
-      const postDocRef = doc(db, "stayUpdated", id);
-      await updateDoc(postDocRef, { top: !isTopnews });
-      getPosts(setPosts, setLoading);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  
+  
 
   if (!isAuthenticated) {
     return <Navigate to="/admin/login" replace />;
@@ -90,9 +75,13 @@ const AllPosts = () => {
           </div>
         </div>
       )}
-      <Link to="/admin/stay-updated/create-post" className="add-btn">
-        Add New Post
-      </Link>
+     <div className="top-btns">
+        <input type="checkbox" name="selectall" id="setSubscribers" />
+        <div className="options">
+            <img src={sendIcon} alt="sendIcon" />
+            <img src={deleteLogo} alt="deleteLogo" />
+        </div>
+     </div>
       <div className="dashboard">
         {loading ? (
           <CustomLoader />
@@ -101,63 +90,33 @@ const AllPosts = () => {
             <thead>
               <tr>
                 <td>S/N</td>
-                <td>Article Name</td>
-                <td>Top News</td>
+                <td>Email Address</td>
                 <td>Date</td>
-                <td>Unpublished</td>
-                <td>Published</td>
-                <td>Edit</td>
+                <td>Check</td>
                 <td>Delete</td>
               </tr>
             </thead>
 
             <tbody>
-              {posts?.map((post, index) => {
-                const { header, id, date, published, top } = post;
+              {subscribers?.map((subscriber, index) => {
+                const {email, currentDate} = subscriber
                 return (
                   <tr key={index}>
                     <td>{index + 1}</td>
-                    <td>{header}</td>
-                    <td className="top">
-                      <input
-                        type="radio"
-                        name={`top${index}`}
-                        checked={top}
-                        onClick={() => handleTopnewsToggle(id, top)}
-                        readOnly
-                      />
-                    </td>
-                    <td className="date">{date}</td>
+                    <td className="email">{email}</td>
+                    <td className="date">{moment(currentDate).format('YYYY MM DD')}</td>
                     <td>
                       <input
-                        type="radio"
+                        type="checkbox"
                         name={`unpublished${index}`}
-                        checked={!published}
-                        onChange={() => handlePublishToggle(id, published)}
                       />
-                    </td>
-                    <td>
-                      <input
-                        type="radio"
-                        name={`published${index}`}
-                        checked={published}
-                        onChange={() => handlePublishToggle(id, published)}
-                      />
-                    </td>
-                    <td>
-                      <Link to={`/admin/stay-updated/edit-post/${id}`}>
-                        Edit
-                      </Link>
                     </td>
                     <td>
                       <img
                         src={deleteLogo}
                         alt="deleteLogo"
                         className="delete"
-                        onClick={() => {
-                          setId(id);
-                          setModal(true);
-                        }}
+                        
                       />
                     </td>
                   </tr>
@@ -171,4 +130,4 @@ const AllPosts = () => {
   );
 };
 
-export default AllPosts;
+export default Subscribers;

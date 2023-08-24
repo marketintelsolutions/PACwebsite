@@ -325,4 +325,16 @@
       }
     }
   }
+
+  & .top-btns{
+    // border: 2px solid blue;
+    display: flex;
+    gap: 105px;
+
+    & .options{
+      display: flex;
+      align-items: center;
+      gap:22px;
+    }
+  }
 }

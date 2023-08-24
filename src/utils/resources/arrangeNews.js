@@ -43,5 +43,7 @@ export function limitStringTo70Characters(inputString) {
     } else {
       return inputString.slice(0, lastSpaceIndex);
     }
+
+    // return inputString.slice(0, 60);
   }
 }

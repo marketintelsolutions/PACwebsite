@@ -21,6 +21,7 @@ const CreatePostStayUpdated = () => {
     titleDesc: "",
     body: "",
     published: true,
+    top: false,
   });
 
   const postCollectionRef = collection(db, "stayUpdated");

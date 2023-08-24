@@ -10,7 +10,7 @@ const Dashboard = ({ children }) => {
           <Link to="/admin" className="item active">
             Stay Updated
           </Link>
-          <Link className="item">Subscribers</Link>
+          <Link to='/admin/subscribers' className="item">Subscribers</Link>
         </div>
       </div>
       <div className="center">{children}</div>

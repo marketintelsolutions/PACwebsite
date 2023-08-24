@@ -30,6 +30,7 @@ const CreatePostStayUpdated = () => {
     titleDesc: "",
     body: "",
     published: blog.published,
+    top: blog.top,
   });
   const [loading, setLoading] = useState(false);
 
@@ -48,8 +49,8 @@ const CreatePostStayUpdated = () => {
     uploadFile(image, setProgress, setFormData);
   }, [image]);
 
-  console.log(blog);
-  console.log(formData.published);
+  // console.log(blog);
+  console.log(formData.top);
 
   const handleQuillChange = (content) => {
     setFormData((prevData) => ({

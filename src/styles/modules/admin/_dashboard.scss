@@ -1,8 +1,9 @@
 .dashboard {
-  //   border: 2px solid red;
+    // border: 2px solid red;
 
   & table {
     border-collapse: collapse;
+    
 
     & thead {
       background: #0089ff;
@@ -69,8 +70,17 @@
           }
         }
 
+        & .date,
+        .top {
+          width: 100px;
+        }
+
         & .delete {
           cursor: pointer;
+        }
+
+        & .email{
+          width:522px;
         }
       }
     }

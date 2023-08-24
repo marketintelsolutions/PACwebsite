@@ -28,6 +28,7 @@ import { Translator, Translate } from "react-auto-translate";
 import CreatePost from "./pages/admin/CreatePost";
 import AllPosts from "./pages/admin/AllPosts";
 import EditPost from "./pages/admin/EditPost";
+import Subscribers from "./pages/admin/Subscribers";
 
 const cacheProvider = {
   get: (language, key) =>
@@ -119,6 +120,7 @@ const App = () => {
               path="/admin/stay-updated/edit-post/:id"
               element={<EditPost />}
             />
+            <Route path="/admin/subscribers" element={<Subscribers />} />
             {/* <ProtectedRoute path="/admin" element={<Dashboard />} /> */}
 
             <Route path="*" element={<Error />} />

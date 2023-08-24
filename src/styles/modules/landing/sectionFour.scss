@@ -1,7 +1,5 @@
 .section-four {
   background-size: contain;
-  // border: 2px solid blue;
-  //   min-height: 200vh;
   background-position: 10px;
   background-repeat: no-repeat;
   position: relative;
@@ -14,10 +12,6 @@
     top: -170px;
     right: -65%;
     height: 100%;
-    // border: 2px solid red;
-    // width: 90%;
-    // width:
-    // z-index: 5;
   }
 
   & .spirit {
@@ -27,15 +21,10 @@
     width: fit-content;
     margin: 0 auto;
     justify-content: center;
-    // border: 2px solid red;
 
     @media (max-width: $breakpoint-tablet) {
       flex-direction: column;
     }
-    // & img {
-    //   position: relative;
-    //   z-index: 2;
-    // }
 
     & .image {
       display: flex;
@@ -93,7 +82,7 @@
 
     & .spirit-container {
       position: relative;
-      border: 2px solid red;
+      // border: 2px solid red;
     }
 
     & .spirit-main {
@@ -416,9 +405,12 @@
     background-size: cover;
     min-height: 403px;
     // width: fit-content;
+    // max-width: 395.041px;
+    margin: 0 auto;
     width: 100%;
     // max-height: 463.23px;
-    height: fit-content;
+    // height: fit-content;
+    height: auto;
     display: flex;
     align-items: flex-end;
 
@@ -430,9 +422,9 @@
     & .text {
       background: rgba(6, 38, 68, 0.8);
       border-radius: 3.70585px;
-      min-height: 50%;
-      height: fit-content;
-      // max-height: 225px;
+      // min-height: 50%;
+      // height: fit-content;
+      height: 225px;
       color: white;
       padding: 43px 27px;
       display: flex;
@@ -440,6 +432,7 @@
       gap: 29px;
       transition: var(--transition);
       width: 100%;
+      // min-width: 395.041px;
 
       &:hover {
         background: rgba(255, 255, 255, 0.8);
@@ -473,6 +466,7 @@
         text-transform: capitalize;
         max-width: 395.041px;
         color: #ffffff;
+        min-height: 63px;
 
         @media (max-width: $breakpoint-tablet) {
           font-size: 14.9472px;

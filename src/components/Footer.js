@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { footer } from "../utils/data";
 import facebook from "../assets/images/facebook.svg";
 import instagram from "../assets/images/instagram.svg";
@@ -9,8 +9,33 @@ import mailTransparent from "../assets/images/mailTransparent.svg";
 import footerBg from "../assets/images/footerBg.png";
 import { Link } from "react-router-dom";
 import { Translate } from "react-auto-translate";
+import { addDoc, collection} from "firebase/firestore";
+import { db } from "../firebase/firebaseConfig";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSubscribe = async () => {
+
+    if(!email)return
+    try {
+      // Add your code here to handle the subscription process
+      // For example, you can add the email to a database or other service
+  const postCollectionRef = collection(db, "subscribers");
+  
+      // Upload email and current date to Firebase Storage
+      const currentDate = new Date().toISOString();
+      // await emailRef.putString(`Email: ${email}\nDate: ${currentDate}`);
+      // const data = {}
+      await addDoc(postCollectionRef, {email, currentDate});
+
+      alert("Subscription successful!");
+    } catch (error) {
+      console.error("Error subscribing:", error);
+      alert("Subscription failed. Please try again.");
+    }
+  };
+
   return (
     <footer style={{ backgroundImage: `url(${footerBg})` }}>
       <div className="footer-center">
@@ -70,16 +95,15 @@ const Footer = () => {
               <Translate>subscribe to our newsletter</Translate>
             </p>
             <div className="input">
-              <input
-                type="text"
-                // placeholder={`${(<Translate>xEmail Address</Translate>)}`}
-                // placeholder={<Translate>hello</Translate>}
-                placeholder="Email Address"
-              />
-              <button>
-                <Translate>subscribe</Translate>
-              </button>
-            </div>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <button onClick={handleSubscribe}>Subscribe</button>
+      </div>
             <p>
               <span>
                 <img src={phoneTransparent} alt="phoneTransparent" />
