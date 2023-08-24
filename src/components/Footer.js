@@ -28,6 +28,7 @@ const Footer = () => {
       // await emailRef.putString(`Email: ${email}\nDate: ${currentDate}`);
       // const data = {}
       await addDoc(postCollectionRef, {email, currentDate});
+      setEmail('')
 
       alert("Subscription successful!");
     } catch (error) {

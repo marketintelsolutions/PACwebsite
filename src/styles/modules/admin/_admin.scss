@@ -182,6 +182,7 @@
         text-decoration: none;
         padding: 10px 28px;
         border-top: 1px solid rgba(0, 0, 0, 0.1);
+        cursor: pointer;
 
         &:before {
           content: "";
@@ -330,6 +331,8 @@
     // border: 2px solid blue;
     display: flex;
     gap: 105px;
+    align-items: center;
+    height: 24px;
 
     & .options{
       display: flex;
