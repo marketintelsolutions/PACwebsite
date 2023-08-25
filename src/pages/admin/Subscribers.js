@@ -17,7 +17,8 @@ const Subscribers = () => {
   const [loading, setLoading] = useState(false);
   const [isModal, setModal] = useState(false);
   const [id, setId] = useState("");
-  const [selectedItems, setSelectedItems] = useState([]);
+  const [selectedItems, setSelectedItems] = useState(JSON.parse(localStorage.getItem('selectedItems'))||[]);
+  const [deleteFunc, setDeleteFunc] = useState({})
 
   const isAuthenticated = localStorage.getItem("isAuth");
 
@@ -37,6 +38,7 @@ const Subscribers = () => {
       // setLoading(false);
 
       getSubscribers(setSubscribers, setLoading);
+      
       setModal(false);
     } catch (error) {
       console.log(error);
@@ -46,17 +48,26 @@ const Subscribers = () => {
   const handleSelectAll = () => {
     if (selectedItems.length === subscribers.length || selectedItems.length>0) {
       setSelectedItems([]);
+      localStorage.removeItem('selectedItems')
     } else {
-      setSelectedItems(subscribers.map(subscriber => subscriber.id));
+      const items = subscribers.map(subscriber => subscriber.id)
+      setSelectedItems(items);
+      localStorage.setItem("selectedItems", JSON.stringify(items));
     }
   };
   
   const handleToggleSelect = (id) => {
     if (selectedItems.includes(id)) {
-      setSelectedItems(selectedItems.filter(item => item !== id));
+      const items = selectedItems.filter(item => item !== id)
+      setSelectedItems(items);
+      localStorage.setItem("selectedItems", JSON.stringify(items));
     } else {
-      setSelectedItems([...selectedItems, id]);
+      const items = [...selectedItems, id]
+      setSelectedItems(items);
+      localStorage.setItem("selectedItems", JSON.stringify(items));
     }
+  
+    // Store selected items in local storage
   };
   
   const handleDeleteSelected = async (selectedItems) => {
@@ -66,10 +77,18 @@ const Subscribers = () => {
       await Promise.all(deletePromises);
       setSelectedItems([]); // Clear selected items after deletion
       getSubscribers(setSubscribers, setLoading);
+      
+      // Remove selected items from local storage
+      localStorage.removeItem("selectedItems");
     } catch (error) {
       console.log(error);
     }
   };
+
+  const deleteItem = (param,handler) =>{
+    setModal(true)
+    setDeleteFunc({param,handler})
+  }
   
   
 
@@ -93,7 +112,10 @@ const Subscribers = () => {
               <button
                 to="/admin"
                 className="button"
-                onClick={() => handleDelete(id)}
+                onClick={() => {
+                  const {handler, param} = deleteFunc
+                  handler(param)
+                }}
               >
                 Yes, confirm
               </button>
@@ -127,12 +149,16 @@ const Subscribers = () => {
     outline: "none",
     marginRight: "5px",
   }}
-
 />
 
         {selectedItems.length > 0&&<div className="options">
-            <img src={sendIcon} alt="sendIcon" />
-            <img src={deleteLogo} alt="deleteLogo" onClick={() => handleDeleteSelected(selectedItems)} />
+        <Link
+      to="/admin/subscribers/send-email"
+      onClick={() => localStorage.setItem("selectedItems", JSON.stringify(selectedItems))}
+    >
+      <img src={sendIcon} alt="sendIcon" />
+    </Link>
+            <img src={deleteLogo} alt="deleteLogo" className="delete" onClick={()=>deleteItem(selectedItems,handleDeleteSelected)} />
         </div>}
      </div>
       <div className="dashboard">
@@ -168,12 +194,17 @@ const Subscribers = () => {
 
                     </td>
                     <td>
-                      <img
-                        src={deleteLogo}
-                        alt="deleteLogo"
-                        className="delete"
-                        onClick={()=>handleDelete(id)}
-                      />
+                      <button
+                        onClick={()=>deleteItem(id,handleDelete)}
+                        disabled={!selectedItems.includes(id)}
+                        className={selectedItems.includes(id) ? '' : 'disabled'}
+                      >
+                        <img
+                          src={deleteLogo}
+                          alt="deleteLogo"
+                          className="delete"
+                        />
+                      </button>
                     </td>
                   </tr>
                 );

@@ -29,6 +29,7 @@ import CreatePost from "./pages/admin/CreatePost";
 import AllPosts from "./pages/admin/AllPosts";
 import EditPost from "./pages/admin/EditPost";
 import Subscribers from "./pages/admin/Subscribers";
+import SendMail from "./pages/admin/SendMail";
 
 const cacheProvider = {
   get: (language, key) =>
@@ -121,7 +122,7 @@ const App = () => {
               element={<EditPost />}
             />
             <Route path="/admin/subscribers" element={<Subscribers />} />
-            {/* <ProtectedRoute path="/admin" element={<Dashboard />} /> */}
+            <Route path="/admin/subscribers/send-email" element={<SendMail />} />
 
             <Route path="*" element={<Error />} />
           </Routes>
