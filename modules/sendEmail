@@ -1,0 +1,32 @@
+const nodemailer = require('nodemailer');
+
+// Create a Nodemailer transporter
+const transporter = nodemailer.createTransport({
+  service: 'gmail', // e.g., 'Gmail'
+  auth: {
+    user: 'your_email@example.com',
+    pass: 'your_email_password',
+  },
+});
+
+const sendMail = async (req, res) => {
+  try {
+    const { subject, body, selectedEmails } = req.body;
+
+    // Send mail with defined transport object
+    const info = await transporter.sendMail({
+      from: 'your_email@example.com',
+      to: selectedEmails,
+      subject: subject,
+      html: body,
+    });
+
+    console.log('Email sent:', info.response);
+    res.status(200).json({ message: 'Email sent successfully' });
+  } catch (error) {
+    console.error('Error sending email:', error);
+    res.status(500).json({ error: 'An error occurred while sending the email' });
+  }
+}
+
+module.exports = sendMail
