@@ -13,16 +13,16 @@ import Dashboard from "../../components/admin/Dashboard";
 
 const SendMail = () => {
 
-  
+
 
   const [isModal, setModal] = useState(false);
   const [selectedItems, setSelectedItems] = useState([])
   const [subscribers, setSubscribers] = useState(JSON.parse(localStorage.getItem('subscribers')))
-  
+
 
   const selectedList = localStorage.getItem('selectedItems')
 
-  const selected = subscribers?.filter((item)=>selectedList.includes(item.id)).map((item)=>item.email)
+  const selected = subscribers?.filter((item) => selectedList.includes(item.id)).map((item) => item.email)
 
   const [formData, setFormData] = useState({
     subject: "",
@@ -32,33 +32,58 @@ const SendMail = () => {
   // const location = useLocation();
   // const { selectedItems } = location.state;
 
-useEffect(()=>{
-  setSelectedItems(selected.join(", "));
-  console.log(formData);
-},[])
+  useEffect(() => {
+    setSelectedItems(selected.join(", "));
+    console.log(formData);
+  }, [])
 
-const handleInputChange = (event) => {
-  const { name, value } = event.target;
-  setFormData({
-    ...formData,
-    [name]: value,
-  });
-};
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
-const handleBodyChange = (value) => {
-  setFormData({
-    ...formData,
-    body: value,
-  });
-};
+  const handleBodyChange = (value) => {
+    setFormData({
+      ...formData,
+      body: value,
+    });
+  };
 
-const handleSubmit = (event) => {
-  event.preventDefault();
-  // Handle form submission using formData
-};
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const emailData = {
+      subject: formData.subject,
+      body: formData.body,
+      selectedEmails: selectedItems.split(",").map(email => email.trim()) // Convert comma-separated emails to an array
+    };
+
+    try {
+      const response = await fetch('http://localhost:8080/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(emailData)
+      });
+
+      if (response.ok) {
+        // Email sent successfully
+        setModal(true);
+      } else {
+        // Handle error
+      }
+    } catch (error) {
+      // Handle error
+    }
+  };
+
 
   // console.log(selectedItems);
- 
+
 
   return (
     <Dashboard>
@@ -72,14 +97,14 @@ const handleSubmit = (event) => {
               <div className="icon">
                 <AiOutlineCheckCircle />
               </div>
-              <p>Post created successfully!</p>
-              <Link to="/admin" className="button">
+              <p>Mail sent successfully!</p>
+              <Link to="/admin/subscribers" className="button">
                 Dashboard
               </Link>
             </div>
           </div>
         )}
-       <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <div className="header form-item">
             <label htmlFor="subject">Subject</label>
             <input
@@ -91,7 +116,7 @@ const handleSubmit = (event) => {
               onChange={handleInputChange}
             />
           </div>
-          
+
           <div className="form-item">
             <label htmlFor="selectedEmails">Selected Email</label>
             <input
@@ -102,7 +127,7 @@ const handleSubmit = (event) => {
               onChange={handleInputChange}
             />
           </div>
-          
+
           <div className="form-item">
             <label htmlFor="body">Body Of Message</label>
             <ReactQuill

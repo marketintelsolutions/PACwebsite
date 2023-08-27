@@ -34,7 +34,7 @@ import SendMail from "./pages/admin/SendMail";
 const cacheProvider = {
   get: (language, key) =>
     ((JSON.parse(localStorage.getItem("translations")) || {})[key] || {})[
-      language
+    language
     ],
   set: (language, key, value) => {
     const existing = JSON.parse(localStorage.getItem("translations")) || {
@@ -112,7 +112,7 @@ const App = () => {
               element={<Login setIsAuth={setIsAuth} />}
             />
 
-            <Route path="/admin" element={<AllPosts />} />
+            <Route path="/admin/stay-updated" element={<AllPosts />} />
             <Route
               path="/admin/stay-updated/create-post"
               element={<CreatePost />}

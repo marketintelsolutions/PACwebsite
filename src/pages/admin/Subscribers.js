@@ -128,36 +128,33 @@ const Subscribers = () => {
       )}
      <div className="top-btns">
      <input
-  type="checkbox"
-  name="selectall"
-  id="setSubscribers"
-  checked={selectedItems.length === subscribers.length}
-  onChange={handleSelectAll}
-  style={{
-    appearance: "none",
-    width: "16px",
-    height: "16px",
-    backgroundColor: "white",
-    borderRadius: '4px',
-    border: '1px solid #0089FF',
-    backgroundImage: selectedItems.length > 0
-      ? `url(${minus})`
-      : "none", // Use the minus icon when checked, else none
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    cursor: "pointer",
-    outline: "none",
-    marginRight: "5px",
-  }}
-/>
+        type="checkbox"
+        name="selectall"
+        id="setSubscribers"
+        checked={selectedItems.length === subscribers.length}
+        onChange={handleSelectAll}
+        style={{
+          appearance: "none",
+          width: "16px",
+          height: "16px",
+          backgroundColor: "white",
+          borderRadius: '4px',
+          border: '1px solid #0089FF',
+          backgroundImage: selectedItems.length > 0 ? `url(${minus})`: "none", // Use the minus icon when checked, else none
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          cursor: "pointer",outline: "none",
+          marginRight: "5px",
+          }}
+      />
 
         {selectedItems.length > 0&&<div className="options">
         <Link
-      to="/admin/subscribers/send-email"
-      onClick={() => localStorage.setItem("selectedItems", JSON.stringify(selectedItems))}
-    >
-      <img src={sendIcon} alt="sendIcon" />
-    </Link>
+          to="/admin/subscribers/send-email"
+          onClick={() => localStorage.setItem("selectedItems", JSON.stringify(selectedItems))}
+        >
+        <img src={sendIcon} alt="sendIcon" />
+        </Link>
             <img src={deleteLogo} alt="deleteLogo" className="delete" onClick={()=>deleteItem(selectedItems,handleDeleteSelected)} />
         </div>}
      </div>
@@ -186,12 +183,11 @@ const Subscribers = () => {
                     <td className="date">{moment(currentDate).format('YYYY MM DD')}</td>
                     <td>
                     <input
-  type="checkbox"
-  name={`select${index}`}
-  checked={selectedItems.includes(id)}
-  onChange={() => handleToggleSelect(id)}
-/>
-
+                      type="checkbox"
+                      name={`select${index}`}
+                      checked={selectedItems.includes(id)}
+                      onChange={() => handleToggleSelect(id)}
+                    />
                     </td>
                     <td>
                       <button
@@ -204,6 +200,7 @@ const Subscribers = () => {
                           alt="deleteLogo"
                           className="delete"
                         />
+                        
                       </button>
                     </td>
                   </tr>
