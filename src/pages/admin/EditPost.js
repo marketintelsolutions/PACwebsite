@@ -61,7 +61,7 @@ const CreatePostStayUpdated = () => {
 
   const handleDiscard = () => {
     // Handle discard logic
-    navigate("/admin");
+    navigate("/admin/stay-updated");
   };
 
   if (!isAuthenticated) {
@@ -113,7 +113,7 @@ const CreatePostStayUpdated = () => {
               name="date"
               value={formData.date}
               onChange={(e) => handleChange(e, setImage, setFormData)}
-              // onChange={handleChange}
+            // onChange={handleChange}
             />
           </div>
           <div
@@ -132,7 +132,7 @@ const CreatePostStayUpdated = () => {
               name="image"
               accept="image/*"
               onChange={(e) => handleChange(e, setImage, setFormData)}
-              // onChange={handleChange}
+            // onChange={handleChange}
             />
           </div>
 
@@ -151,7 +151,7 @@ const CreatePostStayUpdated = () => {
               placeholder="Add Short Image Title"
               value={formData.imageTitle}
               onChange={(e) => handleChange(e, setImage, setFormData)}
-              // onChange={handleChange}
+            // onChange={handleChange}
             />
           </div>
           <div className="form-item">
@@ -163,7 +163,7 @@ const CreatePostStayUpdated = () => {
               placeholder="Add Short Title Description"
               value={formData.titleDesc}
               onChange={(e) => handleChange(e, setImage, setFormData)}
-              // onChange={handleChange}
+            // onChange={handleChange}
             />
           </div>
           <div className="form-item">

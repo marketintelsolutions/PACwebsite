@@ -95,7 +95,7 @@ const CreatePostStayUpdated = () => {
 
   const handleDiscard = () => {
     // Handle discard logic
-    navigate("/admin");
+    navigate("/admin/stay-updated");
   };
 
   const handleSaveAndContinue = async (e) => {
@@ -227,7 +227,7 @@ const CreatePostStayUpdated = () => {
             type="submit"
             onClick={(e) => handleSaveAndContinue(e)}
             disabled={progress !== null && progress < 100}
-            // disabled={progress < 100}
+          // disabled={progress < 100}
           >
             Save and Continue
           </button>

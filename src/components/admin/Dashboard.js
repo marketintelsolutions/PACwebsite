@@ -3,7 +3,12 @@ import { Link, useLocation } from "react-router-dom";
 
 const Dashboard = ({ children }) => {
   const location = useLocation(); // Get the current location
-  const paths = location.pathname.split('/')
+  let paths = location.pathname.split('/')
+
+  if (paths === null) {
+    console.log('hello');
+  }
+  console.log(paths);
 
   return (
     <div className="admin-dashboard">

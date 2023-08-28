@@ -12,15 +12,13 @@ import ReactQuill from "react-quill";
 import Dashboard from "../../components/admin/Dashboard";
 
 const SendMail = () => {
-
-
-
   const [isModal, setModal] = useState(false);
   const [selectedItems, setSelectedItems] = useState([])
   const [subscribers, setSubscribers] = useState(JSON.parse(localStorage.getItem('subscribers')))
 
 
-  const selectedList = localStorage.getItem('selectedItems')
+  const navigate = useNavigate()
+  const selectedList = localStorage.getItem('selectedItems') || []
 
   const selected = subscribers?.filter((item) => selectedList.includes(item.id)).map((item) => item.email)
 
@@ -73,15 +71,21 @@ const SendMail = () => {
       if (response.ok) {
         // Email sent successfully
         setModal(true);
+        localStorage.removeItem('selectedItems')
       } else {
         // Handle error
+        alert(response.status)
       }
     } catch (error) {
       // Handle error
+      console.log(error);
     }
   };
 
-
+  const handleDiscard = () => {
+    // Handle discard logic
+    navigate("/admin/subscribers");
+  };
   // console.log(selectedItems);
 
 
@@ -137,7 +141,7 @@ const SendMail = () => {
             />
           </div>
           <div className="buttons">
-            <button className="discard" type="button">
+            <button className="discard" type="button" onClick={handleDiscard}>
               Discard
             </button>
             <button className={"submit"} type="submit">
