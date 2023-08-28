@@ -2,6 +2,10 @@
   padding: 108px 40px;
   overflow: hidden;
 
+  @media (max-width: $breakpoint-tablet) {
+  padding: 108px 0px;
+  }
+
   .section-center {
     display: flex;
     align-items: center;
@@ -36,6 +40,8 @@
       display: flex;
       gap: 30px;
       flex-direction: column;
+      // border: 2px solid red;
+      // width: 100%;
 
       & h2 {
         font-family: "Open Sans";

@@ -15,6 +15,7 @@
   }
 
   & .spirit {
+    // border: 2px solid blue;
     padding-top: 108px;
     display: flex;
     align-items: center;
@@ -54,7 +55,6 @@
         & .middle {
           width: 242.796px;
           height: 263.192px;
-          // border: 2px solid blue;
           transform: translate(-4px, -4px);
 
           & .inner {
@@ -111,7 +111,12 @@
       // border: 2px solid red;
 
       @media (max-width: $breakpoint-tablet) {
-        width: 228px;
+        // width: 228px;  
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      transform: translate(0px);
+
       }
 
       & .item {
@@ -133,6 +138,7 @@
         @media (max-width: $breakpoint-tablet) {
           // flex-direction: column;
           width: 228px;
+          // width: 300px;
         }
 
         &:hover {
@@ -231,6 +237,12 @@
       display: flex;
       gap: 30px;
       flex-direction: column;
+      // border: 2px solid green;
+
+      @media (max-width: $breakpoint-tablet) {
+       margin: 0 auto;
+      }
+
       & p {
         font-family: "Open Sans";
         font-style: normal;

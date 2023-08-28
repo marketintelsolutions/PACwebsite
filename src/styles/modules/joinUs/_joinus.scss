@@ -1,6 +1,8 @@
 .alumni {
   // border: 2px solid red;
   // margin-bottom: 100px;
+  overflow: hidden;
+  width: 100vw;
 
   & .section-two {
     display: flex;
@@ -12,6 +14,12 @@
     position: relative;
     z-index: 3;
 
+    @media (max-width: $breakpoint-tablet) {
+      // align-items: flex;
+      flex-direction: column-reverse;
+      gap: 60px;
+    }
+
     & .left {
       display: flex;
       flex-direction: column;
@@ -20,6 +28,11 @@
       width: 50%;
       // border: 2px solid red;
 
+    @media (max-width: $breakpoint-tablet) {
+      width: 100%;
+      margin: 0 auto;
+    }
+
       & h3 {
         color: #25333f;
         font-family: Open Sans;
@@ -27,6 +40,14 @@
         font-style: normal;
         font-weight: 400;
         line-height: 15px; /* 100% */
+
+        @media (max-width: $breakpoint-tablet) {
+              color: #474747;
+              font-size: 27px;
+              font-weight: 600;
+              line-height: 107%; /* 28.89px */
+              text-transform: capitalize;
+        }
       }
 
       & p {
@@ -37,6 +58,16 @@
         font-weight: 300;
         line-height: 40px; /* 129.032% */
         // width: 80%;
+
+        @media (max-width: $breakpoint-tablet) {
+          color: #474747;
+          text-align: justify;
+          font-family: Open Sans;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
       }
 
       & button {
@@ -70,6 +101,12 @@
     position: relative;
     z-index: 0;
 
+    @media (max-width: $breakpoint-tablet) {
+      padding: 0;
+      width: 80%;
+      margin: 0 auto;
+    }
+
     & .form-container {
       max-width: 1104px;
       // border: 2px solid blue;
@@ -77,6 +114,10 @@
       display: flex;
       flex-direction: column;
       gap: 40px;
+
+    @media (max-width: $breakpoint-tablet) {
+      gap:20px;
+    }
 
       & h2 {
         color: #474747;
@@ -87,14 +128,26 @@
         font-weight: 600;
         line-height: 107%; /* 53.5px */
         text-align: center;
+
+        @media (max-width: $breakpoint-tablet) {
+          font-family: Open Sans;
+          font-size: 27px;
+          line-height: 107%; /* 28.89px */
+          text-transform: capitalize;
+          text-align: left;
+        }
       }
 
       & span {
-        width: 1px;
-        height: 85px;
-        transform: rotate(90deg);
+        height: 1px;
+        width: 85px;
+        // transform: rotate(90deg);
         background: #474747;
         margin: 0 auto;
+
+        @media (max-width: $breakpoint-tablet) {
+          display: none;
+        }
       }
 
       & p {
@@ -104,18 +157,29 @@
         font-style: normal;
         font-weight: 400;
         line-height: 107%; /* 21.4px */
+
+        @media (max-width: $breakpoint-tablet) {
+          max-width: 343px;
+          text-align: justify;
+        }
       }
 
       & form {
         display: flex;
         flex-direction: column;
         gap: 20px;
+
         & .details {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           gap: 22px;
           row-gap: 20px;
+
+          @media (max-width: $breakpoint-tablet) {
+           grid-template-columns: 1fr;
+          }
         }
+
         & input,
         textarea {
           padding: 15px;
@@ -175,6 +239,10 @@
         width: 80%;
         max-width: 1399px;
 
+        @media (max-width: $breakpoint-tablet) {
+          flex-direction: column-reverse;
+         }
+
         & .left {
           width: 50%;
           max-width: 619px;
@@ -182,6 +250,11 @@
           flex-direction: column;
           gap: 15px;
           justify-content: center;
+          
+          @media (max-width: $breakpoint-tablet) {
+            width: 100%;
+           }
+
           & h2 {
             color: #474747;
             font-family: Open Sans;
@@ -208,6 +281,10 @@
           // border: 2px solid blue;
           width: 732px;
 
+          @media (max-width: $breakpoint-tablet) {
+            width: 100%;
+           }
+
           & img {
             width: 100%;
             height: 100%;
@@ -216,6 +293,12 @@
             object-fit: cover;
           }
         }
+      }
+
+      & .left-item{
+        @media (max-width: $breakpoint-tablet) {
+          flex-direction: column;
+         }
       }
     }
   }

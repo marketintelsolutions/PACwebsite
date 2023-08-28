@@ -100,8 +100,8 @@ const Alumni = ({ setNavlogo }) => {
   return (
     <div className="alumni">
       <SectionOne
-        color="#38B6FF"
-        text="Welcome to the PAC Alumni Network"
+        color="#062643"
+        text="PAC Alumni Network"
         img={alumni}
       />
       <div className="animation animate-left">
@@ -201,7 +201,7 @@ const Alumni = ({ setNavlogo }) => {
 
             if (index % 2 !== 0) {
               return (
-                <div className="item" key={index}>
+                <div className="item left-item" key={index}>
                   <div className="right">
                     <img src={image} alt={heading} />
                   </div>

@@ -2,19 +2,21 @@
   margin-top: 108px;
   width: 100%;
   margin: 35px auto;
-  // border: 2px solid red;
+  /* border: 2px solid red; */
 
-  & .center {
+  .center {
     display: flex;
     justify-content: space-between;
     max-width: 1410px;
     margin: 0 auto;
 
-    & .left {
+    .left {
       display: flex;
       gap: 31px;
       align-items: center;
-      & p {
+
+      p,
+      span {
         color: #333;
         font-family: Open Sans;
         font-size: 20px;
@@ -23,13 +25,7 @@
         line-height: 107%; /* 21.4px */
       }
 
-      & span {
-        color: #333;
-        font-family: Open Sans;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 107%; /* 21.4px */
+      span {
         border-radius: 5px;
         background: #f0f1f5;
         box-shadow: 2px 2px 1.5px 0px rgba(189, 189, 189, 0.2) inset,
@@ -39,11 +35,11 @@
       }
     }
 
-    & .right {
+    .right {
       display: flex;
       gap: 53px;
 
-      & button {
+      button {
         display: flex;
         gap: 10px;
         background: transparent;
@@ -53,13 +49,45 @@
       }
     }
   }
+
+  @media (max-width: $breakpoint-tablet) {
+    .center {
+      flex-direction: column;
+      gap: 20px;
+
+      .left {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+
+        span {
+          margin-top: 10px;
+          display: block;
+        }
+      }
+
+      .right {
+        flex-direction: column;
+        gap: 20px;
+
+        button {
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-large) {
+    /* Additional responsive adjustments for larger screens if needed */
+  }
 }
+
 
 .newsletter {
   margin-bottom: 108px;
   & .newsletter-section-two {
     margin: 120px auto 60px;
-    // border: 2px solid red;
+    border: 2px solid red;
 
     & .content {
       width: 85%;
@@ -142,29 +170,25 @@
   margin: 250px auto 75px;
   width: 70%;
   max-width: 1288px;
-  // align-items: center;
-  // border: 2px solid blue;
 
-  & .container {
+  .container {
     display: flex;
     justify-content: space-between;
   }
 
-  & .content {
-    // margin: 0 auto;
+  .content {
     width: 60%;
-    // display: flex;
-    // border: 2px solid red;
+
+    
   }
 
-  & .btn-container {
-    // border: 2px solid red;
+  .btn-container {
     width: 100%;
     display: flex;
     justify-content: center;
   }
 
-  & .back {
+  .back {
     color: #0089ff;
     text-align: center;
     font-family: Inter;
@@ -174,54 +198,32 @@
     line-height: 20px;
     background: transparent;
     margin: 0 auto 70px;
-    // width: fit-content;
-    border: none;
-    // align-self: ;
     text-decoration: none;
   }
 
-  & h1 {
+  h1 {
     color: #333;
     font-family: Open Sans;
     font-size: 35px;
     font-style: normal;
     font-weight: 700;
-    line-height: 40px; /* 114.286% */
+    line-height: 40px;
     max-width: 784px;
-    // margin: 0 auto;
   }
 
-  & .date {
-    color: #bdbdbd;
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 14px; /* 87.5% */
-    margin-top: 5px;
-  }
-
-  & .image {
+  .image {
     margin: 22px 0 33px;
     position: relative;
-    // max-width: 801px;
     height: 452px;
-    // height: fit-content;
 
-    // border: 2px solid blue;
-
-    & img {
-      // object-fit: cover;
+    img {
       object-fit: contain;
       width: 100%;
-      // height: 100%;
       max-width: 801px;
       height: 452px;
-      // height: auto;
-      // border: 2px solid red;
     }
 
-    & span {
+    span {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -232,26 +234,25 @@
       font-size: 11px;
       font-style: normal;
       font-weight: 400;
-      line-height: 16.5px; /* 150% */
+      line-height: 16.5px;
       padding: 9.8px 16px;
       width: 240px;
     }
   }
 
-  & .short-desc {
+  .short-desc {
     border-left: 2px solid #38b6ff;
     background: #fff;
     padding: 0px 35.175px 0px 9.188px;
     margin-bottom: 84px;
 
-    & p {
+    p {
       max-width: 206.466px;
     }
   }
 
-  & .body {
-    // border: 2px solid red;
-    & p {
+  .body {
+    p {
       color: #062644;
       text-align: justify;
       font-family: Open Sans;
@@ -261,14 +262,15 @@
       line-height: normal;
       max-width: 801px;
     }
+
     a {
       color: #38b6ff !important;
       text-decoration: none;
       cursor: pointer;
     }
 
-    & ul {
-      & li {
+    ul {
+      li {
         color: #062644;
         text-align: justify;
         font-family: Open Sans;
@@ -281,8 +283,7 @@
     }
   }
 
-  & .right {
-    // border: 2px solid red;
+  .right {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -290,7 +291,7 @@
     max-width: 258px;
     gap: 28px;
 
-    & h2 {
+    h2 {
       width: 100%;
       position: relative;
 
@@ -306,24 +307,24 @@
       }
     }
 
-    & .items {
+    .items {
       display: flex;
       flex-direction: column;
       gap: 25px;
 
-      & .item {
+      .item {
         display: flex;
         flex-direction: column;
         gap: 6px;
       }
 
-      & .time {
+      .time {
         color: #38b6ff;
         font-family: Open Sans;
         font-size: 11px;
         font-style: italic;
         font-weight: 600;
-        line-height: 13px; /* 118.182% */
+        line-height: 13px;
         position: relative;
 
         &:before {
@@ -339,17 +340,93 @@
         }
       }
 
-      & .text {
+      .text {
         color: #000;
         font-family: Open Sans;
         font-size: 17.6px;
         font-style: normal;
         font-weight: 400;
-        line-height: 22.88px; /* 130% */
+        line-height: 22.88px;
         cursor: pointer;
         text-decoration: none;
-        // text-transform: capitalize;
       }
     }
   }
+
+  @media (max-width: $breakpoint-tablet) {
+    margin: 168px auto 50px;
+    width: 90%;
+
+    .container {
+      flex-direction: column;
+      gap: 20px;
+
+      & .content{
+        // border: 2px solid red;
+        width: 100%;
+
+        & .image{
+          width: 343px;
+          height: 193.553px;
+
+          & img{
+            width: 100%;
+            height: 100%;
+            // obj
+          }
+        }
+
+        & .short-desc{
+
+          & p{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+
+
+    h1 {
+      font-size: 27px;
+      max-width: 100%;
+    }
+
+    .short-desc {
+      padding: 0 15px;
+      margin-bottom: 50px;
+    }
+
+    .body {
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .right {
+      display: none;
+      h2 {
+        &:before {
+          left: -15px;
+        }
+      }
+
+      .items {
+        .time {
+          &:before {
+            left: -15px;
+          }
+        }
+
+        .text {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-large) {
+    /* Additional responsive adjustments for larger screens if needed */
+  }
 }
+

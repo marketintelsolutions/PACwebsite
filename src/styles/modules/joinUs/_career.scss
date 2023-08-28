@@ -1,4 +1,6 @@
 .career {
+  @media (max-width: $breakpoint-tablet) {
+  }
   & .career-section-two {
     // border: 2px solid red;
     margin: 160px 0;
@@ -20,6 +22,10 @@
         // border: 2px solid blue;
         display: flex;
         gap: 62px;
+
+        @media (max-width: $breakpoint-tablet) {
+          flex-direction: column-reverse;
+        }
 
         & .left {
           display: flex;
@@ -106,17 +112,33 @@
           }
         }
 
+        
+
         & .right {
           min-width: 53%;
           //   width: 100%;
           //   max-width: 855px;
           overflow: hidden;
+
+//           @media (max-width: $breakpoint-tablet) {
+//             // flex-direction: column-reverse;
+//             width: 367px;
+// height: 317.208px;
+//           }
           & img {
             height: 100%;
             width: 100%;
             object-fit: cover;
           }
         }
+      }
+
+      & .right-item{
+        @media (max-width: $breakpoint-tablet) {
+          flex-direction: column;
+        }
+          // flex-direction: column-reverse;
+
       }
     }
 
@@ -128,6 +150,11 @@
       justify-content: center;
       flex-direction: column;
       gap: 30px;
+
+          @media (max-width: $breakpoint-tablet) {
+            align-items: flex-start;
+          }
+
 
       & h1 {
         color: #474747;
@@ -146,6 +173,10 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+
+          @media (max-width: $breakpoint-tablet) {
+            text-align: justify;
+          }
       }
 
       & button {

@@ -14,7 +14,7 @@ const CareerBlockReversed = ({
   )}`;
 
   return (
-    <div className="career-item">
+    <div className="career-item right-item">
       <div className="right">
         <img src={image} alt="image" />
       </div>

@@ -20,6 +20,7 @@ const Career = () => {
     updateMailLink();
   }, [subject, message]);
 
+
   const updateMailLink = () => {
     const mailString =
       `?subject=` +
@@ -56,21 +57,21 @@ const Career = () => {
               />
             );
           })}
-        </div>
-        <div className="join">
-          <h1>
-            <Translate>Join Us</Translate>
-          </h1>
-          <p>
-            <Translate>
-              It’s never been easier to find your perfect role that meets your
-              career ambitions. Head over to our career page to explore an
-              opportunity at PAC Holdings.
-            </Translate>
-          </p>
-          <button>
-            <Translate>View All Jobs</Translate>
-          </button>
+          <div className="join">
+            <h1>
+              <Translate>Join Us</Translate>
+            </h1>
+            <p>
+              <Translate>
+                It’s never been easier to find your perfect role that meets your
+                career ambitions. Head over to our career page to explore an
+                opportunity at PAC Holdings.
+              </Translate>
+            </p>
+            <button>
+              <Translate>View All Jobs</Translate>
+            </button>
+          </div>
         </div>
       </div>
     </section>
