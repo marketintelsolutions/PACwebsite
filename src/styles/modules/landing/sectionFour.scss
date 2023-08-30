@@ -412,6 +412,13 @@
   // border: 2px solid red;
   margin: 0 auto;
 
+  @media (max-width: $breakpoint-large) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: 1fr;
+  }
+
   & .item {
     background-repeat: no-repeat;
     background-size: cover;
@@ -429,6 +436,7 @@
     @media (max-width: $breakpoint-tablet) {
       width: 337.14px;
       min-height: 346px;
+      // grid-template-columns: 1fr;
     }
 
     & .text {

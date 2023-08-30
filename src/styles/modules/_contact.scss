@@ -362,10 +362,8 @@
       gap: 24px;
 
       @media (max-width: $breakpoint-tablet) {
-        // font-size: 27px;
-        // border: 2px solid red;
         width: 80%;
-     }
+ }
 
       & input,
       textarea {
@@ -374,7 +372,7 @@
         background: #f3f3f3;
         padding: 15px;
 
-        &::placeholder {
+        &::placeholder { 
           color: #000;
           text-align: justify;
           font-family: Kozuka Gothic Pro;

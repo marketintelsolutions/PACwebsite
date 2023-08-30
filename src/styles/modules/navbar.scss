@@ -16,7 +16,6 @@
     color: white;
     background: #062644;
     border-radius: 194px;
-
     transition: var(--transition);
     margin: 0 auto;
     max-width: 1600px;
@@ -86,7 +85,6 @@
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 194px;
-
     display: flex;
     justify-content: space-between;
     width: 86%;
@@ -97,6 +95,7 @@
     height: 120px;
     position: relative;
     transition: var(--transition);
+    gap: 30px;
 
     @media (max-width: $breakpoint-tablet) {
       padding: 39px;
@@ -120,6 +119,8 @@
       display: flex;
       gap: 40px;
       transition: var(--transition-fast);
+      // border: 2px solid blue;
+      // max-width: 70%;
 
       @media (max-width: $breakpoint-large) {
         position: absolute;
@@ -139,12 +140,14 @@
 
       & .item {
         display: flex;
-        gap: 10px;
+        // gap: 10px;
         text-decoration: none;
         cursor: pointer;
         // position: relative;
         flex-direction: column;
         width: fit-content;
+        // border: 2px solid red;
+        padding-bottom: 10px;
 
         @media (max-width: $breakpoint-large) {
           display: none;
@@ -167,21 +170,25 @@
         }
 
         & .drop-item {
-          &:hover {
+        
+        &:hover {
             color: white;
             // cursor: pointer;
           }
         }
 
         & span {
+          transform: translateX(5px);
           cursor: pointer;
         }
       }
 
       & .border {
+        // border: 2px solid blue;
         // border-bottom: 2px solid var(--primary-blue);
-        border-width: 0;
+        // border-width: 0;
         position: relative;
+        min-width: max-content;
 
         &:after {
           content: "";
@@ -282,6 +289,7 @@
     transition: var(--transition);
     cursor: pointer;
     text-decoration: none;
+    border-radius: 6px;
 
     &:hover {
       background: #062644;

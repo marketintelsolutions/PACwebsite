@@ -1,4 +1,7 @@
 .csr {
+  overflow-x: hidden;
+  position: relative;
+  
   & .csr-section-one {
     height: 100vh;
     max-height: 880px;

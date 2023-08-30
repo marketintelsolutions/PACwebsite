@@ -52,13 +52,18 @@
 
   @media (max-width: $breakpoint-tablet) {
     .center {
+      // border: 2px solid red;
       flex-direction: column;
       gap: 20px;
+      align-items: flex-start;
+      width: fit-content;
 
       .left {
         flex-direction: column;
         gap: 10px;
         text-align: center;
+      // border: 2px solid blue;
+      align-items: flex-start;
 
         span {
           margin-top: 10px;
@@ -67,7 +72,9 @@
       }
 
       .right {
-        flex-direction: column;
+        // flex-direction: column;
+        justify-content: space-between;
+        width:100%;
         gap: 20px;
 
         button {
@@ -87,7 +94,7 @@
   margin-bottom: 108px;
   & .newsletter-section-two {
     margin: 120px auto 60px;
-    border: 2px solid red;
+    // border: 2px solid red;
 
     & .content {
       width: 85%;
@@ -163,6 +170,12 @@
       }
     }
   }
+}
+
+.stay-updated{
+  // border: 2px solid red;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .stay-updated-item {
