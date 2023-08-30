@@ -9,11 +9,21 @@
     position: relative;
     z-index: 3;
 
+    @media (max-width: $breakpoint-tablet) {
+    padding-bottom: 65px;
+    max-height: 565px;
+  }
+
     & .center {
       margin: 0 auto;
       display: flex;
       flex-direction: column;
       gap: 23px;
+
+    @media (max-width: $breakpoint-tablet) {
+      max-width: 317px;
+    }
+
 
       & h3 {
         color: #fff;
@@ -23,6 +33,8 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+
+    
       }
 
       & h1 {
@@ -36,6 +48,12 @@
         border-radius: 148px;
         background: #fff;
         text-align: center;
+
+        @media (max-width: $breakpoint-tablet) {
+          font-size: 24px;
+        padding: 25px 45px;
+        margin: 0 auto;
+      }
       }
 
       & p {
@@ -71,6 +89,10 @@
 
       display: flex;
       gap: 73px;
+
+    @media (max-width: $breakpoint-tablet) {
+      flex-direction: column;
+    }
 
       & .left {
         position: relative;
@@ -111,12 +133,21 @@
           font-weight: 600;
           line-height: 107%; /* 53.5px */
           max-width: 724px;
+
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 27px;
+    }
         }
 
         & span {
           background: #474747;
           width: 85px;
           height: 1px;
+
+          @media (max-width: $breakpoint-tablet) {
+            // font-size: 27px;
+            display: none;
+          }
         }
 
         & p {
@@ -131,28 +162,12 @@
         }
 
         & button {
-          // padding: 15px 34px;
-          // background: transparent;
-          // width: fit-content;
-          // color: #fff;
-          // font-family: Open Sans;
-          // font-size: 18px;
-          // font-style: normal;
-          // font-weight: 400;
-          // line-height: normal;
-          // border-radius: 51px;
-          // background: #0053fa;
-          // position: relative;
-
           width: 186px;
-          // width: fit-content;
           padding: 0;
           height: 69px;
-          // overflow: hidden;
           display: flex;
           border-radius: 25px;
           background: var(--primary-blue);
-          // background: rgba(6, 38, 68, 0.9);
           color: white;
           justify-content: center;
           align-items: center;
@@ -217,6 +232,11 @@
         justify-content: center;
         align-items: center;
 
+        @media (max-width: $breakpoint-tablet) {
+          // border-right: none;;
+          background: #fff;
+        }
+
         &:hover {
           background: #e62d39;
 
@@ -237,6 +257,11 @@
 
       & .border {
         border-right: 0.6px solid rgba(0, 0, 0, 0.55);
+
+        @media (max-width: $breakpoint-tablet) {
+        border-bottom: 0.6px solid rgba(0, 0, 0, 0.55);
+          border-right: none;
+        }
       }
     }
   }
@@ -264,6 +289,12 @@
         font-weight: 600;
         line-height: 107%; /* 53.5px */
         text-align: center;
+
+        @media (max-width: $breakpoint-tablet) {
+          font-size: 27px;
+          width: 294px;
+          margin: 0 auto;
+          }
       }
 
       & .line {
@@ -287,10 +318,13 @@
         // flex-wrap: wrap;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-
         gap: 40px;
         row-gap: 29px;
         justify-content: center;
+
+        @media (max-width: $breakpoint-tablet) {
+        grid-template-columns: 1fr;
+      }
 
         & .goal {
           border-radius: 7.828px;
@@ -302,6 +336,10 @@
           justify-content: center;
           transition: var(--transition);
 
+          @media (max-width: $breakpoint-tablet) {
+            width: 100%;
+          }
+
           & .goal-center {
             padding: 39px;
             border-radius: 7.828px;
@@ -310,6 +348,11 @@
             align-items: center;
             justify-content: center;
             width: 256px;
+
+            @media (max-width: $breakpoint-tablet) {
+              width: 80%;
+              height: 75%;
+            }
 
             & img {
               height: 178px;
