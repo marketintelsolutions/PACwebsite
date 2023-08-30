@@ -4,7 +4,7 @@ import alumni from "../../assets/images/pacAlumni.png";
 import mapalumni from "../../assets/images/mapalumni.png";
 import alumniBg from "../../assets/images/alumniBg.png";
 import paclogo from "../../assets/images/paclogo.svg";
-import alumniLogo from "../../assets/logos/alumniLogo.svg";
+import alumniLogo from "../../assets/logos/alumniLogo.png";
 import { alumniData } from "../../utils/joinusData";
 import { gettingStarted } from "../../utils/helpers/sendMailHelpers";
 import { useNavigate } from "react-router-dom";
