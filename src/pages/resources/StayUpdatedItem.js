@@ -15,23 +15,26 @@ const StayUpdatedItem = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState({});
   const [blogs, setBlogs] = useState([]);
+  const [featuredBlogs, setFeaturedBlogs] = useState([])
   const [loading, setLoading] = useState(false);
 
-  // useEffect(() => {
-  //   window.scroll(0, 0);
+  useEffect(() => {
+    window.scroll(0, 0);
 
-  //   setLoading(true);
+    setLoading(true);
 
-  //   id && getBlogDetails(id, setBlog, setLoading);
+    id && getBlogDetails(id, setBlog, setLoading);
 
-  //   const blogList = JSON.parse(localStorage.getItem("posts"));
-  //   console.log(blogList);
-  //   setBlogs(arrangeAndAddTimeAgo(blogList));
+    const blogList = JSON.parse(localStorage.getItem("posts"));
+    console.log(blogList);
+    setBlogs(arrangeAndAddTimeAgo(blogList));
+  }, [id]);
 
-  //   console.log(arrangeAndAddTimeAgo(blogList));
-  // }, [id]);
-
-  // useEffect(() => {}, []);
+  useEffect(() => {
+    const featured = blogs.filter((item) => item.top === true)
+    // console.log(featured);
+    setFeaturedBlogs(featured)
+  }, [blogs]);
 
   // console.log(blog, "blog");
 
@@ -100,55 +103,60 @@ const StayUpdatedItem = () => {
               <div className="line"></div>
             </div>
             <div className="news">
+              {
+                featuredBlogs.map((blog) => {
+
+                })
+              }
               <div className="featured">
                 <img src={featuredBig} alt="featuredBig" />
                 <h3>PAC Capital Commits to a 3-year Sponsorship Agreement with CANEX presents Africa @Portugal Fashion Week</h3>
                 <p>February 19, 2022</p>
               </div>
-              <div className="others">
-                <div className="news-row">
-                  <div className="news-item">
-                    <img src={featuredSmall} alt="featuredSmall" />
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                  </div>
-                  <div className="news-item">
-                    <img src={featuredSmall} alt="featuredSmall" />
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                  </div>
-                  <div className="news-item">
-                    <img src={featuredSmall} alt="featuredSmall" />
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                  </div>
+              {/* <div className="others"> */}
+              <div className="news-row">
+                <div className="news-item">
+                  <img src={featuredSmall} alt="featuredSmall" />
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                 </div>
-                <div className="news-row">
-                  <div className="news-item">
-                    <img src={featuredSmall} alt="featuredSmall" />
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                  </div>
-                  <div className="news-item">
-                    <img src={featuredSmall} alt="featuredSmall" />
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                  </div>
-                  <div className="news-item">
-                    <img src={featuredSmall} alt="featuredSmall" />
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                  </div>
+                <div className="news-item">
+                  <img src={featuredSmall} alt="featuredSmall" />
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                 </div>
-                <div className="news-row">
-                  <div className="news-item">
-                    <img src={featuredSmall} alt="featuredSmall" />
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                  </div>
-                  <div className="news-item">
-                    <img src={featuredSmall} alt="featuredSmall" />
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                  </div>
-                  <div className="news-item">
-                    <img src={featuredSmall} alt="featuredSmall" />
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                  </div>
+                <div className="news-item">
+                  <img src={featuredSmall} alt="featuredSmall" />
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                 </div>
               </div>
+              <div className="news-row">
+                <div className="news-item">
+                  <img src={featuredSmall} alt="featuredSmall" />
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+                <div className="news-item">
+                  <img src={featuredSmall} alt="featuredSmall" />
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+                <div className="news-item">
+                  <img src={featuredSmall} alt="featuredSmall" />
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+              </div>
+              <div className="news-row">
+                <div className="news-item">
+                  <img src={featuredSmall} alt="featuredSmall" />
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+                <div className="news-item">
+                  <img src={featuredSmall} alt="featuredSmall" />
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+                <div className="news-item">
+                  <img src={featuredSmall} alt="featuredSmall" />
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+              </div>
+              {/* </div> */}
             </div>
           </div>
         </>

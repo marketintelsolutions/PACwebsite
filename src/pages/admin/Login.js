@@ -38,7 +38,7 @@ const ControlledLogin = ({ setIsAuth }) => {
         setIsAuth(true);
 
         setError(null);
-        navigate("/admin");
+        navigate("/admin/stay-updated");
       })
       .catch((error) => {
         const errorCode = error.code;
