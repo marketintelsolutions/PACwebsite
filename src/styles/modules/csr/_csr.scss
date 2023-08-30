@@ -415,18 +415,28 @@
     align-items: center;
     justify-content: center;
 
+    @media (max-width: $breakpoint-tablet) {
+    }
+
     & button {
-      padding: 23px 50px;
+      padding: 32px 50px;
       border-radius: 59px;
       background: #ed1c24;
       color: #fff;
       font-family: Open Sans;
-      font-size: 25px;
+      font-size: 30px;
       font-style: normal;
       font-weight: 800;
       line-height: 107%; /* 32.1px */
       border: none;
       cursor: pointer;
+      width: fit-content;
+
+      @media (max-width: $breakpoint-tablet) {
+      min-width: 300px;
+      
+        // padding: 32px 51px;
+      }
     }
   }
 }
