@@ -6,7 +6,9 @@ import { db } from "../../firebase/firebaseConfig";
 import moment from "moment";
 import { arrangeAndAddTimeAgo } from "../../utils/resources/arrangeNews";
 import CustomLoader from "../../components/resources/CustomLoader";
-import { getBlogDetails } from "../../utils/helpers/admin/fetchPosts";
+import { getBlogDetails } from "../../utils/helpers/admin/fetchPosts"
+import featuredBig from '../../assets/images/featuredBig.png'
+import featuredSmall from '../../assets/images/featuredSmall.png'
 
 const StayUpdatedItem = () => {
   const navigate = useNavigate();
@@ -15,19 +17,19 @@ const StayUpdatedItem = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    window.scroll(0, 0);
+  // useEffect(() => {
+  //   window.scroll(0, 0);
 
-    setLoading(true);
+  //   setLoading(true);
 
-    id && getBlogDetails(id, setBlog, setLoading);
+  //   id && getBlogDetails(id, setBlog, setLoading);
 
-    const blogList = JSON.parse(localStorage.getItem("posts"));
-    console.log(blogList);
-    setBlogs(arrangeAndAddTimeAgo(blogList));
+  //   const blogList = JSON.parse(localStorage.getItem("posts"));
+  //   console.log(blogList);
+  //   setBlogs(arrangeAndAddTimeAgo(blogList));
 
-    console.log(arrangeAndAddTimeAgo(blogList));
-  }, [id]);
+  //   console.log(arrangeAndAddTimeAgo(blogList));
+  // }, [id]);
 
   // useEffect(() => {}, []);
 
@@ -88,6 +90,64 @@ const StayUpdatedItem = () => {
                     </div>
                   );
                 })}
+              </div>
+            </div>
+          </div>
+          <div className="top-news">
+            <div className="top">
+              <div className="box"></div>
+              <h2>Top News</h2>
+              <div className="line"></div>
+            </div>
+            <div className="news">
+              <div className="featured">
+                <img src={featuredBig} alt="featuredBig" />
+                <h3>PAC Capital Commits to a 3-year Sponsorship Agreement with CANEX presents Africa @Portugal Fashion Week</h3>
+                <p>February 19, 2022</p>
+              </div>
+              <div className="others">
+                <div className="news-row">
+                  <div className="news-item">
+                    <img src={featuredSmall} alt="featuredSmall" />
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  </div>
+                  <div className="news-item">
+                    <img src={featuredSmall} alt="featuredSmall" />
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  </div>
+                  <div className="news-item">
+                    <img src={featuredSmall} alt="featuredSmall" />
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  </div>
+                </div>
+                <div className="news-row">
+                  <div className="news-item">
+                    <img src={featuredSmall} alt="featuredSmall" />
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  </div>
+                  <div className="news-item">
+                    <img src={featuredSmall} alt="featuredSmall" />
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  </div>
+                  <div className="news-item">
+                    <img src={featuredSmall} alt="featuredSmall" />
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  </div>
+                </div>
+                <div className="news-row">
+                  <div className="news-item">
+                    <img src={featuredSmall} alt="featuredSmall" />
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  </div>
+                  <div className="news-item">
+                    <img src={featuredSmall} alt="featuredSmall" />
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  </div>
+                  <div className="news-item">
+                    <img src={featuredSmall} alt="featuredSmall" />
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

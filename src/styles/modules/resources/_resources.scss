@@ -438,8 +438,109 @@
     }
   }
 
-  @media (max-width: $breakpoint-large) {
-    /* Additional responsive adjustments for larger screens if needed */
+  & .top-news{
+    // border: 2px solid red;
+    margin-top: 102px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    & .top{
+      display: flex;
+      gap: 9px;
+      align-items: center;
+
+      & .box{
+        width: 15px;
+        height: 15px;
+        background: #F00;
+      }
+
+      & h2{
+        color: #4A4A4A;
+font-family: Open Sans;
+font-size: 20px;
+font-style: normal;
+font-weight: 800;
+line-height: 34px; 
+min-width: max-content;
+      }
+
+      & .line{
+        width: 100%;
+        height: 1px;
+        background: #DDD;
+      }
+    }
+
+    & .news{
+      display: flex;
+      gap: 13px;
+
+      & .featured{
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        & img{
+          height: 100%;
+          width: 100%;
+          max-height: 162px;
+          object-fit: cover;
+        }
+
+        & h3{
+          color: #4A4A4A;
+          font-family: Open Sans;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 27px; /* 135% */
+        }
+
+        & p{
+          color: #C5C5C5;
+          font-family: Roboto;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 14px; /* 116.667% */
+        }
+      }
+      & .others {
+        display: flex;
+
+        & .news-row{
+          display: flex;
+          flex-direction: column;
+          padding: 0 12px;
+          border-left: 1px solid #DDD;
+
+          & .news-item{
+            display: flex;
+            gap: 9px;
+            padding: 8.8px 0 17px;
+
+            & img{
+              width: 70px;
+height: 70px;
+            }
+
+            & p{
+              color: #4F4F4F;
+              font-family: Open Sans;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 20px; /* 125% */
+            }
+          }
+        }
+      }
+    }
   }
+
+
 }
 
