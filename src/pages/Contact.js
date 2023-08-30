@@ -127,7 +127,7 @@ const Contact = () => {
       </div>
       {/* SECTION FOUR */}
       <div className="contact-section-four map-item">
-        <div className="bottom">
+        <div className="bottom map-bottom">
           <div className="right">
             <img src={contactMapTwo} alt="contactMapOne" />
           </div>

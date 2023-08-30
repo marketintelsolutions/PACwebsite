@@ -21,6 +21,11 @@
       justify-content: center;
       align-items: center;
       margin-top: 40px;
+
+      @media (max-width: $breakpoint-tablet) {
+        max-width: 343px;
+      }
+
       & h1 {
         color: #474747;
         text-align: center;
@@ -29,6 +34,10 @@
         font-style: normal;
         font-weight: 600;
         // line-height: 53.5px; /* */
+
+        @media (max-width: $breakpoint-tablet) {
+          font-size: 27px;
+        }
       }
 
       & span {
@@ -51,16 +60,27 @@
     }
 
     & .bottom {
-      //   border: 2px solid red;
+        // border: 2px solid red;
       display: flex;
       max-width: 1200px;
       background: #062644;
       height: 590px;
+      width: 100%;;
+
+      @media (max-width: $breakpoint-tablet) {
+        flex-direction: column;
+        height: fit-content;
+      }
 
       & .left {
         padding: 60px 50px;
         display: flex;
         flex-direction: column;
+
+        @media (max-width: $breakpoint-tablet) {
+          padding: 35px 20px;
+          width: 100%;
+        }
 
         & .item {
           display: flex;
@@ -82,6 +102,11 @@
             flex-direction: column;
             gap: 10px;
 
+            @media (max-width: $breakpoint-tablet) {
+              //  border: 2px solid blue;
+              width: 100%;
+            }
+
             & p {
               color: #fff;
               font-family: Inter;
@@ -89,6 +114,10 @@
               font-style: normal;
               font-weight: 400;
               line-height: 25px; /* 125% */
+
+              @media (max-width: $breakpoint-tablet) {
+                font-size: 18px;
+             }
             }
           }
         }
@@ -111,6 +140,10 @@
               font-style: normal;
               font-weight: 400;
               line-height: 30px; /* 136.364% */
+
+              @media (max-width: $breakpoint-tablet) {
+                font-size: 18px;
+             }
             }
           }
         }
@@ -130,6 +163,10 @@
               text-decoration-line: underline;
               text-transform: lowercase;
               text-decoration: underline;
+
+              @media (max-width: $breakpoint-tablet) {
+                font-size: 18px;
+             }
             }
           }
         }
@@ -159,6 +196,12 @@
         }
       }
     }
+
+    & .map-bottom{
+      @media (max-width: $breakpoint-tablet) {
+        flex-direction: column-reverse;
+     }
+    }
   }
 
   & .contact-section-three {
@@ -172,6 +215,12 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media (max-width: $breakpoint-tablet) {
+      // flex-direction: column;
+      height: fit-content;
+      width: 100%;
+   }
 
     & h1 {
       color: #fff;
@@ -189,6 +238,10 @@
       display: flex;
       gap: 12px;
 
+      @media (max-width: $breakpoint-tablet) {
+        flex-direction: column;
+     }
+
       & .line {
         width: 1px;
         background: #fff;
@@ -204,6 +257,12 @@
           display: flex;
           flex-direction: column;
           gap: 20px;
+
+          @media (max-width: $breakpoint-tablet) {
+            flex-direction: column;
+            gap: 0px;
+         }
+
           & h3 {
             color: #fff;
             font-family: Inter;
@@ -216,6 +275,11 @@
           & .details {
             display: flex;
             gap: 58px;
+
+            @media (max-width: $breakpoint-tablet) {
+              flex-direction: column;
+              gap: 0px;
+           }
 
             & p {
               color: #fff;
@@ -232,6 +296,10 @@
               display: flex;
               flex-direction: column;
               gap: 11px;
+
+              @media (max-width: $breakpoint-tablet) {
+                gap: 0px;
+             }
 
               & p {
                 color: #fff;
@@ -265,6 +333,8 @@
     justify-content: center;
     align-items: center;
 
+    
+
     & h1 {
       color: #474747;
       text-align: center;
@@ -273,6 +343,10 @@
       font-style: normal;
       font-weight: 600;
       line-height: 107%; /* 53.5px */
+
+      @media (max-width: $breakpoint-tablet) {
+        font-size: 27px;
+     }
     }
 
     & span {
@@ -286,6 +360,12 @@
       display: flex;
       flex-direction: column;
       gap: 24px;
+
+      @media (max-width: $breakpoint-tablet) {
+        // font-size: 27px;
+        // border: 2px solid red;
+        width: 80%;
+     }
 
       & input,
       textarea {
