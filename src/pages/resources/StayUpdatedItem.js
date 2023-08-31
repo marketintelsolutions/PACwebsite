@@ -121,7 +121,7 @@ const StayUpdatedItem = () => {
                     const { imgUrl, header, date, id } = blog
 
                     if (index === 0) return
-                    return <div className="news-item">
+                    return <div className={index < 4 ? "news-item" : "news-item small"}>
                       <div className="image"><img src={imgUrl} alt="featuredSmall" /></div>
                       <Link
                         to={`/resources/stay-updated/${id}`}
@@ -134,39 +134,6 @@ const StayUpdatedItem = () => {
                   })
                 }
               </div>
-
-
-              {/* <div className="others"> */}
-
-              {/* <div className="news-row">
-                <div className="news-item">
-                  <img src={featuredSmall} alt="featuredSmall" />
-                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </div>
-                <div className="news-item">
-                  <img src={featuredSmall} alt="featuredSmall" />
-                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </div>
-                <div className="news-item">
-                  <img src={featuredSmall} alt="featuredSmall" />
-                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </div> */}
-              {/* </div>
-              <div className="news-row">
-                <div className="news-item">
-                  <img src={featuredSmall} alt="featuredSmall" />
-                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </div>
-                <div className="news-item">
-                  <img src={featuredSmall} alt="featuredSmall" />
-                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </div>
-                <div className="news-item">
-                  <img src={featuredSmall} alt="featuredSmall" />
-                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </div>
-              </div> */}
-              {/* </div> */}
             </div>
           </div>
         </>
