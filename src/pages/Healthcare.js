@@ -14,7 +14,7 @@ const Healthcare = () => {
 
   return (
     <div>
-      <SectionOne color="#38B6FF" text="Healthcare" img={healthcareBg} />
+      <SectionOne color="#F00" text="Healthcare" img={healthcareBg} />
 
       <div className="bottom portfolio">
         <div className="animation ">

@@ -1,5 +1,4 @@
 .about-section-one {
-  // border: 2px solid blue;
   // height: 100vh;
   position: relative;
   overflow-x: hidden;
@@ -19,6 +18,7 @@
 
     & .main-bg {
       position: relative;
+      // border: 2px solid blue;
       width: 100vw;
 
       & img {
@@ -36,10 +36,8 @@
         position: absolute;
         top: 50%;
         left: 0;
-        // background: #a6a6a7;
         border-radius: 0px 148px 148px 0px;
-        max-width: 970px;
-        width: 50%;
+        min-width: 35%;
         max-height: 182px;
         height: 30%;
         max-width: 970px;
@@ -51,10 +49,11 @@
         justify-content: center;
         // padding-left: 60%;
         padding: 0 90px;
+        // border: 2px solid blue;
 
         @media (max-width: $breakpoint-tablet) {
-          min-width: 327px;
-          width: fit-content;
+          max-width: 327px;
+          min-width: 40%;
           max-height: 168px;
           padding: 0 40px 0 100px;
           // padding-left: 130px;
@@ -73,6 +72,7 @@
             font-weight: 700;
             letter-spacing: -3.8px;
             max-width: 250px;
+            font-size: 35px;
           }
         }
 

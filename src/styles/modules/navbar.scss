@@ -109,8 +109,10 @@
           width: 154px;
         }
         @media (max-width: $breakpoint-tablet) {
-          height: 34px;
+          height: fit-content;
+          max-height: 70px;
           width: 124px;
+          object-fit: contain;
         }
       }
     }
@@ -262,14 +264,18 @@
   // left: 0;
   background: white;
   // background: rgba(255, 255, 255, 0.9);
-
+  // border: 2px solid red;
   padding: 24px;
-
   color: black;
   display: flex;
   flex-direction: column;
   gap: 24px;
   z-index: 5;
+
+  @media (max-width: $breakpoint-tablet) {
+    max-width: 300px;
+  padding: 14px;
+}
 
   & a,
   p {
@@ -290,6 +296,12 @@
     cursor: pointer;
     text-decoration: none;
     border-radius: 6px;
+
+    @media (max-width: $breakpoint-tablet) {
+      max-width: 240px;
+    padding: 8px 20px;
+    font-size: 14.2px;
+  }
 
     &:hover {
       background: #062644;
