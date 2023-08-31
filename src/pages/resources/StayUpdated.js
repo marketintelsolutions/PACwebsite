@@ -15,6 +15,8 @@ import { getPosts } from "../../utils/helpers/admin/fetchPosts";
 const StayUpdated = () => {
   const [postLists, setPostLists] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 9;
 
   const posts = JSON.parse(localStorage.getItem("posts"));
 
@@ -33,6 +35,17 @@ const StayUpdated = () => {
 
   // if (loading) return <h2>Loading...</h2>;
 
+  const totalPosts = postLists.length
+  const totalPages = Math.ceil(totalPosts / postsPerPage);
+  console.log(totalPages, 'tp');
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = postLists.slice(indexOfFirstPost, indexOfLastPost);
+
+  const goToPage = (page) => {
+    setCurrentPage(page);
+  };
+
   return (
     <section className="stay-updated">
       <SectionOne color="#38B6FF" text="Stay Updated" img={vendorbg} />
@@ -45,7 +58,7 @@ const StayUpdated = () => {
             {loading ? (
               <CustomLoader />
             ) : (
-              postLists.map((item, index) => {
+              currentPosts.map((item, index) => {
                 const { id, header, imgUrl, published } = item;
 
                 if (!published) return;
@@ -72,7 +85,13 @@ const StayUpdated = () => {
               })
             )}
           </div>
-          <Pagination />
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            goToPage={goToPage}
+            totalPosts={totalPosts}
+            postsPerPage={postsPerPage}
+          />
         </div>
       </div>
     </section>
