@@ -4,14 +4,15 @@ import arrowRight from "../../assets/logos/arrowRight.svg";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
 import moment from "moment";
-import { arrangeAndAddTimeAgo } from "../../utils/resources/arrangeNews";
+import { arrangeAndAddTimeAgo, limitStringTo50Characters, limitStringTo70Characters } from "../../utils/resources/arrangeNews";
 import CustomLoader from "../../components/resources/CustomLoader";
 import { getBlogDetails } from "../../utils/helpers/admin/fetchPosts"
 import featuredBig from '../../assets/images/featuredBig.png'
 import featuredSmall from '../../assets/images/featuredSmall.png'
 
 const StayUpdatedItem = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
+
   const { id } = useParams();
   const [blog, setBlog] = useState({});
   const [blogs, setBlogs] = useState([]);
@@ -20,20 +21,20 @@ const StayUpdatedItem = () => {
 
   useEffect(() => {
     window.scroll(0, 0);
-
     setLoading(true);
-
-    id && getBlogDetails(id, setBlog, setLoading);
+    id && getBlogDetails(id, setBlog, setLoading, setFeaturedBlogs);
 
     const blogList = JSON.parse(localStorage.getItem("posts"));
-    console.log(blogList);
+    // console.log(blogList);
     setBlogs(arrangeAndAddTimeAgo(blogList));
   }, [id]);
 
   useEffect(() => {
-    const featured = blogs.filter((item) => item.top === true)
-    // console.log(featured);
+    const blogList = JSON.parse(localStorage.getItem("posts"));
+
+    const featured = blogList.filter((item) => item.top === true)
     setFeaturedBlogs(featured)
+    // console.log(featured, 'featured');
   }, [blogs]);
 
   // console.log(blog, "blog");
@@ -103,17 +104,43 @@ const StayUpdatedItem = () => {
               <div className="line"></div>
             </div>
             <div className="news">
-              {
-                featuredBlogs.map((blog) => {
-
-                })
-              }
               <div className="featured">
-                <img src={featuredBig} alt="featuredBig" />
-                <h3>PAC Capital Commits to a 3-year Sponsorship Agreement with CANEX presents Africa @Portugal Fashion Week</h3>
-                <p>February 19, 2022</p>
+                <img src={featuredBlogs[0]?.imgUrl} alt="featuredBig" />
+                <h3>{featuredBlogs[0]?.header}</h3>
+                <p>{featuredBlogs[0]?.date}</p>
               </div>
+              <div className="news-row">
+                {
+                  featuredBlogs.map((blog, index) => {
+                    const { imgUrl, header, date } = blog
+
+                    if (index === 0) return
+                    return <div className="news-item">
+                      <div className="image"><img src={imgUrl} alt="featuredSmall" /></div>
+                      <p>{limitStringTo50Characters(header)}...</p>
+                      {/* <p className="date">February 19, 2022</p> */}
+                    </div>
+                  })
+                }
+              </div>
+
+
               {/* <div className="others"> */}
+
+              {/* <div className="news-row">
+                <div className="news-item">
+                  <img src={featuredSmall} alt="featuredSmall" />
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+                <div className="news-item">
+                  <img src={featuredSmall} alt="featuredSmall" />
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+                <div className="news-item">
+                  <img src={featuredSmall} alt="featuredSmall" />
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div> */}
+              {/* </div>
               <div className="news-row">
                 <div className="news-item">
                   <img src={featuredSmall} alt="featuredSmall" />
@@ -127,35 +154,7 @@ const StayUpdatedItem = () => {
                   <img src={featuredSmall} alt="featuredSmall" />
                   <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                 </div>
-              </div>
-              <div className="news-row">
-                <div className="news-item">
-                  <img src={featuredSmall} alt="featuredSmall" />
-                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </div>
-                <div className="news-item">
-                  <img src={featuredSmall} alt="featuredSmall" />
-                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </div>
-                <div className="news-item">
-                  <img src={featuredSmall} alt="featuredSmall" />
-                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </div>
-              </div>
-              <div className="news-row">
-                <div className="news-item">
-                  <img src={featuredSmall} alt="featuredSmall" />
-                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </div>
-                <div className="news-item">
-                  <img src={featuredSmall} alt="featuredSmall" />
-                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </div>
-                <div className="news-item">
-                  <img src={featuredSmall} alt="featuredSmall" />
-                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </div>
-              </div>
+              </div> */}
               {/* </div> */}
             </div>
           </div>

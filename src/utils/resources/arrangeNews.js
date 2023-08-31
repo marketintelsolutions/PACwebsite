@@ -47,3 +47,21 @@ export function limitStringTo70Characters(inputString) {
     // return inputString.slice(0, 60);
   }
 }
+
+export function limitStringTo50Characters(inputString) {
+  if (inputString.length <= 50) {
+    return inputString;
+  } else {
+    // Find the last space before the 70th character
+    const lastSpaceIndex = inputString.lastIndexOf(" ", 50);
+
+    // If no space is found before the 70th character, cut the string at the 70th character
+    if (lastSpaceIndex === -1) {
+      return inputString.slice(0, 50);
+    } else {
+      return inputString.slice(0, lastSpaceIndex);
+    }
+
+    // return inputString.slice(0, 50);
+  }
+}
