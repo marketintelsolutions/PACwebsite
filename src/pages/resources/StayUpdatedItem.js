@@ -32,6 +32,8 @@ const StayUpdatedItem = () => {
   useEffect(() => {
     const blogList = JSON.parse(localStorage.getItem("posts"));
 
+    blogList.sort((a, b) => new Date(b.date) - new Date(a.date));
+
     const featured = blogList.filter((item) => item.top === true)
     setFeaturedBlogs(featured)
     // console.log(featured, 'featured');
@@ -106,18 +108,27 @@ const StayUpdatedItem = () => {
             <div className="news">
               <div className="featured">
                 <img src={featuredBlogs[0]?.imgUrl} alt="featuredBig" />
-                <h3>{featuredBlogs[0]?.header}</h3>
+                <Link
+                  to={`/resources/stay-updated/${featuredBlogs[0]?.id}`}
+                  className="heading">
+                  {featuredBlogs[0]?.header}
+                </Link>
                 <p>{featuredBlogs[0]?.date}</p>
               </div>
               <div className="news-row">
                 {
                   featuredBlogs.map((blog, index) => {
-                    const { imgUrl, header, date } = blog
+                    const { imgUrl, header, date, id } = blog
 
                     if (index === 0) return
                     return <div className="news-item">
                       <div className="image"><img src={imgUrl} alt="featuredSmall" /></div>
-                      <p>{limitStringTo50Characters(header)}...</p>
+                      <Link
+                        to={`/resources/stay-updated/${id}`}
+                        className="heading"
+                      >
+                        {limitStringTo50Characters(header)}
+                      </Link>
                       {/* <p className="date">February 19, 2022</p> */}
                     </div>
                   })
