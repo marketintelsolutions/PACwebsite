@@ -47,7 +47,7 @@ const CareerBlockReversed = ({
             </div>
           </>
         )}
-        <a href={mailtoLink} id="mail-link">
+        <a href={mailtoLink} id="mail-link" target='_blank'>
           <Translate>SUBMIT RESUME</Translate>
           <span>
             <img src={downloadGrey} alt="downloadGrey" />

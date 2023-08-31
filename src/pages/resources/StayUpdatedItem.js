@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import arrowRight from "../../assets/logos/arrowRight.svg";
-import { doc, getDoc } from "firebase/firestore";
-import { db } from "../../firebase/firebaseConfig";
 import moment from "moment";
-import { arrangeAndAddTimeAgo, limitStringTo50Characters, limitStringTo70Characters } from "../../utils/resources/arrangeNews";
+import { arrangeAndAddTimeAgo, limitStringTo50Characters } from "../../utils/resources/arrangeNews";
 import CustomLoader from "../../components/resources/CustomLoader";
 import { getBlogDetails } from "../../utils/helpers/admin/fetchPosts"
-import featuredBig from '../../assets/images/featuredBig.png'
-import featuredSmall from '../../assets/images/featuredSmall.png'
 
 const StayUpdatedItem = () => {
   // const navigate = useNavigate();
@@ -34,16 +30,12 @@ const StayUpdatedItem = () => {
 
     blogList.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-    const featured = blogList.filter((item) => item.top === true)
+    const featured = blogList.filter((item) => item.top === true).slice(0, 7)
     setFeaturedBlogs(featured)
     // console.log(featured, 'featured');
   }, [blogs]);
 
   // console.log(blog, "blog");
-
-  // const handleGoBack = () => {
-  //   navigate(-1); // Go back one step in the history
-  // };
 
   return (
     <section className="stay-updated-item">
@@ -52,9 +44,6 @@ const StayUpdatedItem = () => {
       ) : (
         <>
           <div className="btn-container">
-            {/* <button onClick={handleGoBack}>
-              Stay Updated <img src={arrowRight} alt="arrowRight" />{" "}
-            </button> */}
             <Link to={"/resources/stay-updated"} className="back">
               Stay Updated <img src={arrowRight} alt="arrowRight" />
             </Link>
@@ -119,16 +108,18 @@ const StayUpdatedItem = () => {
                 {
                   featuredBlogs.map((blog, index) => {
                     const { imgUrl, header, date, id } = blog
-
                     if (index === 0) return
                     return <div className={index < 4 ? "news-item" : "news-item small"}>
                       <div className="image"><img src={imgUrl} alt="featuredSmall" /></div>
-                      <Link
-                        to={`/resources/stay-updated/${id}`}
-                        className="heading"
-                      >
-                        {limitStringTo50Characters(header)}
-                      </Link>
+                      <div className="text">
+                        <Link
+                          to={`/resources/stay-updated/${id}`}
+                          className="heading"
+                        >
+                          {limitStringTo50Characters(header)}
+                        </Link>
+                        <p>{date}</p>
+                      </div>
                       {/* <p className="date">February 19, 2022</p> */}
                     </div>
                   })
