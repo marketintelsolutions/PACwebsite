@@ -15,6 +15,7 @@ import { itemsData } from "../../utils/landingData";
 import { getPosts } from "../../utils/helpers/admin/fetchPosts";
 import { Link } from "react-router-dom";
 import { limitStringTo70Characters } from "../../utils/resources/arrangeNews";
+import CustomLoader from "../resources/CustomLoader";
 
 const SectionFour = () => {
   const [scrollIndex, setScrollIndex] = useState(0);
@@ -25,7 +26,9 @@ const SectionFour = () => {
 
   const posts = JSON.parse(localStorage.getItem("posts"));
   const itemsPerPage = 3;
-  const totalPages = Math.ceil(postLists.length / itemsPerPage);
+  // const totalPages = Math.ceil(postLists.length / itemsPerPage);
+  const totalPages = Math.ceil(postLists.length - 1);
+
 
 
   useEffect(() => {
@@ -131,31 +134,31 @@ const SectionFour = () => {
         <h2>
           <Translate>STAY UPDATED</Translate>
         </h2>
-
         <div className="foundations-container">
-          <div className="foundations">
-            {visibleFoundations.map((item, index) => {
-              const { imgUrl, header, id } = item;
-              return (
-                <div
-                  className="item"
-                  key={index}
-                  style={{ backgroundImage: `url(${imgUrl})` }}
-                >
-                  <div className="text">
-                    <span></span>
-                    <p>
-                      <Translate>{limitStringTo70Characters(header)}...</Translate>
-                    </p>
-                    <Link to={`/resources/stay-updated/${id}`}>
-                      <Translate> Read more</Translate>
-                    </Link>
+          {loading ? <CustomLoader /> :
+            <div className="foundations">
+              {visibleFoundations.map((item, index) => {
+                const { imgUrl, header, id } = item;
+                return (
+                  <div
+                    className="item"
+                    key={index}
+                    style={{ backgroundImage: `url(${imgUrl})` }}
+                  >
+                    <div className="text">
+                      <span></span>
+                      <p>
+                        <Translate>{limitStringTo70Characters(header)}...</Translate>
+                      </p>
+                      <Link to={`/resources/stay-updated/${id}`}>
+                        <Translate> Read more</Translate>
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+                );
+              })}
+            </div>
+          }</div>
         <div className="navigation">
           <span className="arrow" onClick={() => handleScroll("left")}>
             <img src={arrowLeft} alt="arrowLeft" />
