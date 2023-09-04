@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
 import SectionOne from "../../components/about/SectionOne";
 import vendorbg from "../../assets/images/vendorbg.png";
-import { foundations } from "../../utils/data";
 import Pagination from "../../components/resources/Pagination";
 import { Link } from "react-router-dom";
 import LiquidBackground from "../../components/LiquidBackground";
 import { Translate } from "react-auto-translate";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../firebase/firebaseConfig";
 import CustomLoader from "../../components/resources/CustomLoader";
 import { limitStringTo70Characters } from "../../utils/resources/arrangeNews";
 import { getPosts } from "../../utils/helpers/admin/fetchPosts";
