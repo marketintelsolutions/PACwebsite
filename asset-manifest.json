@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d0b0acd2.css",
-    "main.js": "/static/js/main.a31fef2f.js",
+    "main.js": "/static/js/main.30401314.js",
     "static/media/brochure.pdf": "/static/media/brochure.03f11445c8ef3faf8aa1.pdf",
     "static/media/alumniBg.png": "/static/media/alumniBg.a53ca1451e7c5a8f1a26.png",
     "static/media/errorImage.jpg": "/static/media/errorImage.f794f8c278e7dc061491.jpg",
@@ -85,11 +85,9 @@
     "static/media/focus.png": "/static/media/focus.082283ebb6bd24878fe7.png",
     "static/media/protest.svg": "/static/media/protest.d6f1940d5005ca465a4644f0f9328348.svg",
     "static/media/portfolioAnimationLeft.svg": "/static/media/portfolioAnimationLeft.bde6aa9ca9afa07d8b303f44ad7feaae.svg",
-    "static/media/curvedbg.svg": "/static/media/curvedbg.55b16caa9d309a13ffe83dce6d2a3899.svg",
     "static/media/placeholder.png": "/static/media/placeholder.a6143582309785dca610.png",
     "static/media/mobile.png": "/static/media/mobile.3e8a9336ebe5355fb6c9.png",
     "static/media/csrLogo.svg": "/static/media/csrLogo.e931dce201b8351ca9ffa95acde640e2.svg",
-    "static/media/spirit.svg": "/static/media/spirit.7fbb3343af3a03f12b583a3da0ed6e82.svg",
     "static/media/handshakeGrey.svg": "/static/media/handshakeGrey.f7d0a45cdb2c0c43f278fbe82eb5e4b5.svg",
     "static/media/handshakeNew.svg": "/static/media/handshakeNew.97141ba5dacc6f101e25e69003c8d385.svg",
     "static/media/estateWhite.svg": "/static/media/estateWhite.7a9236f0acffc5dbc3bd87130a0af07c.svg",
@@ -179,10 +177,10 @@
     "static/media/minus.svg": "/static/media/minus.8672ab2a8712f5aecb7401423a6a6418.svg",
     "static/media/arrowLeft.svg": "/static/media/arrowLeft.8285f4806e7bf425e0b4fee5d17f97ba.svg",
     "main.d0b0acd2.css.map": "/static/css/main.d0b0acd2.css.map",
-    "main.a31fef2f.js.map": "/static/js/main.a31fef2f.js.map"
+    "main.30401314.js.map": "/static/js/main.30401314.js.map"
   },
   "entrypoints": [
     "static/css/main.d0b0acd2.css",
-    "static/js/main.a31fef2f.js"
+    "static/js/main.30401314.js"
   ]
 }
