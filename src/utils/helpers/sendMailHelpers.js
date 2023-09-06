@@ -11,7 +11,7 @@ export const contact = ({
   if (fullName && email && subject && message) {
     axios
       .post(
-        `${process.env.SEND_EMAIL_BASE_URL}/pacwebsite/send-message`,
+        `${process.env.REACT_APP_SEND_EMAIL_BASE_URL}/pacwebsite/send-message`,
         // " http://localhost:8080/pacwebsite/send-message",
         {
           fullName,
@@ -44,7 +44,7 @@ export const gettingStarted = ({
   if (firstName && lastName && email && address && phone && message) {
     axios
       .post(
-        `${process.env.SEND_EMAIL_BASE_URL}/pacwebsite/getting-started`,
+        `${process.env.REACT_APP_SEND_EMAIL_BASE_URL}/pacwebsite/getting-started`,
         // " http://localhost:8080/pacwebsite/getting-started",
         {
           firstName,
@@ -142,7 +142,7 @@ export const vendorForm = ({
   ) {
     axios
       .post(
-        `${process.env.SEND_EMAIL_BASE_URL}/pacwebsite/vendor-info`,
+        `${process.env.REACT_APP_SEND_EMAIL_BASE_URL}/pacwebsite/vendor-info`,
         // " http://localhost:8080/pacwebsite/vendor-info",
         {
           company,

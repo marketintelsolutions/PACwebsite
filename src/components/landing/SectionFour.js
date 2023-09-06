@@ -7,7 +7,6 @@ import vector from "../../assets/logos/vector.svg";
 import vector1 from "../../assets/logos/vector1.svg";
 import vector2 from "../../assets/logos/vector2.svg";
 import vectorBlue from "../../assets/logos/vectorBlue.svg";
-import { foundations } from "../../utils/data";
 import LiquidBackground from "../LiquidBackground";
 import ButtonAnimation from "../ButtonAnimation";
 import { Translate } from "react-auto-translate";
