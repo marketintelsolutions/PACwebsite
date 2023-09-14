@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import LiquidBackground from "../../components/LiquidBackground";
 import { Translate } from "react-auto-translate";
 import CustomLoader from "../../components/resources/CustomLoader";
-import { limitStringTo70Characters } from "../../utils/resources/arrangeNews";
+import { arrangeAndAddTimeAgo, limitStringTo70Characters } from "../../utils/resources/arrangeNews";
 import { getPosts } from "../../utils/helpers/admin/fetchPosts";
 
 const StayUpdated = () => {
@@ -21,14 +21,19 @@ const StayUpdated = () => {
     posts && localStorage.clear("posts");
     setLoading(true);
 
-    return () => getPosts(setPostLists, setLoading);
+    getPosts(setPostLists, setLoading)
+
+    // setPostLists(arrangeAndAddTimeAgo(postLists))
+
+    // return () => getPosts(setPostLists, setLoading);
   }, []);
+
 
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
 
-  console.log(postLists);
+  // console.log(postLists);
 
   // if (loading) return <h2>Loading...</h2>;
 
@@ -37,6 +42,7 @@ const StayUpdated = () => {
   console.log(totalPages, 'tp');
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
+
   const currentPosts = postLists.slice(indexOfFirstPost, indexOfLastPost);
 
   const goToPage = (page) => {

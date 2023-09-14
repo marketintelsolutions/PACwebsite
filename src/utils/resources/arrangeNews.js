@@ -18,10 +18,17 @@ function getTimeAgo(date) {
   }
 }
 
-export function arrangeAndAddTimeAgo(array) {
+export function arrangeAndAddTimeAgo(array, type) {
   array.sort((a, b) => new Date(b.date) - new Date(a.date));
   // array.sort((a, b) => new Date(a.date) - new Date(b.date));
   const limitedArray = array.slice(0, 9); // Limit to 9 items
+
+  if (type === 'all') {
+    return array.map((item) => {
+      const timeAgo = getTimeAgo(item.date);
+      return { ...item, timeAgo };
+    });
+  }
 
   return limitedArray.map((item) => {
     const timeAgo = getTimeAgo(item.date);

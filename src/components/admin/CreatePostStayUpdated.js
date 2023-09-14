@@ -133,7 +133,7 @@ const CreatePostStayUpdated = () => {
               <AiOutlineCheckCircle />
             </div>
             <p>Post created successfully!</p>
-            <Link to="/admin" className="button">
+            <Link to="/admin/stay-updated" className="button">
               Dashboard
             </Link>
           </div>
