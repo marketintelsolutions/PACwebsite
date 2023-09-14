@@ -100,9 +100,9 @@ export const handleSaveAndContinue = async (
       body,
     });
     setModal(true);
-    const timeout = setTimeout(() => {
-      navigate("/admin");
-    }, 4000);
+    // const timeout = setTimeout(() => {
+    //   navigate("/admin");
+    // }, 4000);
 
     return () => clearTimeout(timeout);
   } catch (error) {
