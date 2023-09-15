@@ -104,7 +104,7 @@ export const handleSaveAndContinue = async (
     //   navigate("/admin");
     // }, 4000);
 
-    return () => clearTimeout(timeout);
+    // return () => clearTimeout(timeout);
   } catch (error) {
     console.log("Error:", error);
   }
