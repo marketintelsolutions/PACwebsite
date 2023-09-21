@@ -12,15 +12,12 @@ import { getFirestore } from "firebase/firestore";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 // console.log(process.env.REACT_APP_FIREBASE_API_KEY);
 const firebaseConfig = {
-  // apiKey: `${process.env.REACT_APP_FIREBASE_API_KEY}`,
-  apiKey: `AIzaSyBeLsOasXSoR2BV2CKwvG0KBLCzWFy6bIg`,
-  // authDomain: `${process.env.REACT_APP_FIREBASE_AUTH_DOMAIN}`,
-  authDomain: `AIzaSyBeLsOasXSoR2BV2CKwvG0KBLCzWFy6bIg`,
+  apiKey: `${process.env.REACT_APP_FIREBASE_API_KEY}`,
+  authDomain: `${process.env.REACT_APP_FIREBASE_AUTH_DOMAIN}`,
   projectId: "pac-website-ee788",
   storageBucket: "pac-website-ee788.appspot.com",
   messagingSenderId: "135437435413",
-  // appId: `${process.env.REACT_APP_FIREBASE_API_ID}`,
-  appId: `1:135437435413:web:6653886fc0ff0487b3041c`,
+  appId: `${process.env.REACT_APP_FIREBASE_API_ID}`,
   measurementId: "G-TWY3LNQ21T",
 };
 
