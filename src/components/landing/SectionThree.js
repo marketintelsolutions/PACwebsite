@@ -15,7 +15,7 @@ const SectionThree = () => {
       <div className="bottom">
         <div className="items">
           {portfolio.map((item, index) => {
-            const { img, text, color, whiteImg } = item;
+            const { img, text, color, whiteImg, black } = item;
 
             return (
               <div
@@ -39,7 +39,7 @@ const SectionThree = () => {
                 <span>
                   <img src={active[index] ? whiteImg : img} alt={text} />
                 </span>
-                <p>
+                <p className={`${black && 'black'}`}>
                   <Translate>{text}</Translate>
                 </p>
               </div>

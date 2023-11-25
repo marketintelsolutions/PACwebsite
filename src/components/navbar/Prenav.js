@@ -30,9 +30,8 @@ const Prenav = ({
 
   return (
     <div
-      className={`${
-        active.country !== "Nigeria" ? "pre-nav pre-nav-selected" : "pre-nav"
-      }`}
+      className={`${active.country !== "Nigeria" ? "pre-nav pre-nav-selected" : "pre-nav"
+        }`}
     >
       <div className="center">
         <div

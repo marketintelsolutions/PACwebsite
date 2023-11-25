@@ -80,6 +80,7 @@ export const portfolio = [
     whiteImg: celebrationWhite,
     text: "hospitality & entertainment",
     color: "#FAB400",
+    black: true
   },
   {
     img: estate,

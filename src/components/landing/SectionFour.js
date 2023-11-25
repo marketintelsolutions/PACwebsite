@@ -53,14 +53,11 @@ const SectionFour = () => {
   return (
     <section
       className="section-four"
-    //   style={{ backgroundImage: `url(${curvedbg})` }}
     >
       <span className="bg-image">
-        {/* <img src={curvedbg} alt="curvedbg" /> */}
         <LiquidBackground />
       </span>
       <div className="spirit">
-        {/* <img src={spirit} alt="spirit" /> */}
         <div
           className="image"
           onMouseOver={() => {

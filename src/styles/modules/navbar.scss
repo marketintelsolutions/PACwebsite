@@ -149,7 +149,7 @@
         flex-direction: column;
         width: fit-content;
         // border: 2px solid red;
-        padding-bottom: 10px;
+        // padding-bottom: 4px;
 
         @media (max-width: $breakpoint-large) {
           display: none;
@@ -172,8 +172,7 @@
         }
 
         & .drop-item {
-        
-        &:hover {
+          &:hover {
             color: white;
             // cursor: pointer;
           }
@@ -265,7 +264,7 @@
   background: white;
   // background: rgba(255, 255, 255, 0.9);
   // border: 2px solid red;
-  padding: 24px;
+  padding: 8px;
   color: black;
   display: flex;
   flex-direction: column;
@@ -274,8 +273,8 @@
 
   @media (max-width: $breakpoint-tablet) {
     max-width: 300px;
-  padding: 14px;
-}
+    padding: 14px;
+  }
 
   & a,
   p {
@@ -299,9 +298,9 @@
 
     @media (max-width: $breakpoint-tablet) {
       max-width: 240px;
-    padding: 8px 20px;
-    font-size: 14.2px;
-  }
+      padding: 8px 20px;
+      font-size: 14.2px;
+    }
 
     &:hover {
       background: #062644;

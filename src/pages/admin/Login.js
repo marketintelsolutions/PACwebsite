@@ -49,12 +49,7 @@ const ControlledLogin = ({ setIsAuth }) => {
 
   return (
     <div className="admin-login">
-      {/* <div className="left">
-        <div className="center">
-          <h1>PAC Holdings</h1>
-          <p>Admin Login</p>
-        </div>
-      </div> */}
+
       <div className="right">
         <form onSubmit={handleSubmit}>
           <div className="form-center">
