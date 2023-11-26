@@ -7,6 +7,7 @@ import vector from "../../assets/logos/vector.svg";
 import vector1 from "../../assets/logos/vector1.svg";
 import vector2 from "../../assets/logos/vector2.svg";
 import vectorBlue from "../../assets/logos/vectorBlue.svg";
+import landingVid from "../../assets/videos/landingVid.mp4";
 import LiquidBackground from "../LiquidBackground";
 import ButtonAnimation from "../ButtonAnimation";
 import { Translate } from "react-auto-translate";
@@ -21,14 +22,11 @@ const SectionFour = () => {
   const [activeVector, setActiveVector] = useState(vector1);
   const [postLists, setPostLists] = useState([]);
   const [loading, setLoading] = useState(false);
-
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const posts = JSON.parse(localStorage.getItem("posts"));
   const itemsPerPage = 3;
-  // const totalPages = Math.ceil(postLists.length / itemsPerPage);
   const totalPages = Math.ceil(postLists.length - 1);
-
-
 
   useEffect(() => {
     posts && localStorage.clear("posts");
@@ -37,13 +35,24 @@ const SectionFour = () => {
     getPosts(setPostLists, setLoading);
   }, []);
 
-
   const handleScroll = (direction) => {
-    if (direction === "left" && scrollIndex > 0) {
-      setScrollIndex(scrollIndex - 1);
-    } else if (direction === "right" && scrollIndex < totalPages - 1) {
-      setScrollIndex(scrollIndex + 1);
+    if (direction === "left") {
+      if (scrollIndex > 0) {
+        setScrollIndex(scrollIndex - 1);
+      } else {
+        setScrollIndex(totalPages - 1);
+      }
+    } else if (direction === "right") {
+      if (scrollIndex < totalPages - 1) {
+        setScrollIndex(scrollIndex + 1);
+      } else {
+        setScrollIndex(0);
+      }
     }
+  };
+
+  const toggleVideo = () => {
+    setIsVideoPlaying(!isVideoPlaying);
   };
 
   const startIndex = scrollIndex * itemsPerPage;
@@ -51,9 +60,7 @@ const SectionFour = () => {
   const visibleFoundations = postLists.slice(scrollIndex, scrollIndex + 3);
 
   return (
-    <section
-      className="section-four"
-    >
+    <section className="section-four">
       <span className="bg-image">
         <LiquidBackground />
       </span>
@@ -104,8 +111,17 @@ const SectionFour = () => {
       {/* MIDDLE */}
       <div className="middle">
         <div className="image">
-          <img src={playCircle} alt="playCircle" className="play" />
-          <img src={worldImage} alt="worldImage" className="world" />
+
+          {isVideoPlaying ? (
+            <video src={landingVid} autoPlay controls className="world" />
+          ) : (
+            <><img
+              src={playCircle}
+              alt="playCircle"
+              className="play"
+              onClick={toggleVideo}
+            /><img src={worldImage} alt="worldImage" className="world" /></>
+          )}
         </div>
         <div className="text">
           <p>
@@ -118,9 +134,6 @@ const SectionFour = () => {
             <span>
               <Translate>Learn more</Translate>
             </span>
-            <div className="liquid">
-              <ButtonAnimation />
-            </div>
           </a>
         </div>
       </div>
@@ -131,7 +144,9 @@ const SectionFour = () => {
           <Translate>STAY UPDATED</Translate>
         </h2>
         <div className="foundations-container">
-          {loading ? <CustomLoader /> :
+          {loading ? (
+            <CustomLoader />
+          ) : (
             <div className="foundations">
               {visibleFoundations.map((item, index) => {
                 const { imgUrl, header, id } = item;
@@ -144,7 +159,9 @@ const SectionFour = () => {
                     <div className="text">
                       <span></span>
                       <p>
-                        <Translate>{limitStringTo70Characters(header)}...</Translate>
+                        <Translate>
+                          {limitStringTo70Characters(header)}...
+                        </Translate>
                       </p>
                       <Link to={`/resources/stay-updated/${id}`}>
                         <Translate> Read more</Translate>
@@ -154,7 +171,9 @@ const SectionFour = () => {
                 );
               })}
             </div>
-          }</div>
+          )}
+        </div>
+        {/* NAVIGATION */}
         <div className="navigation">
           <span className="arrow" onClick={() => handleScroll("left")}>
             <img src={arrowLeft} alt="arrowLeft" />
