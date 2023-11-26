@@ -1,5 +1,5 @@
 .margin {
-  margin-top: 324px;
+  margin-top: 254px;
 
   @media (max-width: $breakpoint-tablet) {
     margin-top: 190px;
@@ -8,7 +8,7 @@
 .portfolio {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 60px;
   margin-bottom: 156px;
   position: relative;
   overflow-x: hidden;
@@ -24,15 +24,12 @@
     margin: 0 auto;
     gap: 48px;
     align-items: center;
-    // border: 2px solid red;
-    width: fit-content;
+    border: 2px solid red;
+    width: 70%;
     justify-content: center;
     height: fit-content;
-    transform: scale(0.76, 0.76);
-    // max-height: 478px;
-    // border: 2px solid red;
+    // transform: scale(0.76, 0.76);
     position: relative;
-    // z-index: 4;
 
     @media (max-width: $breakpoint-tablet) {
       flex-direction: column;
@@ -49,6 +46,7 @@
 
     & .image {
       height: 100%;
+      min-width: 50%;
 
       & img {
         height: 100%;
@@ -63,8 +61,6 @@
       font-weight: 600;
       font-size: 35px;
       line-height: 107%;
-      /* identical to box height, or 43px */
-
       display: flex;
       align-items: center;
       color: #474747;
@@ -98,6 +94,13 @@
         align-items: center;
         text-align: justify;
         color: #474747;
+        transition: var(--transition);
+        width: fit-content;
+
+        &:hover {
+          color: var(--primary-blue);
+          transition: var(--transition);
+        }
       }
     }
 
@@ -105,19 +108,22 @@
       margin-top: 15px;
       background: transparent;
       border: none;
-
       font-family: "Inter";
       font-style: normal;
       font-weight: 700;
       font-size: 16px;
       line-height: 24px;
-      /* identical to box height, or 150% */
-
       display: flex;
       align-items: center;
       color: #0089ff;
       cursor: pointer;
       text-decoration: none;
+      width: fit-content;
+
+      &:hover {
+        color: var(--primary-blue);
+        transition: var(--transition);
+      }
     }
   }
 

@@ -1,24 +1,54 @@
 .about-section-three {
   height: 594px;
-  background-size: cover;
-  background-repeat: no-repeat;
   transition: var(--transition);
+  position: relative;
+
+  & .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 594px;
+    overflow: hidden;
+
+    & img {
+      transform: scale(1, 1);
+      transition: var(--transition);
+      object-fit: cover;
+    }
+
+    &:before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      background: rgba(217, 217, 217, 0.83);
+      left: 0;
+      z-index: 3;
+    }
+  }
 
   @media (max-width: $breakpoint-tablet) {
     height: fit-content;
   }
 
   &:hover {
-    background-size: 120% 110%;
-    transition: var(--transition);
+    & .bg-image {
+      & img {
+        transition: var(--transition);
+        transform: scale(1.4, 1.4);
+      }
+    }
   }
 
   & .goals-center {
-    background: rgba(217, 217, 217, 0.83);
+    // background: rgba(217, 217, 217, 0.83);
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 3;
 
     @media (max-width: $breakpoint-tablet) {
       padding: 60px 73.5px;

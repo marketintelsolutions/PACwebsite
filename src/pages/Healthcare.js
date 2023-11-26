@@ -3,8 +3,7 @@ import SectionOne from "../components/about/SectionOne";
 import PortfolioLeft from "../components/portfolio/PortfolioLeft";
 import PortfolioRight from "../components/portfolio/PortfolioRight";
 import { healthcare } from "../utils/data";
-import healthcareBg from "../assets/images/healthcareBg.png";
-import animation from "../assets/images/portfolioAnimationLeft.svg";
+import healthcareBg from "../assets/images/africanWoman.png";
 import LiquidBackground from "../components/LiquidBackground";
 
 const Healthcare = () => {

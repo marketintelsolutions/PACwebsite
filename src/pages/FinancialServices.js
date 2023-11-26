@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import SectionOne from "../components/about/SectionOne";
 import PortfolioLeft from "../components/portfolio/PortfolioLeft";
 import PortfolioRight from "../components/portfolio/PortfolioRight";
-import financialBg from "../assets/images/financialBg.png";
+import financialBg from "../assets/images/aboutBg.png";
 import { financialData } from "../utils/data";
 import animation from "../assets/images/portfolioAnimationLeft.svg";
 import LiquidBackground from "../components/LiquidBackground";

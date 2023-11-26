@@ -18,6 +18,7 @@ const Hospitality = () => {
         color="#FAB400"
         text="Hospitality & Entertainment"
         img={hospitalityBg}
+        textColor='#000'
       />
 
       <div className="top">

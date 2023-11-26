@@ -88,10 +88,10 @@
     display: flex;
     justify-content: space-between;
     width: 86%;
+    max-width: 1664px;
     margin: 0 auto;
     padding: 45px 114px;
     align-items: center;
-    max-width: 1664px;
     height: 120px;
     position: relative;
     transition: var(--transition);
@@ -185,9 +185,6 @@
       }
 
       & .border {
-        // border: 2px solid blue;
-        // border-bottom: 2px solid var(--primary-blue);
-        // border-width: 0;
         position: relative;
         min-width: max-content;
 
