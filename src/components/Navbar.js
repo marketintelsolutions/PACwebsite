@@ -74,7 +74,7 @@ const Navbar = ({
           <div className={`${dropdown ? "nav-items active" : "nav-items"}`}>
             <div className="item">
               <Link to="/about" onClick={() => setDropdown(false)}>
-                <Translate>About</Translate>
+                <Translate>About Us</Translate>
               </Link>
             </div>
             <div className="item border">

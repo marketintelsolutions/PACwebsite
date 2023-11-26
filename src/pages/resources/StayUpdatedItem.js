@@ -7,13 +7,12 @@ import CustomLoader from "../../components/resources/CustomLoader";
 import { getBlogDetails } from "../../utils/helpers/admin/fetchPosts"
 
 const StayUpdatedItem = () => {
-  // const navigate = useNavigate();
-
-  const { id } = useParams();
   const [blog, setBlog] = useState({});
   const [blogs, setBlogs] = useState([]);
   const [featuredBlogs, setFeaturedBlogs] = useState([])
   const [loading, setLoading] = useState(false);
+
+  const { id } = useParams();
 
   useEffect(() => {
     window.scroll(0, 0);
@@ -70,14 +69,14 @@ const StayUpdatedItem = () => {
               <h2>Latest News</h2>
               <div className="items">
                 {blogs.map((item) => {
-                  const { id, header, timeAgo, published } = item;
+                  const { id: itemId, header, timeAgo, published } = item;
                   if (!published) return;
 
                   return (
                     <div className="item">
-                      <p className="time">{timeAgo}</p>
+                      <p className={`${itemId === id ? "time selected" : "time"}`}>{timeAgo}</p>
                       <Link
-                        to={`/resources/stay-updated/${id}`}
+                        to={`/resources/stay-updated/${itemId}`}
                         className="text"
                       >
                         {header}

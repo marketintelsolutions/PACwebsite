@@ -11,7 +11,7 @@ const About = () => {
   }, []);
   return (
     <section className="about">
-      <SectionOne color="#A6A6A7" text="About" img={aboutBg} />
+      <SectionOne color="#A6A6A7" text="About Us" img={aboutBg} />
       <SectionTwo />
       <SectionThree />
       <SectionFour />
