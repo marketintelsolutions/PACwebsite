@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import worldImage from "../../assets/images/worldImage.svg";
 import playCircle from "../../assets/images/playCircle.svg";
 import arrowLeft from "../../assets/images/arrowLeft.svg";
@@ -24,6 +24,9 @@ const SectionFour = () => {
   const [loading, setLoading] = useState(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
+  const scrollIntervalRef = useRef(null);
+  const navigationRef = useRef(null);
+
   const posts = JSON.parse(localStorage.getItem("posts"));
   const itemsPerPage = 3;
   const totalPages = Math.ceil(postLists.length - 1);
@@ -34,6 +37,16 @@ const SectionFour = () => {
 
     getPosts(setPostLists, setLoading);
   }, []);
+
+  // const startAutoScroll = () => {
+  //   scrollIntervalRef.current = setInterval(() => {
+  //     handleScroll("right");
+  //   }, 3000); // Adjust the interval as needed (e.g., every 3 seconds)
+  // };
+
+  // const stopAutoScroll = () => {
+  //   clearInterval(scrollIntervalRef.current);
+  // };
 
   const handleScroll = (direction) => {
     if (direction === "left") {
@@ -49,7 +62,52 @@ const SectionFour = () => {
         setScrollIndex(0);
       }
     }
+
+    // Additional logic for automatic scrolling
+    // if (direction === "auto" && scrollIndex < totalPages - 1) {
+    //   setScrollIndex(scrollIndex + 1);
+    // } else if (direction === "auto") {
+    //   setScrollIndex(0);
+    // }
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      return handleScroll('right')
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [scrollIndex])
+
+  // // USEEFFECT FOR AUTOSCROLLING
+  // useEffect(() => {
+  //   const options = {
+  //     root: null,
+  //     rootMargin: "0px",
+  //     threshold: 0.5,
+  //   };
+
+  //   const callback = (entries) => {
+  //     entries.forEach((entry) => {
+  //       if (entry.isIntersecting) {
+  //         startAutoScroll();
+  //       } else {
+  //         stopAutoScroll();
+  //       }
+  //     });
+  //   };
+
+  //   const observer = new IntersectionObserver(callback, options);
+  //   if (navigationRef.current) {
+  //     observer.observe(navigationRef.current);
+  //   }
+
+  //   // Clean up the observer when the component unmounts
+  //   return () => {
+  //     observer.disconnect();
+  //     stopAutoScroll();
+  //   };
+  // }, []);
 
   const toggleVideo = () => {
     setIsVideoPlaying(!isVideoPlaying);
@@ -174,7 +232,7 @@ const SectionFour = () => {
           )}
         </div>
         {/* NAVIGATION */}
-        <div className="navigation">
+        <div ref={navigationRef} className="navigation">
           <span className="arrow" onClick={() => handleScroll("left")}>
             <img src={arrowLeft} alt="arrowLeft" />
           </span>
