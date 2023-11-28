@@ -101,9 +101,9 @@ const Csr = ({ setNavlogo }) => {
               <span>
                 <Translate>Learn more</Translate>
               </span>
-              <div className="liquid">
+              {/* <div className="liquid">
                 <ButtonAnimation />
-              </div>
+              </div> */}
             </button>
           </div>
         </div>
@@ -163,9 +163,8 @@ const Csr = ({ setNavlogo }) => {
                   <div
                     className="goal-center"
                     style={{
-                      background: `${
-                        grey[index] ? "rgba(255, 255, 255, 0.70)" : color
-                      }`,
+                      background: `${grey[index] ? "rgba(255, 255, 255, 0.70)" : color
+                        }`,
                     }}
                   >
                     <img src={grey[index] ? greyLogo : logo} alt={logo} />

@@ -2,13 +2,18 @@ import team1 from "../assets/images/team-1.jpg";
 import team2 from "../assets/images/team-2.jpg";
 import team3 from "../assets/images/team-3.jpg";
 import placeholder from "../assets/images/placeholder.png";
+import atekoja from '../assets/images/Atekoja.jpg'
+import chris from '../assets/images/Chris.jpg'
+import sina from '../assets/images/Sina.jpg'
+import eric from '../assets/images/Eric.jpg'
+import garba from '../assets/images/Garba.jpg'
 
 export const directors = [
   {
     name: "Dolapo Atekoja",
     position: "Chairman",
     bioLink: "/about/dolapo",
-    imageSrc: placeholder,
+    imageSrc: atekoja,
     person: "dolapo",
     data: [
       "He is the Managing Consultant of Hudley Consulting Limited. His areas of expertise include assisting clients to achieve optimal operating, financial and strategic potential. He brings excellent analytical, quantitative and problem solving skills in developing strategic and operational solutions to Clients’ businesses.",
@@ -21,7 +26,7 @@ export const directors = [
     name: "Chris Oshiafi",
     position: "Chief Executive Officer",
     bioLink: "/about/chris",
-    imageSrc: team1,
+    imageSrc: chris,
     person: "chris",
     data: [
       "The Chief Executive Officer comes with over two decades of experience in Structured Finance, Consulting, Investment Banking and Venture Capital/Private Equity. He holds a 2nd Class (Upper Division) in Accounting & Finance from the University of London and Master of Business Administration degree from the University of Lagos.",
@@ -34,7 +39,7 @@ export const directors = [
     name: "Sina Alimi",
     position: "Deputy Chief Executive Officer",
     bioLink: "/about/sina",
-    imageSrc: team2,
+    imageSrc: sina,
     person: "sina",
     data: [
       "Sina has considerable experience in Deal Structuring, Project Finance, Mergers & Acquisitions, Privatization and Asset Management. He is an Alumnus of the Lagos Business School’s Chief Executive Programme (CEP 18) and IESE Business School, Barcelona, Spain. He holds a Bachelor of Science degree in Accounting (Second Class Upper) from the prestigious University of Lagos in 1989.",
@@ -44,9 +49,9 @@ export const directors = [
   },
   {
     name: "Eric Okoruwa",
-    position: "Director",
+    position: "Group Executive Director",
     bioLink: "/about/eric",
-    imageSrc: team3,
+    imageSrc: eric,
     person: "eric",
     data: [
       "Eric holds a Masters Degree in Marketing and a Bachelor Degree in Business Administration from the University of Lagos. He is a member of the Nigerian Institute of Management. Prior to joining PanAfrican Capital Holdings, he was actively involved in various high profile projects, capital raising exercise and advisory mandates in the private sector as well as privatization programme of both the State and Federal governments at Profound Securities Limited, Fountain Trust Bank Plc and Refuge Home Savings and Loans Limited.",
@@ -71,7 +76,7 @@ export const directors = [
     name: "Garba Ahmed",
     position: "Director",
     bioLink: "/about/garba",
-    imageSrc: placeholder,
+    imageSrc: garba,
     person: "garba",
     data: [
       "Alhaji Ahmed is an accomplished Central Banker, Logistics Expert and a seasoned Media Practitioner par excellence. He has varied experience in financial services industry and in the media world spanning over 30 years. He holds a Bachelor of Science degree in Political Science from Ahmadu Bello University, Zaria and a Master of Communications Arts degree from the University of Ibadan.",
