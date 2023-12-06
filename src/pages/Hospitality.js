@@ -41,9 +41,9 @@ const Hospitality = () => {
         </div>
         {hospitality.map((item, index) => {
           if (index % 2 !== 0 || index === 1) {
-            return <PortfolioRight {...item} index={index} />;
+            return <PortfolioRight {...item} index={index} key={index} />;
           }
-          return <PortfolioLeft {...item} index={index} />;
+          return <PortfolioLeft {...item} index={index} key={index} />;
         })}
       </div>
     </div>

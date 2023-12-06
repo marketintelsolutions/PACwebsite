@@ -30,21 +30,22 @@ export const blocks = [
     image: health,
     text: "Health",
     whiteImg: whiteHeart,
+    description: 'Our goal is to reduce the prevalence of preventive mortality and improve access to better quality healthcare for a positive socio- economic impact.Through our health initiatives and interventions, we seek to reduce the prevalence of preventive mortality and improve access to better and quality healthcare.Our projects are designed to impact positively on the socio - economic conditions of the beneficiaries, giving them opportunities to live healthy lives.'
   },
   {
     image: education,
     text: "Education",
-    whiteImg: whiteCap,
+    whiteImg: whiteCap, description: 'Our aim is to spur innovation amongst young Nigerians through innovative challenges, and sponsored competitions. We create educational programs that aim at spurring innovation amongst young Nigerians through constructive challenges, learning facilities, and sponsored competitions while providing access to educational opportunities which will help them be better positioned fo rthe future. We are confident that goood education would provide the resources to reduce poverty, improve health, and provide inclusice growth that lessens inequality within and across different countries; just as Eric Hanushek and Ludger Woessman have rightly said.'
   },
   {
     image: environment,
     text: "Environment",
-    whiteImg: whiteEnvironment,
+    whiteImg: whiteEnvironment, description: 'With the increasing climate stress and environmental pollution, we support "Green" projects in Nigeria. Our programs support government initiatives, research, and policies that help to improve sustainability over the long term. Some of our activities in this area include recycling and tree-planting initiative, community sanitation, and hygiene awareness programs. We are committed to supporting \'Green Projects\', research, and policies that help to improve sustainability over the long term, as well as focused activities that facilitate the maintenance of a healthy environment'
   },
   {
     image: protest,
     text: "Economic Empowerment",
-    whiteImg: whiteProtest,
+    whiteImg: whiteProtest, description: 'We work with the government and civil society to foster the economic empowerment of the impoverished and underpriviledged by promoting job creation and entrepreneurial development, organizing vocational training and skills acquisition programs, and subsidizing vocational tools. By providing people with economic power, we are pulling them out of poverty and giving them the ability to raise others too. They would also be able to live out their dreams because having economic power provides them a level ground to be able to achieve success.'
   },
 ];
 

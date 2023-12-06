@@ -12,7 +12,7 @@ const PortfolioLeft = ({
   bgColor,
   link,
   page,
-  headingColor,
+  headingColor, newColor
 }) => {
   return (
     <div className="item">
@@ -47,7 +47,7 @@ const PortfolioLeft = ({
           {text.map((item, index) => (
             <p
               style={
-                bgColor ? { background: `${bgColor}`, color: "white" } : {}
+                bgColor ? { background: `${bgColor}`, color: `${newColor || "white"}` } : {}
               }
               key={index}
             >
