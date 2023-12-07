@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.bbc06b45.css",
-    "main.js": "/static/js/main.7f63ffe3.js",
+    "main.css": "/static/css/main.ac547116.css",
+    "main.js": "/static/js/main.d76b0534.js",
     "static/media/brochure.pdf": "/static/media/brochure.03f11445c8ef3faf8aa1.pdf",
     "static/media/landingVid.mp4": "/static/media/landingVid.08824d0e2d0774dab873.mp4",
     "static/media/alumniBg.png": "/static/media/alumniBg.a53ca1451e7c5a8f1a26.png",
@@ -103,6 +103,7 @@
     "static/media/health.svg": "/static/media/health.4b7e8fbe305822f8a6b81eaef994f80a.svg",
     "static/media/microscope.svg": "/static/media/microscope.ec697492da9996265567f5902fa9c912.svg",
     "static/media/growthGrey.svg": "/static/media/growthGrey.6de2c92286710e11ccdb42ab7e733740.svg",
+    "static/media/cancelWhite.svg": "/static/media/cancelWhite.18b8c9efd35c7d96626938dfb193985a.svg",
     "static/media/heart.svg": "/static/media/heart.f182b34e0cf9d0628b7b79060e75337d.svg",
     "static/media/heartGrey.svg": "/static/media/heartGrey.0ca29ee14b7af3740e48b4608f22f18c.svg",
     "static/media/money.svg": "/static/media/money.6c945e96eb50a208b82c8a0c99ea058a.svg",
@@ -181,11 +182,11 @@
     "static/media/prepaid.svg": "/static/media/prepaid.8e1336786270552592a9c7eadf9c1115.svg",
     "static/media/minus.svg": "/static/media/minus.8672ab2a8712f5aecb7401423a6a6418.svg",
     "static/media/arrowLeft.svg": "/static/media/arrowLeft.8285f4806e7bf425e0b4fee5d17f97ba.svg",
-    "main.bbc06b45.css.map": "/static/css/main.bbc06b45.css.map",
-    "main.7f63ffe3.js.map": "/static/js/main.7f63ffe3.js.map"
+    "main.ac547116.css.map": "/static/css/main.ac547116.css.map",
+    "main.d76b0534.js.map": "/static/js/main.d76b0534.js.map"
   },
   "entrypoints": [
-    "static/css/main.bbc06b45.css",
-    "static/js/main.7f63ffe3.js"
+    "static/css/main.ac547116.css",
+    "static/js/main.d76b0534.js"
   ]
 }
