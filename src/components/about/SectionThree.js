@@ -40,9 +40,9 @@ const SectionThree = () => {
               <div className="text">
                 <p>
                   <Translate>
-                    “To run successful & socially responsible business
-                    institutions, providing sustainable returns to stake
-                    holders”
+                  To run successful & socially responsible business 
+                  institutions, providing sustainable returns to stake 
+                  holders”
                   </Translate>
                 </p>
               </div>

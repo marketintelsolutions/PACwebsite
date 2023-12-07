@@ -23,8 +23,8 @@ export const portfolioData = [
     heading: "Hospitality & Entertainment",
     text: [
       "The Amber Hospitality Services Limited is a hospitality management and development company, created by hoteliers and financial professional aiming to bring into the industry a comprehensive understanding of management and development, by implementing the right approaches that this industry requires.",
-      " Our roots are in Africa, but our business knowledge was gathered around the world and in all kinds of hospitality operations, despite all the challenges that the industry faces nowadays our mission still to provide responsible management solutions.",
-      "Amber Hospitality Services Limited has developed different Brands to reach all angles of the industry, targeting customer satisfaction by delivering exceptional services and quality products. By meeting and continually endeavouring to exceed our customers expectations, we will produce the results needed to satisfy and attract investors and continue our individual and corporate growth.",
+      "Our roots are in Africa, but our business knowledge was gathered around the world and in all kinds of hospitality operations, despite all the challenges that the industry faces nowadays our mission still to provide responsible management solutions.",
+      "Amber Hospitality Services Limited has developed different Brands to reach all angles of the industry, targeting customer satisfaction by delivering exceptional services and quality products. By meeting and continually endeavouring to exceed our customers' expectations, we will produce the results needed to satisfy and attract investors and continue our individual and corporate growth.",
     ],
     link: "/portfolio/hospitality",
     page: true,
@@ -49,7 +49,7 @@ export const portfolioData = [
     text: [
       "Agriculture is one of the pillars of the Nigerian economy with contribution of an average of 25% to real GDP. PAC Holdings is actively participating in this sector by investing in agro-processing, including processing of Agricultural products with export potential.",
       "Major investments undertaken in this sector include:",
-      " An industrial mango plantation with a ranch/slaughter business-line in Cote D’Voire.",
+      " AAn industrial mango plantation with a ranch/slaughter business-line in Cote D’Voire.",
       "Manufacture and supply of High Quality Cassava Flour (HQCF)/ Commercial and Mechanized Farming of Cassava Tubers.",
     ],
     link: "/portfolio/agro-allied",
@@ -71,9 +71,11 @@ export const portfolioData = [
   },
   {
     img: technology,
-    heading: "Technology & Payment Systems",
+    heading: "Technology and Media",
     text: [
-      "One of the major investment we have done in the ICT & Media space is in Pan-African Towers- a company engaging in telecommunications, energy, logistics and engineering businesses in Nigeria. Its co-location services include vertical space for GSM/CDMS/WIMAX antenna configuration on tower, vertical space on tower for fixing transmission equipment (microwave), air conditioned equipment, and concrete base for outdoor BTS equipment",
+      "Our investment in the Technology and Media sector encompasses a wide range of technologies and services related to information processing and computer systems. It includes hardware, software, networking, telecommunications equipment, internet services, software development, and IT infrastructure management.", 
+      
+      "We also have a vested interest in the production, distribution, and consumption of media content. It includes traditional forms of media such as television, radio, newspapers, magazines, and books, as well as newer digital media platforms like online news portals, social media, streaming services, podcasts, and gaming. Our aim is to contribute to the broader media landscape across Africa.",
     ],
     link: "/portfolio/technology",
     page: true,
@@ -83,10 +85,8 @@ export const portfolioData = [
     img: healthcare,
     heading: "Healthcare",
     text: [
-      "Tergo Energy is a subsidiary of PanAfrican Capital Holdings Limited that is committed to the utilization of natural gas and renewable energy.",
-      "A member of Nigerian Gas Association, we are determined in addressing Africa’s energy challenge through the provision of clean and sustainable energy solutions.",
-      "We apply our multi-disciplined technical expertise to the development of natural gas and solar to generate positive results in a responsible manner.",
-      "Tergo Energy is committed and dedicated to serving the interests of all our stakeholders by being both a good steward of the resources we operate and delivering attractive returns to our investors.",
+      "We operate in the Healthcare sector with the sole objective of making investments in novel and disruptive healthcare platforms, projects, and businesses across the healthcare value chain.",
+      "We seek to create value leveraging innovations and strategic partnerships in targeted segments: PPP, Diagnostics, Pharmaceuticals, Digital Health, HMO, Supply Chain, Specialist Services etc.",
     ],
     link: "/portfolio/healthcare",
     page: true,

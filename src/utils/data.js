@@ -203,7 +203,7 @@ export const financialData = [
     heading: "PAC Capital",
     text: [
       "PAC Capital Limited is the Investment Banking and Advisory arm of the Group’s Financial Services Division and is a leading Capital Markets & Financial Advisory Services firm in Nigeria. The company has extensive experience in the dynamics of working with Multi-Lateral Funding & Credit Institutions across Africa and beyond.",
-      "We have worked across various sectors including public sector to provide comprehensive Capital Raising, Mergers and Acquisition Advisory, Debt Restructuring, Project Finance, Corporate Restructuring & Business Combination and Structured Trade Finance. ",
+      "We have worked across various sectors including public sector to provide comprehensive Capital Raising, Mergers and Acquisition Advisory, Debt Restructuring, Project Finance, Corporate Restructuring & Business Combination and Structured Trade Finance.",
     ],
     link: "https://paccapitalltd.com",
   },
@@ -223,7 +223,7 @@ export const financialData = [
     text: [
       "PAC Securities Limited is a dealing member of the Nigerian Stock Exchange (NSE) and one of the successful brokerage firms in Nigeria, having participated in many high profile transactions in the industry.",
 
-      "The company offers brokerage/financial services to a broad spectrum of clients including institutional investors, Multi-Nationals, Public Sectors, High net-worth individuals and retail investors. Our services are planned for organizations and entities that wish to invest in Africa",
+      "The company offers brokerage/financial services to a broad spectrum of clients including institutional investors, Multi-Nationals, Public Sectors, High net-worth individuals and retail investors. Our services are planned for organizations and entities that wish to invest in Africa.",
     ],
     link: "https://pacsecurities.com",
   },
@@ -360,7 +360,6 @@ export const renewable = [
 
       "· Solar Power Generation",
       "· Solar Battery Sales",
-      "· Corporate LPG Services",
       "· Full Solar Installation",
       "· Solar Equipment Servicing",
       "· Solar Street Lighting",
@@ -384,7 +383,7 @@ export const technology = [
     img: paysharp,
     heading: "Do More With Paysharp",
     text: [
-      "Enjoy the ease of conducting financial transactions such as Airtime Vending, Cash Deposit and Withdrawals Bill Payment and many more services",
+      "Enjoy the ease of conducting financial transactions such as Airtime Vending, Cash Deposit and Withdrawals Bill Payment and many more services.",
     ],
     link: "https://paysharpng.com ",
   },
@@ -423,7 +422,7 @@ export const technology = [
     img: realEstateNew,
     heading: "Real Estate Management",
     text: [
-      "ProptyPlus – One of the leading Real Estate Software platform providing the ultimate property search experience and property management",
+      "ProptyPlus – One of the leading Real Estate Software platform providing the ultimate property search experience and property management.",
     ],
     link: "https://proptyplus.com",
   },
@@ -475,23 +474,21 @@ export const technology = [
 export const healthcare = [
   {
     img: afrilife,
-    heading: "Afrilife",
+    heading: "Afrilife Health Care Services",
     text: [
-      "We invest across critical healthcare value chains by leveraging innovations and strategic partnerships in Africa.",
+      "Afrilife is the health subsidiary of PanAfrican Capital Holdings Group, is a healthcare investment firm, with diversified interests in pharmaceuticals, diagnostics and other medical interests.",
 
-      "Afrilife will invest in early stage but predominantly in mid-stage private entities and later-stage public entities (through PPPs) which are attractively valued and have a convincing business model, including their product pipeline, technology, and management.",
+      "With a mandate to invest in high impact healthcare projects, Afrilife aims to be the industry leader in the healthcare investment space.",
     ],
     link: "https://afrilifehealthcare.com",
   },
   {
     img: sage,
-    heading: "Sage Diagnostics Services LTD",
+    heading: "Sage Diagnostics Services",
     text: [
-      "Sage Diagnostics center is a full-fledged diagnostic center inclusive of a molecular lab center to service the growing demand for diagnostics both for occupational health safety and for medical diagnostics requirements to aid treatment.",
+      "Sage Diagnostics Services Limited is a diagnostic service provider (Imaging & laboratory) which is the pioneer project of Afrilife, with a wide range of tests including routine, specialized (Molecular Biology Tests) and advanced tests for clinical, research, screening, industrial, environmental, and occupational health.",
 
-      "· Comprehensive wellness packages: Occupational Health screenings (Annual Health Checks, Fit To Fly tests, Medical Fitness Tests etc)",
-      " · Comprehensive laboratory, Basic Imaging, Other complimentary tests",
-      " · Specialized PCR Tests",
+      "We are poised to provide innovative, timely, and quality medical diagnostics services.",
     ],
     link: "https://sagedsl.com",
   },
@@ -499,9 +496,9 @@ export const healthcare = [
     img: lifeLine,
     heading: "LifeLine Pharma",
     text: [
-      "LIFELINE Pharma was started in the year 2000 by Mr. Prasad Nakhare and Mr. Kiran Khobare are the founders of the organization, and under their leadership, we have created STERIWELL® and STERINCI®.",
+      "Lifeline Pharma is the healthcare brand of Afrilife, with operations in pharmaceutical wholesales, distribution and warehousing.",
 
-      " We are an ISO 9001: 2015 certified firm, would like to introduce STERIWELL® 20 and 40-liter capacity machines that can treat 3 kg to 5.5 kg of waste per 45 minutes. STERIWELL® system is CE certified from a designated European notified body, meeting the standards and compliance to EN ISO 12100: 2010 for safety of machinery design and IEC (International Electro technical Communication) EN 602041: 2006+ A1: 2009. STERIWELL® is also certified with ISO14001: 2015 confirming to the International Standards for effective Environmental Management System (EMS). STERIWELL® is registered under GeM (Government e-Market Place) portal.",
+      " Lifeline meets the medication needs of our partner facilities with a focus on quality, speed and convenience of service.",
     ],
     //   link: "https://www.ziltchone.com ",
   },
@@ -512,7 +509,7 @@ export const hospitality = [
     img: blueAmber,
     heading: "BLUE AMBER - Luxury Hotels",
     subHeading: "Plush, Contemporary, Grand, Inspiring.",
-    bgColor: "#00AEEF",
+    bgColor: "#0C5C83",
     text: [
       "From the charm and longing of an olden era to the modern amenities of today’s flawless high-tech efficiency, the BLUE AMBER - Luxury Hotels brand was designed to stand as an enduring testament to a golden age of warm-hearted hospitality, luxury, and elegance.",
       "We build the hotels, or we refurbish the existing ones with attention to detail, quality, and an exceptional back-of-house. This passion for perfection is set by our leadership through the work and engagement of our Project Managers, designers, project teams, operations teams, and our partners, in order to achieve a truly prestigious and unique property, to convey the necessary qualities that live up to this unique brand proposition.",
@@ -529,7 +526,7 @@ export const hospitality = [
     bgColor: "#E61F2C",
     text: [
       "From the charm and longing of an olden era to the modern amenities of today’s flawless high-tech efficiency, the BLUE AMBER - Luxury Hotels brand was designed to stand as an enduring testament to a golden age of warm-hearted hospitality, luxury, and elegance.",
-      " We build the hotels, or we refurbish the existing ones with attention to detail, quality, and an exceptional back-of-house. This passion for perfection is set by our leadership through the work and engagement of our Project Managers, designers, project teams, operations teams, and our partners, in order to achieve a truly prestigious and unique property, to convey the necessary qualities that live up to this unique brand proposition.",
+      " We build the hotels, or we refurbish the existing ones with attention to detail, quality, and an exceptional back-of-house. This passion for perfection is set by our leadership through the work and engagement of our Project Managers, designers, project teams, operations teams, and our partners, in order to achieve a truly prestigious and unique property, to convey the necessary qualities that live up to this unique brand proposition.We build the hotels, or we refurbish the existing ones with attention to detail, quality, and an exceptional back-of-house. This passion for perfection is set by our leadership through the work and engagement of our Project Managers, designers, project teams, operations teams, and our partners, in order to achieve a truly prestigious and unique property, to convey the necessary qualities that live up to this unique brand proposition.",
       "Firmly we believe that luxury need not to be extravagant; that the highest standards of luxury can be delivered in a sustainable and responsible way.",
       "Blue Amber – Luxury Hotels are to set among the Amber Collection – Hotels & Resorts, the company brand that will be recognized by its versatility to accommodate, from families vacations to corporate business under the same roof, the hotels tend to be located in the leading business district of the cities and group destinations around the world. These hotels feature stylish, contemporary design, abundant meeting facilities and extraordinary restaurants.",
     ],
@@ -546,7 +543,7 @@ export const hospitality = [
       " When it comes to meetings and celebrations, we offer hybrid, flexible and innovative solutions so that you can find the ideal venue with state-of-the-art equipment to fulfil your unique event vision and goals.",
       "Enjoy complete international standard services as we give you a wonderful treat with our welcoming protocols - our express check-in using stress free cards alongside a welcoming glass of complimentary juice on arrival.",
       "Above all, just simply experience our first-class personalized service with our well-trained personnel always available to serve you throughout your stay.",
-      "At Amber Residence, you are always welcome to a world of warmth",
+      "At Amber Residence, you are always welcome to a world of warmth.",
     ],
     link: "https://amberresidenceng.com",
     page: false,
@@ -573,7 +570,7 @@ export const hospitality = [
     text: [
       "A Brand developed so that our guests now can feel the home touch while they are abroad, ETERNITI Apartments is a new design concept having the essential set of amenities that will be available to today's travelers – mention free WI-FI, complimentary full breakfast, a social area with a contemporaneous decor for evening relaxation, plus the handiness of a fully-equipped kitchen among the other well-known services that are so well established by AMBER COLLECTION – HOTELS & RESORTS",
       " The ETERNITI guests will enjoy the freshness of food and beverage options at the daily complimentary breakfast, a small convenience corner will offer the guest a variety of snacks, upmarket frozen appetizers and grocery items that can be used to prepare lite meals in the apartment. A welcome set of complimentary groceries will be available at their arrival.",
-      "Guests can stay fit and have fun at our fitness center and recreational areas. Or just give us your list for grocery shopping service. Laundry services and dry-cleaning services are also available, also our 24/Concierge services",
+      "Guests can stay fit and have fun at our fitness center and recreational areas. Or just give us your list for grocery shopping service. Laundry services and dry-cleaning services are also available, also our 24/Concierge services.",
     ],
     page: false,
   },
@@ -583,10 +580,10 @@ export const hospitality = [
     subHeading: "Spirited, Personal, Unexpected. Adventurous",
     bgColor: "#CDAB6B",
     text: [
-      "Amber Hospitality Services Limited has developed a special brand together with Amber Collection – Hotels & Resorts a management platform of International Campus Residences, focussing on student housing in top cities across target countries.",
+      "Amber Hospitality Services Limited has developed a special brand together with Amber Collection – Hotels & Resorts a management platform of International Campus Residences, focussing on student housing in top cities across target countries.​",
       "The residences are designed to help students enhance their university experience by promoting a residential environment that supports their educational, and personal development.",
       "The built-up communities encourage the students to continue their learning path outside the classroom, the necessary infrastructures have been thought and planned on the student needs such as privacy, convenience, WI-FI, dedicated laundry room, open space to study, like as well a diversity of social, and intellectual spaces to promote the cultural development.",
-      "This Brand, will promote the basic services of a normal hospitality operations, by making available 24 hours, 7 days a week Concierge services to help the students in their personal requirements, also cleaning services will be in place for public areas and rooms (this one, only ones a week), also the privacy and security it is something that we take very seriously in all our Residences, the wellbeing of everybody, we consider this is one of our prime services, within the range of available services that we provide.",
+      "This Brand, will promote the basic services of a normal hospitality operation, by making available 24 hours, 7 days a week Concierge services to help the students in their personal requirements, also cleaning services will be in place for public areas and rooms (this one, only ones a week), also the privacy and security it is something that we take very seriously in all our Residences, the wellbeing of everybody, we consider this is one of our prime services, within the range of available services that we provide.",
     ],
     page: false,
   },

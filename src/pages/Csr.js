@@ -91,10 +91,10 @@ const Csr = ({ setNavlogo }) => {
             <span></span>
             <p>
               <Translate>
-                We recognize the need for immediate action in our communities
-                and confidence that our interventions will support other efforts
-                to bring development that balances social, economic, and
-                environmental sustainability.
+              We recognize the need for immediate action in our communities 
+              and confidence that our interventions will support other efforts 
+              to bring development that balances social, economic, and environmental 
+              sustainability.
               </Translate>
             </p>
             <button>

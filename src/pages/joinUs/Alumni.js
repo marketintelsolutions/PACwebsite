@@ -117,9 +117,9 @@ const Alumni = ({ setNavlogo }) => {
           </h3>
           <p>
             <Translate>
-              We are a band of ex-PanAfrican Capital Group staff with a shared
-              goal of staying connected while cheering each other on the journey
-              of life towards making positive impact where it matters most.
+            We are a band of ex-PanAfrican Capital Group staff with a shared 
+            goal of staying connected while cheering each other on the journey 
+            of life towards making positive impact where it matters most.
             </Translate>
           </p>
           <button>

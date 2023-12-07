@@ -16,9 +16,9 @@ const SectionTwo = () => {
           </h2>
           <p>
             <Translate>
-              We believe that progress is informed by the past and inspired by
-              the future, this is why we operate an investment philosophy based
-              on ideas, partnerships and solutions.
+            We believe that progress is informed by the past and inspired 
+            by the future, this is why we operate an investment philosophy 
+            based on ideas, partnerships and solutions.
             </Translate>
           </p>
         </div>
