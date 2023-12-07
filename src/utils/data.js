@@ -547,6 +547,7 @@ export const hospitality = [
     ],
     link: "https://amberresidenceng.com",
     page: false,
+    newColor: '#152344'
   },
   {
     img: amberCrest,

@@ -1,7 +1,7 @@
 .csr {
   overflow-x: hidden;
   position: relative;
-  
+
   & .csr-section-one {
     height: 100vh;
     max-height: 880px;
@@ -13,9 +13,9 @@
     z-index: 3;
 
     @media (max-width: $breakpoint-tablet) {
-    padding-bottom: 65px;
-    max-height: 565px;
-  }
+      padding-bottom: 65px;
+      max-height: 565px;
+    }
 
     & .center {
       margin: 0 auto;
@@ -23,10 +23,9 @@
       flex-direction: column;
       gap: 23px;
 
-    @media (max-width: $breakpoint-tablet) {
-      max-width: 317px;
-    }
-
+      @media (max-width: $breakpoint-tablet) {
+        max-width: 317px;
+      }
 
       & h3 {
         color: #fff;
@@ -36,8 +35,6 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
-
-    
       }
 
       & h1 {
@@ -54,9 +51,9 @@
 
         @media (max-width: $breakpoint-tablet) {
           font-size: 24px;
-        padding: 25px 45px;
-        margin: 0 auto;
-      }
+          padding: 25px 45px;
+          margin: 0 auto;
+        }
       }
 
       & p {
@@ -93,9 +90,9 @@
       display: flex;
       gap: 73px;
 
-    @media (max-width: $breakpoint-tablet) {
-      flex-direction: column;
-    }
+      @media (max-width: $breakpoint-tablet) {
+        flex-direction: column;
+      }
 
       & .left {
         position: relative;
@@ -137,9 +134,9 @@
           line-height: 107%; /* 53.5px */
           max-width: 724px;
 
-    @media (max-width: $breakpoint-tablet) {
-      font-size: 27px;
-    }
+          @media (max-width: $breakpoint-tablet) {
+            font-size: 27px;
+          }
         }
 
         & span {
@@ -180,12 +177,19 @@
           font-size: 17px;
           line-height: normal;
           border: none;
-          transition: var(--transition);
+          transition: var(--transition-fast);
           cursor: pointer;
           border: 1px solid var(--primary-blue);
           animation: mymove 5s infinite;
           position: relative;
           // border: 2px solid red;
+
+          &:hover {
+            background: white;
+            transition: var(--transition-fast);
+            border: 1px solid var(--primary-blue);
+            color: var(--primary-blue);
+          }
 
           & span {
             z-index: 4;
@@ -214,6 +218,8 @@
 
   & .csr-section-three {
     padding-bottom: 80px;
+    position: relative;
+    z-index: 3;
     & .content {
       width: 80%;
       max-width: 1408px;
@@ -234,6 +240,7 @@
         height: 216px;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
 
         @media (max-width: $breakpoint-tablet) {
           // border-right: none;;
@@ -262,9 +269,42 @@
         border-right: 0.6px solid rgba(0, 0, 0, 0.55);
 
         @media (max-width: $breakpoint-tablet) {
-        border-bottom: 0.6px solid rgba(0, 0, 0, 0.55);
+          border-bottom: 0.6px solid rgba(0, 0, 0, 0.55);
           border-right: none;
         }
+      }
+    }
+
+    & .modal-content {
+      background: #a3a2a3;
+      padding: 80px 0;
+      color: white;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+
+      & .image {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+      }
+
+      & h1 {
+        width: 100%;
+        max-width: 80%;
+      }
+
+      & p {
+        max-width: 80%;
+        color: #fff;
+        text-align: justify;
+        font-family: Open Sans;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
       }
     }
   }
@@ -297,7 +337,7 @@
           font-size: 27px;
           width: 294px;
           margin: 0 auto;
-          }
+        }
       }
 
       & .line {
@@ -326,8 +366,8 @@
         justify-content: center;
 
         @media (max-width: $breakpoint-tablet) {
-        grid-template-columns: 1fr;
-      }
+          grid-template-columns: 1fr;
+        }
 
         & .goal {
           border-radius: 7.828px;
@@ -436,8 +476,8 @@
       width: fit-content;
 
       @media (max-width: $breakpoint-tablet) {
-      min-width: 300px;
-      
+        min-width: 300px;
+
         // padding: 32px 51px;
       }
     }

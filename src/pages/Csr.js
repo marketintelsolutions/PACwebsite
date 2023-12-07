@@ -3,6 +3,7 @@ import csrBg from "../assets/images/csrBg.png";
 import csrWomen from "../assets/images/csrWomen.png";
 import playWhite from "../assets/images/playWhite.svg";
 import csrLogo from "../assets/logos/csrLogo.svg";
+import cancelWhite from "../assets/logos/cancelWhite.svg";
 import paclogo from "../assets/images/paclogo.svg";
 import { blocks, goals } from "../utils/csrData";
 import { useNavigate } from "react-router-dom";
@@ -11,9 +12,11 @@ import ButtonAnimation from "../components/ButtonAnimation";
 import { Translate } from "react-auto-translate";
 
 const Csr = ({ setNavlogo }) => {
-  const navigate = useNavigate();
-
   const [grey, setGrey] = useState(Array.from(goals).fill(false));
+  const [modal, setModal] = useState(false)
+  const [modalItem, setModalItem] = useState({})
+
+  const navigate = useNavigate();
 
   const newArray = blocks.map((item) => {
     return { ...item, white: false };
@@ -23,15 +26,6 @@ const Csr = ({ setNavlogo }) => {
     window.scroll(0, 0);
     setNavlogo(csrLogo);
 
-    // const onBeforeUnload = (e) => {
-    //   // run your cleanup code here
-    //   setNavlogo(paclogo);
-    //   console.log("user is leaving page");
-    // };
-    // window.addEventListener("beforeunload", onBeforeUnload);
-    // return () => {
-    //   window.removeEventListener("beforeunload", onBeforeUnload);
-    // };
   }, []);
 
   useEffect(() => {
@@ -51,6 +45,8 @@ const Csr = ({ setNavlogo }) => {
   }, [navigate]);
 
   const [items, setItems] = useState(newArray);
+
+
   return (
     <section className="csr">
       <div
@@ -93,8 +89,8 @@ const Csr = ({ setNavlogo }) => {
               <Translate>
               We recognize the need for immediate action in our communities 
               and confidence that our interventions will support other efforts 
-              to bring development that balances social, economic, and environmental 
-              sustainability.
+              to bring development that balances social, economic, and 
+              environmental sustainability.
               </Translate>
             </p>
             <button>
@@ -110,9 +106,13 @@ const Csr = ({ setNavlogo }) => {
       </div>
 
       <div className="csr-section-three">
-        <div className="content">
+        {modal ? <div className="content modal-content">
+          <div className="image"><img src={cancelWhite} alt="cancelWhite" onClick={() => setModal(false)} /></div>
+          <h1>{modalItem.text}</h1>
+          <p>{modalItem.description}</p>
+        </div> : <div className="content">
           {items.map((item, index) => {
-            const { image, text, whiteImg } = item;
+            const { image, text, whiteImg, description } = item;
             let border = index !== blocks.length - 1;
             return (
               <div
@@ -126,6 +126,10 @@ const Csr = ({ setNavlogo }) => {
                   setItems(modifiedArray);
                 }}
                 onMouseLeave={() => setItems(newArray)}
+                onClick={() => {
+                  setModal(true)
+                  setModalItem(item)
+                }}
               >
                 <img src={items[index].white ? whiteImg : image} alt={image} />
                 <p>
@@ -134,7 +138,7 @@ const Csr = ({ setNavlogo }) => {
               </div>
             );
           })}
-        </div>
+        </div>}
       </div>
 
       <div className="csr-section-four">
@@ -159,6 +163,7 @@ const Csr = ({ setNavlogo }) => {
                     setGrey(newArray);
                   }}
                   onMouseLeave={() => setGrey(Array.from(goals).fill(false))}
+                  key={index}
                 >
                   <div
                     className="goal-center"
