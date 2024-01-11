@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ac547116.css",
-    "main.js": "/static/js/main.d76b0534.js",
+    "main.js": "/static/js/main.ba11c97d.js",
     "static/media/brochure.pdf": "/static/media/brochure.03f11445c8ef3faf8aa1.pdf",
     "static/media/landingVid.mp4": "/static/media/landingVid.08824d0e2d0774dab873.mp4",
     "static/media/alumniBg.png": "/static/media/alumniBg.a53ca1451e7c5a8f1a26.png",
@@ -183,10 +183,10 @@
     "static/media/minus.svg": "/static/media/minus.8672ab2a8712f5aecb7401423a6a6418.svg",
     "static/media/arrowLeft.svg": "/static/media/arrowLeft.8285f4806e7bf425e0b4fee5d17f97ba.svg",
     "main.ac547116.css.map": "/static/css/main.ac547116.css.map",
-    "main.d76b0534.js.map": "/static/js/main.d76b0534.js.map"
+    "main.ba11c97d.js.map": "/static/js/main.ba11c97d.js.map"
   },
   "entrypoints": [
     "static/css/main.ac547116.css",
-    "static/js/main.d76b0534.js"
+    "static/js/main.ba11c97d.js"
   ]
 }
