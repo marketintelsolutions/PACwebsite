@@ -41,8 +41,7 @@ const SectionThree = () => {
                 <p>
                   <Translate>
                   To run successful & socially responsible business 
-                  institutions, providing sustainable returns to stake 
-                  holders”
+                  institutions, providing sustainable returns to stakeholders”
                   </Translate>
                 </p>
               </div>

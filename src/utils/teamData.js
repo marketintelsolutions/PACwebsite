@@ -31,7 +31,7 @@ export const directors = [
     data: [
       "The Chief Executive Officer comes with over two decades of experience in Structured Finance, Consulting, Investment Banking and Venture Capital/Private Equity. He holds a 2nd Class (Upper Division) in Accounting & Finance from the University of London and Master of Business Administration degree from the University of Lagos.",
       "He is a Fellow of the Institute of Chartered Accountants of Nigeria (ICAN), an Associate of the Chartered Insurance Institute of London, (ACII) UK and Chartered Institute of Taxation of Nigeria (ACIT). He also attended various programs at the prestigious Columbia Business School, New York, United States and INSEAD Business School, Fontainebleau, France, the IESE Business School in Barcelona, Spain and the Chief Executive Programme (CEP 17) Class of the Lagos Business School.",
-      "He was the Pioneer Managing Director/CEO of Truebond Investments & Capital Limited, a Company with diverse interests in Oil & Gas, Telecommunications, Power and the Capital Markets. He has also worked with the firm of Damitop Consulting Limited as Managing Partner where he worked on a number of World Bank projects for the Federal and several State Governments. He served as Executive Director (Investment Banking) of Citizens International Bank (now Enterprise Bank Limited) until his appointment as the pioneer Chief Executive Officer of PanAfrican Capital Holdings Limited.",
+      "He was the Pioneer Managing Director/CEO of Truebond Investments & Capital Limited, a Company with diverse interests in Oil & Gas, Telecommunications, Power and the Capital Markets. He has also worked with the firm of Damitop Consulting Limited as Managing Partner where he worked on a number of World Bank projects for the Federal and several State Governments. He served as Executive Director (Investment Banking) of Citizens International Bank (now Heritage Bank Limited) until his appointment as the pioneer Chief Executive Officer of PanAfrican Capital Holdings Limited.",
     ],
     image: chris,
   },
@@ -59,7 +59,7 @@ export const directors = [
     ],
     image: eric,
   },
-  {
+  /*{
     name: "Tessa Egbe Ikimi",
     position: "Director",
     bioLink: "/about/tessa",
@@ -71,7 +71,7 @@ export const directors = [
       "She is also a Notary Public of the Supreme Court of Nigeria. Her exploits in the international and local scene provided the basis for achieving prominence in her profession. ",
     ],
     image: placeholder,
-  },
+  },*/
   {
     name: "Garba Ahmed",
     position: "Director",

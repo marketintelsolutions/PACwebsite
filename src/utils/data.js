@@ -109,7 +109,7 @@ export const portfolio = [
   {
     img: internet,
     whiteImg: internetWhite,
-    text: "technology and payment system",
+    text: "technology & media",
     color: "#FA6900",
   },
 ];
@@ -252,9 +252,9 @@ export const financialData = [
     img: factoring,
     heading: "Factoring & Supply Chain Finance",
     text: [
-      "Factoring & Supply Chain Finance Limited (“FSF”) engages in Trade receivables financing and is a member of FCI – an umbrella organisation for independent factoring companies around the world. With unrestricted access to Multilateral funding institutions, we have the ability to ensure that Small Medium Enterprises are able to benefit from financing.",
+      "Factoring & Supply Chain Finance Limited (“FSC”) engages in Trade receivables financing and is a member of FCI – an umbrella organisation for independent factoring companies around the world. With unrestricted access to Multilateral funding institutions, we have the ability to ensure that Small Medium Enterprises are able to benefit from financing.",
 
-      "At FSF, we are focused to assist businesses unlock opportunities through: Invoice Discounting, Full Service Factoring, Supply Chain Finance, Debt Factoring, Vendor Finance, Consumer Lending.",
+      "At FSC, we are focused to assist businesses unlock opportunities through: Invoice Discounting, Full Service Factoring, Supply Chain Finance, Debt Factoring, Vendor Finance, Consumer Lending.",
     ],
     link: "https://fscsng.com",
   },
@@ -373,7 +373,7 @@ export const renewable = [
 export const technology = [
   {
     img: fintech,
-    heading: "Ziltchone Technologies",
+    heading: "Ziltch1 Technologies",
     text: [
       "We Care. We Connect. We Create. We are the next generation of the Solutions. Giving you more for less!",
     ],
@@ -474,7 +474,7 @@ export const technology = [
 export const healthcare = [
   {
     img: afrilife,
-    heading: "Afrilife Health Care Services",
+    heading: "Afrilife Healthcare Services",
     text: [
       "Afrilife is the health subsidiary of PanAfrican Capital Holdings Group, is a healthcare investment firm, with diversified interests in pharmaceuticals, diagnostics and other medical interests.",
 
@@ -521,14 +521,14 @@ export const hospitality = [
   },
   {
     img: luxor,
-    heading: "BLUE AMBER - Luxury Hotels",
+    heading: "Luxor Hotel - By Amber",
     subHeading: "Plush, Contemporary, Grand, Inspiring.",
     bgColor: "#E61F2C",
     text: [
-      "From the charm and longing of an olden era to the modern amenities of today’s flawless high-tech efficiency, the BLUE AMBER - Luxury Hotels brand was designed to stand as an enduring testament to a golden age of warm-hearted hospitality, luxury, and elegance.",
-      " We build the hotels, or we refurbish the existing ones with attention to detail, quality, and an exceptional back-of-house. This passion for perfection is set by our leadership through the work and engagement of our Project Managers, designers, project teams, operations teams, and our partners, in order to achieve a truly prestigious and unique property, to convey the necessary qualities that live up to this unique brand proposition.We build the hotels, or we refurbish the existing ones with attention to detail, quality, and an exceptional back-of-house. This passion for perfection is set by our leadership through the work and engagement of our Project Managers, designers, project teams, operations teams, and our partners, in order to achieve a truly prestigious and unique property, to convey the necessary qualities that live up to this unique brand proposition.",
-      "Firmly we believe that luxury need not to be extravagant; that the highest standards of luxury can be delivered in a sustainable and responsible way.",
-      "Blue Amber – Luxury Hotels are to set among the Amber Collection – Hotels & Resorts, the company brand that will be recognized by its versatility to accommodate, from families vacations to corporate business under the same roof, the hotels tend to be located in the leading business district of the cities and group destinations around the world. These hotels feature stylish, contemporary design, abundant meeting facilities and extraordinary restaurants.",
+      "LUXOR, a new upscale hotel concept that puts its modernism, style, and elegance within everyone's reach. Our guests will relish of the spacious guestroom with the latest technologies.",
+      "LUXOR will deliver a completely new experience in the concept of modern hospitality, a hospitality concept that it is part of the 21st Century, a hotel with a thought for the future at the present. Again, our development team and operational team will carefully take in consideration the opinions of our business partners in order to bring in success and at the same time appeal to the concept.",
+      "LUXOR is set to include sophisticated business and leisure facilities, banquet, and conference facilities of world-class standard, with an offer of variety of restaurants catering as well as different types of cuisines, and bars.",
+      "Lobby lounges are set to provide for business travel guests and frequent guests to socialize and relax in a clean and eco-friendly environment, meeting spaces will be typically for small-to-medium size groups, offering the perfect facilities for meetings and conventions. An elegant ballroom will be available for hosting weddings, banquets, and cocktail parties.",
     ],
     page: false,
   },
@@ -578,7 +578,7 @@ export const hospitality = [
   {
     img: steppingStone,
     heading: "STEPPINGSTONE",
-    subHeading: "Spirited, Personal, Unexpected. Adventurous",
+    subHeading: "Personal, Convenience, Diverse, Community",
     bgColor: "#CDAB6B",
     text: [
       "Amber Hospitality Services Limited has developed a special brand together with Amber Collection – Hotels & Resorts a management platform of International Campus Residences, focussing on student housing in top cities across target countries.​",

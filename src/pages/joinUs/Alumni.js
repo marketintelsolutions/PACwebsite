@@ -133,7 +133,7 @@ const Alumni = ({ setNavlogo }) => {
       <div className="section-three">
         <div className="form-container">
           <h2>
-            <Translate>Getting Started</Translate>
+            <Translate>Get Started</Translate>
           </h2>
           <span></span>
           <p>

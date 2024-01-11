@@ -184,7 +184,7 @@ const SectionFour = () => {
         <div className="text">
           <p>
             <Translate>
-              CCreating Impact through opportunities, strategic alliances and 
+              Creating Impact through opportunities, strategic alliances and 
               partnerships
             </Translate>
           </p>

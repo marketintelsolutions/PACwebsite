@@ -24,11 +24,16 @@ const Hospitality = () => {
       <div className="top">
         <p>
           <Translate>
-          We do understand that every property is unique, and for that, we 
-          have design five main Brands in order to fully apply the demands 
-          of the market, so we look forward to discussing your specific 
-          opportunity and how we can assist you in revealing the full potential 
-          of your asset.
+          Welcome to the epitome of luxury and leisure – Amber Hospitality Services! 
+          We invite you to immerse yourself in a world of unparalleled hospitality 
+          and entertainment where every moment is crafted to exceed your expectations. 
+          Our brands are synonymous with exquisite accommodations, exquisite dining 
+          experiences, and an array of captivating entertainment options designed to 
+          create unforgettable memories. Whether you seek a lavish escape at our opulent 
+          hotels, a culinary adventure at our world-class restaurants, or thrilling 
+          entertainment at our venues, The Amber Brands promises an unparalleled journey 
+          of indulgence. For a glimpse into our exceptional offerings and to discover how 
+          we redefine luxury and entertainment, visit our website and let the enchantment begin.
           </Translate>
         </p>
         {/*<button>Read More</button>*/}

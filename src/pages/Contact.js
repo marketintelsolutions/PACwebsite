@@ -133,7 +133,7 @@ const Contact = () => {
           </div>
           <div className="left">
             <div className="title item">
-              <h2>PAC Holdings</h2>
+              <h2>PAC Ghana</h2>
               <div className="text">
                 <p>PanAfrican Capital (GH) Ltd.8, Blohum Street,</p>
                 <p>Dzorwulu, , Along Dzorwulu Road P.M.B CT 252,</p>
