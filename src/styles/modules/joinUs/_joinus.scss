@@ -28,10 +28,10 @@
       width: 50%;
       // border: 2px solid red;
 
-    @media (max-width: $breakpoint-tablet) {
-      width: 100%;
-      margin: 0 auto;
-    }
+      @media (max-width: $breakpoint-tablet) {
+        width: 100%;
+        margin: 0 auto;
+      }
 
       & h3 {
         color: #25333f;
@@ -42,11 +42,11 @@
         line-height: 15px; /* 100% */
 
         @media (max-width: $breakpoint-tablet) {
-              color: #474747;
-              font-size: 27px;
-              font-weight: 600;
-              line-height: 107%; /* 28.89px */
-              text-transform: capitalize;
+          color: #474747;
+          font-size: 27px;
+          font-weight: 600;
+          line-height: 107%; /* 28.89px */
+          text-transform: capitalize;
         }
       }
 
@@ -115,9 +115,9 @@
       flex-direction: column;
       gap: 40px;
 
-    @media (max-width: $breakpoint-tablet) {
-      gap:20px;
-    }
+      @media (max-width: $breakpoint-tablet) {
+        gap: 20px;
+      }
 
       & h2 {
         color: #474747;
@@ -176,7 +176,7 @@
           row-gap: 20px;
 
           @media (max-width: $breakpoint-tablet) {
-           grid-template-columns: 1fr;
+            grid-template-columns: 1fr;
           }
         }
 
@@ -241,7 +241,7 @@
 
         @media (max-width: $breakpoint-tablet) {
           flex-direction: column-reverse;
-         }
+        }
 
         & .left {
           width: 50%;
@@ -250,10 +250,10 @@
           flex-direction: column;
           gap: 15px;
           justify-content: center;
-          
+
           @media (max-width: $breakpoint-tablet) {
             width: 100%;
-           }
+          }
 
           & h2 {
             color: #474747;
@@ -283,7 +283,7 @@
 
           @media (max-width: $breakpoint-tablet) {
             width: 100%;
-           }
+          }
 
           & img {
             width: 100%;
@@ -295,10 +295,10 @@
         }
       }
 
-      & .left-item{
+      & .left-item {
         @media (max-width: $breakpoint-tablet) {
           flex-direction: column;
-         }
+        }
       }
     }
   }
@@ -308,7 +308,7 @@
     // color: white;
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
     position: relative;
     // border: 2px solid red; background-repeat: no-repeat;
     background-size: cover;

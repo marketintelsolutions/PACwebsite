@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SectionOne from "../components/about/SectionOne";
 import contactBg from "../assets/images/contactBg.png";
 import contactMapOne from "../assets/images/contactMapOne.png";
@@ -14,6 +14,12 @@ import LiquidBackground from "../components/LiquidBackground";
 import { Translate } from "react-auto-translate";
 
 const Contact = () => {
+
+  useEffect(() => {
+    window.scroll(0, 0);
+
+  }, []);
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",

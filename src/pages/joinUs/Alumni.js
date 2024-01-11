@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SectionOne from "../../components/about/SectionOne";
 import alumni from "../../assets/images/pacAlumni.png";
 import mapalumni from "../../assets/images/mapalumni.png";
@@ -12,29 +12,19 @@ import LiquidBackground from "../../components/LiquidBackground";
 import { Translate } from "react-auto-translate";
 
 const Alumni = ({ setNavlogo }) => {
+  const formContainerRef = useRef(null);
   const navigate = useNavigate();
 
   useEffect(() => {
     window.scroll(0, 0);
     setNavlogo(alumniLogo);
 
-    // const onBeforeUnload = (e) => {
-    //   // run your cleanup code here
-    //   setNavlogo(paclogo);
-    //   console.log("user is leaving page");
-    // };
-    // window.addEventListener("beforeunload", onBeforeUnload);
-    // return () => {
-    //   window.removeEventListener("beforeunload", onBeforeUnload);
-    // };
   }, []);
 
   useEffect(() => {
     const unlisten = navigate((location, action) => {
       if (action === "POP") {
         console.log("User is leaving the page");
-        // Do something before the user leaves the page
-        // setNavlogo(paclogo);
       }
     });
 
@@ -117,9 +107,9 @@ const Alumni = ({ setNavlogo }) => {
           </h3>
           <p>
             <Translate>
-            We are a band of ex-PanAfrican Capital Group staff with a shared 
-            goal of staying connected while cheering each other on the journey 
-            of life towards making positive impact where it matters most.
+              We are a band of ex-PanAfrican Capital Group staff with a shared
+              goal of staying connected while cheering each other on the journey
+              of life towards making positive impact where it matters most.
             </Translate>
           </p>
           <button>
@@ -130,13 +120,71 @@ const Alumni = ({ setNavlogo }) => {
           <img src={mapalumni} alt="mapalumni" />
         </div>
       </div>
-      <div className="section-three">
+
+      <div className="section-four">
+        <div className="section-center">
+          {alumniData.map((item, index) => {
+            const { heading, text, image } = item;
+
+            if (index % 2 !== 0) {
+              return (
+                <div className="item left-item" key={index}>
+                  <div className="right">
+                    <img src={image} alt={heading} />
+                  </div>
+                  <div className="left">
+                    <h2>
+                      <Translate>{heading}</Translate>
+                    </h2>
+                    <p>
+                      <Translate>{text}</Translate>
+                    </p>
+                  </div>
+                </div>
+              );
+            }
+            return (
+              <div className="item" key={index}>
+                <div className="left">
+                  <h2>
+                    <Translate>{heading}</Translate>
+                  </h2>
+                  <p>
+                    <Translate>{text}</Translate>
+                  </p>
+                </div>
+                <div className="right">
+                  <img src={image} alt={heading} />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div
+        className="section-five"
+        style={{ backgroundImage: `url(${alumniBg})` }}
+      >
+        <div className="content">
+          <h1>
+            <Translate>Join Our Community Today</Translate>
+          </h1>
+          <p>
+            <Translate>Become an icon</Translate>
+          </p>
+          <button onClick={() => formContainerRef.current.scrollIntoView({ behavior: "smooth" })}>
+            <Translate>Get started</Translate>
+          </button>
+        </div>
+      </div>
+
+      <div className="section-three" ref={formContainerRef}>
         <div className="form-container">
           <h2>
             <Translate>Get Started</Translate>
           </h2>
           <span></span>
-          <p>
+          <p >
             <Translate>
               Kindly fill this form. You can manually send us email on
               info@panafricancapitalholdings.com
@@ -192,62 +240,6 @@ const Alumni = ({ setNavlogo }) => {
               <Translate>Submit</Translate>
             </button>
           </form>
-        </div>
-      </div>
-      <div className="section-four">
-        <div className="section-center">
-          {alumniData.map((item, index) => {
-            const { heading, text, image } = item;
-
-            if (index % 2 !== 0) {
-              return (
-                <div className="item left-item" key={index}>
-                  <div className="right">
-                    <img src={image} alt={heading} />
-                  </div>
-                  <div className="left">
-                    <h2>
-                      <Translate>{heading}</Translate>
-                    </h2>
-                    <p>
-                      <Translate>{text}</Translate>
-                    </p>
-                  </div>
-                </div>
-              );
-            }
-            return (
-              <div className="item" key={index}>
-                <div className="left">
-                  <h2>
-                    <Translate>{heading}</Translate>
-                  </h2>
-                  <p>
-                    <Translate>{text}</Translate>
-                  </p>
-                </div>
-                <div className="right">
-                  <img src={image} alt={heading} />
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      <div
-        className="section-five"
-        style={{ backgroundImage: `url(${alumniBg})` }}
-      >
-        <div className="content">
-          <h1>
-            <Translate>Join Our Community Today</Translate>
-          </h1>
-          <p>
-            <Translate>Become an icon</Translate>
-          </p>
-          <button>
-            <Translate>Get started</Translate>
-          </button>
         </div>
       </div>
     </div>

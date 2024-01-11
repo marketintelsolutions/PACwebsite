@@ -12,9 +12,9 @@ const Portfolio = () => {
     <div className="portfolio margin">
       {portfolioData.map((data, index) => {
         if (index % 2 !== 0 || index === 1) {
-          return <PortfolioRight {...data} index={index} />;
+          return <PortfolioRight {...data} key={index} />;
         }
-        return <PortfolioLeft {...data} index={index} />;
+        return <PortfolioLeft {...data} key={index} />;
       })}
     </div>
   );
