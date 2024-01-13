@@ -95,7 +95,7 @@ const Contact = () => {
                 <Translate>Email us</Translate>
               </h2>
               <div className="text">
-                <a href="info@panafricancapitalholdings.com">
+                <a href="mailto:info@panafricancapitalholdings.com">
                   info@panafricancapitalholdings.com
                 </a>
               </div>

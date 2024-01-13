@@ -1,7 +1,7 @@
 import React from "react";
 import { Translate } from "react-auto-translate";
 
-const Block = ({ title, number }) => {
+const Block = ({ title, number, email }) => {
   return (
     <div className="block">
       <h3>{title}</h3>
@@ -11,9 +11,9 @@ const Block = ({ title, number }) => {
         </p>
         <div className="send">
           <p>{number} </p>
-          <h4>
+          <a href={`mailto:${email}`}>
             <Translate>Send an email</Translate>
-          </h4>
+          </a>
         </div>
       </div>
     </div>

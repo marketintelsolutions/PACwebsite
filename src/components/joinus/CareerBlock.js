@@ -10,19 +10,6 @@ const CareerBlock = ({
   mailLink,
   setSubject,
 }) => {
-  // const handleSubmit = async () => {
-  //   // setSubject(heading);
-  //   console.log(heading, "done");
-
-  //   // await setSubject(heading); // Wait for the state update to complete
-  //   const subject = heading;
-  //   const mailtoLink = `mailto:info@panafricancapitalholdings.com?subject=${encodeURIComponent(
-  //     subject
-  //   )}`;
-  //   // window.location.href = mailLink;
-  //   window.location.href = mailtoLink;
-  // };
-
   let mailtoLink = `mailto:info@panafricancapitalholdings.com?subject=${encodeURIComponent(
     heading
   )}`;
@@ -64,12 +51,6 @@ const CareerBlock = ({
             <img src={downloadGrey} alt="downloadGrey" />
           </span>
         </a>
-        {/* <button id="mail-link" onClick={handleSubmit}>
-          SUBMIT RESUME{" "}
-          <span>
-            <img src={downloadGrey} alt="downloadGrey" />
-          </span>
-        </button> */}
       </div>
       <div className="right">
         <img src={image} alt="image" />
