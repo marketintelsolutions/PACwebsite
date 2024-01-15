@@ -190,7 +190,7 @@ export const footer = [
       { link: "portfolio/healthcare", text: "healthcare" },
       {
         link: "/portfolio/technology",
-        text: "technology & payment systems",
+        text: "technology & payment solutions",
       },
       { link: "/portfolio/renewable", text: "renewable energy" },
     ],

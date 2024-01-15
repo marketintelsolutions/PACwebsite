@@ -3,7 +3,7 @@ import csrBg from "../assets/images/csrBg.png";
 import csrWomen from "../assets/images/csrWomen.png";
 import playWhite from "../assets/images/playWhite.svg";
 import csrLogo from "../assets/logos/csrLogo.svg";
-import cancelWhite from "../assets/logos/cancelWhite.svg";
+import cancelWhite from "../assets/logos/cancel.svg";
 import paclogo from "../assets/images/paclogo.svg";
 import { blocks, goals } from "../utils/csrData";
 import { useNavigate } from "react-router-dom";
@@ -87,10 +87,10 @@ const Csr = ({ setNavlogo }) => {
             <span></span>
             <p>
               <Translate>
-              We recognize the need for immediate action in our communities 
-              and confidence that our interventions will support other efforts 
-              to bring development that balances social, economic, and 
-              environmental sustainability.
+                We recognize the need for immediate action in our communities
+                and confidence that our interventions will support other efforts
+                to bring development that balances social, economic, and
+                environmental sustainability.
               </Translate>
             </p>
             <button>
