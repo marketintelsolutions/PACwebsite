@@ -11,7 +11,7 @@ const Block = ({ title, number, email }) => {
         </p>
         <div className="send">
           <p>{number} </p>
-          <a href={`mailto:${email}`}>
+          <a target='_blank' href={`mailto:${email}`}>
             <Translate>Send an email</Translate>
           </a>
         </div>
