@@ -27,7 +27,7 @@ const AllPosts = () => {
     setLoading(true);
     getPosts(setPosts, setLoading);
 
-    calculateModalPosition()
+    // calculateModalPosition()
   }, []);
 
   // console.log(posts);
@@ -66,14 +66,14 @@ const AllPosts = () => {
     }
   };
 
-  const calculateModalPosition = () => {
-    console.log('heeyyyy');
-    const dashboardRect = dashboardRef.current.getBoundingClientRect();
-    const modalCenterX = dashboardRect.left + dashboardRect.width / 2;
-    const modalCenterY = dashboardRect.top + dashboardRect.height / 2;
-    setPosition({ left: `${modalCenterX}`, top: `${modalCenterY}px` })
-    return;
-  };
+  // const calculateModalPosition = () => {
+  //   console.log('heeyyyy');
+  //   const dashboardRect = dashboardRef.current.getBoundingClientRect();
+  //   const modalCenterX = dashboardRect.left + dashboardRect.width / 2;
+  //   const modalCenterY = dashboardRect.top + dashboardRect.height / 2;
+  //   setPosition({ left: `${modalCenterX}`, top: `${modalCenterY}px` })
+  //   return;
+  // };
 
   // console.log(calculateModalPosition());
   console.log(position);
