@@ -8,14 +8,31 @@ import { Translate } from "react-auto-translate";
 import CustomLoader from "../../components/resources/CustomLoader";
 import { arrangeAndAddTimeAgo, limitStringTo70Characters } from "../../utils/resources/arrangeNews";
 import { getPosts } from "../../utils/helpers/admin/fetchPosts";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/firebaseConfig";
 
 const StayUpdated = () => {
   const [postLists, setPostLists] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const [newsletter, setNewsletter] = useState('')
   const postsPerPage = 9;
 
   const posts = JSON.parse(localStorage.getItem("posts"));
+
+  const postCollectionRef = collection(db, "newsletter");
+
+
+  const getNewsletters = async () => {
+    const snapshot = await getDocs(postCollectionRef);
+    const newsletters = snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    console.log('newsletter gotten');
+    console.log(newsletters);
+    newsletters[0] && setNewsletter(newsletters[0].newsletter); // Pre-fill with the first newsletter
+  };
 
   useEffect(() => {
     posts && localStorage.clear("posts");
@@ -23,23 +40,16 @@ const StayUpdated = () => {
 
     getPosts(setPostLists, setLoading)
 
-    // setPostLists(arrangeAndAddTimeAgo(postLists))
-
-    // return () => getPosts(setPostLists, setLoading);
   }, []);
 
 
   useEffect(() => {
     window.scroll(0, 0);
+    getNewsletters();
   }, []);
-
-  // console.log(postLists);
-
-  // if (loading) return <h2>Loading...</h2>;
 
   const totalPosts = postLists.length
   const totalPages = Math.ceil(totalPosts / postsPerPage);
-  console.log(totalPages, 'tp');
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
 
@@ -95,6 +105,7 @@ const StayUpdated = () => {
             totalPosts={totalPosts}
             postsPerPage={postsPerPage}
           />
+          <div className="newsletter-download"><p><Translate>Get our latest Newsletter</Translate></p><a href={newsletter} target='_blank'><Translate>Download</Translate></a></div>
         </div>
       </div>
     </section>

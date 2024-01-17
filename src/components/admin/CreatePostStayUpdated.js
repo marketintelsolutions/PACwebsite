@@ -56,7 +56,6 @@ const CreatePostStayUpdated = () => {
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadUrl) => {
             setFormData((prev) => ({ ...prev, imgUrl: downloadUrl }));
-            // console.log("hello");
           });
         }
       );
@@ -64,10 +63,6 @@ const CreatePostStayUpdated = () => {
 
     formData && uploadFile();
   }, [image]);
-
-  // useEffect(() => {
-
-  // }, [isModal]);
 
   const handleChange = (event) => {
     const { name, value, files } = event.target;
@@ -89,12 +84,9 @@ const CreatePostStayUpdated = () => {
       ...prevData,
       body: content,
     }));
-
-    console.log(content);
   };
 
   const handleDiscard = () => {
-    // Handle discard logic
     navigate("/admin/stay-updated");
   };
 
@@ -106,19 +98,9 @@ const CreatePostStayUpdated = () => {
       alert("kindly fill all fields");
       return;
     }
-    // Handle save and continue logic
-    // console.log("hey there");
+
     await addDoc(postCollectionRef, { ...formData });
-    // await addDoc(postCollectionRef, { title: "hello" });
-    // console.log("entered");
-
     setModal(true);
-
-    // const timeout = setTimeout(() => {
-    //   navigate("/admin");
-    // }, 4000);
-
-    // return () => clearTimeout(timeout);
   };
 
   return (
