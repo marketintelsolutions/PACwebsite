@@ -6,7 +6,7 @@ export const contactDetailsOne = [
   },
   {
     title: "PAC Registrars",
-    number: "+234 1 422 8855",
+    number: "+234 908 6790 272",
     email: "info@pacregistrars.com",
   },
   {
@@ -16,12 +16,12 @@ export const contactDetailsOne = [
   },
   {
     title: "Kaxaal Africa",
-    number: "+234 913 933 8254",
+    number: "+234 807 809 5798",
     email: "info@webzenagroallied.com",
   },
   {
     title: "Afrilife Healthcare Services",
-    number: "+234 1 4227777",
+    number: "+234 806 489 7887",
     email: "info@afrilifehealthcare.com",
   },
 ];
@@ -57,7 +57,7 @@ export const contactDetailsTwo = [
 export const contactDetailsThree = [
   {
     title: "PAC Securities",
-    number: "+234 700 909 909",
+    number: "+234 803 7179 556",
     email: "info@pacsecurities.com",
   },
   {
@@ -71,8 +71,8 @@ export const contactDetailsThree = [
     email: "info@bricsinfrastructure.com",
   },
   {
-    title: "Ziltch 1 Technologies",
-    number: "+234 1 4227777",
-    email: "info@panafricancapitalholdings.com",
+    title: "Ziltch1 Technologies",
+    number: "+234 1 903 044 2365",
+    email: "info@ziltchone.com",
   },
 ];
