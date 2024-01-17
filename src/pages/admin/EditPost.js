@@ -49,8 +49,10 @@ const CreatePostStayUpdated = () => {
     uploadFile(image, setProgress, setFormData);
   }, [image]);
 
-  // console.log(blog);
-  console.log(formData.top);
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
 
   const handleQuillChange = (content) => {
     setFormData((prevData) => ({

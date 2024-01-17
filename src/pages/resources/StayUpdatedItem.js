@@ -5,6 +5,7 @@ import moment from "moment";
 import { arrangeAndAddTimeAgo, limitStringTo50Characters } from "../../utils/resources/arrangeNews";
 import CustomLoader from "../../components/resources/CustomLoader";
 import { getBlogDetails } from "../../utils/helpers/admin/fetchPosts"
+import { Translate } from "react-auto-translate";
 
 const StayUpdatedItem = () => {
   const [blog, setBlog] = useState({});
@@ -44,19 +45,19 @@ const StayUpdatedItem = () => {
         <>
           <div className="btn-container">
             <Link to={"/resources/stay-updated"} className="back">
-              Stay Updated <img src={arrowRight} alt="arrowRight" />
+              <Translate>Stay Updated</Translate> <img src={arrowRight} alt="arrowRight" />
             </Link>
           </div>
           <div className="container">
             <div className="content">
-              <h1>{blog.header}</h1>
+              <h1><Translate>{blog.header}</Translate></h1>
               <p className="date">{moment(blog.date).format("MMM Do YYYY")}</p>
               <div className="image">
                 <img src={blog.imgUrl} alt="fashion" />
-                <span>{blog.imageTitle}</span>
+                <span><Translate>{blog.imageTitle}</Translate></span>
               </div>
               <div className="short-desc">
-                <p>{blog.titleDesc}</p>
+                <p><Translate>{blog.titleDesc}</Translate></p>
               </div>
               <div
                 className="body"
@@ -66,7 +67,7 @@ const StayUpdatedItem = () => {
               </div>
             </div>
             <div className="right">
-              <h2>Latest News</h2>
+              <h2><Translate>Latest News</Translate></h2>
               <div className="items">
                 {blogs.map((item) => {
                   const { id: itemId, header, timeAgo, published } = item;
@@ -79,7 +80,7 @@ const StayUpdatedItem = () => {
                         to={`/resources/stay-updated/${itemId}`}
                         className="text"
                       >
-                        {header}
+                        <Translate>{header}</Translate>
                       </Link>
                     </div>
                   );
@@ -90,7 +91,7 @@ const StayUpdatedItem = () => {
           <div className="top-news">
             <div className="top">
               <div className="box"></div>
-              <h2>Top News</h2>
+              <h2><Translate>Top News</Translate></h2>
               <div className="line"></div>
             </div>
             <div className="news">
@@ -115,7 +116,7 @@ const StayUpdatedItem = () => {
                           to={`/resources/stay-updated/${id}`}
                           className="heading"
                         >
-                          {limitStringTo50Characters(header)}
+                          <Translate>{limitStringTo50Characters(header)}</Translate>
                         </Link>
                         <p>{date}</p>
                       </div>

@@ -1,8 +1,8 @@
 .pagination {
   margin-top: 108px;
   width: 100%;
-  margin: 35px auto;
-  /* border: 2px solid red; */
+  margin: 35px auto 80px;
+  // border: 2px solid red;
   position: relative;
   z-index: 5;
 
@@ -177,6 +177,37 @@
   // border: 2px solid red;
   overflow-x: hidden;
   position: relative;
+
+  & .newsletter-download {
+    // border: 2px solid red;
+    max-width: 1410px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+    font-family: Open Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    & a {
+      color: #fff;
+      text-decoration: none;
+      font-family: Open Sans;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 107%;
+      background: #38b6ff;
+      border: none;
+      cursor: pointer;
+      flex-shrink: 0;
+      padding: 22px 42px;
+    }
+  }
 }
 
 .stay-updated-item {
