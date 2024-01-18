@@ -29,8 +29,6 @@ const StayUpdated = () => {
       id: doc.id,
       ...doc.data(),
     }));
-    console.log('newsletter gotten');
-    console.log(newsletters);
     newsletters[0] && setNewsletter(newsletters[0].newsletter); // Pre-fill with the first newsletter
   };
 

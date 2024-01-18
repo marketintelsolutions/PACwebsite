@@ -30,6 +30,9 @@ import AllPosts from "./pages/admin/AllPosts";
 import EditPost from "./pages/admin/EditPost";
 import Subscribers from "./pages/admin/Subscribers";
 import SendMail from "./pages/admin/SendMail";
+import PacAcademy from "./pages/pacAcademy/PacAcademy";
+import PacAcademyItem from "./pages/pacAcademy/PacAcademyItem";
+import PacAcademyAdmin from "./pages/pacAcademy/PacAcademyAdmin";
 
 const cacheProvider = {
   get: (language, key) =>
@@ -105,6 +108,10 @@ const App = () => {
 
             <Route path="/csr" element={<Csr setNavlogo={setNavlogo} />} />
             <Route path="/contact" element={<Contact />} />
+
+            <Route path="/pacacademy" element={<PacAcademy />} />
+            <Route path="/pacacademy/:id" element={<PacAcademyItem />} />
+            <Route path="/pacacademy/admin" element={<PacAcademyAdmin />} />
 
             {/* ------ADMIN--------- */}
             <Route
