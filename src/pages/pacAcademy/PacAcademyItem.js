@@ -48,9 +48,10 @@ const PacAcademyItem = () => {
     }, []);
 
     useEffect(() => {
+        window.scroll(0, 400);
         const item = academies.find((item) => item.id === id)
         setAcademy(item)
-    }, [])
+    }, [id])
 
     return (
         <div className="resource-details">
@@ -61,12 +62,11 @@ const PacAcademyItem = () => {
                     <div className="content">
                         <div className="right">
                             {academies.map((item, index) => {
-
                                 return (
                                     <Link
                                         key={index}
-                                        className={`item`}
-                                        to={`/resources`}
+                                        className={`${item.id === id ? "item active" : "item"}`}
+                                        to={`/pacacademy/${item.id}`}
                                     >
                                         <span><BsBuildingsFill /></span>
                                         <h2>{item.id}</h2>
@@ -79,7 +79,7 @@ const PacAcademyItem = () => {
                                 <div className="total">
                                     <p>total</p>{" "}
                                     <p className="length">
-                                        <span>{academy.files?.length}</span>
+                                        <span>{academy.files?.length || 0}</span>
                                     </p>
                                 </div>
                                 <h3>
@@ -98,6 +98,8 @@ const PacAcademyItem = () => {
                                             // console.log("I love you");
                                             fileType = "pdf";
                                         }
+                                        console.log(file);
+
                                         return (
                                             <a
                                                 key={index}
@@ -125,14 +127,6 @@ const PacAcademyItem = () => {
                                 ) : (
                                     <h2>Loading...</h2>
                                 )}
-
-                                <button className="button">
-                                    <span
-
-                                    >
-                                        Load More
-                                    </span>
-                                </button>
                             </div>
                         </div>
                     </div>

@@ -29,7 +29,7 @@ const PacAcademy = () => {
                     ...doc.data(),
                 }
             });
-            console.log(academies);
+            // console.log(academies);
             // setAcademies(academies)
             localStorage.setItem('academies', JSON.stringify(academies))
             setLoading(false)
@@ -42,7 +42,7 @@ const PacAcademy = () => {
 
     useEffect(() => {
         window.scroll(0, 0);
-        academies.length === 0 && getAcademies()
+        getAcademies()
     }, []);
 
     return (

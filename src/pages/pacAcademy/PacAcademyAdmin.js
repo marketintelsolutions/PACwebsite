@@ -90,7 +90,7 @@ const PacAcademyAdmin = () => {
                         const docSnap = await getDoc(docRef);
                         const docData = docSnap.data();
                         docData.files = docData.files || [];
-                        docData.files.push({ name: file.name, ...metadata });
+                        docData.files.push({ name: file.name, ...metadata, downloadURL });
                         await updateDoc(docRef, docData);
                         setNewFiles([]); // Clear selected files
                         setProgress(0);
@@ -112,7 +112,6 @@ const PacAcademyAdmin = () => {
     };
 
     const handleFileChange = (event) => {
-        console.log(event.target.files);
         const filesObj = event.target.files;
 
         const filesArr = [];
@@ -122,7 +121,6 @@ const PacAcademyAdmin = () => {
                 filesArr.push(filesObj[i]);
             }
         }
-        console.log(filesArr, "files");
         setNewFiles(filesArr);
     };
 
@@ -135,12 +133,12 @@ const PacAcademyAdmin = () => {
                     <div className="content">
                         <div className="right">
                             {headings.map((item, index) => {
-                                const { text, icon, sub, main } = item;
+                                const { id, text, icon, sub, main } = item;
 
                                 return (
                                     <Link
                                         key={index}
-                                        className={`item`}
+                                        className={`${id === id ? "item active" : "item"}`}
                                         to={`/resources`}
                                     >
                                         <span>{icon}</span>
