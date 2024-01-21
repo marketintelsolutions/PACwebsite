@@ -285,11 +285,28 @@
     // border: 2px solid red;
     padding: 100px 40px;
 
+    & .back-btn {
+      border: none;
+      background: #062644;
+      color: white;
+      border-radius: 10px;
+      text-align: center;
+      padding: 15px 25px;
+      font-size: 20px;
+      text-decoration: none;
+      cursor: pointer;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      // justify-content: space-between;
+      gap: 10px;
+    }
+
     & .content-center {
       min-height: 400px;
       // border: 2px solid blue;
       max-width: var(--width-standard);
-      margin: 0 auto;
+      margin: 50px auto;
       border-radius: 20px;
 
       & .content {
@@ -729,5 +746,23 @@
         font-size: 30px;
       }
     }
+  }
+}
+
+@media print {
+  .academy-pdf {
+    display: none;
+  }
+}
+.academy-pdf {
+  & .pdf-container {
+    height: 550px;
+    // border: 2px solid red;
+    max-width: 1410px;
+    margin: 0 auto;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
   }
 }

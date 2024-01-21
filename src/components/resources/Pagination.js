@@ -25,10 +25,6 @@ const Pagination = ({ currentPage, totalPages, goToPage, totalPosts, postsPerPag
         <div className="left">
           <p>
             <Translate>
-              {/* {`Showing ${(currentPage - 1) * 10 + 1} to ${currentPage * 10 <= totalPages * 10 ? currentPage * 10 : totalPages * 10
-                } of ${totalPages * 10} entries`} */}
-              {/* {`Showing ${(currentPage - 1) * 10 + 1} to ${currentPage * 10 <= totalPages * 10 ? (currentPage * 10) - 1 : totalPages * 10
-                } of ${totalPosts} entries`} */}
               {`Showing ${firstPostOnPage} to ${lastPostOnPage} of ${totalPosts} entries`}
             </Translate>
           </p>

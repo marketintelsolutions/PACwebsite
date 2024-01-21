@@ -37,7 +37,6 @@ const PacAcademy = () => {
             console.log(error);
             setLoading(false)
         }
-
     };
 
     useEffect(() => {
@@ -49,23 +48,23 @@ const PacAcademy = () => {
         <section className="resources">
             <SectionOne color="#A6A6A7" text="PAC Academy" img={pattern} />
             <div className="section-one">
-                {loading ? <CustomLoader /> :
-                    <div className="content-head-center">
-                        <div className="left">
-                            <div className="all">
-                                <span>
-                                    <BsBuildingsFill />
-                                </span>
-                                <div className="text">
-                                    <h2>{files.length || "..."}</h2>
-                                    <p>total files</p>
-                                </div>
-                                <button>
-                                    {" "}
-                                    <Link to="/resources/all">view all files</Link>
-                                </button>
+                <div className="content-head-center">
+                    <div className="left">
+                        <div className="all">
+                            <span>
+                                <BsBuildingsFill />
+                            </span>
+                            <div className="text">
+                                <h2>{files.length || "__"}</h2>
+                                <p>PAC Academy</p>
                             </div>
+                            <button>
+                                {" "}
+                                {/* <Link to="/resources/all">view all files</Link> */}
+                            </button>
                         </div>
+                    </div>
+                    {loading ? <CustomLoader /> :
                         <div className="right">
                             <div className="items">
                                 {academies.map((item, index) => {
@@ -83,8 +82,8 @@ const PacAcademy = () => {
                                     );
                                 })}
                             </div>
-                        </div>
-                    </div>}
+                        </div>}
+                </div>
             </div>
         </section>
     )

@@ -1,10 +1,9 @@
 import moment from 'moment';
 import React, { useEffect, useState } from 'react'
-import { BsChevronDown, BsFileEarmarkPdfFill, BsFillFileEarmarkExcelFill, BsBuildingsFill } from 'react-icons/bs';
-import { MdDateRange } from 'react-icons/md';
+import { BsFileEarmarkPdfFill, BsFillFileEarmarkExcelFill, BsBuildingsFill } from 'react-icons/bs';
+import { IoMdArrowRoundBack } from "react-icons/io";
 import { FaRegFloppyDisk } from "react-icons/fa6";
 import { Link, useParams } from 'react-router-dom';
-import { headings } from '../../utils/academyData';
 import pattern from "../../assets/images/pattern.jpg";
 import SectionOne from '../../components/about/SectionOne';
 import { collection, getDocs } from 'firebase/firestore';
@@ -58,6 +57,7 @@ const PacAcademyItem = () => {
             <SectionOne color="#A6A6A7" text={`PAC Academy - ${id}`} img={pattern} />
 
             <div className="section-two" id="resources">
+                <Link to="/pacacademy" className='back-btn'><IoMdArrowRoundBack /> BACK</Link>
                 <div className="content-center">
                     <div className="content">
                         <div className="right">
@@ -92,10 +92,8 @@ const PacAcademyItem = () => {
                                 {!loading ? (
                                     academy?.files?.map((file, index) => {
                                         const { name, size, downloadURL, dateCreated } = file;
-                                        // console.log(file, "file");
                                         let fileType;
                                         if (name?.endsWith(".pdf")) {
-                                            // console.log("I love you");
                                             fileType = "pdf";
                                         }
                                         console.log(file);
@@ -118,7 +116,6 @@ const PacAcademyItem = () => {
                                                 <h2>{name}</h2>
                                                 <p>
                                                     <FaRegFloppyDisk />{" "}
-                                                    {/* {moment(dateCreated).format("MMMM Do YYYY")} */}
                                                     {size / 1000} kb
                                                 </p>
                                             </a>

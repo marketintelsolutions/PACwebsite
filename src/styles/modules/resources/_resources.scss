@@ -35,6 +35,21 @@
             rgba(255, 255, 255, 0.7) inset;
         padding: 12px 16px;
       }
+      & .input-span {
+        padding: 0;
+        & input {
+          width: 70px;
+          // border: 2px solid red;
+          font-size: 20px;
+          border: none;
+          padding: 12px 16px;
+          border-radius: 5px;
+          background: #f0f1f5;
+          box-shadow: 2px 2px 1.5px 0px rgba(189, 189, 189, 0.2) inset,
+            -5.813046455383301px -5.813046455383301px 5.813046455383301px 0px
+              rgba(255, 255, 255, 0.7) inset;
+        }
+      }
     }
 
     .right {
