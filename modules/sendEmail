@@ -4,8 +4,10 @@ const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
   service: 'gmail', // e.g., 'Gmail'
   auth: {
-    user: 'your_email@example.com',
-    pass: 'your_email_password',
+    // user: `${process.env.EMAIL}`,
+    // pass: `${process.env.EMAIL_PASSWORD}`,
+    user: 'mail.pacholdings@gmail.com',
+    pass: 'zwveytcpxozeopyx'
   },
 });
 
@@ -13,9 +15,12 @@ const sendMail = async (req, res) => {
   try {
     const { subject, body, selectedEmails } = req.body;
 
+    console.log(req.body);
+
     // Send mail with defined transport object
     const info = await transporter.sendMail({
-      from: 'your_email@example.com',
+      from: 'info@pacholdings.com',
+      // to: ['igbagboleye@gmail.com', 'igbagboleye2@gmail.com'],
       to: selectedEmails,
       subject: subject,
       html: body,
