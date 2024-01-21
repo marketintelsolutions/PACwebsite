@@ -113,7 +113,7 @@ const App = () => {
             <Route path="/pacacademy" element={<PacAcademy />} />
             <Route path="/pacacademy/:id" element={<PacAcademyItem />} />
             <Route path="/pacacademy/admin" element={<PacAcademyAdmin />} />
-            <Route path="/pacacademy/pdf" element={<PacPdf />} />
+            <Route path="/pacacademy/pdf/:name" element={<PacPdf />} />
 
             {/* ------ADMIN--------- */}
             <Route

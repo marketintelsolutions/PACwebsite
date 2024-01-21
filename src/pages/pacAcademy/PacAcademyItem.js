@@ -79,7 +79,7 @@ const PacAcademyItem = () => {
                                 <div className="total">
                                     <p>total</p>{" "}
                                     <p className="length">
-                                        <span>{academy.files?.length || 0}</span>
+                                        <span>{academy?.files?.length || 0}</span>
                                     </p>
                                 </div>
                                 <h3>
@@ -96,15 +96,33 @@ const PacAcademyItem = () => {
                                         if (name?.endsWith(".pdf")) {
                                             fileType = "pdf";
                                         }
-                                        console.log(file);
+                                        // console.log(file);
 
                                         return (
-                                            <a
+                                            // <a
+                                            // key={index}
+                                            // className="item"
+                                            // href={downloadURL}
+                                            // target="_blank"
+                                            // rel="noopener noreferrer"
+                                            // >
+                                            //     <span className="icon">
+                                            //         {fileType === "pdf" ? (
+                                            //             <BsFileEarmarkPdfFill />
+                                            //         ) : (
+                                            //             <BsFillFileEarmarkExcelFill />
+                                            //         )}
+                                            //     </span>
+                                            //     <h2>{name}</h2>
+                                            //     <p>
+                                            //         <FaRegFloppyDisk />{" "}
+                                            //         {size / 1000} kb
+                                            //     </p>
+                                            // </a>
+                                            <Link
                                                 key={index}
                                                 className="item"
-                                                href={downloadURL}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
+                                                to={`/pacacademy/pdf/${name}`}
                                             >
                                                 <span className="icon">
                                                     {fileType === "pdf" ? (
@@ -117,8 +135,7 @@ const PacAcademyItem = () => {
                                                 <p>
                                                     <FaRegFloppyDisk />{" "}
                                                     {size / 1000} kb
-                                                </p>
-                                            </a>
+                                                </p></Link>
                                         );
                                     })
                                 ) : (
