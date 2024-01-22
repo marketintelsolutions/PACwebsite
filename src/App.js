@@ -68,7 +68,6 @@ const App = () => {
         to={`${language}`}
         googleApiKey={`${process.env.REACT_APP_GOOGLE_API_KEY}`}
       >
-        <h1></h1>
         <SharedLayout logo={navlogo} setLanguage={setLanguage}>
           <Routes>
             <Route path="/" element={<Landing />} />
