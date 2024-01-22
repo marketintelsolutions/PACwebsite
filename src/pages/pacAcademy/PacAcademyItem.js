@@ -1,10 +1,9 @@
 import moment from 'moment';
 import React, { useEffect, useState } from 'react'
-import { BsChevronDown, BsFileEarmarkPdfFill, BsFillFileEarmarkExcelFill, BsBuildingsFill } from 'react-icons/bs';
-import { MdDateRange } from 'react-icons/md';
+import { BsFileEarmarkPdfFill, BsFillFileEarmarkExcelFill, BsBuildingsFill } from 'react-icons/bs';
+import { IoMdArrowRoundBack } from "react-icons/io";
 import { FaRegFloppyDisk } from "react-icons/fa6";
 import { Link, useParams } from 'react-router-dom';
-import { headings } from '../../utils/academyData';
 import pattern from "../../assets/images/pattern.jpg";
 import SectionOne from '../../components/about/SectionOne';
 import { collection, getDocs } from 'firebase/firestore';
@@ -48,25 +47,26 @@ const PacAcademyItem = () => {
     }, []);
 
     useEffect(() => {
+        window.scroll(0, 400);
         const item = academies.find((item) => item.id === id)
         setAcademy(item)
-    }, [])
+    }, [id])
 
     return (
         <div className="resource-details">
             <SectionOne color="#A6A6A7" text={`PAC Academy - ${id}`} img={pattern} />
 
             <div className="section-two" id="resources">
+                <Link to="/pacacademy" className='back-btn'><IoMdArrowRoundBack /> BACK</Link>
                 <div className="content-center">
                     <div className="content">
                         <div className="right">
                             {academies.map((item, index) => {
-
                                 return (
                                     <Link
                                         key={index}
-                                        className={`item`}
-                                        to={`/resources`}
+                                        className={`${item.id === id ? "item active" : "item"}`}
+                                        to={`/pacacademy/${item.id}`}
                                     >
                                         <span><BsBuildingsFill /></span>
                                         <h2>{item.id}</h2>
@@ -79,7 +79,7 @@ const PacAcademyItem = () => {
                                 <div className="total">
                                     <p>total</p>{" "}
                                     <p className="length">
-                                        <span>{academy.files?.length}</span>
+                                        <span>{academy?.files?.length || 0}</span>
                                     </p>
                                 </div>
                                 <h3>
@@ -92,19 +92,37 @@ const PacAcademyItem = () => {
                                 {!loading ? (
                                     academy?.files?.map((file, index) => {
                                         const { name, size, downloadURL, dateCreated } = file;
-                                        // console.log(file, "file");
                                         let fileType;
                                         if (name?.endsWith(".pdf")) {
-                                            // console.log("I love you");
                                             fileType = "pdf";
                                         }
+                                        // console.log(file);
+
                                         return (
-                                            <a
+                                            // <a
+                                            // key={index}
+                                            // className="item"
+                                            // href={downloadURL}
+                                            // target="_blank"
+                                            // rel="noopener noreferrer"
+                                            // >
+                                            //     <span className="icon">
+                                            //         {fileType === "pdf" ? (
+                                            //             <BsFileEarmarkPdfFill />
+                                            //         ) : (
+                                            //             <BsFillFileEarmarkExcelFill />
+                                            //         )}
+                                            //     </span>
+                                            //     <h2>{name}</h2>
+                                            //     <p>
+                                            //         <FaRegFloppyDisk />{" "}
+                                            //         {size / 1000} kb
+                                            //     </p>
+                                            // </a>
+                                            <Link
                                                 key={index}
                                                 className="item"
-                                                href={downloadURL}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
+                                                to={`/pacacademy/pdf/${name}`}
                                             >
                                                 <span className="icon">
                                                     {fileType === "pdf" ? (
@@ -116,23 +134,13 @@ const PacAcademyItem = () => {
                                                 <h2>{name}</h2>
                                                 <p>
                                                     <FaRegFloppyDisk />{" "}
-                                                    {/* {moment(dateCreated).format("MMMM Do YYYY")} */}
                                                     {size / 1000} kb
-                                                </p>
-                                            </a>
+                                                </p></Link>
                                         );
                                     })
                                 ) : (
                                     <h2>Loading...</h2>
                                 )}
-
-                                <button className="button">
-                                    <span
-
-                                    >
-                                        Load More
-                                    </span>
-                                </button>
                             </div>
                         </div>
                     </div>

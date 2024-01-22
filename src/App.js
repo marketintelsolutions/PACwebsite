@@ -33,6 +33,7 @@ import SendMail from "./pages/admin/SendMail";
 import PacAcademy from "./pages/pacAcademy/PacAcademy";
 import PacAcademyItem from "./pages/pacAcademy/PacAcademyItem";
 import PacAcademyAdmin from "./pages/pacAcademy/PacAcademyAdmin";
+import PacPdf from "./pages/pacAcademy/PacPdf";
 
 const cacheProvider = {
   get: (language, key) =>
@@ -112,6 +113,7 @@ const App = () => {
             <Route path="/pacacademy" element={<PacAcademy />} />
             <Route path="/pacacademy/:id" element={<PacAcademyItem />} />
             <Route path="/pacacademy/admin" element={<PacAcademyAdmin />} />
+            <Route path="/pacacademy/pdf/:name" element={<PacPdf />} />
 
             {/* ------ADMIN--------- */}
             <Route

@@ -90,7 +90,7 @@ const PacAcademyAdmin = () => {
                         const docSnap = await getDoc(docRef);
                         const docData = docSnap.data();
                         docData.files = docData.files || [];
-                        docData.files.push({ name: file.name, ...metadata });
+                        docData.files.push({ name: file.name, ...metadata, downloadURL });
                         await updateDoc(docRef, docData);
                         setNewFiles([]); // Clear selected files
                         setProgress(0);
@@ -112,7 +112,6 @@ const PacAcademyAdmin = () => {
     };
 
     const handleFileChange = (event) => {
-        console.log(event.target.files);
         const filesObj = event.target.files;
 
         const filesArr = [];
@@ -122,25 +121,23 @@ const PacAcademyAdmin = () => {
                 filesArr.push(filesObj[i]);
             }
         }
-        console.log(filesArr, "files");
         setNewFiles(filesArr);
     };
 
     return (
         <div className="resource-details">
             <SectionOne color="#A6A6A7" text="PAC Academy Admin" img={pattern} />
-
             <div className="section-two" id="resources">
                 <div className="content-center">
                     <div className="content">
                         <div className="right">
                             {headings.map((item, index) => {
-                                const { text, icon, sub, main } = item;
+                                const { id, text, icon, sub, main } = item;
 
                                 return (
                                     <Link
                                         key={index}
-                                        className={`item`}
+                                        className={`${id === id ? "item active" : "item"}`}
                                         to={`/resources`}
                                     >
                                         <span>{icon}</span>
@@ -178,13 +175,14 @@ const PacAcademyAdmin = () => {
                                     />
                                     {isUploadOpen && <div className="upload-file">
                                         <div className="content-center">
-                                            <div
+                                            <Link
                                                 className="close"
                                                 // onClick={() => setIsUploadOpen(false)}
-                                                onClick={() => navigate(-1)}
+                                                // onClick={() => navigate(-1)}
+                                                to='/pacacademy'
                                             >
                                                 x
-                                            </div>
+                                            </Link>
 
                                             <h2>Select Folder</h2>
                                             <select name="folder" id="folder" disabled={loading} value={folder} onChange={(e) => setFolder(e.target.value)}>
