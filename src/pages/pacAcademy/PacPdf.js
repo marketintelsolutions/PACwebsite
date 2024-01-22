@@ -8,7 +8,8 @@ import { Translate } from "react-auto-translate";
 import prevblue from "../../assets/logos/prevblue.svg";
 import nextblue from "../../assets/logos/nextblue.svg";
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
@@ -16,6 +17,8 @@ const PacPdf = () => {
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
     const [pdf, setPdf] = useState({})
+
+    const navigate = useNavigate()
 
     const { pdfs } = useSelector((store) => store.pdf)
 
@@ -57,44 +60,48 @@ const PacPdf = () => {
     return (
         <div className='academy-pdf' >
             <SectionOne color="#A6A6A7" text={`PAC Academy - ${name}`} img={pattern} />
-            <div className='pdf-container' onContextMenu={(e) => e.preventDefault()}>
-                <Document file={`http://localhost:8080/getPdf?downloadUrl=${encodeURIComponent(pdf.downloadURL)}`} onLoadSuccess={onDocumentLoadSuccess}>
-                    <Page pageNumber={pageNumber} width={700} />
-                </Document>
-            </div>
 
-            <div className="pagination">
-                <div className="center">
-                    <div className="left">
-                        <p>
-                            <Translate>
-                                {`Showing page ${pageNumber} of ${numPages} pages`}
-                            </Translate>
-                        </p>
-                        <span className='input-span'>
-                            <input
-                                type="text"
-                                value={pageNumber}
-                                onChange={(e) => {
-                                    const enteredValue = parseInt(e.target.value, 10) || 1;
-                                    setPageNumber(Math.min(enteredValue, numPages));
-                                }}
-                            />
-                        </span>
-                    </div>
-                    <div className="right">
-                        <button onClick={goToPreviousPage} disabled={pageNumber <= 1}>
-                            <img src={prevblue} alt="prevblue" />
-                            <span>
-                                <Translate>Previous</Translate>
+            <div className='content'>
+                <button onClick={() => navigate(-1)} className='back-btn'><IoMdArrowRoundBack /> BACK</button>
+                <div className='pdf-container' onContextMenu={(e) => e.preventDefault()}>
+                    <Document file={`http://localhost:8080/getPdf?downloadUrl=${encodeURIComponent(pdf.downloadURL)}`} onLoadSuccess={onDocumentLoadSuccess}>
+                        <Page pageNumber={pageNumber} width={1000} />
+                    </Document>
+                </div>
+
+                <div className="pagination">
+                    <div className="center">
+                        <div className="left">
+                            <p>
+                                <Translate>
+                                    {`Showing page ${pageNumber} of ${numPages} pages`}
+                                </Translate>
+                            </p>
+                            <span className='input-span'>
+                                <input
+                                    type="text"
+                                    value={pageNumber}
+                                    onChange={(e) => {
+                                        const enteredValue = parseInt(e.target.value, 10) || 1;
+                                        setPageNumber(Math.min(enteredValue, numPages));
+                                    }}
+                                />
                             </span>
-                        </button>
-                        <button onClick={goToNextPage} disabled={pageNumber >= numPages}>
-                            <span>
-                                <Translate>Next</Translate>
-                            </span>
-                            <img src={nextblue} alt="nextblue" />
-                        </button>
+                        </div>
+                        <div className="right">
+                            <button onClick={goToPreviousPage} disabled={pageNumber <= 1}>
+                                <img src={prevblue} alt="prevblue" />
+                                <span>
+                                    <Translate>Previous</Translate>
+                                </span>
+                            </button>
+                            <button onClick={goToNextPage} disabled={pageNumber >= numPages}>
+                                <span>
+                                    <Translate>Next</Translate>
+                                </span>
+                                <img src={nextblue} alt="nextblue" />
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
