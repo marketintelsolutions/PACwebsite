@@ -755,11 +755,32 @@
   }
 }
 .academy-pdf {
+  & .content {
+    max-width: 1200px;
+    margin: 50px auto;
+  }
+  & .back-btn {
+    border: none;
+    background: #062644;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px 25px;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    gap: 10px;
+  }
+
   & .pdf-container {
+    margin-top: 50px;
     height: 550px;
     // border: 2px solid red;
-    max-width: 1410px;
-    margin: 0 auto;
+    // max-width: 1410px;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;

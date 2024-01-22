@@ -122,6 +122,7 @@ const PacAcademyItem = () => {
                                             <Link
                                                 key={index}
                                                 className="item"
+                                                target='_blank'
                                                 to={`/pacacademy/pdf/${name}`}
                                             >
                                                 <span className="icon">
