@@ -29,7 +29,7 @@ const SectionFour = () => {
 
   const posts = JSON.parse(localStorage.getItem("posts"));
   const itemsPerPage = 3;
-  const totalPages = Math.ceil(postLists.length - 1);
+  const totalPages = 9;
 
   useEffect(() => {
     posts && localStorage.clear("posts");
@@ -37,16 +37,6 @@ const SectionFour = () => {
 
     getPosts(setPostLists, setLoading);
   }, []);
-
-  // const startAutoScroll = () => {
-  //   scrollIntervalRef.current = setInterval(() => {
-  //     handleScroll("right");
-  //   }, 3000); // Adjust the interval as needed (e.g., every 3 seconds)
-  // };
-
-  // const stopAutoScroll = () => {
-  //   clearInterval(scrollIntervalRef.current);
-  // };
 
   const handleScroll = (direction) => {
     if (direction === "left") {
@@ -63,12 +53,6 @@ const SectionFour = () => {
       }
     }
 
-    // Additional logic for automatic scrolling
-    // if (direction === "auto" && scrollIndex < totalPages - 1) {
-    //   setScrollIndex(scrollIndex + 1);
-    // } else if (direction === "auto") {
-    //   setScrollIndex(0);
-    // }
   };
 
   useEffect(() => {
@@ -79,43 +63,13 @@ const SectionFour = () => {
     return () => clearInterval(interval)
   }, [scrollIndex])
 
-  // // USEEFFECT FOR AUTOSCROLLING
-  // useEffect(() => {
-  //   const options = {
-  //     root: null,
-  //     rootMargin: "0px",
-  //     threshold: 0.5,
-  //   };
-
-  //   const callback = (entries) => {
-  //     entries.forEach((entry) => {
-  //       if (entry.isIntersecting) {
-  //         startAutoScroll();
-  //       } else {
-  //         stopAutoScroll();
-  //       }
-  //     });
-  //   };
-
-  //   const observer = new IntersectionObserver(callback, options);
-  //   if (navigationRef.current) {
-  //     observer.observe(navigationRef.current);
-  //   }
-
-  //   // Clean up the observer when the component unmounts
-  //   return () => {
-  //     observer.disconnect();
-  //     stopAutoScroll();
-  //   };
-  // }, []);
-
   const toggleVideo = () => {
     setIsVideoPlaying(!isVideoPlaying);
   };
 
   const startIndex = scrollIndex * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const visibleFoundations = postLists.slice(scrollIndex, scrollIndex + 3);
+  const visibleFoundations = postLists.slice(0, 27).slice(scrollIndex, scrollIndex + 3);
 
   return (
     <section className="section-four">
@@ -184,7 +138,7 @@ const SectionFour = () => {
         <div className="text">
           <p>
             <Translate>
-              Creating Impact through opportunities, strategic alliances and 
+              Creating Impact through opportunities, strategic alliances and
               partnerships
             </Translate>
           </p>

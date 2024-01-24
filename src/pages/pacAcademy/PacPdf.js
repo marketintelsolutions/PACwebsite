@@ -59,41 +59,6 @@ const PacPdf = () => {
 
     return (
         <div className='academy-pdf' >
-            <div className="pagination">
-                <div className="center">
-                    <div className="left">
-                        <p>
-                            <Translate>
-                                {`Showing page ${pageNumber} of ${numPages} pages`}
-                            </Translate>
-                        </p>
-                        <span className='input-span'>
-                            <input
-                                type="text"
-                                value={pageNumber}
-                                onChange={(e) => {
-                                    const enteredValue = parseInt(e.target.value, 10) || 1;
-                                    setPageNumber(Math.min(enteredValue, numPages));
-                                }}
-                            />
-                        </span>
-                    </div>
-                    <div className="right">
-                        <button onClick={goToPreviousPage} disabled={pageNumber <= 1}>
-                            <img src={prevblue} alt="prevblue" />
-                            <span>
-                                <Translate>Previous</Translate>
-                            </span>
-                        </button>
-                        <button onClick={goToNextPage} disabled={pageNumber >= numPages}>
-                            <span>
-                                <Translate>Next</Translate>
-                            </span>
-                            <img src={nextblue} alt="nextblue" />
-                        </button>
-                    </div>
-                </div>
-            </div>
             <div className='content'>
                 <div className='pdf-container' onContextMenu={(e) => e.preventDefault()}>
                     <Document file={`http://localhost:8080/getPdf?downloadUrl=${encodeURIComponent(pdf.downloadURL)}`} onLoadSuccess={onDocumentLoadSuccess}>
@@ -101,8 +66,41 @@ const PacPdf = () => {
                         <Page pageNumber={pageNumber} width={document.body.clientWidth - 100} />
                     </Document>
                 </div>
-
-
+                <div className="pagination">
+                    <div className="center">
+                        <div className="left">
+                            <p>
+                                <Translate>
+                                    {`Showing page ${pageNumber} of ${numPages} pages`}
+                                </Translate>
+                            </p>
+                            <span className='input-span'>
+                                <input
+                                    type="text"
+                                    value={pageNumber}
+                                    onChange={(e) => {
+                                        const enteredValue = parseInt(e.target.value, 10) || 1;
+                                        setPageNumber(Math.min(enteredValue, numPages));
+                                    }}
+                                />
+                            </span>
+                        </div>
+                        <div className="right">
+                            <button onClick={goToPreviousPage} disabled={pageNumber <= 1}>
+                                <img src={prevblue} alt="prevblue" />
+                                <span>
+                                    <Translate>Previous</Translate>
+                                </span>
+                            </button>
+                            <button onClick={goToNextPage} disabled={pageNumber >= numPages}>
+                                <span>
+                                    <Translate>Next</Translate>
+                                </span>
+                                <img src={nextblue} alt="nextblue" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
