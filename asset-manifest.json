@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f518aab7.css",
-    "main.js": "/static/js/main.5b31de9b.js",
+    "main.css": "/static/css/main.8a0851a3.css",
+    "main.js": "/static/js/main.7507b38a.js",
     "static/media/brochure.pdf": "/static/media/brochure.03f11445c8ef3faf8aa1.pdf",
     "static/media/landingVid.mp4": "/static/media/landingVid.08824d0e2d0774dab873.mp4",
     "static/media/alumniBg.png": "/static/media/alumniBg.a53ca1451e7c5a8f1a26.png",
@@ -19,6 +19,7 @@
     "static/media/hospitalityBg.png": "/static/media/hospitalityBg.af618f2e3a72c6103669.png",
     "static/media/vendorbg.png": "/static/media/vendorbg.9af156df65da8f57e4eb.png",
     "static/media/renewableBg.png": "/static/media/renewableBg.6be3ec2b70cef4a38588.png",
+    "static/media/portfolioBg.png": "/static/media/portfolioBg.b7c7a21a78e978f638c8.png",
     "static/media/internship.png": "/static/media/internship.970fb63af081b5220238.png",
     "static/media/aboutBg.png": "/static/media/aboutBg.a650566d312081957ce5.png",
     "static/media/solar.png": "/static/media/solar.9ad170df1400e7e00e75.png",
@@ -79,6 +80,7 @@
     "static/media/footerBg.png": "/static/media/footerBg.713bc37838d837d16798.png",
     "static/media/mapalumni.png": "/static/media/mapalumni.d7f397ad906f6c434d2e.png",
     "static/media/portugal.jpg": "/static/media/portugal.16dfca74e8c28bf88e70.jpg",
+    "static/media/pattern.jpg": "/static/media/pattern.3ccaf7234b25fd2f8a40.jpg",
     "static/media/residences.png": "/static/media/residences.e7c9cd79469fd1136b39.png",
     "static/media/luxor.png": "/static/media/luxor.1dd710e960959fab8b30.png",
     "static/media/amberCrest.png": "/static/media/amberCrest.58d9c97ce371bd62fb4d.png",
@@ -181,11 +183,11 @@
     "static/media/prepaid.svg": "/static/media/prepaid.8e1336786270552592a9c7eadf9c1115.svg",
     "static/media/minus.svg": "/static/media/minus.8672ab2a8712f5aecb7401423a6a6418.svg",
     "static/media/arrowLeft.svg": "/static/media/arrowLeft.8285f4806e7bf425e0b4fee5d17f97ba.svg",
-    "main.f518aab7.css.map": "/static/css/main.f518aab7.css.map",
-    "main.5b31de9b.js.map": "/static/js/main.5b31de9b.js.map"
+    "main.8a0851a3.css.map": "/static/css/main.8a0851a3.css.map",
+    "main.7507b38a.js.map": "/static/js/main.7507b38a.js.map"
   },
   "entrypoints": [
-    "static/css/main.f518aab7.css",
-    "static/js/main.5b31de9b.js"
+    "static/css/main.8a0851a3.css",
+    "static/js/main.7507b38a.js"
   ]
 }
