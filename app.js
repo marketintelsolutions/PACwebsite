@@ -39,7 +39,6 @@ app.get('/getPdf', async (req, res) => {
 
     const pdfArrayBuffer = await pdfResponse.arrayBuffer();
 
-    // Convert ArrayBuffer to Buffer
     const pdfBuffer = Buffer.from(pdfArrayBuffer);
 
     res.contentType('application/pdf');
