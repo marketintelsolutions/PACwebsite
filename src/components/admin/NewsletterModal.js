@@ -4,29 +4,30 @@ import alert from "../../assets/logos/alert.svg";
 import { addDoc, collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
 import { db } from '../../firebase/firebaseConfig';
 
-const NewsletterModal = ({ setIsNewsletterModal }) => {
+const NewsletterModal = ({ selected, setIsNewsletterModal, fileUrl, setSelectedFile }) => {
     const [newsletter, setNewsletter] = useState('')
     const [newsletters, setNewsletters] = useState([])
 
-    const postCollectionRef = collection(db, "newsletter");
+    const postCollectionRef = collection(db, selected);
 
     const handleSave = async (e) => {
         e.preventDefault();
 
-        if (!newsletter) {
-            alert("kindly fill all fields");
-            return;
-        }
+        // if (!newsletter) {
+        //     alert("kindly fill all fields");
+        //     return;
+        // }
 
         try {
             await newsletters.map((item) => {
-                deleteDoc(doc(db, "newsletter", item.id));
+                deleteDoc(doc(db, selected, item.id));
             })
 
-            await addDoc(postCollectionRef, { newsletter });
+            await addDoc(postCollectionRef, { [selected]: fileUrl });
 
             console.log('item added');
             setIsNewsletterModal(false);
+            setSelectedFile(null)
         } catch (error) {
             console.error('Error adding/deleting newsletter:', error);
             alert('An error occurred while saving the newsletter. Please try again.');
@@ -59,10 +60,10 @@ const NewsletterModal = ({ setIsNewsletterModal }) => {
                 <div className="icon">
                     <img src={alert} alt="alert" />
                 </div>
-                <p>Add/Modify Newsletter</p>
-                <div className="input">
+                <p>Add/Modify {selected} file</p>
+                {/* <div className="input">
                     <input type="text" placeholder="Add link to newsletter" value={newsletter} onChange={(e) => setNewsletter(e.target.value)} />
-                </div>
+                </div> */}
                 <div className="buttons">
                     <button
                         className="button"
