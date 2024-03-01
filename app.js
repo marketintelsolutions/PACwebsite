@@ -2,10 +2,10 @@ const express = require("express");
 const router = express.Router();
 const cors = require("cors");
 const sendMail = require("./modules/sendEmail");
+const { sendMailZiltch } = require("./modules/sendMailZiltch");
 
 const app = express();
 
-// app.use(express.static(path.join(__dirname + "/public")));
 
 const port = process.env.PORT || 8080;
 require("dotenv").config();
@@ -29,6 +29,8 @@ app.get("/", (req, res) => {
 });
 
 app.post('/send-email', sendMail);
+
+app.post('/send-email-ziltch', sendMailZiltch);
 
 app.get('/getPdf', async (req, res) => {
   const downloadUrl = req.query.downloadUrl;
