@@ -60,7 +60,7 @@ const SendMail = () => {
     };
 
     try {
-      const response = await fetch('https://pac.jesekung.com/send-email', {
+      const response = await fetch('https://pacbackend-ca764e382ef7.herokuapp.com/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

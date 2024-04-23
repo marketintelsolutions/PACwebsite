@@ -26,11 +26,8 @@ const AllPosts = () => {
     window.scroll(0, 0);
     setLoading(true);
     getPosts(setPosts, setLoading);
-
-    // calculateModalPosition()
   }, []);
 
-  // console.log(posts);
 
   const handleDelete = async (id) => {
     try {
@@ -65,19 +62,6 @@ const AllPosts = () => {
       console.log(error);
     }
   };
-
-  // const calculateModalPosition = () => {
-  //   console.log('heeyyyy');
-  //   const dashboardRect = dashboardRef.current.getBoundingClientRect();
-  //   const modalCenterX = dashboardRect.left + dashboardRect.width / 2;
-  //   const modalCenterY = dashboardRect.top + dashboardRect.height / 2;
-  //   setPosition({ left: `${modalCenterX}`, top: `${modalCenterY}px` })
-  //   return;
-  // };
-
-  // console.log(calculateModalPosition());
-  console.log(position);
-
 
   if (!isAuthenticated) {
     return <Navigate to="/admin/login" replace />;
@@ -114,13 +98,13 @@ const AllPosts = () => {
         )}
 
         {/* NEWSLETTER MODAL */}
-        {isNewsletterModal && <NewsletterModal setIsNewsletterModal={setIsNewsletterModal} />}
+        {/* {isNewsletterModal && <NewsletterModal setIsNewsletterModal={setIsNewsletterModal} />} */}
 
         <div className="dashboard-top">
           <Link to="/admin/stay-updated/create-post" className="add-btn">
             Add New Post
           </Link>
-          <button className="newsletter-btn" onClick={() => setIsNewsletterModal(true)}>Newsletter</button>
+          {/* <button className="newsletter-btn" onClick={() => setIsNewsletterModal(true)}>Newsletter</button> */}
         </div>
         <div className="dashboard">
           {loading ? (

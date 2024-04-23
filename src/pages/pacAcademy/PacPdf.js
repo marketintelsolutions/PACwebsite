@@ -61,7 +61,7 @@ const PacPdf = () => {
         <div className='academy-pdf' >
             <div className='content'>
                 <div className='pdf-container' onContextMenu={(e) => e.preventDefault()}>
-                    <Document file={`https://pac.jesekung.com/getPdf?downloadUrl=${encodeURIComponent(pdf.downloadURL)}`} onLoadSuccess={onDocumentLoadSuccess}>
+                    <Document file={`https://pacbackend-ca764e382ef7.herokuapp.com/getPdf?downloadUrl=${encodeURIComponent(pdf.downloadURL)}`} onLoadSuccess={onDocumentLoadSuccess}>
                         {/* <Page pageNumber={pageNumber} width={window.innerWidth - 200} /> */}
                         <Page pageNumber={pageNumber} width={document.body.clientWidth - 100} />
                     </Document>

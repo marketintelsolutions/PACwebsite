@@ -5,11 +5,6 @@ const Dashboard = ({ children }) => {
   const location = useLocation(); // Get the current location
   let paths = location.pathname.split('/')
 
-  if (paths === null) {
-    console.log('hello');
-  }
-  console.log(paths);
-
   return (
     <div className="admin-dashboard">
       <div className="sidebar">
@@ -29,6 +24,15 @@ const Dashboard = ({ children }) => {
               }`}
           >
             Subscribers
+          </Link>
+          <Link
+            to="/admin/upload"
+            // className={`item ${location.pathname === "/admin/subscribers" || location.pathname === '/admin/subscribers/send-email' ? "active" : ""
+            //   }`}
+            className={`item ${paths.includes('upload') ? "active" : ""
+              }`}
+          >
+            Upload
           </Link>
         </div>
       </div>

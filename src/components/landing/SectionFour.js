@@ -16,6 +16,8 @@ import { getPosts } from "../../utils/helpers/admin/fetchPosts";
 import { Link } from "react-router-dom";
 import { limitStringTo70Characters } from "../../utils/resources/arrangeNews";
 import CustomLoader from "../resources/CustomLoader";
+import { db } from "../../firebase/firebaseConfig";
+import { collection, getDocs } from "firebase/firestore";
 
 const SectionFour = () => {
   const [scrollIndex, setScrollIndex] = useState(0);
@@ -23,6 +25,7 @@ const SectionFour = () => {
   const [postLists, setPostLists] = useState([]);
   const [loading, setLoading] = useState(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [profile, setProfile] = useState('')
 
   const scrollIntervalRef = useRef(null);
   const navigationRef = useRef(null);
@@ -30,6 +33,23 @@ const SectionFour = () => {
   const posts = JSON.parse(localStorage.getItem("posts"));
   const itemsPerPage = 3;
   const totalPages = 9;
+
+  const postCollectionRef = collection(db, "profile");
+
+  const getProfile = async () => {
+    const snapshot = await getDocs(postCollectionRef);
+    const profiles = snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    profiles[0] && setProfile(profiles[0].profile); // Pre-fill with the first newsletter
+  };
+
+  useEffect(() => {
+    window.scroll(0, 0);
+    getProfile();
+  }, []);
+
 
   useEffect(() => {
     posts && localStorage.clear("posts");
@@ -143,7 +163,7 @@ const SectionFour = () => {
             </Translate>
           </p>
           <a>
-            <span>
+            <span onClick={() => window.open(profile, '_blank')}>
               <Translate>Learn more</Translate>
             </span>
           </a>

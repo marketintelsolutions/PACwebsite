@@ -34,6 +34,7 @@ import PacAcademy from "./pages/pacAcademy/PacAcademy";
 import PacAcademyItem from "./pages/pacAcademy/PacAcademyItem";
 import PacAcademyAdmin from "./pages/pacAcademy/PacAcademyAdmin";
 import PacPdf from "./pages/pacAcademy/PacPdf";
+import Upload from "./pages/admin/Upload";
 
 const cacheProvider = {
   get: (language, key) =>
@@ -132,6 +133,7 @@ const App = () => {
             <Route path="/admin/subscribers" element={<Subscribers />} />
             <Route path="/admin/subscribers/send-email" element={<SendMail />} />
 
+            <Route path="/admin/upload" element={<Upload />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </SharedLayout>
