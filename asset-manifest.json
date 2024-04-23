@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8a0851a3.css",
-    "main.js": "/static/js/main.52ac11bd.js",
+    "main.css": "/static/css/main.0d539c57.css",
+    "main.js": "/static/js/main.76e628f7.js",
     "static/media/brochure.pdf": "/static/media/brochure.03f11445c8ef3faf8aa1.pdf",
     "static/media/landingVid.mp4": "/static/media/landingVid.08824d0e2d0774dab873.mp4",
     "static/media/alumniBg.png": "/static/media/alumniBg.a53ca1451e7c5a8f1a26.png",
@@ -174,20 +174,23 @@
     "static/media/equalGrey.svg": "/static/media/equalGrey.aade808e9296c62e2aa1f15d2acb521f.svg",
     "static/media/cancel.svg": "/static/media/cancel.06f560f7dff5f96f6d5d720d4b9db643.svg",
     "static/media/menuLine.svg": "/static/media/menuLine.d39ac3c2ee48d9be9ac32c4094a65c2a.svg",
+    "static/media/upload.svg": "/static/media/upload.dde7052408953915e1cb630e843a025c.svg",
     "static/media/delete.svg": "/static/media/delete.c1e63423e46d966c36e212900f9fdd86.svg",
     "static/media/calender.svg": "/static/media/calender.5931d57d26a886168fef2018169e0f43.svg",
     "static/media/airtime.svg": "/static/media/airtime.4c0d334fd2123b70601dcfbd66691ac3.svg",
     "static/media/arrowRight.svg": "/static/media/arrowRight.1178637f883bada5c1e50c64a31c12b8.svg",
     "static/media/closeModal.svg": "/static/media/closeModal.70548c26eb2867d79884bf285580f093.svg",
     "static/media/facebook.svg": "/static/media/facebook.58ce81175c907a3a86b1603b3d013d55.svg",
+    "static/media/blueTick.svg": "/static/media/blueTick.ccb1087cc9675f96f2a55b37178c1971.svg",
+    "static/media/baselineDelete.svg": "/static/media/baselineDelete.e66cee1e95084381eac6c954d281b4d8.svg",
     "static/media/prepaid.svg": "/static/media/prepaid.8e1336786270552592a9c7eadf9c1115.svg",
     "static/media/minus.svg": "/static/media/minus.8672ab2a8712f5aecb7401423a6a6418.svg",
     "static/media/arrowLeft.svg": "/static/media/arrowLeft.8285f4806e7bf425e0b4fee5d17f97ba.svg",
-    "main.8a0851a3.css.map": "/static/css/main.8a0851a3.css.map",
-    "main.52ac11bd.js.map": "/static/js/main.52ac11bd.js.map"
+    "main.0d539c57.css.map": "/static/css/main.0d539c57.css.map",
+    "main.76e628f7.js.map": "/static/js/main.76e628f7.js.map"
   },
   "entrypoints": [
-    "static/css/main.8a0851a3.css",
-    "static/js/main.52ac11bd.js"
+    "static/css/main.0d539c57.css",
+    "static/js/main.76e628f7.js"
   ]
 }
