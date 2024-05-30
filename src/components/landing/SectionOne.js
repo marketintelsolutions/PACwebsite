@@ -46,7 +46,7 @@ const SectionOne = () => {
             <img src={worldMain} alt="phone-bg" />
             <div className="bg-label">
               <div className="text-center">
-                <h3>Africa’s investment future is pan Africa...</h3>
+                <h3>Africa’s investment future is pan Africa.</h3>
               </div>
             </div>
           </div>
