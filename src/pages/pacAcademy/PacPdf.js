@@ -24,8 +24,6 @@ const PacPdf = () => {
 
     const { name } = useParams()
 
-    // console.log(pdfs);
-
     useEffect(() => {
         window.scroll(0, 0);
         // const file = pdfs.find((item) => item.name === name)
@@ -38,7 +36,6 @@ const PacPdf = () => {
                 }
             })
         })
-        // setPdf(file)
     }, [])
 
     const onDocumentLoadSuccess = ({ numPages }) => {
@@ -62,7 +59,7 @@ const PacPdf = () => {
             <div className='content'>
                 <div className='pdf-container' onContextMenu={(e) => e.preventDefault()}>
                     <Document file={`https://pacbackend-ca764e382ef7.herokuapp.com/getPdf?downloadUrl=${encodeURIComponent(pdf.downloadURL)}`} onLoadSuccess={onDocumentLoadSuccess}>
-                        {/* <Page pageNumber={pageNumber} width={window.innerWidth - 200} /> */}
+
                         <Page pageNumber={pageNumber} width={document.body.clientWidth - 100} />
                     </Document>
                 </div>

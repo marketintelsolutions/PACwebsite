@@ -56,8 +56,10 @@
 
       & .items {
         margin-top: 20px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        // display: grid;
+        display: flex;
+        flex-wrap: wrap;
+        // grid-template-columns: repeat(3, 1fr);
         gap: 82px;
         justify-content: center;
         align-items: center;

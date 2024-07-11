@@ -23,7 +23,7 @@ export const portfolioData = [
     heading: "Hospitality & Entertainment",
     text: [
       "The Amber Hospitality Services Limited is a hospitality management and development company, created by hoteliers and financial professional aiming to bring into the industry a comprehensive understanding of management and development, by implementing the right approaches that this industry requires.",
-      "Our roots are in Africa, but our business knowledge was gathered around the world and in all kinds of hospitality operations, despite all the challenges that the industry faces nowadays our mission still to provide responsible management solutions.",
+      "Our roots are in Africa, but our business knowledge was gathered around the world and in all kinds of hospitality operations, despite all the challenges that the industry faces nowadays our mission is still to provide responsible management solutions.",
       "Amber Hospitality Services Limited has developed different Brands to reach all angles of the industry, targeting customer satisfaction by delivering exceptional services and quality products. By meeting and continually endeavouring to exceed our customers' expectations, we will produce the results needed to satisfy and attract investors and continue our individual and corporate growth.",
     ],
     link: "/portfolio/hospitality",
@@ -73,8 +73,8 @@ export const portfolioData = [
     img: technology,
     heading: "Technology and Media",
     text: [
-      "Our investment in the Technology and Media sector encompasses a wide range of technologies and services related to information processing and computer systems. It includes hardware, software, networking, telecommunications equipment, internet services, software development, and IT infrastructure management.", 
-      
+      "Our investment in the Technology and Media sector encompasses a wide range of technologies and services related to information processing and computer systems. It includes hardware, software, networking, telecommunications equipment, internet services, software development, and IT infrastructure management.",
+
       "We also have a vested interest in the production, distribution, and consumption of media content. It includes traditional forms of media such as television, radio, newspapers, magazines, and books, as well as newer digital media platforms like online news portals, social media, streaming services, podcasts, and gaming. Our aim is to contribute to the broader media landscape across Africa.",
     ],
     link: "/portfolio/technology",

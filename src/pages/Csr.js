@@ -76,7 +76,7 @@ const Csr = ({ setNavlogo }) => {
         <div className="content">
           <div className="left">
             <img src={csrWomen} alt="csrWomen" />
-            <img src={playWhite} alt="playWhite" className="play" />
+            {/* <img src={playWhite} alt="playWhite" className="play" /> */}
           </div>
           <div className="right">
             <h1>
@@ -93,14 +93,14 @@ const Csr = ({ setNavlogo }) => {
                 environmental sustainability.
               </Translate>
             </p>
-            <button>
+            <a target="_blank" href="https://www.thepacfoundation.org">
               <span>
                 <Translate>Learn more</Translate>
               </span>
               {/* <div className="liquid">
                 <ButtonAnimation />
               </div> */}
-            </button>
+            </a>
           </div>
         </div>
       </div>
