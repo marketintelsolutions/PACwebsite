@@ -9,6 +9,7 @@
     left: 0;
     height: 594px;
     overflow: hidden;
+    width: 100%;
 
     & img {
       transform: scale(1, 1);
@@ -49,6 +50,7 @@
     align-items: center;
     position: relative;
     z-index: 3;
+    // border: 2px solid red;
 
     @media (max-width: $breakpoint-tablet) {
       padding: 60px 73.5px;
@@ -66,6 +68,8 @@
       max-width: 1403px;
       justify-content: space-between;
       margin: 0 auto;
+      // border: 2px solid red;
+
       height: fit-content;
 
       @media (max-width: $breakpoint-tablet) {
@@ -77,8 +81,6 @@
     }
 
     & .goal-container {
-      // border: 2px solid red;
-
       &:hover {
         & .goal {
           transform: rotateY(180deg);

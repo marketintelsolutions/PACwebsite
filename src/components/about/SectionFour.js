@@ -34,54 +34,6 @@ const SectionFour = () => {
                 </div>
               );
             })}
-            {/* <div className="item">
-              <img src={placeholder} alt="businessMan" />
-              <div className="text">
-                <h2>Dolapo Atekoja</h2>
-                <p>Chairman</p>
-                <Link to="/about/dolapo">read bio</Link>
-              </div>
-            </div>
-            <div className="item">
-              <img src={team1} alt="businessMan" />
-              <div className="text">
-                <h2>Chris Oshiafi</h2>
-                <p>Chief Executive Officer</p>
-                <button>read bio</button>
-              </div>
-            </div>
-            <div className="item">
-              <img src={team2} alt="businessMan" />
-              <div className="text">
-                <h2>Sina Alimi</h2>
-                <p>Deputy Chief Executive Officer</p>
-                <button>read bio</button>
-              </div>
-            </div>
-            <div className="item">
-              <img src={team3} alt="placeholder" />
-              <div className="text">
-                <h2>Eric Okoruwa</h2>
-                <p>Director</p>
-                <button>read bio</button>
-              </div>
-            </div>
-            <div className="item">
-              <img src={placeholder} alt="placeholder" />
-              <div className="text">
-                <h2>Tessa Egbe Ikimi</h2>
-                <p>Director</p>
-                <button>read bio</button>
-              </div>
-            </div>
-            <div className="item">
-              <img src={placeholder} alt="placeholder" />
-              <div className="text">
-                <h2>Garba Ahmed</h2>
-                <p>Director</p>
-                <button>read bio</button>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>

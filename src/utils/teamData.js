@@ -72,18 +72,18 @@ export const directors = [
     ],
     image: placeholder,
   },*/
-  {
-    name: "Garba Ahmed",
-    position: "Director",
-    bioLink: "/about/garba",
-    imageSrc: garba,
-    person: "garba",
-    data: [
-      "Alhaji Ahmed is an accomplished Central Banker, Logistics Expert and a seasoned Media Practitioner par excellence. He has varied experience in financial services industry and in the media world spanning over 30 years. He holds a Bachelor of Science degree in Political Science from Ahmadu Bello University, Zaria and a Master of Communications Arts degree from the University of Ibadan.",
-      "He began his career after his NYSC with Star Group of Newspapers, Enugu; and worked with Radio Kano in August 1986. In February 1986, he joined Triumph Publishing Company Limited, Kano as an Assistant Editor and by November 1986 he had risen to the position of Acting Editor. In December 1988, he joined the Apex Bank, Central Bank of Nigeria (CBN) as a Special Assistant to the Deputy Governor, International Operations. He served in various Directorates of the Bank and rose to the position of Director of Branch Operations Department. He was appointed the pioneer Director and Head of Procurement and Support Services Department. He served in this capacity until he retired on 31st December, 2011.During the course of his career in the Bank, he attended several courses within and outside the shores of Nigeria. He is a member of several Institutes and Associations including a Fellow of the Nigerian Institute of Managment (NIM) and Member, International Facility Management Association (IFMA).",
-    ],
-    image: garba,
-  },
+  // {
+  //   name: "Garba Ahmed",
+  //   position: "Director",
+  //   bioLink: "/about/garba",
+  //   imageSrc: garba,
+  //   person: "garba",
+  //   data: [
+  //     "Alhaji Ahmed is an accomplished Central Banker, Logistics Expert and a seasoned Media Practitioner par excellence. He has varied experience in financial services industry and in the media world spanning over 30 years. He holds a Bachelor of Science degree in Political Science from Ahmadu Bello University, Zaria and a Master of Communications Arts degree from the University of Ibadan.",
+  //     "He began his career after his NYSC with Star Group of Newspapers, Enugu; and worked with Radio Kano in August 1986. In February 1986, he joined Triumph Publishing Company Limited, Kano as an Assistant Editor and by November 1986 he had risen to the position of Acting Editor. In December 1988, he joined the Apex Bank, Central Bank of Nigeria (CBN) as a Special Assistant to the Deputy Governor, International Operations. He served in various Directorates of the Bank and rose to the position of Director of Branch Operations Department. He was appointed the pioneer Director and Head of Procurement and Support Services Department. He served in this capacity until he retired on 31st December, 2011.During the course of his career in the Bank, he attended several courses within and outside the shores of Nigeria. He is a member of several Institutes and Associations including a Fellow of the Nigerian Institute of Managment (NIM) and Member, International Facility Management Association (IFMA).",
+  //   ],
+  //   image: garba,
+  // },
 ];
 
 export const coreValues = [
