@@ -256,7 +256,7 @@ export const financialData = [
 
       "At FSC, we are focused to assist businesses unlock opportunities through: Invoice Discounting, Full Service Factoring, Supply Chain Finance, Debt Factoring, Vendor Finance, Consumer Lending.",
     ],
-    link: "https://fscsng.com",
+    link: "https://fscfng.com",
   },
   {
     img: keynes,

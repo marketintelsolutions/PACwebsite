@@ -14,12 +14,18 @@ import { Translate } from "react-auto-translate";
 const Alumni = ({ setNavlogo }) => {
   const formContainerRef = useRef(null);
   const navigate = useNavigate();
+  const [topPosition, setTopPosition] = useState(0)
+
 
   useEffect(() => {
     window.scroll(0, 0);
     setNavlogo(alumniLogo);
 
   }, []);
+
+  useEffect(() => {
+    window.scroll(0, window.scrollY + topPosition)
+  }, [topPosition])
 
   useEffect(() => {
     const unlisten = navigate((location, action) => {
@@ -34,6 +40,11 @@ const Alumni = ({ setNavlogo }) => {
       setNavlogo(paclogo);
     };
   }, [navigate]);
+
+  const scrollToForm = () => {
+    const positions = formContainerRef.current.getBoundingClientRect()
+    setTopPosition(positions.top)
+  }
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -84,7 +95,7 @@ const Alumni = ({ setNavlogo }) => {
       phone: "",
       message: "",
     });
-    console.log(formData);
+    // console.log(formData);
   };
 
   return (
@@ -112,7 +123,7 @@ const Alumni = ({ setNavlogo }) => {
               of life towards making positive impact where it matters most.
             </Translate>
           </p>
-          <button>
+          <button onClick={scrollToForm}>
             <Translate>Discover more</Translate>
           </button>
         </div>
@@ -178,7 +189,7 @@ const Alumni = ({ setNavlogo }) => {
         </div>
       </div>
 
-      <div className="section-three" ref={formContainerRef}>
+      <div className="section-three" id="form-section" ref={formContainerRef}>
         <div className="form-container">
           <h2>
             <Translate>Get Started</Translate>
