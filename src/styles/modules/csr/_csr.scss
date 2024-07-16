@@ -461,7 +461,8 @@
     @media (max-width: $breakpoint-tablet) {
     }
 
-    & button {
+    & a {
+      text-decoration: none;
       padding: 32px 50px;
       border-radius: 59px;
       background: #ed1c24;

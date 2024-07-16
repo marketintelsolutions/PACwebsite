@@ -93,7 +93,7 @@ const Csr = ({ setNavlogo }) => {
                 environmental sustainability.
               </Translate>
             </p>
-            <a target="_blank" href="https://www.thepacfoundation.org">
+            <a target="_blank" href="https://thepacfoundation.org/who-we-are">
               <span>
                 <Translate>Learn more</Translate>
               </span>
@@ -189,9 +189,9 @@ const Csr = ({ setNavlogo }) => {
         </div>
       </div>
       <div className="get-involved">
-        <button>
+        <a target="_blank" href="https://thepacfoundation.org">
           <Translate>Get Involved</Translate>
-        </button>
+        </a>
       </div>
     </section>
   );
