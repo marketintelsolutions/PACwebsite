@@ -530,6 +530,7 @@ export const hospitality = [
       "LUXOR is set to include sophisticated business and leisure facilities, banquet, and conference facilities of world-class standard, with an offer of variety of restaurants catering as well as different types of cuisines, and bars.",
       "Lobby lounges are set to provide for business travel guests and frequent guests to socialize and relax in a clean and eco-friendly environment, meeting spaces will be typically for small-to-medium size groups, offering the perfect facilities for meetings and conventions. An elegant ballroom will be available for hosting weddings, banquets, and cocktail parties.",
     ],
+    link: "https://amberhospitality.com",
     page: false,
   },
   {
@@ -560,7 +561,7 @@ export const hospitality = [
       "Our F&B outlets are designed to provide unrivalled guest experience but as well focused on the flowless of the service areas, the bar’s, lounge's have a lifestyle concept where the Interiors and ambience are thoughtfully planned for informal and relaxed moments.",
       "MICE facilities are projected with the ultimate state-of-the-art audio-visual systems and complete meeting and banqueting equipment, providing, and guaranteeing each meetings & events in the AMBER CREST Hotel are as pleasant as they are productive, meeting the highest expectations of our clients.",
     ],
-    // link: "https//amberhospitality.com",
+    link: "https://amberhospitality.com",
     page: false,
   },
   {
@@ -573,6 +574,7 @@ export const hospitality = [
       " The ETERNITI guests will enjoy the freshness of food and beverage options at the daily complimentary breakfast, a small convenience corner will offer the guest a variety of snacks, upmarket frozen appetizers and grocery items that can be used to prepare lite meals in the apartment. A welcome set of complimentary groceries will be available at their arrival.",
       "Guests can stay fit and have fun at our fitness center and recreational areas. Or just give us your list for grocery shopping service. Laundry services and dry-cleaning services are also available, also our 24/Concierge services.",
     ],
+    link: "https://amberhospitality.com",
     page: false,
   },
   {
@@ -586,6 +588,7 @@ export const hospitality = [
       "The built-up communities encourage the students to continue their learning path outside the classroom, the necessary infrastructures have been thought and planned on the student needs such as privacy, convenience, WI-FI, dedicated laundry room, open space to study, like as well a diversity of social, and intellectual spaces to promote the cultural development.",
       "This Brand, will promote the basic services of a normal hospitality operation, by making available 24 hours, 7 days a week Concierge services to help the students in their personal requirements, also cleaning services will be in place for public areas and rooms (this one, only ones a week), also the privacy and security it is something that we take very seriously in all our Residences, the wellbeing of everybody, we consider this is one of our prime services, within the range of available services that we provide.",
     ],
+    link: "https://unilagguesthouses.com",
     page: false,
   },
 ];
