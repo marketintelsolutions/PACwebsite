@@ -104,7 +104,7 @@ const StayUpdated = () => {
             postsPerPage={postsPerPage}
           />
           {/* <div className="newsletter-download"><p><Translate>Get our latest Newsletter</Translate></p><a href={newsletter} target='_blank'><Translate>Download</Translate></a></div> */}
-          <div className="newsletter-download"><p><Translate>Get our latest Newsletter</Translate></p><a href={'https://panafricancapitalholdings-my.sharepoint.com/personal/omolola_ojo_panafricancapitalholdings_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fomolola%5Fojo%5Fpanafricancapitalholdings%5Fcom%2FDocuments%2FPAC%20Holdings%20Newsletter%2FPAC%20Edge%20Magazine%20Vol%2E3%2Epdf&parent=%2Fpersonal%2Fomolola%5Fojo%5Fpanafricancapitalholdings%5Fcom%2FDocuments%2FPAC%20Holdings%20Newsletter&ct=1721201778280&or=OWA-NT-Mail&cid=c60f8b16-8b33-44bd-0cd9-0e537c4d54c5&ga=1'} target='_blank'><Translate>Download</Translate></a></div>
+          <div className="newsletter-download"><p><Translate>Get our latest Newsletter</Translate></p><a href={'/pdf/newsletter.pdf'} target='_blank'><Translate>Download</Translate></a></div>
         </div>
       </div>
     </section>
