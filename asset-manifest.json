@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.d4e1ee4e.css",
-    "main.js": "/static/js/main.886b1c02.js",
+    "main.js": "/static/js/main.00dac677.js",
     "static/media/brochure.pdf": "/static/media/brochure.03f11445c8ef3faf8aa1.pdf",
     "static/media/landingVid.mp4": "/static/media/landingVid.08824d0e2d0774dab873.mp4",
     "static/media/alumniBg.png": "/static/media/alumniBg.a53ca1451e7c5a8f1a26.png",
     "static/media/errorImage.jpg": "/static/media/errorImage.f794f8c278e7dc061491.jpg",
+    "static/media/Atekoja.jpg": "/static/media/Atekoja.84d458c082882d1baa70.jpg",
     "static/media/worldImage.svg": "/static/media/worldImage.f217e0be4b88922cad1eb63248e3beb5.svg",
     "static/media/estateBg.png": "/static/media/estateBg.3371647bb089d2709283.png",
     "static/media/pacAlumni.png": "/static/media/pacAlumni.226f6534bf6e2192517c.png",
@@ -75,7 +76,6 @@
     "static/media/Garba.jpg": "/static/media/Garba.b0a3358e8710a012bb23.jpg",
     "static/media/asset.png": "/static/media/asset.5ebb9c56a9547a1aae9e.png",
     "static/media/capital.png": "/static/media/capital.8201606b5248e19dfefe.png",
-    "static/media/Atekoja.jpg": "/static/media/Atekoja.963e86cc372782917f2d.jpg",
     "static/media/businessMan.png": "/static/media/businessMan.6964d73fb4bd10006c2d.png",
     "static/media/footerBg.png": "/static/media/footerBg.713bc37838d837d16798.png",
     "static/media/mapalumni.png": "/static/media/mapalumni.d7f397ad906f6c434d2e.png",
@@ -187,10 +187,10 @@
     "static/media/minus.svg": "/static/media/minus.8672ab2a8712f5aecb7401423a6a6418.svg",
     "static/media/arrowLeft.svg": "/static/media/arrowLeft.8285f4806e7bf425e0b4fee5d17f97ba.svg",
     "main.d4e1ee4e.css.map": "/static/css/main.d4e1ee4e.css.map",
-    "main.886b1c02.js.map": "/static/js/main.886b1c02.js.map"
+    "main.00dac677.js.map": "/static/js/main.00dac677.js.map"
   },
   "entrypoints": [
     "static/css/main.d4e1ee4e.css",
-    "static/js/main.886b1c02.js"
+    "static/js/main.00dac677.js"
   ]
 }
