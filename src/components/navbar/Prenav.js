@@ -24,7 +24,6 @@ const Prenav = ({
     setPrePosition({ top: topPosition, left });
     setPreDropItems(items);
 
-    // console.log(preDropItems);
     setActive({ ...active, focus: `${type}` });
   };
 
