@@ -29,9 +29,8 @@
       }
     }
     & .bottom {
-      width: 90%;
-      // border: 2px solid blue;
-      max-width: 1104px;
+      width: 100%;
+      max-width: 1244px;
       margin: 70px auto;
 
       @media (max-width: $breakpoint-tablet) {
@@ -56,13 +55,13 @@
 
       & .items {
         margin-top: 20px;
-        display: grid;
+        // display: grid;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
-        // border: 2px solid blue;
         max-width: max-content;
-        // grid-template-columns: repeat(2, 1fr);
-        gap: 82px;
+        // grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
         justify-content: center;
         align-items: center;
 
