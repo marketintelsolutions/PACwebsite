@@ -6,7 +6,8 @@ import atekoja from '../assets/images/Atekoja.jpg'
 import chris from '../assets/images/Chris.jpg'
 import sina from '../assets/images/Sina.jpg'
 import eric from '../assets/images/Eric.jpg'
-import garba from '../assets/images/Garba.jpg'
+import amina from '../assets/images/amina.jpg'
+
 
 export const directors = [
   {
@@ -59,31 +60,22 @@ export const directors = [
     ],
     image: eric,
   },
-  /*{
-    name: "Tessa Egbe Ikimi",
-    position: "Director",
-    bioLink: "/about/tessa",
-    imageSrc: placeholder,
-    person: "tessa",
+
+  {
+    name: "Amina Jambo",
+    position: "Non-Executive Director",
+    bioLink: "/about/amina",
+    imageSrc: amina,
+    person: "amina",
     data: [
-      "Tessa Egbe Ikimi is a renowned Lawyer of repute with significant experience in International and Local Laws. Her working experience as a Lawyer and Administrator spans over thirty years. She was called to the Bar in 1974 and has large bank of contacts and relationship which was established over time.",
-      "Tessa Egbe Ikimi attended Lagos Business School Nigeria, Chief Executive Programme (CEP) Class 17 and IESE Business School, Barcelona, Spain – Advance Management Programme (AMP) 2008, London School of Economics and Political Science,University of London LLM (Masters in Law) and University of Lagos LLB (Bachelor of Law)",
-      "She is also a Notary Public of the Supreme Court of Nigeria. Her exploits in the international and local scene provided the basis for achieving prominence in her profession. ",
+      "Amina Jambo brings over 30 years of diverse experience across the private, public, and development sectors. She began her career as a Social Welfare Officer with the United Nations High Commission for Refugees (UNHCR) in Geneva, where her passion for global development and humanitarian efforts was ignited. Following her time with UNHCR, Amina transitioned into Nigeria’s private sector, where she held several leadership roles across various SMEs in Lagos, Kaduna, and Abuja.",
+      "Her extensive public service includes her role at the Nigerian Investment Promotion Commission (NIPC), where she rose through the ranks to become the Head of Press and Protocol. She also served as Special Assistant (Protocol) to the Honorable Minister of Finance and later as Head of the Intergovernmental Relations and Facilitation Unit of NIPC's One-Stop Investments Centre (OSIC).",
+      "In the private sector, Amina has led teams in various capacities, including as the Team Lead for the Customer Experience Team at Murtala Mohammed Airport II, Chairman of the Board of Plateau Environmental Protection Agency (PEPSA), and Managing Director of Cobalt International Services Ltd. ",
+      "Her entrepreneurial spirit led her to establish Coaching Consulting & Allied Services, a training and human resource firm based in Abuja. Amina is also a certified consultant of the Etiquette and Protocol Academy of London and is actively involved in several organizations championing women's interests, including WIMBIZ, AWBI, and NAWORG.",
     ],
-    image: placeholder,
-  },*/
-  // {
-  //   name: "Garba Ahmed",
-  //   position: "Director",
-  //   bioLink: "/about/garba",
-  //   imageSrc: garba,
-  //   person: "garba",
-  //   data: [
-  //     "Alhaji Ahmed is an accomplished Central Banker, Logistics Expert and a seasoned Media Practitioner par excellence. He has varied experience in financial services industry and in the media world spanning over 30 years. He holds a Bachelor of Science degree in Political Science from Ahmadu Bello University, Zaria and a Master of Communications Arts degree from the University of Ibadan.",
-  //     "He began his career after his NYSC with Star Group of Newspapers, Enugu; and worked with Radio Kano in August 1986. In February 1986, he joined Triumph Publishing Company Limited, Kano as an Assistant Editor and by November 1986 he had risen to the position of Acting Editor. In December 1988, he joined the Apex Bank, Central Bank of Nigeria (CBN) as a Special Assistant to the Deputy Governor, International Operations. He served in various Directorates of the Bank and rose to the position of Director of Branch Operations Department. He was appointed the pioneer Director and Head of Procurement and Support Services Department. He served in this capacity until he retired on 31st December, 2011.During the course of his career in the Bank, he attended several courses within and outside the shores of Nigeria. He is a member of several Institutes and Associations including a Fellow of the Nigerian Institute of Managment (NIM) and Member, International Facility Management Association (IFMA).",
-  //   ],
-  //   image: garba,
-  // },
+    image: amina,
+  },
+
 ];
 
 export const coreValues = [
