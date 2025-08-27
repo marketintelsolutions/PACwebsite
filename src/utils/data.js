@@ -59,6 +59,8 @@ import subscription from "../assets/logos/subscription.svg";
 import afrilife from "../assets/images/afrilife.png";
 import sage from "../assets/images/sage.png";
 import lifeLine from "../assets/images/lifeLine.png";
+import viewpoint from "../assets/images/viewpoint.png";
+import synergy from "../assets/images/synergy.png";
 
 // hospitality
 import blueAmber from "../assets/images/blueAmber.png";
@@ -213,7 +215,7 @@ export const financialData = [
     text: [
       "PAC Asset Management Limited is an integrated Asset Management Company that offers traditional and non-traditional investment products and services to institutional investors and High net-worth individuals under discretionary and non discretionary mandates.",
 
-      "Some products and services offered by PAC Asset include a portfolio of Mutual Funds, Private funds including endowments and other specialized funds, fixed income brokerage.",
+      "Some products and services offered by PAC Asset include a portfolio of mutual funds, private funds such as endowments and other specialized funds, as well as fixed income brokerage.",
     ],
     link: "http://pacassetmanagement.com",
   },
@@ -258,7 +260,7 @@ export const financialData = [
     ],
     link: "https://fscfng.com",
   },
-  {
+  /* {
     img: keynes,
     heading: "Keynes Private Equity",
     text: [
@@ -266,7 +268,7 @@ export const financialData = [
       "We are dedicated to creating above par value for our partners from alternative assets funds and Investments management.",
     ],
     link: "https://keynesprivateequity.com",
-  },
+  }, */
 ];
 
 export const realEstate = [
@@ -500,7 +502,25 @@ export const healthcare = [
 
       " Lifeline meets the medication needs of our partner facilities with a focus on quality, speed and convenience of service.",
     ],
-    //   link: "https://www.ziltchone.com ",
+    link: "https://www.lifelinepharmaltd.com",
+  },
+  {
+    img: viewpoint,
+    heading: "Viewpoint Health Management System",
+    text: [
+      "Viewpoint Health Management System is a company specializing in Medical consultancy business which deals with state of Art Medical equipment and seamless integration of cutting-edge management practices with a human-centric approach company based in Nigeria.",
+    ],
+    link: "https://www.viewpointhms.com",
+  },
+  {
+    img: synergy,
+    heading: "Synergy Health Solutions",
+    text: [
+      "Synergy Health Solutions Limited is a Mauritius established company with roots in Africa, pioneering healthcare management and infrastructure consultancy firm dedicated to raising the standard of healthcare delivery across Africa.",
+      
+      "With decades of cumulative leadership experience, we partner with governments and private stakeholders to deliver end-to-end hospital solutions tailored for Africa’s unique healthcare challenges.",
+    ],
+    link: "https://www.synergyhealthsolutions.org",
   },
 ];
 

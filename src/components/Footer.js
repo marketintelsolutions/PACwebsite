@@ -147,13 +147,13 @@ const Footer = () => {
               >
                 <img src={instagram} alt="instagram" />
               </a>
-              <a
+              {/* <a 
                 href="https://twitter.com/PACHoldingsLtd?t=A_VcFWUX98Wng_OPzYJLHg&s=09"
                 target="_blank"
                 className="icon"
-              >
+              > 
                 <img src={twitter} alt="twitter" />
-              </a>
+              </a>*/}
               <a
                 href="https://www.linkedin.com/company/panafrican-capital-holdings-limited/"
                 target="_blank"

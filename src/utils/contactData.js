@@ -1,6 +1,6 @@
 export const contactDetailsOne = [
   {
-    title: "PAC Assets Management",
+    title: "PAC Asset Management",
     number: "+234 700 909 909",
     email: "info@pacassetmanagement.com",
   },
@@ -9,13 +9,13 @@ export const contactDetailsOne = [
     number: "+234 908 6790 272",
     email: "info@pacregistrars.com",
   },
-  {
+  /* {
     title: "Keynes Private Equity",
     number: "+234 01 271 6000",
     email: "info@keynesprivateequity.com",
-  },
+  }, */
   {
-    title: "Kaxaal Africa",
+    title: "Kaxal Africa",
     number: "+234 807 809 5798",
     email: "info@webzenagroallied.com",
   },

@@ -132,7 +132,7 @@ const Contact = () => {
         </div>
       </div>
       {/* SECTION FOUR */}
-      <div className="contact-section-four map-item">
+      {/*<div className="contact-section-four map-item">
         <div className="bottom map-bottom">
           <div className="right">
             <img src={contactMapTwo} alt="contactMapOne" />
@@ -167,7 +167,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div>*/}
       {/* SECTION FIVE */}
       <div className="section-five">
         <h1>
