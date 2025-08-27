@@ -1,12 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.bc34cc00.css",
-    "main.js": "/static/js/main.6315aba8.js",
+    "main.js": "/static/js/main.a4939075.js",
     "static/media/brochure.pdf": "/static/media/brochure.03f11445c8ef3faf8aa1.pdf",
     "static/media/landingVid.mp4": "/static/media/landingVid.08824d0e2d0774dab873.mp4",
     "static/media/alumniBg.png": "/static/media/alumniBg.a53ca1451e7c5a8f1a26.png",
     "static/media/errorImage.jpg": "/static/media/errorImage.f794f8c278e7dc061491.jpg",
-    "static/media/Atekoja.jpg": "/static/media/Atekoja.84d458c082882d1baa70.jpg",
     "static/media/worldImage.svg": "/static/media/worldImage.f217e0be4b88922cad1eb63248e3beb5.svg",
     "static/media/estateBg.png": "/static/media/estateBg.3371647bb089d2709283.png",
     "static/media/pacAlumni.png": "/static/media/pacAlumni.226f6534bf6e2192517c.png",
@@ -21,6 +20,7 @@
     "static/media/vendorbg.png": "/static/media/vendorbg.9af156df65da8f57e4eb.png",
     "static/media/renewableBg.png": "/static/media/renewableBg.6be3ec2b70cef4a38588.png",
     "static/media/portfolioBg.png": "/static/media/portfolioBg.b7c7a21a78e978f638c8.png",
+    "static/media/viewpoint.png": "/static/media/viewpoint.32a8cd293639309aea1a.png",
     "static/media/internship.png": "/static/media/internship.970fb63af081b5220238.png",
     "static/media/aboutBg.png": "/static/media/aboutBg.a650566d312081957ce5.png",
     "static/media/solar.png": "/static/media/solar.9ad170df1400e7e00e75.png",
@@ -72,12 +72,14 @@
     "static/media/Sina.jpg": "/static/media/Sina.79fdea970759629c98fa.jpg",
     "static/media/businessMale.png": "/static/media/businessMale.263bb997ef18f56857c7.png",
     "static/media/wordDesign.png": "/static/media/wordDesign.b07793da73fdc3341b46.png",
+    "static/media/Atekoja.jpg": "/static/media/Atekoja.3b07d76de28fbb7e5660.jpg",
     "static/media/conventions.jpg": "/static/media/conventions.a289421c2a9b2ad3f55e.jpg",
     "static/media/asset.png": "/static/media/asset.5ebb9c56a9547a1aae9e.png",
     "static/media/capital.png": "/static/media/capital.8201606b5248e19dfefe.png",
     "static/media/businessMan.png": "/static/media/businessMan.6964d73fb4bd10006c2d.png",
     "static/media/footerBg.png": "/static/media/footerBg.713bc37838d837d16798.png",
     "static/media/mapalumni.png": "/static/media/mapalumni.d7f397ad906f6c434d2e.png",
+    "static/media/synergy.png": "/static/media/synergy.732a7eb8eea0223a81b9.png",
     "static/media/portugal.jpg": "/static/media/portugal.16dfca74e8c28bf88e70.jpg",
     "static/media/pattern.jpg": "/static/media/pattern.3ccaf7234b25fd2f8a40.jpg",
     "static/media/residences.png": "/static/media/residences.e7c9cd79469fd1136b39.png",
@@ -187,10 +189,10 @@
     "static/media/minus.svg": "/static/media/minus.8672ab2a8712f5aecb7401423a6a6418.svg",
     "static/media/arrowLeft.svg": "/static/media/arrowLeft.8285f4806e7bf425e0b4fee5d17f97ba.svg",
     "main.bc34cc00.css.map": "/static/css/main.bc34cc00.css.map",
-    "main.6315aba8.js.map": "/static/js/main.6315aba8.js.map"
+    "main.a4939075.js.map": "/static/js/main.a4939075.js.map"
   },
   "entrypoints": [
     "static/css/main.bc34cc00.css",
-    "static/js/main.6315aba8.js"
+    "static/js/main.a4939075.js"
   ]
 }
