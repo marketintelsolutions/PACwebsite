@@ -35,7 +35,7 @@ const Prenav = ({
       <div className="center">
         <div
           className="predropdown item"
-          onClick={(e) => togglePreDropdown(e, countries)}
+        // onClick={(e) => togglePreDropdown(e, countries)}
         >
           <p className="pretext">
             <Translate>{active.country}</Translate>
@@ -55,7 +55,8 @@ const Prenav = ({
             <img src={clock} alt="arrowDownFill" />
           </span>
           <p>
-            <Translate>8:00am-5:00pm</Translate>
+            8:00am-5:00pm
+            {/* <Translate>8:00am-5:00pm</Translate> */}
           </p>
         </div>
         <div className="item">
