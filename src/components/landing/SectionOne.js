@@ -16,7 +16,7 @@ const SectionOne = () => {
     return () => clearInterval(interval);
   }, [translated]);
 
-  const handleClick = (e) => {};
+  const handleClick = (e) => { };
 
   return (
     <section className="section-one" onClick={(e) => handleClick(e)}>
@@ -46,7 +46,7 @@ const SectionOne = () => {
             <img src={worldMain} alt="phone-bg" />
             <div className="bg-label">
               <div className="text-center">
-                <h3>Africa’s investment future is pan Africa.</h3>
+                <h3><Translate>Africa’s investment future is pan Africa.</Translate></h3>
               </div>
             </div>
           </div>
