@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.bc34cc00.css",
-    "main.js": "/static/js/main.a0f3019e.js",
+    "main.js": "/static/js/main.f5c28ec5.js",
     "static/media/brochure.pdf": "/static/media/brochure.03f11445c8ef3faf8aa1.pdf",
     "static/media/landingVid.mp4": "/static/media/landingVid.08824d0e2d0774dab873.mp4",
     "static/media/alumniBg.png": "/static/media/alumniBg.a53ca1451e7c5a8f1a26.png",
@@ -32,6 +32,7 @@
     "static/media/csrBg.png": "/static/media/csrBg.0ab01143c2f0eb22eb11.png",
     "static/media/people.png": "/static/media/people.a8b36043d0e956f20c89.png",
     "static/media/academy.png": "/static/media/academy.7fffbe4f10f11c5f75a0.png",
+    "static/media/Chris.jpg": "/static/media/Chris.f0ecb7fb99887aac6be0.jpg",
     "static/media/goalsBg.png": "/static/media/goalsBg.34610bb5d46f36008909.png",
     "static/media/keynes.png": "/static/media/keynes.c1e6b4e37e6f94158a7b.png",
     "static/media/contactBg.png": "/static/media/contactBg.d0078fead22ccf5e526a.png",
@@ -56,7 +57,6 @@
     "static/media/afrilife.png": "/static/media/afrilife.23bddaacff398a31f656.png",
     "static/media/experienced.png": "/static/media/experienced.6e3faf727a9060695948.png",
     "static/media/contactMapTwo.png": "/static/media/contactMapTwo.8adf39cd8bcd2ed74f6a.png",
-    "static/media/Chris.jpg": "/static/media/Chris.6dd79d4ac2976e50781e.jpg",
     "static/media/technology.png": "/static/media/technology.c5e2135c3b3c6e93ef47.png",
     "static/media/climateChange.png": "/static/media/climateChange.cf9ad6fcaa52746763b0.png",
     "static/media/securities.png": "/static/media/securities.37174b52c874aac022dd.png",
@@ -189,10 +189,10 @@
     "static/media/minus.svg": "/static/media/minus.8672ab2a8712f5aecb7401423a6a6418.svg",
     "static/media/arrowLeft.svg": "/static/media/arrowLeft.8285f4806e7bf425e0b4fee5d17f97ba.svg",
     "main.bc34cc00.css.map": "/static/css/main.bc34cc00.css.map",
-    "main.a0f3019e.js.map": "/static/js/main.a0f3019e.js.map"
+    "main.f5c28ec5.js.map": "/static/js/main.f5c28ec5.js.map"
   },
   "entrypoints": [
     "static/css/main.bc34cc00.css",
-    "static/js/main.a0f3019e.js"
+    "static/js/main.f5c28ec5.js"
   ]
 }
