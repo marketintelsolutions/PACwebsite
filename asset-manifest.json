@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.bc34cc00.css",
-    "main.js": "/static/js/main.f5c28ec5.js",
+    "main.js": "/static/js/main.0c16ca30.js",
     "static/media/brochure.pdf": "/static/media/brochure.03f11445c8ef3faf8aa1.pdf",
     "static/media/landingVid.mp4": "/static/media/landingVid.08824d0e2d0774dab873.mp4",
     "static/media/alumniBg.png": "/static/media/alumniBg.a53ca1451e7c5a8f1a26.png",
@@ -13,6 +13,7 @@
     "static/media/worldMain.png": "/static/media/worldMain.bc3646349316ec8e8b58.png",
     "static/media/technologyBg.png": "/static/media/technologyBg.c144256ab4a9001be42c.png",
     "static/media/phoneLandingImage.png": "/static/media/phoneLandingImage.73ce9ba77f8d606ce0ee.png",
+    "static/media/Chris.jpg": "/static/media/Chris.b0b5f1b32e4763eaa896.jpg",
     "static/media/agroBg.png": "/static/media/agroBg.97196c5ca127b7396f59.png",
     "static/media/careerBg.png": "/static/media/careerBg.87d7b945f52f81c9aecf.png",
     "static/media/africanWoman.png": "/static/media/africanWoman.017fcade5ba14665f77d.png",
@@ -32,7 +33,6 @@
     "static/media/csrBg.png": "/static/media/csrBg.0ab01143c2f0eb22eb11.png",
     "static/media/people.png": "/static/media/people.a8b36043d0e956f20c89.png",
     "static/media/academy.png": "/static/media/academy.7fffbe4f10f11c5f75a0.png",
-    "static/media/Chris.jpg": "/static/media/Chris.f0ecb7fb99887aac6be0.jpg",
     "static/media/goalsBg.png": "/static/media/goalsBg.34610bb5d46f36008909.png",
     "static/media/keynes.png": "/static/media/keynes.c1e6b4e37e6f94158a7b.png",
     "static/media/contactBg.png": "/static/media/contactBg.d0078fead22ccf5e526a.png",
@@ -189,10 +189,10 @@
     "static/media/minus.svg": "/static/media/minus.8672ab2a8712f5aecb7401423a6a6418.svg",
     "static/media/arrowLeft.svg": "/static/media/arrowLeft.8285f4806e7bf425e0b4fee5d17f97ba.svg",
     "main.bc34cc00.css.map": "/static/css/main.bc34cc00.css.map",
-    "main.f5c28ec5.js.map": "/static/js/main.f5c28ec5.js.map"
+    "main.0c16ca30.js.map": "/static/js/main.0c16ca30.js.map"
   },
   "entrypoints": [
     "static/css/main.bc34cc00.css",
-    "static/js/main.f5c28ec5.js"
+    "static/js/main.0c16ca30.js"
   ]
 }
