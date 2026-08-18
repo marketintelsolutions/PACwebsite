@@ -77,6 +77,14 @@ const Navbar = ({
                 <Translate>About Us</Translate>
               </Link>
             </div>
+            <div className="item">
+              <a
+                href="https://pacholdingsat20.panafricancapitalholdings.com/"
+                onClick={() => setDropdown(false)}
+              >
+                PAC@20
+              </a>
+            </div>
             <div className="item border">
               <Link to="/portfolio" onClick={() => setDropdown(false)}>
                 <Translate>Our Portfolio</Translate>
