@@ -10,19 +10,19 @@ import amina from '../assets/images/amina.jpg'
 
 
 export const directors = [
-  {
-    name: "Dolapo Atekoja",
-    position: "Chairman",
-    bioLink: "/about/dolapo",
-    imageSrc: atekoja,
-    person: "dolapo",
-    data: [
-      "He is the Managing Consultant of Hudley Consulting Limited. His areas of expertise include assisting clients to achieve optimal operating, financial and strategic potential. He brings excellent analytical, quantitative and problem solving skills in developing strategic and operational solutions to Clients’ businesses.",
-      "He is a veteran Financial and Management Consultant with over three (3) decades working and advisory experience that cut across the banking industry, money and capital markets, commercial and merchant banks at the highest management levels with his last banking position being the Managing Director of Equatorial Trust Bank.",
-      "An Economist as well as a Stockbroker, he is a Fellow of Chartered Institute of Stockbrokers. He serves on the Board of various Companies and has had several stints in the public services; notably serving on several occasions as a member of the Presidential Advisory Committee of the Federal Republic Nigeria.",
-    ],
-    image: atekoja,
-  },
+  // {
+  //   name: "Dolapo Atekoja",
+  //   position: "Chairman",
+  //   bioLink: "/about/dolapo",
+  //   imageSrc: atekoja,
+  //   person: "dolapo",
+  //   data: [
+  //     "He is the Managing Consultant of Hudley Consulting Limited. His areas of expertise include assisting clients to achieve optimal operating, financial and strategic potential. He brings excellent analytical, quantitative and problem solving skills in developing strategic and operational solutions to Clients’ businesses.",
+  //     "He is a veteran Financial and Management Consultant with over three (3) decades working and advisory experience that cut across the banking industry, money and capital markets, commercial and merchant banks at the highest management levels with his last banking position being the Managing Director of Equatorial Trust Bank.",
+  //     "An Economist as well as a Stockbroker, he is a Fellow of Chartered Institute of Stockbrokers. He serves on the Board of various Companies and has had several stints in the public services; notably serving on several occasions as a member of the Presidential Advisory Committee of the Federal Republic Nigeria.",
+  //   ],
+  //   image: atekoja,
+  // },
   {
     name: "Chris Oshiafi",
     position: "Chief Executive Officer",
