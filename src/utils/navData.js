@@ -54,6 +54,10 @@ export const resources = [
     text: "Stay Updated",
     path: "/resources/stay-updated",
   },
+  {
+    text: "PAC Documentary",
+    path: "/",
+  },
   // {
   //   text: "Newsletter",
   //   path: "/resources/newsletter",
