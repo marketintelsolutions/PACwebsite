@@ -38,11 +38,11 @@ const Prenav = ({
         // onClick={(e) => togglePreDropdown(e, countries)}
         >
           <p className="pretext">
-            <Translate>{active.country}</Translate>
+            {/* <Translate>{active.country}</Translate> */}
           </p>
-          <span>
+          {/* <span>
             <img src={arrowDownFill} alt="arrowDownFill" className="preimage" />
-          </span>
+          </span> */}
         </div>
         <div className="item">
           <img src={calender} alt="arrowDownFill" />
