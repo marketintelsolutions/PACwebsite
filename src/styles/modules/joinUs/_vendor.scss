@@ -227,6 +227,21 @@
             border: 1px solid #e0e0e0;
             background: #f3f3f3;
             height: 49px;
+            cursor: pointer;
+            min-width: 0;
+
+            & .file-names {
+              flex: 1;
+              min-width: 0;
+              align-self: center;
+              padding: 0 14px;
+              color: #474747;
+              font-family: Open Sans;
+              font-size: 14px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
 
             & .upload-btn {
               border-left: 0.5px solid #474747;
@@ -240,6 +255,7 @@
           }
 
           & .cancel-btn {
+            cursor: pointer;
             padding: 9px 19px;
             background: #f3f3f3;
             border: none;

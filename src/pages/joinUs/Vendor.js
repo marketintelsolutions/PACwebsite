@@ -13,7 +13,11 @@ import position from "../../assets/logos/position.svg";
 import business from "../../assets/logos/business.svg";
 import cloud from "../../assets/logos/cloud.svg";
 import cancel from "../../assets/logos/cancel.svg";
-import { vendorForm } from "../../utils/helpers/sendMailHelpers";
+import {
+  vendorForm,
+  validateUploads,
+  ACCEPTED_UPLOAD_TYPES,
+} from "../../utils/helpers/sendMailHelpers";
 import { Translate } from "react-auto-translate";
 
 const Vendor = () => {
@@ -58,6 +62,7 @@ const Vendor = () => {
     contactPosition: "",
     contactPhone: "",
     referenceBusinessYears: "",
+    certified: "",
   });
 
   const handleChange = (e) => {
@@ -67,6 +72,32 @@ const Vendor = () => {
       [name]: value,
     }));
   };
+
+  const [uploads, setUploads] = useState({ documents: [], otherDocuments: [] });
+
+  const handleFileChange = (e) => {
+    const { name, files } = e.target;
+    const picked = Array.from(files || []);
+    // Clear the input so picking the same file again still fires onChange.
+    e.target.value = "";
+    if (!picked.length) return;
+
+    const current = uploads[name];
+    const isDuplicate = (f) =>
+      current.some((c) => c.name === f.name && c.size === f.size);
+    const next = [...current, ...picked.filter((f) => !isDuplicate(f))];
+
+    const error = validateUploads({ ...uploads, [name]: next });
+    if (error) return alert(error);
+
+    setUploads((prev) => ({ ...prev, [name]: next }));
+  };
+
+  const clearFiles = (name) =>
+    setUploads((prev) => ({ ...prev, [name]: [] }));
+
+  const fileSummary = (files) =>
+    files.length ? files.map((f) => f.name).join(", ") : "No files selected";
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -106,6 +137,7 @@ const Vendor = () => {
       contactPosition,
       contactPhone,
       referenceBusinessYears,
+      certified,
     } = formData;
     // Handle form submission here with the formData object.
 
@@ -147,10 +179,12 @@ const Vendor = () => {
       contactPosition,
       contactPhone,
       referenceBusinessYears,
+      certified,
       recipient_email,
       fields,
+      documents: uploads.documents,
+      otherDocuments: uploads.otherDocuments,
     });
-    console.log(formData);
   };
 
   return (
@@ -778,15 +812,28 @@ const Vendor = () => {
             </label>
             <div className="upload-input">
               <label htmlFor="documents">
-                <input type="file" multiple id="documents" />
+                <input
+                  type="file"
+                  multiple
+                  id="documents"
+                  name="documents"
+                  accept={ACCEPTED_UPLOAD_TYPES}
+                  onChange={handleFileChange}
+                />
+                <span className="file-names" title={fileSummary(uploads.documents)}>
+                  {fileSummary(uploads.documents)}
+                </span>
                 <div className="upload-btn">
-                  <img src={cloud} alt="cloud" />
+                  <img src={cloud} alt="Choose files" />
                 </div>
-                {/* <button type="button" className="upload-btn">
-          </button> */}
               </label>
-              <button type="button" className="cancel-btn">
-                <img src={cancel} alt="cancel" />
+              <button
+                type="button"
+                className="cancel-btn"
+                onClick={() => clearFiles("documents")}
+                aria-label="Remove selected documents"
+              >
+                <img src={cancel} alt="" />
               </button>
             </div>
             <label>
@@ -794,19 +841,35 @@ const Vendor = () => {
             </label>
             <div className="upload-input">
               <label htmlFor="otherDocuments">
-                <input type="file" multiple id="otherDocuments" />
+                <input
+                  type="file"
+                  multiple
+                  id="otherDocuments"
+                  name="otherDocuments"
+                  accept={ACCEPTED_UPLOAD_TYPES}
+                  onChange={handleFileChange}
+                />
+                <span
+                  className="file-names"
+                  title={fileSummary(uploads.otherDocuments)}
+                >
+                  {fileSummary(uploads.otherDocuments)}
+                </span>
                 <div className="upload-btn">
-                  <img src={cloud} alt="cloud" />
+                  <img src={cloud} alt="Choose files" />
                 </div>
-                {/* <button type="button" className="upload-btn">
-          </button> */}
               </label>
-              <button type="button" className="cancel-btn">
-                <img src={cancel} alt="cancel" />
+              <button
+                type="button"
+                className="cancel-btn"
+                onClick={() => clearFiles("otherDocuments")}
+                aria-label="Remove selected other documents"
+              >
+                <img src={cancel} alt="" />
               </button>
             </div>
             <div className="account-type">
-              <label htmlFor="accountType">
+              <label htmlFor="certified">
                 <Translate>
                   I hereby certify that the above information submitted is true
                   and correct
@@ -816,10 +879,10 @@ const Vendor = () => {
                 <div className="option">
                   <input
                     type="radio"
-                    value="trueInformation"
-                    name="accountType"
-                    id="accountType"
-                    checked={formData.accountType === "trueInformation"}
+                    value="yes"
+                    name="certified"
+                    id="certified"
+                    checked={formData.certified === "yes"}
                     onChange={handleChange}
                   />{" "}
                   <span>

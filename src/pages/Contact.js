@@ -44,7 +44,7 @@ const Contact = () => {
     const fields = Object.keys(formData);
 
     // Handle form submission here with the formData object.
-    console.log(formData);
+    // console.log(formData);
     contact({ fullName, email, subject, message, recipient_email, fields });
 
     setFormData({ fullName: "", email: "", subject: "", message: "" });
