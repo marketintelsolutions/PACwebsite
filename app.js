@@ -1,14 +1,20 @@
+require("dotenv").config();
 const express = require("express");
 const router = express.Router();
 const cors = require("cors");
 const sendMail = require("./modules/sendEmail");
 const { sendMailZiltch } = require("./modules/sendMailZiltch");
+const {
+  sendContactMessage,
+  sendGettingStarted,
+  sendVendorInfo,
+  vendorUpload,
+} = require("./modules/websiteForms");
 
 const app = express();
 
 
 const port = process.env.PORT || 8080;
-require("dotenv").config();
 
 // allows to send information from frontend to backend
 app.use(cors());
@@ -31,6 +37,10 @@ app.get("/", (req, res) => {
 app.post('/send-email', sendMail);
 
 app.post('/send-email-ziltch', sendMailZiltch);
+
+app.post('/pacwebsite/send-message', sendContactMessage);
+app.post('/pacwebsite/getting-started', sendGettingStarted);
+app.post('/pacwebsite/vendor-info', vendorUpload, sendVendorInfo);
 
 app.get('/getPdf', async (req, res) => {
   const downloadUrl = req.query.downloadUrl;

@@ -14,15 +14,17 @@ const transporter = nodemailer.createTransport({
 
 exports.sendMailZiltch = async (req, res) => {
     try {
-        const { recipient_email,
+        const {
+            recipient_email,
             name,
             email,
             subject,
             message,
             formName,
-            fields, } = req.body;
+            fields
+        } = req.body;
 
-        console.log(req.body);
+        console.log('body', req.body);
 
         // Send mail with defined transport object
         const info = await transporter.sendMail({
